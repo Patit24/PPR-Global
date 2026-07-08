@@ -31,7 +31,15 @@ import { FloatingObjects } from "@/components/FloatingObjects";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
-import { fieldOptions, navItems, pricing, projects, services, stats } from "@/lib/content";
+import {
+  fieldOptions,
+  navItems,
+  pricing,
+  projects,
+  resourcePosts,
+  services,
+  stats
+} from "@/lib/content";
 
 const marquee = "WEBSITES • APPS • ADS • SEO • AUTOMATION • CRM • UI/UX • ";
 const whatsappNowNumber = "919609079663";
@@ -654,6 +662,47 @@ Please send me a proposal.`
                 <p className="mt-4 text-sm font-bold uppercase tracking-[0.16em]">{stat.label}</p>
               </Reveal>
             ))}
+          </div>
+        </section>
+
+        <section id="resources" className="px-4 py-24">
+          <div className="mx-auto max-w-7xl">
+            <Reveal className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+              <div>
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
+                  Resources
+                </p>
+                <h2 className="max-w-4xl font-display text-5xl font-semibold leading-none text-white md:text-7xl">
+                  Practical guides for Kolkata businesses planning digital growth.
+                </h2>
+              </div>
+              <p className="max-w-md text-base leading-7 text-white/62">
+                Short explainers on pricing, WhatsApp CRM, and local SEO so buyers can understand
+                what they need before requesting a proposal.
+              </p>
+            </Reveal>
+            <div className="grid gap-4 md:grid-cols-3">
+              {resourcePosts.map((post, index) => (
+                <Reveal
+                  key={post.slug}
+                  delay={index * 0.04}
+                  className="group rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]"
+                >
+                  <Link href={`/resources/${post.slug}`} className="block outline-none focus-visible:ring-2 focus-visible:ring-acid">
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+                      Guide 0{index + 1}
+                    </p>
+                    <h3 className="mt-4 text-2xl font-semibold leading-tight text-white">
+                      {post.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-6 text-white/62">{post.description}</p>
+                    <span className="mt-6 inline-flex min-h-10 items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-acid transition-colors group-hover:text-white">
+                      Read Guide <ArrowUpRight size={15} aria-hidden="true" />
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 

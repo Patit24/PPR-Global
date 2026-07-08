@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { projects, servicePages, services } from "@/lib/content";
+import { projects, resourcePosts, servicePages, services } from "@/lib/content";
 
 const baseUrl = "https://www.pprglobal.online";
 
@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.76
+    })),
+    ...resourcePosts.map((post) => ({
+      url: `${baseUrl}/resources/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.68
     }))
   ];
 }

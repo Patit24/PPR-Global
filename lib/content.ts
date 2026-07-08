@@ -235,7 +235,31 @@ export const servicePages = [
     description:
       "PPR Global builds fast, affordable websites for Kolkata and West Bengal businesses, including static websites, dynamic websites, admin panels, and SEO-ready landing pages.",
     price: "Starts from ₹6,000",
-    highlights: ["Static and dynamic websites", "Admin panel options", "WhatsApp enquiry flow", "SEO-ready structure"]
+    highlights: ["Static and dynamic websites", "Admin panel options", "WhatsApp enquiry flow", "SEO-ready structure"],
+    keywords: [
+      "website development company in Kolkata",
+      "web design agency Kolkata",
+      "affordable website developer Kolkata",
+      "business website development West Bengal"
+    ],
+    body: [
+      "PPR Global builds business websites for owners who need a sharp online presence without a slow agency process. The work is focused on clear messaging, fast loading pages, mobile-friendly layouts, WhatsApp enquiry flow, and the sections a customer needs before they call or submit a lead.",
+      "This service is useful for restaurants, clinics, interior brands, gyms, real estate teams, consultants, and local service businesses in Kolkata and West Bengal. Projects can start as a clean static website and grow into dynamic pages, admin panels, blogs, booking flows, payment links, SEO landing pages, or custom integrations as the business matures.",
+      "Every website is planned around conversion first: what the visitor should understand, what proof they need, and how quickly they can contact the business. PPR Global also helps with basic technical SEO, analytics-ready structure, responsive design, and launch support so the site can be used seriously from day one."
+    ],
+    faqs: [
+      {
+        question: "How much does a website cost in Kolkata?",
+        answer:
+          "A starter static website begins from ₹6,000. Final pricing depends on page count, admin panel needs, booking, payment, WhatsApp automation, SEO, and design complexity."
+      },
+      {
+        question: "Can the website include an admin panel?",
+        answer:
+          "Yes. PPR Global builds websites with admin panels for businesses that need to update content, manage enquiries, publish pages, or control service information without editing code."
+      }
+    ],
+    relatedProjectSlug: "interior-amit"
   },
   {
     slug: "whatsapp-automation-crm",
@@ -244,7 +268,31 @@ export const servicePages = [
     description:
       "Automate enquiries, follow-ups, lead tracking, and team visibility with WhatsApp-first CRM systems for Indian SMBs.",
     price: "Custom quote",
-    highlights: ["Lead routing", "Follow-up reminders", "CRM dashboard", "Proposal and invoice flow"]
+    highlights: ["Lead routing", "Follow-up reminders", "CRM dashboard", "Proposal and invoice flow"],
+    keywords: [
+      "WhatsApp automation CRM",
+      "WhatsApp CRM for small business India",
+      "lead management automation Kolkata",
+      "WhatsApp business automation"
+    ],
+    body: [
+      "WhatsApp is where many Indian SMBs actually receive leads, but most teams still manage those conversations manually. PPR Global builds WhatsApp automation and CRM systems that help businesses capture enquiries, assign leads, track status, schedule follow-ups, and keep sales activity visible in one simple dashboard.",
+      "A typical setup can include lead source tracking, auto-replies, customer tags, follow-up reminders, quote request flows, uploaded files, invoice status, and a compact internal dashboard for owners or team members. This makes the system useful for clinics, real estate teams, interior studios, coaching businesses, service agencies, and local sales teams.",
+      "The goal is not to overcomplicate operations. The system is designed around the workflow the team already uses, then adds automation where it saves time: routing, reminders, status updates, proposal requests, and reporting. PPR Global can connect the CRM to a website form, landing page, ads funnel, or direct WhatsApp click-to-chat campaign."
+    ],
+    faqs: [
+      {
+        question: "Can WhatsApp automation work with website enquiries?",
+        answer:
+          "Yes. Website forms, landing pages, and proposal buttons can send structured enquiry details into WhatsApp and the CRM so the team can follow up faster."
+      },
+      {
+        question: "Is this only for large teams?",
+        answer:
+          "No. The system can be lightweight for a solo business owner or expanded for teams that need lead assignment, status tracking, uploaded files, and reporting."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm"
   },
   {
     slug: "mobile-app-development",
@@ -253,7 +301,31 @@ export const servicePages = [
     description:
       "Launch user-friendly mobile apps with clean UX, scalable architecture, API integrations, and product-ready screens.",
     price: "Starts from ₹14,999",
-    highlights: ["iOS and Android planning", "UX flows", "API integrations", "Launch support"]
+    highlights: ["iOS and Android planning", "UX flows", "API integrations", "Launch support"],
+    keywords: [
+      "mobile app development Kolkata",
+      "app developer West Bengal",
+      "affordable mobile app development India",
+      "React Native app development"
+    ],
+    body: [
+      "PPR Global helps founders and business owners turn app ideas into practical mobile products. The process starts with the core user flow: what the customer needs to do, what screens are required, what data should be stored, and what integrations are needed for the first usable version.",
+      "App builds can include onboarding, dashboards, booking, payments, user accounts, notifications, admin control, API integrations, and responsive product screens. For early-stage businesses, the focus is usually on launching a clean MVP that feels credible, works reliably, and can be improved after real users begin using it.",
+      "The team supports both app UX planning and development execution. That means the product is not just coded screen by screen; it is shaped around business goals, user clarity, technical scalability, and launch readiness."
+    ],
+    faqs: [
+      {
+        question: "What is the starting cost for an app?",
+        answer:
+          "Apps start from ₹14,999 and depend on features, screens, login, backend, payments, admin panel, and integrations."
+      },
+      {
+        question: "Can you build an MVP first?",
+        answer:
+          "Yes. PPR Global can plan and build a first version with the most important user flows, then expand features after launch feedback."
+      }
+    ],
+    relatedProjectSlug: "mobile-app-development"
   },
   {
     slug: "seo-geo-services-kolkata",
@@ -262,7 +334,31 @@ export const servicePages = [
     description:
       "Improve local discovery with technical SEO, service pages, local keyword targeting, and AI-search-ready content structure.",
     price: "Custom quote",
-    highlights: ["Local SEO", "Service page strategy", "Schema setup", "Search-intent content"]
+    highlights: ["Local SEO", "Service page strategy", "Schema setup", "Search-intent content"],
+    keywords: [
+      "SEO services Kolkata",
+      "local SEO West Bengal",
+      "GEO services India",
+      "AI search optimization Kolkata"
+    ],
+    body: [
+      "PPR Global provides SEO and GEO support for businesses that want to be found by people searching for real services, not just brand names. The work focuses on technical cleanup, metadata, service pages, structured data, local intent keywords, internal linking, and content that answers buyer questions clearly.",
+      "For Kolkata businesses, local SEO usually starts with service-area language, consistent contact details, Google Business Profile readiness, location-focused pages, and case studies that show relevant proof. GEO adds another layer: formatting information so AI search engines and answer systems can understand the business, services, location, pricing, and credibility signals.",
+      "This service pairs well with website redesigns, new service pages, landing pages, and content planning. The aim is to build a search foundation that can compound over time instead of relying only on paid ads."
+    ],
+    faqs: [
+      {
+        question: "Do you handle local SEO for Kolkata businesses?",
+        answer:
+          "Yes. PPR Global can improve location signals, service pages, metadata, schema, and content structure for Kolkata and West Bengal searches."
+      },
+      {
+        question: "What is GEO?",
+        answer:
+          "GEO means generative engine optimization: structuring content so AI search tools can understand and cite the business accurately."
+      }
+    ],
+    relatedProjectSlug: "dr-shaheen-dental-clinic"
   },
   {
     slug: "google-meta-ads-kolkata",
@@ -271,7 +367,67 @@ export const servicePages = [
     description:
       "Build paid ad funnels for service businesses with landing pages, WhatsApp leads, tracking, and campaign optimization.",
     price: "Custom quote",
-    highlights: ["Google Ads", "Meta Ads", "Landing pages", "WhatsApp lead capture"]
+    highlights: ["Google Ads", "Meta Ads", "Landing pages", "WhatsApp lead capture"],
+    keywords: [
+      "Google Ads agency Kolkata",
+      "Meta Ads management Kolkata",
+      "WhatsApp lead ads India",
+      "paid ads for small business Kolkata"
+    ],
+    body: [
+      "PPR Global builds paid ad funnels for businesses that want enquiries, bookings, calls, or WhatsApp conversations. The work can include Google Search campaigns, Meta Ads, landing page structure, lead forms, click-to-WhatsApp flows, tracking setup, and ongoing creative or campaign adjustments.",
+      "Good ad performance depends on more than launching a campaign. The offer, page speed, landing page copy, trust sections, service area, budget, lead quality, and follow-up process all affect results. PPR Global connects these pieces so ad spend has a clearer path to enquiries.",
+      "This is a practical fit for clinics, interiors, gyms, restaurants, real estate, local services, and agencies that need a focused lead-generation setup without building a large marketing team."
+    ],
+    faqs: [
+      {
+        question: "Can ads send leads directly to WhatsApp?",
+        answer:
+          "Yes. Campaigns can use WhatsApp click-to-chat, landing page buttons, or forms that pass enquiry details into WhatsApp."
+      },
+      {
+        question: "Do I need a landing page before running ads?",
+        answer:
+          "A focused landing page is strongly recommended because it improves clarity, tracking, trust, and conversion quality."
+      }
+    ],
+    relatedProjectSlug: "interior-amit"
+  }
+];
+
+export const resourcePosts = [
+  {
+    slug: "website-cost-kolkata",
+    title: "How Much Does a Website Cost in Kolkata?",
+    description:
+      "A practical pricing guide for Kolkata business owners comparing static websites, admin panels, dynamic websites, and add-on features.",
+    keywords: ["website cost Kolkata", "website development pricing India", "affordable website Kolkata"],
+    body: [
+      "Website pricing in Kolkata depends on how much the site needs to do. A simple static website can be affordable because it mainly needs clean design, mobile responsiveness, clear copy, and a contact flow. A website with an admin panel costs more because the business needs editable content, login, dashboard screens, and database-backed features.",
+      "The biggest cost drivers are page count, content writing, design complexity, booking, payment, WhatsApp integration, SEO pages, animation, and custom software logic. For many small businesses, the smart first step is a sharp starter website that can be expanded after real enquiries begin coming in."
+    ]
+  },
+  {
+    slug: "whatsapp-crm-small-business",
+    title: "Why Small Businesses Need WhatsApp CRM",
+    description:
+      "How WhatsApp automation helps Indian SMBs capture leads, follow up faster, and avoid losing enquiries in chat history.",
+    keywords: ["WhatsApp CRM small business", "WhatsApp automation India", "lead tracking WhatsApp"],
+    body: [
+      "Most Indian small businesses already sell through WhatsApp, but leads often get lost because messages are mixed with personal chats, old enquiries, files, payment screenshots, and follow-up reminders. A lightweight WhatsApp CRM turns those conversations into a simple pipeline.",
+      "The best setup is usually practical: customer name, source, requirement, status, next follow-up date, notes, files, and invoice or proposal stage. This gives the owner visibility without forcing the team into complicated enterprise software."
+    ]
+  },
+  {
+    slug: "local-seo-service-pages",
+    title: "Why Service Pages Help Local SEO",
+    description:
+      "Why a one-page website struggles to rank for multiple services, and how dedicated service pages help Google understand your business.",
+    keywords: ["local SEO service pages", "SEO for Kolkata business", "service page SEO"],
+    body: [
+      "A single homepage can explain a business, but it usually cannot rank well for every service the business offers. Google needs focused URLs that clearly match search intent. A website development page, WhatsApp automation page, SEO page, and app development page can each target a different buyer need.",
+      "Good service pages do not need to be huge. They need a clear headline, useful explanation, what is included, proof or related work, FAQs, local context, and a simple enquiry path. That structure helps both visitors and search engines understand the page."
+    ]
   }
 ];
 

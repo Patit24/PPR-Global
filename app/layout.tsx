@@ -66,43 +66,69 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    name: "PPR Global",
-    founder: {
-      "@type": "Person",
-      name: "Patit Roy"
-    },
-    url: "https://www.pprglobal.online",
-    image: "https://www.pprglobal.online/opengraph-image",
-    telephone: "+91-9609079663",
-    priceRange: "₹₹",
-    areaServed: [
-      { "@type": "City", name: "Kolkata" },
-      { "@type": "AdministrativeArea", name: "West Bengal" },
-      { "@type": "Country", name: "India" }
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kolkata",
-      addressRegion: "West Bengal",
-      addressCountry: "IN"
-    },
-    sameAs: ["https://www.pprglobal.online"],
-    makesOffer: [
-      "Website development",
-      "Mobile app development",
-      "WhatsApp automation",
-      "CRM dashboard development",
-      "Google Ads",
-      "Meta Ads",
-      "SEO / GEO"
-    ].map((name) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.pprglobal.online/#localbusiness",
+        name: "PPR Global",
+        founder: {
+          "@type": "Person",
+          name: "Patit Roy"
+        },
+        url: "https://www.pprglobal.online",
+        image: "https://www.pprglobal.online/opengraph-image",
+        telephone: "+91-9609079663",
+        priceRange: "₹₹",
+        areaServed: [
+          { "@type": "City", name: "Kolkata" },
+          { "@type": "AdministrativeArea", name: "West Bengal" },
+          { "@type": "Country", name: "India" }
+        ],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kolkata",
+          addressRegion: "West Bengal",
+          addressCountry: "IN"
+        },
+        makesOffer: [
+          "Website development",
+          "Mobile app development",
+          "WhatsApp automation",
+          "CRM dashboard development",
+          "Google Ads",
+          "Meta Ads",
+          "SEO / GEO"
+        ].map((name) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name
+          }
+        }))
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pprglobal.online/#organization",
+        name: "PPR Global",
+        url: "https://www.pprglobal.online",
+        founder: "Patit Roy",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+91-9609079663",
+          contactType: "sales",
+          areaServed: "IN"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.pprglobal.online/#website",
+        name: "PPR Global",
+        url: "https://www.pprglobal.online",
+        publisher: {
+          "@id": "https://www.pprglobal.online/#organization"
+        }
       }
-    }))
+    ]
   };
 
   return (

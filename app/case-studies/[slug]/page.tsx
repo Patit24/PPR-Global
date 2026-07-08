@@ -32,10 +32,17 @@ export async function generateMetadata({
   const title = `${project.title} Case Study | PPR Global`;
   const description = `${project.caseStudy.summary} Built by PPR Global, a website and app development agency in Kolkata.`;
   const image = "imageSrc" in project && project.imageSrc ? project.imageSrc : "/opengraph-image";
+  const keywords = [
+    `${project.title} case study`,
+    `${project.caseStudy.scope} Kolkata`,
+    ...project.tags.map((tag) => `${tag} website project`),
+    "PPR Global"
+  ];
 
   return {
     title,
     description,
+    keywords,
     alternates: {
       canonical: `/case-studies/${project.slug}`
     },
@@ -51,6 +58,12 @@ export async function generateMetadata({
           alt: `${project.title} case study by PPR Global`
         }
       ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image]
     }
   };
 }
@@ -69,17 +82,29 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     "gallery" in caseStudy && Array.isArray(caseStudy.gallery) ? caseStudy.gallery : [];
   const projectSchema = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: project.title,
-    description: caseStudy.summary,
-    creator: {
-      "@type": "Organization",
-      name: "PPR Global",
-      url: baseUrl
-    },
-    about: project.tags,
-    dateCreated: project.year,
-    url: `${baseUrl}/case-studies/${project.slug}`
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${baseUrl}/case-studies/${project.slug}#case-study`,
+        name: project.title,
+        description: caseStudy.summary,
+        creator: {
+          "@id": `${baseUrl}/#organization`
+        },
+        about: project.tags,
+        dateCreated: project.year,
+        url: `${baseUrl}/case-studies/${project.slug}`
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${baseUrl}/case-studies/${project.slug}#webpage`,
+        name: `${project.title} Case Study`,
+        description: caseStudy.summary,
+        isPartOf: {
+          "@id": `${baseUrl}/#website`
+        }
+      }
+    ]
   };
 
   return (
