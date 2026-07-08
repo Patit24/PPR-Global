@@ -23,7 +23,8 @@ import {
   useTransform
 } from "framer-motion";
 import Image from "next/image";
-import type { MouseEvent } from "react";
+import Link from "next/link";
+import type { CSSProperties, MouseEvent } from "react";
 import { useRef, useState } from "react";
 import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingObjects } from "@/components/FloatingObjects";
@@ -35,43 +36,11 @@ import { fieldOptions, navItems, pricing, projects, services, stats } from "@/li
 const marquee = "WEBSITES • APPS • ADS • SEO • AUTOMATION • CRM • UI/UX • ";
 const whatsappNowNumber = "919609079663";
 const bookCallNumber = "919734019005";
+type Project = (typeof projects)[number];
 
 function whatsappLink(phone: string, message: string) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
-
-const interiorGallery = [
-  {
-    title: "Heritage Residence",
-    label: "Portfolio",
-    src: "/projects/interior/portfolio-heritage-shot.jpg",
-    position: "84% 58%"
-  },
-  {
-    title: "Design + Build",
-    label: "Services",
-    src: "/projects/interior/services-page-shot.jpg",
-    position: "70% 55%"
-  },
-  {
-    title: "Meaningful Details",
-    label: "About",
-    src: "/projects/interior/about-page-shot.jpg",
-    position: "70% 52%"
-  },
-  {
-    title: "Service Grid",
-    label: "Experience",
-    src: "/projects/interior/home-services-shot.jpg",
-    position: "68% 48%"
-  },
-  {
-    title: "Project Process",
-    label: "Flow",
-    src: "/projects/interior/process-page-shot.jpg",
-    position: "68% 50%"
-  }
-];
 
 const businessTypes = [
   { name: "Restaurant", icon: Utensils },
@@ -125,7 +94,8 @@ const processSteps = [
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
-  const [isInteriorCaseOpen, setIsInteriorCaseOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [formError, setFormError] = useState("");
   const workRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll();
   const { scrollYProgress: workScrollProgress } = useScroll({
@@ -154,11 +124,22 @@ export default function Home() {
       return;
     }
     const formData = new FormData(form);
+    const name = String(formData.get("name") || "").trim();
+    const whatsapp = String(formData.get("whatsapp") || "").trim();
+    const service = String(formData.get("service") || "").trim();
+
+    if (!name || !whatsapp || !service) {
+      setFormError("Please add your name, WhatsApp number, and service needed.");
+      form.reportValidity();
+      return;
+    }
+
+    setFormError("");
     const message = `Hi Patit, I want to send an enquiry to PPR Global.
-Name: ${formData.get("name") || ""}
+Name: ${name}
 Email: ${formData.get("email") || ""}
-WhatsApp: ${formData.get("whatsapp") || ""}
-Service Needed: ${formData.get("service") || ""}
+WhatsApp: ${whatsapp}
+Service Needed: ${service}
 Budget: ${formData.get("budget") || ""}
 Message: ${formData.get("message") || ""}`;
     window.location.href = whatsappLink(whatsappNowNumber, message);
@@ -214,9 +195,6 @@ Message: ${formData.get("message") || ""}`;
             heroMouseY.set(0);
           }}
         >
-          <h1 className="sr-only">
-            Patit Roy, founder of PPR Global, building digital products for brands worldwide
-          </h1>
           <div
             aria-hidden="true"
             className="absolute inset-0 -z-10 opacity-75"
@@ -234,20 +212,30 @@ Message: ${formData.get("message") || ""}`;
             transition={{ duration: 2.8, repeat: Infinity, ease: "linear" }}
           />
           <motion.div
-            className="mx-auto grid min-h-[calc(100dvh-11rem)] w-full max-w-7xl grid-rows-[auto_1fr] gap-6"
+            className="relative mx-auto grid min-h-[calc(100dvh-9rem)] w-full max-w-7xl grid-rows-[auto_1fr] gap-4 md:min-h-[calc(100dvh-8.5rem)]"
             style={{ y: shouldReduceMotion ? undefined : heroY }}
           >
-            <div className="grid gap-6 md:grid-cols-2">
-              <motion.p
-                className="max-w-xl font-display text-xl font-black uppercase leading-[1.08] tracking-[0.12em] md:text-2xl"
+            <div className="relative z-20 grid gap-5 md:grid-cols-[minmax(0,0.72fr)_0.28fr]">
+              <motion.div
+                className="max-w-[52rem]"
                 initial={shouldReduceMotion ? false : { opacity: 0, y: 18, filter: "blur(5px)" }}
                 animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ type: "spring", duration: 0.62, bounce: 0 }}
               >
-                Affordable software agency building fast digital products for global brands.
-              </motion.p>
+                <p className="mb-3 font-display text-sm font-black uppercase tracking-[0.2em] text-black/48">
+                  Founder of PPR Global
+                </p>
+                <h1 className="font-display text-4xl font-semibold uppercase leading-[0.94] tracking-normal text-ink md:text-5xl lg:text-6xl">
+                  Website & app development for Kolkata businesses.
+                </h1>
+                <p className="mt-5 max-w-xl text-base font-semibold leading-7 text-black/62 md:text-lg">
+                  Affordable websites, apps, automation, ads funnels, CRM systems, and
+                  conversion-ready software delivered fast from Kolkata, West Bengal, for local
+                  and global brands.
+                </p>
+              </motion.div>
               <motion.p
-                className="justify-self-start text-left font-display text-sm font-black uppercase leading-[1.2] tracking-[0.15em] md:justify-self-end md:text-right md:text-base"
+                className="justify-self-start text-left font-display text-sm font-black uppercase leading-[1.2] tracking-[0.15em] md:max-w-xs md:justify-self-end md:text-right md:text-base"
                 initial={shouldReduceMotion ? false : { opacity: 0, y: 18, filter: "blur(5px)" }}
                 animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ type: "spring", duration: 0.62, bounce: 0, delay: 0.06 }}
@@ -260,9 +248,9 @@ Message: ${formData.get("message") || ""}`;
               </motion.p>
             </div>
 
-            <div className="relative grid min-h-[34rem] items-center py-6 md:min-h-[560px]">
+            <div className="relative z-10 grid min-h-[25rem] items-center py-4 md:min-h-[29rem] xl:min-h-[31rem]">
               <motion.div
-                className="mx-auto grid w-full max-w-[820px] place-items-center"
+                className="mx-auto grid w-full max-w-[720px] place-items-center md:max-w-[760px]"
                 style={{
                   x: shouldReduceMotion ? undefined : markX,
                   y: shouldReduceMotion ? undefined : markY,
@@ -277,7 +265,7 @@ Message: ${formData.get("message") || ""}`;
                 animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, filter: "blur(0px)" }}
                 transition={{ type: "spring", duration: 0.95, bounce: 0.04, delay: 0.12 }}
               >
-                <div className="hero-mark relative aspect-[1.05] w-[74vw] max-w-[560px]">
+                <div className="hero-mark relative aspect-[1.05] w-[62vw] max-w-[410px] md:w-[46vw] md:max-w-[470px] xl:max-w-[520px]">
                   <span className="absolute left-[5%] top-[5%]">P</span>
                   <span className="absolute left-[36%] top-[23%]">P</span>
                   <span className="absolute left-[25%] top-[48%]">R</span>
@@ -372,7 +360,7 @@ Message: ${formData.get("message") || ""}`;
                   Featured Work
                 </p>
                 <h2 className="max-w-3xl font-display text-5xl font-semibold leading-none text-white md:max-w-[44rem] md:text-4xl xl:text-5xl">
-                  Case-study style builds for real business outcomes.
+                  Website case studies for Kolkata, healthcare, interior, automation, and app projects.
                 </h2>
               </div>
               <div className="max-w-[26rem]">
@@ -397,11 +385,7 @@ Message: ${formData.get("message") || ""}`;
                   key={project.title}
                   project={project}
                   index={index}
-                  onOpenCaseStudy={
-                    project.title === "Interior Amit Website"
-                      ? () => setIsInteriorCaseOpen(true)
-                      : undefined
-                  }
+                  onOpenCaseStudy={() => setSelectedProject(project)}
                 />
               ))}
             </motion.div>
@@ -416,7 +400,7 @@ Message: ${formData.get("message") || ""}`;
                   Services
                 </p>
                 <h2 className="font-display text-5xl font-semibold leading-none text-white md:text-7xl">
-                  Digital systems from first click to backend control.
+                  Website development, mobile apps & automation for Kolkata businesses.
                 </h2>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -436,6 +420,11 @@ Message: ${formData.get("message") || ""}`;
                             "radial-gradient(circle at 30% 20%, rgba(184,255,61,0.18), transparent 35%), linear-gradient(135deg, rgba(255,255,255,0.08), transparent)"
                         }}
                       />
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="relative flex h-full items-center gap-4 outline-none focus-visible:ring-2 focus-visible:ring-acid"
+                        onClick={(event) => event.stopPropagation()}
+                      >
                       <motion.div
                         className="relative flex h-full items-center gap-4"
                         whileHover={shouldReduceMotion ? undefined : { x: 8 }}
@@ -455,6 +444,7 @@ Message: ${formData.get("message") || ""}`;
                           <p className="mt-2 text-lg font-semibold text-white">{service.name}</p>
                         </div>
                       </motion.div>
+                      </Link>
                       <ArrowUpRight
                         className="absolute right-5 top-5 text-white/20 transition-colors duration-200 group-hover:text-acid"
                         size={18}
@@ -627,16 +617,16 @@ Please send me a proposal.`
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
                 About
               </p>
-              <h2 className="font-display text-5xl font-semibold leading-none text-white md:text-7xl">
-                Founder-led software execution for brands that need speed.
+                <h2 className="font-display text-5xl font-semibold leading-none text-white md:text-7xl">
+                Kolkata website development company led by Patit Roy.
               </h2>
             </Reveal>
             <Reveal className="rounded-lg bg-white/[0.045] p-7 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-10">
               <p className="text-xl leading-9 text-white/78">
                 I&apos;m Patit Roy, founder of PPR Global. We help businesses turn ideas into
                 high-performing websites, mobile apps, automation systems, and marketing
-                funnels. Our team works with clients across industries and countries,
-                delivering premium digital solutions at affordable cost.
+                funnels. Our team works with Kolkata, West Bengal, and global clients across
+                industries, delivering premium digital solutions at affordable cost.
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {["Fast delivery", "Modern UI", "Global collaboration", "Growth-ready systems"].map(
@@ -702,10 +692,16 @@ Please send me a proposal.`
             <Reveal>
               <form className="rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
                 <div className="grid gap-5 md:grid-cols-2">
-                  <Field id="name" label="Name" placeholder="Your name" />
+                  <Field id="name" label="Name" placeholder="Your name" required />
                   <Field id="email" label="Email" type="email" placeholder="you@example.com" />
-                  <Field id="whatsapp" label="WhatsApp Number" type="tel" placeholder="+91 98765 43210" />
-                  <Select id="service" label="Service Needed" options={fieldOptions.services} />
+                  <Field
+                    id="whatsapp"
+                    label="WhatsApp Number"
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    required
+                  />
+                  <Select id="service" label="Service Needed" options={fieldOptions.services} required />
                   <Select id="budget" label="Budget" options={fieldOptions.budgets} />
                   <div className="md:col-span-2">
                     <label
@@ -723,6 +719,15 @@ Please send me a proposal.`
                     />
                   </div>
                 </div>
+                {formError ? (
+                  <p className="mt-4 rounded-md bg-acid/12 px-4 py-3 text-sm font-semibold text-acid">
+                    {formError}
+                  </p>
+                ) : (
+                  <p className="mt-4 text-sm text-white/44">
+                    This sends your enquiry directly on WhatsApp with the selected details.
+                  </p>
+                )}
                 <button
                   type="button"
                   onClick={handleContactEnquiry}
@@ -735,12 +740,40 @@ Please send me a proposal.`
             </Reveal>
           </div>
         </section>
+        <footer className="border-t border-white/10 px-4 py-10">
+          <div className="mx-auto grid max-w-7xl gap-8 text-sm text-white/58 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+            <div>
+              <p className="font-display text-lg font-black uppercase tracking-[0.18em] text-white">
+                PPR Global
+              </p>
+              <p className="mt-3 max-w-xl leading-7">
+                Website development company in Kolkata, West Bengal, serving Indian SMBs and
+                global clients with websites, apps, WhatsApp automation, ads, SEO/GEO, and CRM systems.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Service Area</p>
+              <p className="mt-3 leading-7">Kolkata, West Bengal, India</p>
+              <p className="leading-7">Remote projects worldwide</p>
+            </div>
+            <div>
+              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Contact</p>
+              <a className="mt-3 block leading-7 hover:text-white" href="tel:+919609079663">
+                +91 96090 79663
+              </a>
+              <a className="leading-7 hover:text-white" href="tel:+919734019005">
+                +91 97340 19005
+              </a>
+            </div>
+          </div>
+        </footer>
       </main>
       <AnimatePresence>
-        {isInteriorCaseOpen ? (
-          <InteriorCaseStudyModal
+        {selectedProject ? (
+          <CaseStudyModal
+            project={selectedProject}
             shouldReduceMotion={Boolean(shouldReduceMotion)}
-            onClose={() => setIsInteriorCaseOpen(false)}
+            onClose={() => setSelectedProject(null)}
           />
         ) : null}
       </AnimatePresence>
@@ -748,18 +781,26 @@ Please send me a proposal.`
   );
 }
 
-function InteriorCaseStudyModal({
+function CaseStudyModal({
+  project,
   onClose,
   shouldReduceMotion
 }: {
+  project: Project;
   onClose: () => void;
   shouldReduceMotion: boolean;
 }) {
+  const caseStudy = project.caseStudy;
+  const gallery =
+    "gallery" in caseStudy && Array.isArray(caseStudy.gallery) ? caseStudy.gallery : [];
+  const mainImageSrc = "imageSrc" in project ? project.imageSrc : undefined;
+  const accentStyle = { "--case-accent": caseStudy.accent } as CSSProperties;
+
   return (
     <motion.div
       role="dialog"
       aria-modal="true"
-      aria-labelledby="interior-case-title"
+      aria-labelledby="case-study-title"
       className="fixed inset-0 z-[80] overflow-y-auto bg-black/82 px-3 py-4 text-white backdrop-blur-xl md:px-6 md:py-6"
       initial={shouldReduceMotion ? false : { opacity: 0 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1 }}
@@ -780,7 +821,7 @@ function InteriorCaseStudyModal({
       >
         <div className="sticky top-0 z-20 flex items-center justify-between border-b border-black/10 bg-[#f6f5ef]/90 px-4 py-4 backdrop-blur-xl md:px-6">
           <p className="font-display text-sm font-black uppercase tracking-[0.18em]">
-            [Interior Case Study]
+            [{project.title}]
           </p>
           <button
             type="button"
@@ -795,24 +836,22 @@ function InteriorCaseStudyModal({
         <div className="grid gap-8 px-4 py-8 md:px-8 md:py-10 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <p className="mb-4 font-display text-sm font-black uppercase tracking-[0.22em] text-black/45">
-              Website / UI UX / Portfolio
+              {caseStudy.category}
             </p>
             <h2
-              id="interior-case-title"
+              id="case-study-title"
               className="font-display text-5xl font-semibold leading-none md:text-7xl"
             >
-              Interior Design Website.
+              {caseStudy.headline}
             </h2>
             <p className="mt-6 text-lg leading-8 text-black/68">
-              A warm, editorial website system for an interior brand, designed to show
-              high-value project photography, explain services clearly, and convert visitors
-              into qualified enquiries.
+              {caseStudy.summary}
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
               {[
-                ["Year", "2026"],
-                ["Scope", "Website + UI/UX"],
-                ["Screens", "5 uploaded views"]
+                ["Year", project.year],
+                ["Scope", caseStudy.scope],
+                ["Timeline", caseStudy.duration]
               ].map(([label, value]) => (
                 <motion.div
                   key={label}
@@ -842,23 +881,55 @@ function InteriorCaseStudyModal({
               initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
               animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ type: "spring", duration: 0.58, bounce: 0, delay: 0.08 }}
+              style={mainImageSrc ? undefined : { background: project.image }}
             >
-              <Image
-                src="/projects/interior/portfolio-heritage-shot.jpg"
-                alt="Interior design website portfolio screen"
-                fill
-                sizes="(min-width: 1024px) 58vw, 100vw"
-                className="object-cover"
-                style={{ objectPosition: "84% 58%" }}
-                priority
-              />
-              <div className="absolute left-4 top-4 rounded-full bg-acid px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-ink">
-                Featured screen
+              {mainImageSrc ? (
+                <Image
+                  src={mainImageSrc}
+                  alt={`${project.title} full case-study preview`}
+                  fill
+                  sizes="(min-width: 1024px) 58vw, 100vw"
+                  className="object-contain p-3"
+                  priority
+                />
+              ) : (
+                <div className="absolute inset-0 grid place-items-center p-6">
+                  <div className="w-full max-w-xl rounded-lg border border-white/18 bg-black/38 p-5 text-white backdrop-blur-md">
+                    <div className="mb-5 flex items-center justify-between">
+                      <span className="font-display text-sm font-black uppercase tracking-[0.18em]">
+                        Live Preview
+                      </span>
+                      <span className="rounded-full bg-white/10 px-3 py-1 text-xs">
+                        {project.year}
+                      </span>
+                    </div>
+                    <div className="grid gap-3">
+                      {caseStudy.highlights.slice(0, 4).map((item, index) => (
+                        <div
+                          key={item}
+                          className="flex items-center justify-between rounded-md bg-white/8 p-3"
+                        >
+                          <span>{item}</span>
+                          <span className="font-display text-xl text-acid">
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div
+                className="absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-ink"
+                style={{ backgroundColor: caseStudy.accent }}
+              >
+                Featured project
               </div>
             </motion.div>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              {interiorGallery.map((item, index) => (
+            {gallery.length ? (
+              <div className="grid gap-4 md:grid-cols-2">
+                {gallery.map((item, index) => (
                 <motion.figure
                   key={item.src}
                   className="group overflow-hidden rounded-lg border border-black/10 bg-white p-2"
@@ -887,7 +958,47 @@ function InteriorCaseStudyModal({
                     <span className="text-black/42">[{item.label}]</span>
                   </figcaption>
                 </motion.figure>
-              ))}
+                ))}
+              </div>
+            ) : null}
+
+            <div
+              className="grid gap-4 rounded-lg border border-black/10 bg-white/70 p-4 md:grid-cols-3"
+              style={accentStyle}
+            >
+              <div className="md:col-span-2">
+                <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-black/42">
+                  Key Highlights
+                </p>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {caseStudy.highlights.map((highlight) => (
+                    <div key={highlight} className="flex items-start gap-2 text-sm text-black/68">
+                      <Check
+                        size={16}
+                        className="mt-0.5 shrink-0"
+                        color={caseStudy.accent}
+                        aria-hidden="true"
+                      />
+                      <span>{highlight}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-black/42">
+                  Stack
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {caseStudy.technologies.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-semibold text-black/66"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1151,12 +1262,14 @@ function Field({
   id,
   label,
   type = "text",
-  placeholder
+  placeholder,
+  required = false
 }: {
   id: string;
   label: string;
   type?: string;
   placeholder: string;
+  required?: boolean;
 }) {
   return (
     <div>
@@ -1168,13 +1281,24 @@ function Field({
         name={id}
         type={type}
         placeholder={placeholder}
+        required={required}
         className="h-12 w-full rounded-md bg-black/34 px-4 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow placeholder:text-white/34 focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
       />
     </div>
   );
 }
 
-function Select({ id, label, options }: { id: string; label: string; options: string[] }) {
+function Select({
+  id,
+  label,
+  options,
+  required = false
+}: {
+  id: string;
+  label: string;
+  options: string[];
+  required?: boolean;
+}) {
   return (
     <div>
       <label htmlFor={id} className="mb-2 block text-sm font-semibold text-white/78">
@@ -1183,6 +1307,7 @@ function Select({ id, label, options }: { id: string; label: string; options: st
       <select
         id={id}
         name={id}
+        required={required}
         className="h-12 w-full rounded-md bg-black/34 px-4 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
         defaultValue=""
       >

@@ -2,6 +2,8 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import type { projects } from "@/lib/content";
 
 type Project = (typeof projects)[number];
@@ -52,17 +54,25 @@ export function ProjectCard({
         style={{ background: project.image }}
       >
         {"imageSrc" in project && project.imageSrc ? (
-          <motion.img
-            src={project.imageSrc}
-            alt={`${project.title} preview`}
-            className={`absolute inset-0 h-full w-full transition-transform duration-500 ${
+          <motion.div
+            className={`absolute inset-0 transition-transform duration-500 ${
               hasContainedImage
-                ? "scale-100 object-contain p-2 opacity-100 group-hover:scale-[1.025] md:p-3"
-                : "scale-[1.16] object-cover opacity-90 group-hover:scale-[1.2]"
+                ? "scale-100 group-hover:scale-[1.025]"
+                : "scale-[1.16] group-hover:scale-[1.2]"
             }`}
-            style={{ objectPosition: imagePosition ?? "center" }}
-            loading={index === 0 ? "eager" : "lazy"}
-          />
+          >
+          <Image
+              src={project.imageSrc}
+              alt={`${project.title} Kolkata website development case study preview`}
+              fill
+              sizes="(min-width: 1280px) 430px, (min-width: 1024px) 405px, (min-width: 768px) 380px, 82vw"
+              className={
+                hasContainedImage ? "object-contain p-2 opacity-100 md:p-3" : "object-cover opacity-90"
+              }
+              style={{ objectPosition: imagePosition ?? "center" }}
+              priority={index === 0}
+            />
+          </motion.div>
         ) : null}
         <div
           className={`absolute inset-0 ${
@@ -122,11 +132,13 @@ export function ProjectCard({
           <p className="max-w-xl text-sm leading-6 text-white/68">{project.description}</p>
         )}
         {onOpenCaseStudy ? (
-          <span
-            className="inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-acid transition-colors group-hover:text-white"
+          <Link
+            href={`/case-studies/${project.slug}`}
+            onClick={(event) => event.stopPropagation()}
+            className="inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-acid outline-none transition-colors group-hover:text-white focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
             View Case Study <ArrowUpRight size={16} aria-hidden="true" />
-          </span>
+          </Link>
         ) : (
           <a
             href="#contact"
