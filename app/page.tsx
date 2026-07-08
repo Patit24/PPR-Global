@@ -11,6 +11,8 @@ import {
   Stethoscope,
   Store,
   Utensils,
+  Volume2,
+  VolumeX,
   X
 } from "lucide-react";
 import {
@@ -104,7 +106,9 @@ export default function Home() {
   const shouldReduceMotion = useReducedMotion();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formError, setFormError] = useState("");
+  const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
   const workRef = useRef<HTMLElement>(null);
+  const bannerVideoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll();
   const { scrollYProgress: workScrollProgress } = useScroll({
     target: workRef,
@@ -151,6 +155,19 @@ Service Needed: ${service}
 Budget: ${formData.get("budget") || ""}
 Message: ${formData.get("message") || ""}`;
     window.location.href = whatsappLink(whatsappNowNumber, message);
+  };
+  const toggleBannerSound = () => {
+    const video = bannerVideoRef.current;
+    if (!video) {
+      return;
+    }
+
+    const nextSoundState = !isBannerSoundOn;
+    video.muted = !nextSoundState;
+    if (nextSoundState) {
+      void video.play();
+    }
+    setIsBannerSoundOn(nextSoundState);
   };
 
   return (
@@ -283,9 +300,10 @@ Message: ${formData.get("message") || ""}`;
                 </div>
                 <div className="image-grain relative aspect-[1.2] overflow-hidden rounded-sm bg-black">
                   <video
+                    ref={bannerVideoRef}
                     className="h-full w-full object-cover"
                     autoPlay
-                    muted
+                    muted={!isBannerSoundOn}
                     loop
                     playsInline
                     preload="metadata"
@@ -295,6 +313,19 @@ Message: ${formData.get("message") || ""}`;
                   </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/34 via-transparent to-black/10" />
                   <div className="absolute inset-4 rounded-sm border border-white/22" />
+                  <button
+                    type="button"
+                    onClick={toggleBannerSound}
+                    className="absolute right-3 top-3 inline-flex min-h-9 items-center gap-2 rounded-full bg-black/72 px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.28)] outline-none backdrop-blur-md transition-colors hover:bg-black focus-visible:ring-2 focus-visible:ring-acid"
+                    aria-label={isBannerSoundOn ? "Turn banner sound off" : "Turn banner sound on"}
+                  >
+                    {isBannerSoundOn ? (
+                      <Volume2 size={14} aria-hidden="true" />
+                    ) : (
+                      <VolumeX size={14} aria-hidden="true" />
+                    )}
+                    {isBannerSoundOn ? "Sound On" : "Sound Off"}
+                  </button>
                 </div>
                 <a
                   href="#work"
