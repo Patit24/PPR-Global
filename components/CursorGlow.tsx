@@ -10,6 +10,10 @@ export function CursorGlow() {
   const springY = useSpring(y, { stiffness: 140, damping: 28, mass: 0.5 });
 
   useEffect(() => {
+    if (!window.matchMedia("(min-width: 768px)").matches) {
+      return;
+    }
+
     const handleMove = (event: PointerEvent) => {
       x.set(event.clientX - 120);
       y.set(event.clientY - 120);

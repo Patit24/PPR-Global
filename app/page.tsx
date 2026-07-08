@@ -192,7 +192,7 @@ Message: ${formData.get("message") || ""}`;
 
       <main id="top" className="relative">
         <section
-          className="relative isolate min-h-[calc(100dvh-2rem)] overflow-hidden bg-[#f7f7f1] px-4 pb-5 pt-28 text-ink md:pt-32"
+          className="relative isolate min-h-[calc(100dvh-2rem)] overflow-hidden bg-[#f7f7f1] px-4 pb-5 pt-24 text-ink md:pt-32"
           onMouseMove={(event) => {
             const rect = event.currentTarget.getBoundingClientRect();
             heroMouseX.set(((event.clientX - rect.left) / rect.width - 0.5) * 2);
@@ -224,12 +224,7 @@ Message: ${formData.get("message") || ""}`;
             style={{ y: shouldReduceMotion ? undefined : heroY }}
           >
             <div className="relative z-20 grid gap-5 md:grid-cols-[minmax(0,0.72fr)_0.28fr]">
-              <motion.div
-                className="max-w-[52rem]"
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 18, filter: "blur(5px)" }}
-                animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ type: "spring", duration: 0.62, bounce: 0 }}
-              >
+              <div className="max-w-[52rem]">
                 <p className="mb-3 font-display text-sm font-black uppercase tracking-[0.2em] text-black/48">
                   Founder of PPR Global
                 </p>
@@ -241,19 +236,16 @@ Message: ${formData.get("message") || ""}`;
                   conversion-ready software delivered fast from Kolkata, West Bengal, for local
                   and global brands.
                 </p>
-              </motion.div>
-              <motion.p
+              </div>
+              <p
                 className="justify-self-start text-left font-display text-sm font-black uppercase leading-[1.2] tracking-[0.15em] md:max-w-xs md:justify-self-end md:text-right md:text-base"
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 18, filter: "blur(5px)" }}
-                animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ type: "spring", duration: 0.62, bounce: 0, delay: 0.06 }}
               >
                 [Websites / Apps]
                 <br />
                 [Automation / CRM]
                 <br />
                 [Ads / SEO / UI/UX]
-              </motion.p>
+              </p>
             </div>
 
             <div className="relative z-10 grid min-h-[25rem] items-center py-4 md:min-h-[29rem] xl:min-h-[31rem]">
@@ -269,9 +261,7 @@ Message: ${formData.get("message") || ""}`;
                   transformStyle: "preserve-3d",
                   willChange: "transform"
                 }}
-                initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.92, filter: "blur(10px)" }}
-                animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, filter: "blur(0px)" }}
-                transition={{ type: "spring", duration: 0.95, bounce: 0.04, delay: 0.12 }}
+                initial={false}
               >
                 <div className="hero-mark relative aspect-[1.05] w-[62vw] max-w-[410px] md:w-[46vw] md:max-w-[470px] xl:max-w-[520px]">
                   <span className="absolute left-[5%] top-[5%]">P</span>
@@ -294,14 +284,15 @@ Message: ${formData.get("message") || ""}`;
                 <div className="image-grain relative aspect-[1.2] overflow-hidden rounded-sm bg-black">
                   <video
                     className="h-full w-full object-cover"
-                    src="/videos/patit-banner-card.mp4"
                     autoPlay
                     muted
                     loop
                     playsInline
                     preload="metadata"
                     aria-label="Patit Roy banner video preview"
-                  />
+                  >
+                    <source src="/videos/patit-banner-card.mp4" media="(min-width: 768px)" type="video/mp4" />
+                  </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/34 via-transparent to-black/10" />
                   <div className="absolute inset-4 rounded-sm border border-white/22" />
                 </div>
@@ -349,7 +340,7 @@ Message: ${formData.get("message") || ""}`;
           </motion.div>
         </section>
 
-        <section className="overflow-hidden border-y border-white/10 bg-white/[0.035] py-5">
+        <section className="defer-section overflow-hidden border-y border-white/10 bg-white/[0.035] py-5">
           <motion.div
             className="flex w-max gap-8 whitespace-nowrap font-display text-3xl font-semibold uppercase text-white/82 md:text-5xl"
             animate={shouldReduceMotion ? undefined : { x: ["0%", "-50%"] }}
@@ -360,7 +351,7 @@ Message: ${formData.get("message") || ""}`;
           </motion.div>
         </section>
 
-        <section id="work" ref={workRef} className="relative scroll-mt-28 px-4 py-20 md:h-[300vh] md:pb-0 md:pt-16">
+        <section id="work" ref={workRef} className="defer-section relative scroll-mt-28 px-4 py-20 md:h-[300vh] md:pb-0 md:pt-16">
           <div className="mx-auto max-w-7xl md:sticky md:top-20 md:flex md:h-[calc(100dvh-5rem)] md:flex-col md:justify-center md:overflow-hidden md:py-3">
             <Reveal className="mb-8 flex flex-col justify-between gap-5 md:mb-5 md:flex-row md:items-end">
               <div>
@@ -400,7 +391,7 @@ Message: ${formData.get("message") || ""}`;
           </div>
         </section>
 
-        <section id="services" className="px-4 py-24">
+        <section id="services" className="defer-section px-4 py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
               <div>
@@ -466,7 +457,7 @@ Message: ${formData.get("message") || ""}`;
           </div>
         </section>
 
-        <section className="relative overflow-hidden px-4 py-24">
+        <section className="defer-section relative overflow-hidden px-4 py-24">
           <motion.div
             aria-hidden="true"
             className="absolute left-1/2 top-24 h-72 w-[min(54rem,80vw)] -translate-x-1/2 rounded-full bg-acid/10 blur-3xl"
@@ -619,7 +610,7 @@ Please send me a proposal.`
 
         <ProjectBuilderSection />
 
-        <section id="about" className="px-4 py-24 md:py-32">
+        <section id="about" className="defer-section px-4 py-24 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <Reveal>
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
@@ -650,7 +641,7 @@ Please send me a proposal.`
           </div>
         </section>
 
-        <section className="px-4 py-20">
+        <section className="defer-section px-4 py-20">
           <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => (
               <Reveal
@@ -665,7 +656,7 @@ Please send me a proposal.`
           </div>
         </section>
 
-        <section id="resources" className="px-4 py-24">
+        <section id="resources" className="defer-section px-4 py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
               <div>
@@ -706,7 +697,7 @@ Please send me a proposal.`
           </div>
         </section>
 
-        <section id="contact" className="px-4 py-24 md:py-32">
+        <section id="contact" className="defer-section px-4 py-24 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal className="lg:sticky lg:top-28 lg:self-start">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
@@ -789,7 +780,7 @@ Please send me a proposal.`
             </Reveal>
           </div>
         </section>
-        <footer className="border-t border-white/10 px-4 py-10">
+        <footer className="defer-section border-t border-white/10 px-4 py-10">
           <div className="mx-auto grid max-w-7xl gap-8 text-sm text-white/58 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
             <div>
               <p className="font-display text-lg font-black uppercase tracking-[0.18em] text-white">
@@ -1080,7 +1071,7 @@ Please guide me with the next step.`;
   };
 
   return (
-    <section className="relative overflow-hidden px-4 py-24 md:py-32">
+    <section className="defer-section relative overflow-hidden px-4 py-24 md:py-32">
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 opacity-55"

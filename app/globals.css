@@ -65,6 +65,11 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
 }
 
+.defer-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+}
+
 .hero-mark {
   transform-style: preserve-3d;
   filter: drop-shadow(0 34px 38px rgba(0, 0, 0, 0.26));
@@ -113,6 +118,35 @@ body::before {
   background: rgba(5, 5, 5, 0.18);
   filter: blur(28px);
   transform: rotateX(72deg);
+}
+
+@media (max-width: 767px) {
+  body {
+    background: linear-gradient(180deg, #050505 0%, #0d0d0f 48%, #050505 100%);
+  }
+
+  body::before {
+    background-size: 96px 96px;
+  }
+
+  .hero-mark {
+    filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.22));
+  }
+
+  .hero-mark span {
+    text-shadow:
+      0 0 1px #000,
+      0 4px 0 #151515,
+      0 8px 0 #0e0e0e;
+  }
+
+  .hero-mark::before {
+    filter: blur(12px);
+  }
+
+  .hero-mark::after {
+    filter: blur(16px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

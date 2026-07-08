@@ -6,7 +6,7 @@ export function FloatingObjects() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 hidden overflow-hidden md:block">
       <motion.div
         className="absolute right-[9vw] top-28 h-44 w-44 rounded-[2rem] bg-white/[0.045] shadow-glow backdrop-blur-md"
         style={{ transformStyle: "preserve-3d" }}
