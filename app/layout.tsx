@@ -71,7 +71,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://www.pprglobal.online/#localbusiness",
         name: "PPR Global",
         founder: {
@@ -82,6 +82,17 @@ export default function RootLayout({
         image: "https://www.pprglobal.online/opengraph-image",
         telephone: "+91-9609079663",
         priceRange: "₹₹",
+        serviceType: [
+          "Website Development",
+          "Mobile App Development",
+          "WhatsApp Automation",
+          "CRM Systems",
+          "Google Ads",
+          "Meta Ads",
+          "SEO",
+          "UI/UX Design",
+          "Lead Management"
+        ],
         areaServed: [
           { "@type": "City", name: "Kolkata" },
           { "@type": "AdministrativeArea", name: "West Bengal" },
@@ -136,11 +147,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${inter.variable} ${space.variable}`}>
-      <body>
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+      </head>
+      <body>
         {children}
       </body>
     </html>

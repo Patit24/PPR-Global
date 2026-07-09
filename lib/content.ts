@@ -223,8 +223,8 @@ export const services = [
   { name: "Meta Ads", slug: "meta-ads-management-kolkata", icon: ChartNoAxesCombined },
   { name: "SEO / GEO", slug: "seo-geo-services-kolkata", icon: Search },
   { name: "UI/UX Design", slug: "ui-ux-design-kolkata", icon: Palette },
-  { name: "WhatsApp Automation", slug: "whatsapp-automation-crm", icon: Bot },
-  { name: "CRM Dashboard", slug: "crm-dashboard-development", icon: Layers3 }
+  { name: "WhatsApp Automation", slug: "whatsapp-automation-kolkata", icon: Bot },
+  { name: "CRM Dashboard", slug: "crm-kolkata", icon: Layers3 }
 ];
 
 export const servicePages = [
@@ -262,22 +262,22 @@ export const servicePages = [
     relatedProjectSlug: "interior-amit"
   },
   {
-    slug: "whatsapp-automation-crm",
-    name: "WhatsApp Automation & CRM Systems",
+    slug: "whatsapp-automation-kolkata",
+    name: "WhatsApp Automation for Small Business in Kolkata",
     shortName: "WhatsApp Automation",
     description:
-      "Automate enquiries, follow-ups, lead tracking, and team visibility with WhatsApp-first CRM systems for Indian SMBs.",
+      "WhatsApp automation for small business in Kolkata helps owners capture enquiries, follow up faster, and manage leads without losing chats.",
     price: "Custom quote",
     highlights: ["Lead routing", "Follow-up reminders", "CRM dashboard", "Proposal and invoice flow"],
     keywords: [
-      "WhatsApp automation CRM",
+      "whatsapp automation for small business kolkata",
       "WhatsApp CRM for small business India",
       "lead management automation Kolkata",
-      "WhatsApp business automation"
+      "WhatsApp business automation Kolkata"
     ],
     body: [
-      "WhatsApp is where many Indian SMBs actually receive leads, but most teams still manage those conversations manually. PPR Global builds WhatsApp automation and CRM systems that help businesses capture enquiries, assign leads, track status, schedule follow-ups, and keep sales activity visible in one simple dashboard.",
-      "A typical setup can include lead source tracking, auto-replies, customer tags, follow-up reminders, quote request flows, uploaded files, invoice status, and a compact internal dashboard for owners or team members. This makes the system useful for clinics, real estate teams, interior studios, coaching businesses, service agencies, and local sales teams.",
+      "WhatsApp automation for small business in Kolkata is useful when enquiries arrive all day but the team has no clean way to tag, assign, quote, or follow up. PPR Global builds practical WhatsApp-first systems that capture customer details, route leads, schedule reminders, and keep every conversation tied to a visible sales status.",
+      "A typical setup can include lead source tracking, auto-replies, customer tags, follow-up reminders, quote request flows, uploaded files, invoice status, and a compact internal dashboard for owners or team members. This makes the system useful for clinics, salons, restaurants, real estate teams, interior studios, coaching businesses, service agencies, and local sales teams.",
       "The goal is not to overcomplicate operations. The system is designed around the workflow the team already uses, then adds automation where it saves time: routing, reminders, status updates, proposal requests, and reporting. PPR Global can connect the CRM to a website form, landing page, ads funnel, or direct WhatsApp click-to-chat campaign."
     ],
     faqs: [
@@ -290,6 +290,204 @@ export const servicePages = [
         question: "Is this only for large teams?",
         answer:
           "No. The system can be lightweight for a solo business owner or expanded for teams that need lead assignment, status tracking, uploaded files, and reporting."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm"
+  },
+  {
+    slug: "crm-kolkata",
+    name: "CRM for Small Business in Kolkata",
+    shortName: "Small Business CRM",
+    description:
+      "CRM for small business in Kolkata gives owners a simple dashboard for leads, follow-ups, files, invoices, and team visibility.",
+    price: "Custom quote",
+    highlights: ["Lead pipeline", "Follow-up tracking", "Uploaded files", "Team dashboard"],
+    keywords: [
+      "crm for small business kolkata",
+      "small business CRM Kolkata",
+      "simple CRM setup India",
+      "CRM dashboard development Kolkata"
+    ],
+    body: [
+      "CRM for small business in Kolkata should feel simple enough for daily use, not like enterprise software forced onto a small team. PPR Global designs lightweight CRM dashboards that show new leads, pending tasks, follow-up dates, uploaded files, chat notes, invoices, and the current progress of each customer.",
+      "This works especially well for dentists, salons, real estate agents, interior studios, gyms, coaching centres, and local service teams that receive enquiries from WhatsApp, calls, ads, forms, and referrals. Instead of tracking everything across notebooks or chat history, the CRM keeps the next action visible.",
+      "A build can start with a clean lead tracker and grow into roles, admin controls, notifications, proposal status, payment records, reporting, and website integrations. The aim is to give the owner a practical operating system that matches how the business already sells."
+    ],
+    faqs: [
+      {
+        question: "Is a small business CRM expensive?",
+        answer:
+          "It does not have to be. PPR Global can start with a focused CRM for leads and follow-ups, then add advanced modules only when the business needs them."
+      },
+      {
+        question: "Can the CRM connect with WhatsApp leads?",
+        answer:
+          "Yes. WhatsApp enquiries, website forms, landing page leads, and ads enquiries can be structured into one follow-up dashboard."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm"
+  },
+  {
+    slug: "lead-management",
+    name: "Lead Management System for Small Business in India",
+    shortName: "Lead Management",
+    description:
+      "A lead management system for small business in India helps teams capture, assign, follow up, and report on enquiries from one place.",
+    price: "Custom quote",
+    highlights: ["Lead capture", "Status stages", "Task reminders", "Owner reports"],
+    keywords: [
+      "lead management system for small business india",
+      "lead tracking system India",
+      "sales follow up dashboard",
+      "lead management software Kolkata"
+    ],
+    body: [
+      "A lead management system for small business in India becomes valuable when enquiries are coming from multiple places and nobody is fully sure what happened next. PPR Global builds compact systems that record the source, customer need, status, owner, next follow-up date, notes, files, and proposal stage for each lead.",
+      "The setup can support restaurants, clinics, gyms, real estate teams, interiors, education businesses, and service providers that rely on fast response time. Owners can see which leads are new, which are pending, which need a quote, and which are close to conversion.",
+      "The system can be connected to forms, WhatsApp buttons, ads funnels, landing pages, and admin panels. It can stay simple at launch and later expand into team permissions, invoices, automated reminders, reporting, and customer history."
+    ],
+    faqs: [
+      {
+        question: "What should a lead management system include?",
+        answer:
+          "At minimum it should include lead source, contact details, requirement, status, next follow-up, notes, assigned person, and a clear owner view."
+      },
+      {
+        question: "Can this replace spreadsheets?",
+        answer:
+          "Yes. PPR Global can convert an existing spreadsheet workflow into a cleaner dashboard with reminders, filters, roles, and reporting."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm"
+  },
+  {
+    slug: "website-for-dentists-kolkata",
+    name: "Website for Dentists in Kolkata",
+    shortName: "Dentist Website",
+    description:
+      "A website for dentists in Kolkata should build trust, explain treatments, support appointment booking, and connect patients through WhatsApp.",
+    price: "Starts from ₹6,000",
+    highlights: ["Treatment pages", "Appointment CTA", "Google reviews", "Local SEO structure"],
+    keywords: [
+      "website for dentists kolkata",
+      "dental clinic website Kolkata",
+      "dentist appointment website",
+      "healthcare website design Kolkata"
+    ],
+    body: [
+      "A website for dentists in Kolkata needs to do more than look clean. It should help patients understand treatments, trust the clinic, check location details, read credibility signals, and book an appointment without confusion. PPR Global designs dental websites around patient clarity and fast enquiry flow.",
+      "The page structure can include treatment sections, doctor profiles, clinic photos, appointment buttons, WhatsApp booking, Google review prompts, FAQs, map links, and service-area language for local search. The design stays calm, mobile-friendly, and easy for patients to scan.",
+      "For growing clinics, the website can expand into blogs, treatment landing pages, lead tracking, follow-up reminders, ads landing pages, or a simple booking dashboard. The goal is a website that supports both patient trust and daily clinic operations."
+    ],
+    faqs: [
+      {
+        question: "Can the site include appointment booking?",
+        answer:
+          "Yes. The booking flow can use WhatsApp, a form, calendar links, or a custom dashboard depending on how the clinic wants to manage appointments."
+      },
+      {
+        question: "Can dental treatment pages help SEO?",
+        answer:
+          "Yes. Dedicated pages for services like root canal, braces, implants, whitening, and emergency care can help Google understand clinic relevance."
+      }
+    ],
+    relatedProjectSlug: "dr-shaheen-dental-clinic"
+  },
+  {
+    slug: "website-for-interior-designers-kolkata",
+    name: "Website for Interior Designers in Kolkata",
+    shortName: "Interior Website",
+    description:
+      "A website for interior designers in Kolkata should showcase premium work, explain services, and convert visitors into consultation enquiries.",
+    price: "Starts from ₹6,000",
+    highlights: ["Portfolio showcase", "Consultation CTA", "Luxury UI", "Project gallery"],
+    keywords: [
+      "website for interior designers kolkata",
+      "interior design website Kolkata",
+      "portfolio website for interior studio",
+      "interior designer web design India"
+    ],
+    body: [
+      "A website for interior designers in Kolkata should make the visitor feel the quality of the studio before they ever call. PPR Global builds visual, portfolio-led websites with strong project galleries, service pages, consultation CTAs, and mobile layouts that make completed work easy to explore.",
+      "The structure can include residential and commercial services, before-after galleries, design process sections, testimonials, project categories, budget enquiry forms, and WhatsApp consultation buttons. The visual direction can be minimal, luxury, editorial, or highly animated depending on the studio brand.",
+      "Interior businesses also benefit from local SEO pages and case-study style content because clients often compare quality, trust, timeline, and budget before reaching out. A focused website helps turn that research into qualified enquiries."
+    ],
+    faqs: [
+      {
+        question: "Can you add a project gallery?",
+        answer:
+          "Yes. The website can include categorized galleries for flats, villas, offices, kitchens, bedrooms, and commercial interiors."
+      },
+      {
+        question: "Can the design look premium?",
+        answer:
+          "Yes. PPR Global can build a luxury portfolio style with motion, typography, image-led sections, and strong consultation calls to action."
+      }
+    ],
+    relatedProjectSlug: "interior-amit"
+  },
+  {
+    slug: "website-for-gyms-kolkata",
+    name: "Website for Gyms in Kolkata",
+    shortName: "Gym Website",
+    description:
+      "A website for gyms in Kolkata helps fitness businesses promote memberships, class schedules, trainers, trials, and WhatsApp bookings.",
+    price: "Starts from ₹6,000",
+    highlights: ["Membership sections", "Class booking", "Trainer profiles", "Trial enquiry flow"],
+    keywords: [
+      "website for gym kolkata",
+      "gym website design Kolkata",
+      "fitness website development India",
+      "gym membership landing page"
+    ],
+    body: [
+      "A website for gyms in Kolkata should turn attention into trial bookings, membership enquiries, and class signups. PPR Global builds fitness websites with clear pricing sections, trainer profiles, class schedules, transformation proof, WhatsApp CTAs, and mobile-first layouts for people browsing quickly.",
+      "The site can include personal training, group classes, facilities, gallery, offers, reviews, trial forms, QR membership links, and location-focused SEO content. For gyms running ads, PPR Global can also create landing pages focused on trial passes, weight loss programs, or local membership campaigns.",
+      "As the gym grows, the website can connect to CRM tracking, follow-up reminders, payment links, attendance tools, or simple dashboards. The first goal is always clear: help more nearby people enquire and visit."
+    ],
+    faqs: [
+      {
+        question: "Can a gym website collect trial bookings?",
+        answer:
+          "Yes. Trial forms can send details to WhatsApp or a CRM so staff can follow up quickly."
+      },
+      {
+        question: "Can you build landing pages for gym ads?",
+        answer:
+          "Yes. PPR Global can build focused landing pages for membership offers, transformation programs, personal training, and local campaigns."
+      }
+    ],
+    relatedProjectSlug: "mobile-app-development"
+  },
+  {
+    slug: "website-for-real-estate-kolkata",
+    name: "Website for Real Estate Agents in Kolkata",
+    shortName: "Real Estate Website",
+    description:
+      "A website for real estate agents in Kolkata helps showcase properties, capture buyer leads, and manage enquiries through WhatsApp or CRM.",
+    price: "Starts from ₹6,000",
+    highlights: ["Property listings", "Buyer lead forms", "WhatsApp enquiry", "CRM integration"],
+    keywords: [
+      "website for real estate agents kolkata",
+      "real estate website Kolkata",
+      "property listing website India",
+      "real estate CRM Kolkata"
+    ],
+    body: [
+      "A website for real estate agents in Kolkata should make property browsing simple and lead capture fast. PPR Global builds real estate websites with listing sections, location pages, enquiry buttons, WhatsApp contact, buyer requirements, project highlights, and trust-building content for local markets.",
+      "The setup can support residential flats, commercial spaces, rental listings, land, project launches, broker portfolios, and developer microsites. Each property can include photos, price range, location, features, map context, and enquiry actions that send structured details to the sales team.",
+      "For teams handling many enquiries, the website can connect to a CRM with lead source, property interest, budget, follow-up date, files, and status. This gives agents a cleaner way to manage serious buyers without losing conversations."
+    ],
+    faqs: [
+      {
+        question: "Can the website include property listings?",
+        answer:
+          "Yes. Listings can be static for a starter site or editable through an admin panel for frequent updates."
+      },
+      {
+        question: "Can enquiries go to WhatsApp and CRM?",
+        answer:
+          "Yes. Buyer enquiries can open WhatsApp with property details and also be tracked in a lead dashboard."
       }
     ],
     relatedProjectSlug: "whatsapp-automation-crm"
