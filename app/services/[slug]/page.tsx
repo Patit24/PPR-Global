@@ -149,6 +149,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     ]
   };
   const relatedProject = projects.find((project) => project.slug === service.relatedProjectSlug);
+  const relatedServices = servicePages
+    .filter((item) => item.slug !== service.slug)
+    .slice(0, 6);
 
   return (
     <main className="min-h-screen bg-ink text-white">
@@ -256,6 +259,34 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <h2 className="text-lg font-semibold text-white">{faq.question}</h2>
                   <p className="mt-3 text-sm leading-6 text-white/62">{faq.answer}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+              Related Kolkata service pages
+            </p>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-white/60">
+              Explore connected PPR Global services and vertical landing pages built for local SEO,
+              lead generation, and better buyer journeys.
+            </p>
+            <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+              {relatedServices.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/services/${item.slug}`}
+                  className="group rounded-lg bg-black/24 p-4 outline-none transition-colors hover:bg-black/36 focus-visible:ring-2 focus-visible:ring-acid"
+                >
+                  <h2 className="text-lg font-semibold leading-tight text-white">
+                    {item.name}
+                  </h2>
+                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/58">
+                    {item.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-acid transition-colors group-hover:text-white">
+                    View service <ArrowUpRight size={14} />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

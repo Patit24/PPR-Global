@@ -6,8 +6,10 @@ import {
   CalendarDays,
   Check,
   Dumbbell,
+  MapPin,
   MessageCircle,
   Send,
+  Star,
   Stethoscope,
   Store,
   Utensils,
@@ -39,6 +41,7 @@ import {
   pricing,
   projects,
   resourcePosts,
+  servicePages,
   services,
   stats
 } from "@/lib/content";
@@ -46,6 +49,18 @@ import {
 const marquee = "WEBSITES • APPS • ADS • SEO • AUTOMATION • CRM • UI/UX • ";
 const whatsappNowNumber = "919609079663";
 const bookCallNumber = "919734019005";
+const googleMapsListingLink = "";
+const googleMapsEmbedSrc = "";
+const footerServiceLinks = [
+  "website-development-kolkata",
+  "whatsapp-automation-kolkata",
+  "crm-kolkata",
+  "lead-management",
+  "website-for-dentists-kolkata",
+  "website-for-interior-designers-kolkata",
+  "website-for-gyms-kolkata",
+  "website-for-real-estate-kolkata"
+];
 type Project = (typeof projects)[number];
 
 function whatsappLink(phone: string, message: string) {
@@ -253,6 +268,22 @@ Message: ${formData.get("message") || ""}`;
                   conversion-ready software delivered fast from Kolkata, West Bengal, for local
                   and global brands.
                 </p>
+                {googleMapsListingLink ? (
+                  <a
+                    href={googleMapsListingLink}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-acid"
+                  >
+                    <Star size={15} aria-hidden="true" />
+                    4.9 · 25+ Google Reviews · PPR Global, Kolkata
+                  </a>
+                ) : (
+                  <div className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)]">
+                    <MapPin size={15} aria-hidden="true" />
+                    Google Business Profile launching soon · PPR Global, Kolkata
+                  </div>
+                )}
               </div>
               <p
                 className="justify-self-start text-left font-display text-sm font-black uppercase leading-[1.2] tracking-[0.15em] md:max-w-xs md:justify-self-end md:text-right md:text-base"
@@ -673,6 +704,11 @@ Please send me a proposal.`
         </section>
 
         <section className="defer-section px-4 py-20">
+          <div className="mx-auto max-w-7xl">
+            <Reveal className="mb-5 inline-flex min-h-11 items-center rounded-full border border-white/12 bg-white/[0.055] px-4 text-sm font-black uppercase tracking-[0.16em] text-white/74">
+              Founded 2024 · Based in Kolkata, West Bengal
+            </Reveal>
+          </div>
           <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => (
               <Reveal
@@ -810,6 +846,51 @@ Please send me a proposal.`
               </form>
             </Reveal>
           </div>
+          <Reveal className="mx-auto mt-10 max-w-7xl overflow-hidden rounded-lg bg-white/[0.055] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
+            <div className="flex flex-col justify-between gap-4 border-b border-white/10 p-5 md:flex-row md:items-center">
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+                  Google Maps
+                </p>
+                <p className="mt-2 text-base leading-7 text-white/66">
+                  PPR Global, Kolkata. The live map embed will appear here once the Google
+                  Business Profile is published.
+                </p>
+              </div>
+              {googleMapsListingLink ? (
+                <a
+                  href={googleMapsListingLink}
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full bg-acid px-4 text-xs font-black uppercase tracking-[0.16em] text-ink"
+                >
+                  Open Google Maps <ArrowUpRight size={15} aria-hidden="true" />
+                </a>
+              ) : null}
+            </div>
+            {googleMapsEmbedSrc ? (
+              <iframe
+                src={googleMapsEmbedSrc}
+                width="100%"
+                height="300"
+                className="block border-0"
+                loading="lazy"
+                title="PPR Global Kolkata Google Maps location"
+              />
+            ) : (
+              <div className="grid min-h-[300px] place-items-center p-6 text-center">
+                <div>
+                  <MapPin className="mx-auto text-acid" size={32} aria-hidden="true" />
+                  <p className="mt-4 font-display text-2xl font-semibold text-white">
+                    Google Maps embed pending
+                  </p>
+                  <p className="mt-3 max-w-md text-sm leading-6 text-white/56">
+                    Add the real Google Maps embed URL after the business listing is live.
+                  </p>
+                </div>
+              </div>
+            )}
+          </Reveal>
         </section>
         <footer className="defer-section border-t border-white/10 px-4 py-10">
           <div className="mx-auto grid max-w-7xl gap-8 text-sm text-white/58 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
@@ -835,6 +916,30 @@ Please send me a proposal.`
               <a className="leading-7 hover:text-white" href="tel:+919734019005">
                 +91 97340 19005
               </a>
+            </div>
+          </div>
+          <div className="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-6">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+              Popular Kolkata service links
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {footerServiceLinks.map((slug) => {
+                const service = servicePages.find((item) => item.slug === slug);
+
+                if (!service) {
+                  return null;
+                }
+
+                return (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-white/62 transition-colors hover:border-acid hover:text-acid"
+                  >
+                    {service.shortName}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </footer>

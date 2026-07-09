@@ -78,6 +78,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
   const caseStudy = project.caseStudy;
   const mainImageSrc = "imageSrc" in project ? project.imageSrc : undefined;
+  const imageAlt =
+    "imageAlt" in project && typeof project.imageAlt === "string"
+      ? project.imageAlt
+      : `${project.title} ${project.tags.join(" ")} Kolkata`;
   const gallery =
     "gallery" in caseStudy && Array.isArray(caseStudy.gallery) ? caseStudy.gallery : [];
   const projectSchema = {
@@ -172,7 +176,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 {mainImageSrc ? (
                   <Image
                     src={mainImageSrc}
-                    alt={`${project.title} website case study preview for Kolkata business SEO`}
+                    alt={imageAlt}
                     fill
                     sizes="(min-width: 1024px) 64vw, 100vw"
                     className="object-contain p-3"

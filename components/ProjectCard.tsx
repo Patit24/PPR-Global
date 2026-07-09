@@ -23,6 +23,10 @@ export function ProjectCard({
     "imagePosition" in project && typeof project.imagePosition === "string"
       ? project.imagePosition
       : "center";
+  const imageAlt =
+    "imageAlt" in project && typeof project.imageAlt === "string"
+      ? project.imageAlt
+      : `${project.title} ${project.tags.join(" ")} Kolkata`;
 
   return (
     <motion.article
@@ -52,6 +56,8 @@ export function ProjectCard({
           hasContainedImage ? "md:aspect-[1.85]" : "md:aspect-[1.62]"
         }`}
         style={{ background: project.image }}
+        role={"imageSrc" in project && project.imageSrc ? undefined : "img"}
+        aria-label={"imageSrc" in project && project.imageSrc ? undefined : imageAlt}
       >
         {"imageSrc" in project && project.imageSrc ? (
           <motion.div
@@ -63,7 +69,7 @@ export function ProjectCard({
           >
           <Image
               src={project.imageSrc}
-              alt={`${project.title} Kolkata website development case study preview`}
+              alt={imageAlt}
               fill
               sizes="(min-width: 1280px) 430px, (min-width: 1024px) 405px, (min-width: 768px) 380px, 82vw"
               className={

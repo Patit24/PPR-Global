@@ -30,6 +30,7 @@ export const projects = [
       "A premium interior studio presentation with luxury visuals, mobile-first layouts, and consultation-focused actions.",
     image: "linear-gradient(135deg, #e7c08c 0%, #4b3729 42%, #0c0b0a 100%)",
     imageSrc: "/projects/showcase/interior-amit-showcase.png",
+    imageAlt: "Interior Amit website design and development Kolkata",
     imageFit: "contain",
     caseStudy: {
       category: "Website / UI UX / Portfolio",
@@ -89,6 +90,7 @@ export const projects = [
       "A modern interior website concept built around elegant hero storytelling, project browsing, and lead generation.",
     image: "linear-gradient(135deg, #d9a33d 0%, #42301d 46%, #0d0d0d 100%)",
     imageSrc: "/projects/showcase/as-interior-showcase.png",
+    imageAlt: "AS Interior Studio website UI/UX design Kolkata",
     imageFit: "contain",
     caseStudy: {
       category: "Interior / Web Design / Motion",
@@ -116,6 +118,7 @@ export const projects = [
       "A clean healthcare experience for treatment discovery, appointment booking, local trust, and clinic credibility.",
     image: "linear-gradient(135deg, #dffbf7 0%, #0fa3a3 45%, #062023 100%)",
     imageSrc: "/projects/showcase/dr-shaheen-dental-showcase.png",
+    imageAlt: "Dr. Shaheen Dental Clinic website with online booking Kolkata",
     imageFit: "contain",
     caseStudy: {
       category: "Healthcare / Booking / SEO",
@@ -143,6 +146,7 @@ export const projects = [
       "A dark premium website for an interior group, combining service credibility, craft highlights, and consultation CTAs.",
     image: "linear-gradient(135deg, #d4af37 0%, #1f2530 46%, #05070a 100%)",
     imageSrc: "/projects/showcase/deinterio-showcase.png",
+    imageAlt: "Deinterio Interior Group business website Kolkata",
     imageFit: "contain",
     caseStudy: {
       category: "Business / Interior / Frontend",
@@ -169,6 +173,7 @@ export const projects = [
     description:
       "A WhatsApp-first CRM for lead routing, follow-ups, reminders, and compact team visibility.",
     image: "linear-gradient(135deg, #b8ff3d 0%, #25673a 42%, #080a08 100%)",
+    imageAlt: "WhatsApp automation CRM dashboard for small business Kolkata",
     caseStudy: {
       category: "Automation / CRM / Dashboard",
       headline: "WhatsApp Automation CRM.",
@@ -194,6 +199,7 @@ export const projects = [
     description:
       "Feature-driven mobile product builds from UX wireframes to launch-ready app architecture.",
     image: "linear-gradient(135deg, #ececff 0%, #5a607d 45%, #08080d 100%)",
+    imageAlt: "Mobile app development Kolkata iOS Android",
     caseStudy: {
       category: "Mobile / Product / App Design",
       headline: "Mobile App Development.",
