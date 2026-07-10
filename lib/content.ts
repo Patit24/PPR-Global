@@ -199,7 +199,9 @@ export const projects = [
     description:
       "Feature-driven mobile product builds from UX wireframes to launch-ready app architecture.",
     image: "linear-gradient(135deg, #ececff 0%, #5a607d 45%, #08080d 100%)",
+    imageSrc: "/projects/showcase/mobile-app-development-showcase.png",
     imageAlt: "Mobile app development Kolkata iOS Android",
+    imageFit: "contain",
     caseStudy: {
       category: "Mobile / Product / App Design",
       headline: "Mobile App Development.",
