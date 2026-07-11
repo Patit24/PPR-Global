@@ -9,11 +9,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "@marsidev/react-turnstile": "^1.5.3",
+    "@supabase/supabase-js": "^2.110.2",
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.468.0",
     "next": "^16.2.9",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-hook-form": "^7.81.0",
+    "resend": "^6.17.2",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^20.17.10",

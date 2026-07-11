@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { LeadSystem } from "@/components/leads/LeadSystem";
 import "./globals.css";
 
 const inter = Inter({
@@ -67,6 +68,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -148,6 +150,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${space.variable}`}>
       <head>
+        {gaMeasurementId ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaMeasurementId}');
+                `
+              }}
+            />
+          </>
+        ) : null}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
@@ -160,6 +177,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <LeadSystem />
       </body>
     </html>
   );

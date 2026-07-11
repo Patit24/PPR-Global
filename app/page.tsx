@@ -8,7 +8,6 @@ import {
   Dumbbell,
   MapPin,
   MessageCircle,
-  Send,
   Star,
   Stethoscope,
   Store,
@@ -28,15 +27,15 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import type { CSSProperties, MouseEvent } from "react";
+import type { CSSProperties } from "react";
 import { useRef, useState } from "react";
 import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingObjects } from "@/components/FloatingObjects";
+import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 import {
-  fieldOptions,
   navItems,
   pricing,
   projects,
@@ -45,6 +44,7 @@ import {
   services,
   stats
 } from "@/lib/content";
+import { trackEvent } from "@/lib/lead/analytics";
 
 const marquee = "WEBSITES • APPS • ADS • SEO • AUTOMATION • CRM • UI/UX • ";
 const whatsappNowNumber = "919609079663";
@@ -120,7 +120,6 @@ const processSteps = [
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [formError, setFormError] = useState("");
   const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
   const workRef = useRef<HTMLElement>(null);
   const bannerVideoRef = useRef<HTMLVideoElement>(null);
@@ -145,32 +144,6 @@ export default function Home() {
   const dotY = useTransform(heroSpringY, [-1, 1], ["72%", "28%"]);
   const workX = useTransform(workScrollProgress, [0, 1], ["0%", "-56%"]);
   const workProgressWidth = useTransform(workScrollProgress, [0, 1], ["8%", "100%"]);
-  const handleContactEnquiry = (event: MouseEvent<HTMLButtonElement>) => {
-    const form = event.currentTarget.form;
-    if (!form) {
-      return;
-    }
-    const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
-    const whatsapp = String(formData.get("whatsapp") || "").trim();
-    const service = String(formData.get("service") || "").trim();
-
-    if (!name || !whatsapp || !service) {
-      setFormError("Please add your name, WhatsApp number, and service needed.");
-      form.reportValidity();
-      return;
-    }
-
-    setFormError("");
-    const message = `Hi Patit, I want to send an enquiry to PPR Global.
-Name: ${name}
-Email: ${formData.get("email") || ""}
-WhatsApp: ${whatsapp}
-Service Needed: ${service}
-Budget: ${formData.get("budget") || ""}
-Message: ${formData.get("message") || ""}`;
-    window.location.href = whatsappLink(whatsappNowNumber, message);
-  };
   const toggleBannerSound = () => {
     const video = bannerVideoRef.current;
     if (!video) {
@@ -446,7 +419,11 @@ Message: ${formData.get("message") || ""}`;
                   key={project.title}
                   project={project}
                   index={index}
-                  onOpenCaseStudy={() => setSelectedProject(project)}
+                  onOpenCaseStudy={() => {
+                    trackEvent("portfolio_project_view", { project: project.slug });
+                    window.dispatchEvent(new CustomEvent("ppr:portfolio-project-view"));
+                    setSelectedProject(project);
+                  }}
                 />
               ))}
             </motion.div>
@@ -797,53 +774,9 @@ Please send me a proposal.`
             </Reveal>
 
             <Reveal>
-              <form className="rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field id="name" label="Name" placeholder="Your name" required />
-                  <Field id="email" label="Email" type="email" placeholder="you@example.com" />
-                  <Field
-                    id="whatsapp"
-                    label="WhatsApp Number"
-                    type="tel"
-                    placeholder="+91 98765 43210"
-                    required
-                  />
-                  <Select id="service" label="Service Needed" options={fieldOptions.services} required />
-                  <Select id="budget" label="Budget" options={fieldOptions.budgets} />
-                  <div className="md:col-span-2">
-                    <label
-                      htmlFor="message"
-                      className="mb-2 block text-sm font-semibold text-white/78"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      placeholder="Tell us what you want to build..."
-                      className="w-full resize-y rounded-md bg-black/34 px-4 py-3 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow placeholder:text-white/34 focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
-                    />
-                  </div>
-                </div>
-                {formError ? (
-                  <p className="mt-4 rounded-md bg-acid/12 px-4 py-3 text-sm font-semibold text-acid">
-                    {formError}
-                  </p>
-                ) : (
-                  <p className="mt-4 text-sm text-white/44">
-                    This sends your enquiry directly on WhatsApp with the selected details.
-                  </p>
-                )}
-                <button
-                  type="button"
-                  onClick={handleContactEnquiry}
-                  className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-acid px-6 py-3 text-sm font-bold uppercase tracking-[0.16em] text-ink outline-none transition-transform hover:scale-[1.01] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:w-auto"
-                >
-                  <Send className="mr-2" size={17} aria-hidden="true" />
-                  Send Enquiry
-                </button>
-              </form>
+              <div className="rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+                <LeadCaptureForm source="homepage_contact" />
+              </div>
             </Reveal>
           </div>
           <Reveal className="mx-auto mt-10 max-w-7xl overflow-hidden rounded-lg bg-white/[0.055] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
@@ -919,27 +852,37 @@ Please send me a proposal.`
             </div>
           </div>
           <div className="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-6">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
-              Popular Kolkata service links
-            </p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {footerServiceLinks.map((slug) => {
-                const service = servicePages.find((item) => item.slug === slug);
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+                  Popular Kolkata service links
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {footerServiceLinks.map((slug) => {
+                    const service = servicePages.find((item) => item.slug === slug);
 
-                if (!service) {
-                  return null;
-                }
+                    if (!service) {
+                      return null;
+                    }
 
-                return (
-                  <Link
-                    key={service.slug}
-                    href={`/services/${service.slug}`}
-                    className="rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-white/62 transition-colors hover:border-acid hover:text-acid"
-                  >
-                    {service.shortName}
-                  </Link>
-                );
-              })}
+                    return (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-white/62 transition-colors hover:border-acid hover:text-acid"
+                      >
+                        {service.shortName}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="rounded-lg bg-white/[0.045] p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]">
+                <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-acid">
+                  Quick enquiry
+                </p>
+                <LeadCaptureForm variant="compact" source="footer_enquiry" />
+              </div>
             </div>
           </div>
         </footer>
@@ -1431,71 +1374,5 @@ Please guide me with the next step.`;
         </div>
       </div>
     </section>
-  );
-}
-
-function Field({
-  id,
-  label,
-  type = "text",
-  placeholder,
-  required = false
-}: {
-  id: string;
-  label: string;
-  type?: string;
-  placeholder: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label htmlFor={id} className="mb-2 block text-sm font-semibold text-white/78">
-        {label}
-      </label>
-      <input
-        id={id}
-        name={id}
-        type={type}
-        placeholder={placeholder}
-        required={required}
-        className="h-12 w-full rounded-md bg-black/34 px-4 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow placeholder:text-white/34 focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
-      />
-    </div>
-  );
-}
-
-function Select({
-  id,
-  label,
-  options,
-  required = false
-}: {
-  id: string;
-  label: string;
-  options: string[];
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label htmlFor={id} className="mb-2 block text-sm font-semibold text-white/78">
-        {label}
-      </label>
-      <select
-        id={id}
-        name={id}
-        required={required}
-        className="h-12 w-full rounded-md bg-black/34 px-4 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
-        defaultValue=""
-      >
-        <option value="" disabled>
-          Select one
-        </option>
-        {options.map((option) => (
-          <option key={option} value={option} className="bg-ink">
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
   );
 }
