@@ -861,49 +861,39 @@ Please send me a proposal.`
               <Link className="mt-3 block leading-7 hover:text-white" href="/privacy-policy">
                 Privacy Policy
               </Link>
-              <Link className="leading-7 hover:text-white" href="/terms">
+              <Link className="block leading-7 hover:text-white" href="/terms">
                 Terms
               </Link>
-              <Link className="leading-7 hover:text-white" href="/contact">
+              <Link className="block leading-7 hover:text-white" href="/contact">
                 Contact Page
               </Link>
-              <Link className="leading-7 hover:text-white" href="/about/patit-roy">
+              <Link className="block leading-7 hover:text-white" href="/about/patit-roy">
                 Founder: Patit Roy
               </Link>
             </div>
           </div>
           <div className="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-6">
-            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-              <div>
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
-                  Popular Kolkata service links
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {footerServiceLinks.map((slug) => {
-                    const service = servicePages.find((item) => item.slug === slug);
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+              Popular Kolkata service links
+            </p>
+            <div className="mt-4 flex max-w-5xl flex-wrap gap-2">
+              {footerServiceLinks.map((slug) => {
+                const service = servicePages.find((item) => item.slug === slug);
 
-                    if (!service) {
-                      return null;
-                    }
+                if (!service) {
+                  return null;
+                }
 
-                    return (
-                      <Link
-                        key={service.slug}
-                        href={`/services/${service.slug}`}
-                        className="rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-white/62 transition-colors hover:border-acid hover:text-acid"
-                      >
-                        {service.shortName}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="rounded-lg bg-white/[0.045] p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]">
-                <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-acid">
-                  Quick enquiry
-                </p>
-                <LeadCaptureForm variant="compact" source="footer_enquiry" />
-              </div>
+                return (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-white/62 transition-colors hover:border-acid hover:text-acid"
+                  >
+                    {service.shortName}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </footer>
