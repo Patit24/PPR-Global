@@ -60,7 +60,15 @@ const footerServiceLinks = [
   "website-for-dentists-kolkata",
   "website-for-interior-designers-kolkata",
   "website-for-gyms-kolkata",
-  "website-for-real-estate-kolkata"
+  "website-for-real-estate-kolkata",
+  "mobile-app-development-kolkata",
+  "ecommerce-development-kolkata",
+  "seo-kolkata",
+  "geo-optimization",
+  "google-ads-kolkata",
+  "meta-ads-kolkata",
+  "healthcare-meta-ads-kolkata",
+  "digital-marketing-kolkata"
 ];
 type Project = (typeof projects)[number];
 

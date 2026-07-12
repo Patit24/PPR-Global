@@ -226,10 +226,10 @@ export const services = [
   { name: "Dynamic Website", slug: "dynamic-website-development-kolkata", icon: Workflow },
   { name: "Website with Admin Panel", slug: "website-with-admin-panel-kolkata", icon: AppWindow },
   { name: "3D Motion Animated Website", slug: "3d-motion-animated-website", icon: Sparkles },
-  { name: "Mobile App Development", slug: "mobile-app-development", icon: Smartphone },
-  { name: "Google Ads", slug: "google-ads-management-kolkata", icon: Megaphone },
-  { name: "Meta Ads", slug: "meta-ads-management-kolkata", icon: ChartNoAxesCombined },
-  { name: "SEO / GEO", slug: "seo-geo-services-kolkata", icon: Search },
+  { name: "Mobile App Development", slug: "mobile-app-development-kolkata", icon: Smartphone },
+  { name: "Google Ads", slug: "google-ads-kolkata", icon: Megaphone },
+  { name: "Meta Ads", slug: "meta-ads-kolkata", icon: ChartNoAxesCombined },
+  { name: "SEO / GEO", slug: "seo-kolkata", icon: Search },
   { name: "UI/UX Design", slug: "ui-ux-design-kolkata", icon: Palette },
   { name: "WhatsApp Automation", slug: "whatsapp-automation-kolkata", icon: Bot },
   { name: "CRM Dashboard", slug: "crm-kolkata", icon: Layers3 }
@@ -501,23 +501,23 @@ export const servicePages = [
     relatedProjectSlug: "whatsapp-automation-crm"
   },
   {
-    slug: "mobile-app-development",
-    name: "Mobile App Development",
+    slug: "mobile-app-development-kolkata",
+    name: "Mobile App Development Company in Kolkata",
     shortName: "Mobile Apps",
     description:
-      "Launch user-friendly mobile apps with clean UX, scalable architecture, API integrations, and product-ready screens.",
+      "Mobile app development company in Kolkata building clean iOS, Android, and MVP products with UX planning, APIs, dashboards, and launch support.",
     price: "Starts from ₹14,999",
     highlights: ["iOS and Android planning", "UX flows", "API integrations", "Launch support"],
     keywords: [
+      "mobile app development company kolkata",
       "mobile app development Kolkata",
       "app developer West Bengal",
-      "affordable mobile app development India",
-      "React Native app development"
+      "affordable mobile app development India"
     ],
     body: [
-      "PPR Global helps founders and business owners turn app ideas into practical mobile products. The process starts with the core user flow: what the customer needs to do, what screens are required, what data should be stored, and what integrations are needed for the first usable version.",
+      "PPR Global works as a mobile app development company in Kolkata for founders, local businesses, and service teams that need a practical product instead of only a clickable concept. The process starts with the core user flow: what the customer needs to do, what screens are required, what data should be stored, and what integrations are needed for the first usable version.",
       "App builds can include onboarding, dashboards, booking, payments, user accounts, notifications, admin control, API integrations, and responsive product screens. For early-stage businesses, the focus is usually on launching a clean MVP that feels credible, works reliably, and can be improved after real users begin using it.",
-      "The team supports both app UX planning and development execution. That means the product is not just coded screen by screen; it is shaped around business goals, user clarity, technical scalability, and launch readiness."
+      "The team supports both app UX planning and development execution. That means the product is not just coded screen by screen; it is shaped around business goals, user clarity, technical scalability, and launch readiness for Kolkata, India, and global clients."
     ],
     faqs: [
       {
@@ -534,23 +534,23 @@ export const servicePages = [
     relatedProjectSlug: "mobile-app-development"
   },
   {
-    slug: "seo-geo-services-kolkata",
-    name: "SEO / GEO Services in Kolkata",
-    shortName: "SEO / GEO",
+    slug: "seo-kolkata",
+    name: "SEO Company in Kolkata",
+    shortName: "SEO Kolkata",
     description:
-      "Improve local discovery with technical SEO, service pages, local keyword targeting, and AI-search-ready content structure.",
+      "SEO company in Kolkata helping businesses improve technical SEO, local service pages, schema, internal links, and search-intent content.",
     price: "Custom quote",
     highlights: ["Local SEO", "Service page strategy", "Schema setup", "Search-intent content"],
     keywords: [
+      "seo company kolkata",
       "SEO services Kolkata",
       "local SEO West Bengal",
-      "GEO services India",
       "AI search optimization Kolkata"
     ],
     body: [
-      "PPR Global provides SEO and GEO support for businesses that want to be found by people searching for real services, not just brand names. The work focuses on technical cleanup, metadata, service pages, structured data, local intent keywords, internal linking, and content that answers buyer questions clearly.",
-      "For Kolkata businesses, local SEO usually starts with service-area language, consistent contact details, Google Business Profile readiness, location-focused pages, and case studies that show relevant proof. GEO adds another layer: formatting information so AI search engines and answer systems can understand the business, services, location, pricing, and credibility signals.",
-      "This service pairs well with website redesigns, new service pages, landing pages, and content planning. The aim is to build a search foundation that can compound over time instead of relying only on paid ads."
+      "PPR Global is an SEO company in Kolkata for businesses that want to be found by people searching for real services, not just brand names. The work focuses on technical cleanup, metadata, service pages, structured data, local intent keywords, internal linking, and content that answers buyer questions clearly.",
+      "For Kolkata businesses, local SEO usually starts with service-area language, consistent contact details, Google Business Profile readiness, location-focused pages, and case studies that show relevant proof. The same foundation also helps AI search systems understand business services, pricing signals, location, and credibility.",
+      "This service pairs well with website redesigns, new landing pages, Google Business Profile work, and content planning. The aim is to build a search foundation that can compound over time instead of relying only on paid ads."
     ],
     faqs: [
       {
@@ -559,45 +559,243 @@ export const servicePages = [
           "Yes. PPR Global can improve location signals, service pages, metadata, schema, and content structure for Kolkata and West Bengal searches."
       },
       {
-        question: "What is GEO?",
+        question: "How long does SEO take?",
         answer:
-          "GEO means generative engine optimization: structuring content so AI search tools can understand and cite the business accurately."
+          "Technical fixes can be completed quickly, but ranking improvements usually need consistent pages, content, reviews, links, and Google Business Profile activity over time."
       }
     ],
     relatedProjectSlug: "dr-shaheen-dental-clinic"
   },
   {
-    slug: "google-meta-ads-kolkata",
-    name: "Google Ads & Meta Ads for Kolkata Businesses",
-    shortName: "Ads Management",
+    slug: "geo-optimization",
+    name: "Generative Engine Optimization India",
+    shortName: "GEO Optimization",
     description:
-      "Build paid ad funnels for service businesses with landing pages, WhatsApp leads, tracking, and campaign optimization.",
+      "Generative Engine Optimization India service for businesses that want clearer visibility in AI answers, search summaries, and entity-based discovery.",
     price: "Custom quote",
-    highlights: ["Google Ads", "Meta Ads", "Landing pages", "WhatsApp lead capture"],
+    highlights: ["AI-search-ready pages", "Entity signals", "FAQ structure", "Schema markup"],
     keywords: [
-      "Google Ads agency Kolkata",
-      "Meta Ads management Kolkata",
-      "WhatsApp lead ads India",
-      "paid ads for small business Kolkata"
+      "generative engine optimization india",
+      "GEO services India",
+      "AI search optimization India",
+      "answer engine optimization India"
     ],
     body: [
-      "PPR Global builds paid ad funnels for businesses that want enquiries, bookings, calls, or WhatsApp conversations. The work can include Google Search campaigns, Meta Ads, landing page structure, lead forms, click-to-WhatsApp flows, tracking setup, and ongoing creative or campaign adjustments.",
-      "Good ad performance depends on more than launching a campaign. The offer, page speed, landing page copy, trust sections, service area, budget, lead quality, and follow-up process all affect results. PPR Global connects these pieces so ad spend has a clearer path to enquiries.",
-      "This is a practical fit for clinics, interiors, gyms, restaurants, real estate, local services, and agencies that need a focused lead-generation setup without building a large marketing team."
+      "Generative Engine Optimization India is for businesses that want their website to be easier for AI search tools, answer engines, and modern search summaries to understand. PPR Global structures pages so services, location, pricing context, proof, FAQs, and brand details are clear instead of buried in vague marketing copy.",
+      "A GEO setup can include entity-focused service pages, schema markup, FAQ blocks, short answer sections, internal links, consistent business details, author and founder signals, and clean metadata. This helps AI systems interpret what the business does, who it serves, and why it may be relevant for a specific search.",
+      "GEO does not replace SEO. It works best when technical SEO, local SEO, useful content, Google Business Profile signals, and real case studies are already being improved together. PPR Global uses GEO as part of a practical search visibility plan for Indian service businesses."
     ],
     faqs: [
       {
-        question: "Can ads send leads directly to WhatsApp?",
+        question: "Is GEO different from SEO?",
         answer:
-          "Yes. Campaigns can use WhatsApp click-to-chat, landing page buttons, or forms that pass enquiry details into WhatsApp."
+          "Yes. SEO focuses on traditional search visibility, while GEO improves how clearly AI answer systems can understand and summarize the business."
       },
       {
-        question: "Do I need a landing page before running ads?",
+        question: "Does GEO need new pages?",
         answer:
-          "A focused landing page is strongly recommended because it improves clarity, tracking, trust, and conversion quality."
+          "Often yes. Dedicated service pages, FAQs, schema, and clear entity information make the website easier for AI and search systems to parse."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm"
+  },
+  {
+    slug: "digital-marketing-kolkata",
+    name: "Affordable Digital Marketing Agency in Kolkata",
+    shortName: "Digital Marketing",
+    description:
+      "Affordable digital marketing agency in Kolkata helping small businesses with SEO, Google Ads, Meta Ads, landing pages, and WhatsApp lead funnels.",
+    price: "Custom quote",
+    highlights: ["SEO planning", "Google and Meta campaigns", "Landing pages", "WhatsApp lead capture"],
+    keywords: [
+      "affordable digital marketing agency kolkata",
+      "digital marketing agency Kolkata",
+      "small business marketing Kolkata",
+      "lead generation agency Kolkata"
+    ],
+    body: [
+      "PPR Global is an affordable digital marketing agency in Kolkata for small businesses that need enquiries, calls, WhatsApp leads, and a clearer online presence without a heavy agency process. The focus is on practical channels that connect directly to revenue conversations: SEO pages, Google Ads, Meta Ads, landing pages, forms, and WhatsApp click-to-chat flows.",
+      "A typical campaign starts by understanding the business type, offer, location, budget, and follow-up process. From there, PPR Global can improve the website journey, create campaign-specific landing pages, set up tracking, structure ad funnels, and connect leads into WhatsApp or a CRM dashboard.",
+      "This service fits clinics, interiors, gyms, restaurants, real estate teams, education businesses, local services, and new agencies. The goal is not noise or vanity traffic; it is a cleaner path from discovery to enquiry to follow-up."
+    ],
+    faqs: [
+      {
+        question: "Can digital marketing include both SEO and ads?",
+        answer:
+          "Yes. PPR Global can combine SEO service pages, Google Ads, Meta Ads, landing pages, and WhatsApp lead capture depending on the business goal."
+      },
+      {
+        question: "Is this suitable for a small budget?",
+        answer:
+          "Yes. The plan can start with the highest-impact pages or campaigns first, then expand once lead quality and follow-up are clearer."
       }
     ],
     relatedProjectSlug: "interior-amit"
+  },
+  {
+    slug: "google-ads-kolkata",
+    name: "Google Ads Agency in Kolkata",
+    shortName: "Google Ads",
+    description:
+      "Google Ads agency in Kolkata creating search campaigns, landing pages, conversion tracking, and WhatsApp-ready lead funnels.",
+    price: "Custom quote",
+    highlights: ["Search campaigns", "Landing page copy", "Conversion tracking", "Lead quality review"],
+    keywords: [
+      "google ads agency kolkata",
+      "Google Ads management Kolkata",
+      "Google Search ads Kolkata",
+      "paid search agency Kolkata"
+    ],
+    body: [
+      "PPR Global works as a Google Ads agency in Kolkata for businesses that need high-intent enquiries from people already searching for a service. Campaigns can be planned around service keywords, location terms, budget limits, landing page relevance, and the follow-up workflow after a lead arrives.",
+      "The setup can include keyword research, ad groups, search copy, negative keywords, landing page recommendations, conversion tracking, call or WhatsApp actions, and basic reporting. The campaign is designed around the buyer journey, not only clicks.",
+      "Google Ads works best when the website or landing page clearly explains the offer, proof, pricing context, location, and contact action. PPR Global can improve those pieces together so campaign traffic has a stronger chance of turning into real enquiries."
+    ],
+    faqs: [
+      {
+        question: "Can Google Ads leads go to WhatsApp?",
+        answer:
+          "Yes. Campaign landing pages can include WhatsApp buttons, call buttons, and structured forms that help the team respond faster."
+      },
+      {
+        question: "Do I need a landing page for Google Ads?",
+        answer:
+          "A focused landing page is recommended because it improves message match, trust, conversion tracking, and lead quality."
+      }
+    ],
+    relatedProjectSlug: "dr-shaheen-dental-clinic"
+  },
+  {
+    slug: "meta-ads-kolkata",
+    name: "Meta Ads Agency in Kolkata",
+    shortName: "Meta Ads",
+    description:
+      "Meta Ads agency in Kolkata building Facebook and Instagram lead funnels with creative direction, landing pages, and WhatsApp follow-up.",
+    price: "Custom quote",
+    highlights: ["Facebook ads", "Instagram ads", "Creative testing", "WhatsApp follow-up"],
+    keywords: [
+      "meta ads agency kolkata",
+      "Facebook ads agency Kolkata",
+      "Instagram ads management Kolkata",
+      "Meta lead ads Kolkata"
+    ],
+    body: [
+      "PPR Global is a Meta Ads agency in Kolkata for businesses that want to generate awareness, enquiries, and WhatsApp conversations through Facebook and Instagram. The work can include campaign structure, creative angles, offer messaging, lead forms, landing pages, and follow-up flows.",
+      "Meta campaigns are strongest when the creative, audience, offer, page, and response process are aligned. PPR Global can help plan the ad journey from first impression to enquiry, then connect the lead into WhatsApp or a CRM so the team can respond quickly.",
+      "This is useful for local services, clinics, interiors, gyms, restaurants, real estate, education, events, and product-based businesses. Campaigns can start focused, then expand after the best offers and lead sources become clear."
+    ],
+    faqs: [
+      {
+        question: "Can Meta Ads collect leads without a website?",
+        answer:
+          "Yes, lead forms and WhatsApp campaigns can work without a full website, but a landing page often improves trust and qualification."
+      },
+      {
+        question: "Can you help with ad creatives?",
+        answer:
+          "Yes. PPR Global can help shape creative direction, hooks, landing page copy, and campaign messaging for service businesses."
+      }
+    ],
+    relatedProjectSlug: "interior-amit"
+  },
+  {
+    slug: "healthcare-meta-ads-kolkata",
+    name: "Healthcare Meta Ads Agency in Kolkata",
+    shortName: "Healthcare Meta Ads",
+    description:
+      "Healthcare Meta Ads agency in Kolkata helping clinics and medical service providers build compliant, trust-led Facebook and Instagram lead funnels.",
+    price: "Custom quote",
+    highlights: ["Clinic lead funnels", "Appointment CTAs", "Trust-led landing pages", "WhatsApp follow-up"],
+    keywords: [
+      "healthcare meta ads agency kolkata",
+      "medical meta ads agency kolkata",
+      "clinic Facebook ads Kolkata",
+      "dental clinic Meta Ads Kolkata"
+    ],
+    body: [
+      "PPR Global supports healthcare Meta Ads in Kolkata for clinics, dentists, wellness providers, and medical service businesses that need clearer appointment enquiries from Facebook and Instagram. The work focuses on trust-led messaging, service clarity, appointment actions, and a follow-up process that helps the clinic respond quickly.",
+      "Healthcare advertising needs more care than generic lead generation. Campaigns should avoid exaggerated promises, use responsible wording, explain services clearly, and guide people toward a booking or consultation request. PPR Global can connect ads with landing pages, WhatsApp, call buttons, and enquiry forms.",
+      "This service is suitable for dental clinics, diagnostic services, wellness clinics, physiotherapy, aesthetics, and other appointment-based healthcare businesses. The goal is a clean patient journey from ad to service information to enquiry."
+    ],
+    faqs: [
+      {
+        question: "Can healthcare ads connect to appointment booking?",
+        answer:
+          "Yes. Ads can lead to WhatsApp, phone calls, lead forms, or a landing page with appointment-focused CTAs."
+      },
+      {
+        question: "Do healthcare ads need careful wording?",
+        answer:
+          "Yes. Medical and clinic campaigns should use responsible, clear copy and avoid unrealistic claims."
+      }
+    ],
+    relatedProjectSlug: "dr-shaheen-dental-clinic"
+  },
+  {
+    slug: "ui-ux-design-kolkata",
+    name: "UI UX Design Agency in Kolkata",
+    shortName: "UI/UX Design",
+    description:
+      "UI UX design agency in Kolkata designing websites, apps, dashboards, landing pages, and conversion-focused digital product interfaces.",
+    price: "Custom quote",
+    highlights: ["Website UI", "Mobile app UX", "Dashboard design", "Conversion-focused flows"],
+    keywords: [
+      "ui ux design agency kolkata",
+      "UI UX designer Kolkata",
+      "app UI design Kolkata",
+      "website UI design agency Kolkata"
+    ],
+    body: [
+      "PPR Global is a UI UX design agency in Kolkata for businesses that need interfaces people can understand quickly and use confidently. The work covers website UI, mobile app screens, dashboards, landing pages, admin panels, CRM systems, and conversion-focused enquiry flows.",
+      "A strong UI/UX process starts with the user action: book, enquire, buy, upload, track, approve, or manage. PPR Global maps that flow first, then designs layouts, navigation, forms, visual hierarchy, mobile behavior, and interaction states around the real task.",
+      "The design style can be minimal, premium, bold, playful, or operational depending on the business. The goal is always the same: make the product easier to trust, easier to use, and easier to launch with clean development."
+    ],
+    faqs: [
+      {
+        question: "Can you design before development?",
+        answer:
+          "Yes. PPR Global can create UI/UX layouts first, then move into development once the screens and flow are approved."
+      },
+      {
+        question: "Do you design dashboards and admin panels?",
+        answer:
+          "Yes. CRM dashboards, admin panels, lead trackers, and business software interfaces are part of the UI/UX service."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm"
+  },
+  {
+    slug: "ecommerce-development-kolkata",
+    name: "Ecommerce Website Development in Kolkata",
+    shortName: "Ecommerce",
+    description:
+      "Ecommerce website development in Kolkata for stores that need product pages, checkout flows, payment setup, order management, and mobile-first shopping.",
+    price: "Custom quote",
+    highlights: ["Product catalog", "Checkout planning", "Payment setup", "Order management"],
+    keywords: [
+      "ecommerce website development kolkata",
+      "online store development Kolkata",
+      "Shopify website Kolkata",
+      "ecommerce developer West Bengal"
+    ],
+    body: [
+      "PPR Global builds ecommerce websites in Kolkata for businesses that want to sell products online with a clean product journey and reliable enquiry or checkout flow. The build can include product categories, product detail pages, cart, payment links or gateways, WhatsApp ordering, delivery information, and basic order management.",
+      "For small businesses, ecommerce does not always need to start as a complicated marketplace. A focused catalog with strong product photos, clear pricing, trust sections, WhatsApp support, and payment readiness can be enough to start selling and learn from real customers.",
+      "The website can later expand into coupons, inventory, customer accounts, analytics, SEO category pages, email or WhatsApp updates, and admin controls. PPR Global keeps the first version practical so the store can launch without unnecessary delay."
+    ],
+    faqs: [
+      {
+        question: "Can ecommerce include WhatsApp ordering?",
+        answer:
+          "Yes. Products can include direct WhatsApp enquiry or ordering buttons, especially for businesses that want to confirm stock before payment."
+      },
+      {
+        question: "Can you add payment gateway integration?",
+        answer:
+          "Yes. Payment links or gateway integrations can be added depending on the store requirements and platform choice."
+      }
+    ],
+    relatedProjectSlug: "mobile-app-development"
   }
 ];
 
@@ -633,6 +831,23 @@ export const resourcePosts = [
     body: [
       "A single homepage can explain a business, but it usually cannot rank well for every service the business offers. Google needs focused URLs that clearly match search intent. A website development page, WhatsApp automation page, SEO page, and app development page can each target a different buyer need.",
       "Good service pages do not need to be huge. They need a clear headline, useful explanation, what is included, proof or related work, FAQs, local context, and a simple enquiry path. That structure helps both visitors and search engines understand the page."
+    ]
+  },
+  {
+    slug: "generative-engine-optimization-india",
+    title: "What Is Generative Engine Optimization for Indian Businesses?",
+    description:
+      "A practical guide to GEO, AI search visibility, structured service pages, schema, FAQs, and local entity signals for Indian businesses.",
+    keywords: [
+      "generative engine optimization india",
+      "GEO services India",
+      "AI search optimization India",
+      "answer engine optimization"
+    ],
+    body: [
+      "Generative Engine Optimization helps AI search systems understand a business clearly enough to summarize it, compare it, and connect it to relevant service searches. For Indian businesses, that means clear service pages, consistent location details, real case studies, FAQ answers, schema markup, and content that explains who the service is for.",
+      "GEO is strongest when it sits on top of good SEO. A website still needs fast pages, helpful titles, internal links, local keywords, Google Business Profile signals, and useful body copy. The extra GEO layer makes the information easier for answer engines to parse: services, prices, coverage area, process, proof, and contact options.",
+      "A practical first step is to turn thin service pages into focused pages of 150-300 words or more, add FAQ schema, link related case studies, and keep the brand entity consistent across the site, Google Business Profile, maps, social profiles, and directories."
     ]
   }
 ];

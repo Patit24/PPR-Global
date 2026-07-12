@@ -16,6 +16,31 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: "/services/mobile-app-development",
+        destination: "/services/mobile-app-development-kolkata",
+        permanent: true
+      },
+      {
+        source: "/services/google-ads-management-kolkata",
+        destination: "/services/google-ads-kolkata",
+        permanent: true
+      },
+      {
+        source: "/services/meta-ads-management-kolkata",
+        destination: "/services/meta-ads-kolkata",
+        permanent: true
+      },
+      {
+        source: "/services/seo-geo-services-kolkata",
+        destination: "/services/seo-kolkata",
+        permanent: true
+      },
+      {
+        source: "/services/google-meta-ads-kolkata",
+        destination: "/services/digital-marketing-kolkata",
+        permanent: true
+      },
+      {
         source: "/privacy",
         destination: "/privacy-policy",
         permanent: true
