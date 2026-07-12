@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { business } from "@/lib/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://www.pprglobal.online/sitemap.xml",
-    host: "https://www.pprglobal.online"
+    sitemap: `${business.url}/sitemap.xml`,
+    host: business.url
   };
 }

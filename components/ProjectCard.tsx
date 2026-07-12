@@ -42,7 +42,7 @@ export function ProjectCard({
           onOpenCaseStudy();
         }
       }}
-      className={`group relative w-[82vw] shrink-0 overflow-hidden rounded-lg bg-white/[0.045] outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink md:w-[380px] lg:w-[405px] xl:w-[430px] ${
+      className={`group relative w-[78vw] shrink-0 overflow-hidden rounded-lg bg-white/[0.045] outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:w-[72vw] md:w-[380px] lg:w-[405px] xl:w-[430px] ${
         onOpenCaseStudy ? "cursor-pointer" : ""
       }`}
       initial={shouldReduceMotion ? false : { opacity: 0, y: 24, filter: "blur(6px)" }}
@@ -71,7 +71,7 @@ export function ProjectCard({
               src={project.imageSrc}
               alt={imageAlt}
               fill
-              sizes="(min-width: 1280px) 430px, (min-width: 1024px) 405px, (min-width: 768px) 380px, 82vw"
+              sizes="(min-width: 1280px) 430px, (min-width: 1024px) 405px, (min-width: 768px) 380px, 78vw"
               className={
                 hasContainedImage ? "object-contain p-2 opacity-100 md:p-3" : "object-cover opacity-90"
               }

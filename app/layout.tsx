@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { LeadSystem } from "@/components/leads/LeadSystem";
+import { business } from "@/lib/business";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,10 +17,27 @@ const space = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.pprglobal.online"),
-  title: "PPR Global | Website & App Development Agency in Kolkata",
-  description:
-    "PPR Global builds websites, mobile apps, WhatsApp automation and CRM systems for Kolkata businesses. Fast delivery, transparent pricing from ₹6,000. Get a free quote.",
+  metadataBase: new URL(business.url),
+  applicationName: business.name,
+  title: {
+    default: business.defaultMetadata.title,
+    template: "%s | PPR Global"
+  },
+  description: business.defaultMetadata.description,
+  authors: [{ name: business.founder, url: `${business.url}/about/patit-roy` }],
+  creator: business.founder,
+  publisher: business.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
+  },
   keywords: [
     "Patit Roy",
     "PPR Global",
@@ -33,11 +51,11 @@ export const metadata: Metadata = {
     "SEO GEO Kolkata"
   ],
   openGraph: {
-    title: "PPR Global | Website & App Development Agency in Kolkata",
-    description:
-      "PPR Global crafts modern websites, apps, automation systems, ads funnels and scalable digital experiences for Kolkata and global clients.",
-    url: "https://www.pprglobal.online",
-    siteName: "PPR Global",
+    title: business.defaultMetadata.title,
+    description: business.defaultMetadata.description,
+    url: business.url,
+    siteName: business.name,
+    locale: "en_IN",
     images: [
       {
         url: "/opengraph-image",
@@ -50,9 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PPR Global | Website & App Development Agency in Kolkata",
-    description:
-      "Affordable, modern, fast-delivery websites, apps, automation, ads funnels, SEO/GEO and CRM systems in Kolkata.",
+    title: business.defaultMetadata.title,
+    description: business.defaultMetadata.description,
     images: ["/opengraph-image"]
   },
   alternates: {
@@ -75,26 +92,18 @@ export default function RootLayout({
       {
         "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://www.pprglobal.online/#localbusiness",
-        name: "PPR Global",
+        name: business.name,
+        description: business.description,
         founder: {
           "@type": "Person",
-          name: "Patit Roy"
+          "@id": "https://www.pprglobal.online/#founder",
+          name: business.founder
         },
-        url: "https://www.pprglobal.online",
-        image: "https://www.pprglobal.online/opengraph-image",
+        url: business.url,
+        image: business.primaryImage,
         telephone: "+91-9609079663",
-        priceRange: "₹₹",
-        serviceType: [
-          "Website Development",
-          "Mobile App Development",
-          "WhatsApp Automation",
-          "CRM Systems",
-          "Google Ads",
-          "Meta Ads",
-          "SEO",
-          "UI/UX Design",
-          "Lead Management"
-        ],
+        priceRange: business.priceRange,
+        serviceType: [...business.services],
         areaServed: [
           { "@type": "City", name: "Kolkata" },
           { "@type": "AdministrativeArea", name: "West Bengal" },
@@ -102,10 +111,13 @@ export default function RootLayout({
         ],
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Kolkata",
-          addressRegion: "West Bengal",
-          addressCountry: "IN"
+          streetAddress: business.address.streetAddress,
+          addressLocality: business.address.addressLocality,
+          addressRegion: business.address.addressRegion,
+          postalCode: business.address.postalCode,
+          addressCountry: business.address.addressCountry
         },
+        hasMap: business.googleBusinessProfileUrl,
         makesOffer: [
           "Website development",
           "Mobile app development",
@@ -123,11 +135,24 @@ export default function RootLayout({
         }))
       },
       {
+        "@type": "Person",
+        "@id": "https://www.pprglobal.online/#founder",
+        name: business.founder,
+        jobTitle: "Founder",
+        worksFor: {
+          "@id": "https://www.pprglobal.online/#organization"
+        }
+      },
+      {
         "@type": "Organization",
         "@id": "https://www.pprglobal.online/#organization",
-        name: "PPR Global",
-        url: "https://www.pprglobal.online",
-        founder: "Patit Roy",
+        name: business.name,
+        url: business.url,
+        logo: business.logo,
+        founder: {
+          "@id": "https://www.pprglobal.online/#founder"
+        },
+        sameAs: [business.googleBusinessProfileUrl],
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+91-9609079663",
@@ -138,8 +163,8 @@ export default function RootLayout({
       {
         "@type": "WebSite",
         "@id": "https://www.pprglobal.online/#website",
-        name: "PPR Global",
-        url: "https://www.pprglobal.online",
+        name: business.name,
+        url: business.url,
         publisher: {
           "@id": "https://www.pprglobal.online/#organization"
         }

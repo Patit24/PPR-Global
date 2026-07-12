@@ -27,7 +27,7 @@ export function ContactWidgets() {
           <CalendarDays size={22} aria-hidden="true" />
         </a>
       </div>
-      <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-white/10 bg-black/88 text-xs font-black uppercase tracking-[0.13em] text-white backdrop-blur-xl md:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-white/10 bg-black/88 pb-[env(safe-area-inset-bottom)] text-xs font-black uppercase tracking-[0.13em] text-white backdrop-blur-xl md:hidden">
         <a
           href={`/api/whatsapp?message=${encodeURIComponent(defaultWhatsAppMessage)}`}
           onClick={() => trackEvent("whatsapp_click", { source: "mobile_bar" })}
@@ -48,4 +48,3 @@ export function ContactWidgets() {
     </>
   );
 }
-

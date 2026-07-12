@@ -14,6 +14,11 @@ const nextConfig = {
         source: "/services/crm-dashboard-development",
         destination: "/services/crm-kolkata",
         permanent: true
+      },
+      {
+        source: "/privacy",
+        destination: "/privacy-policy",
+        permanent: true
       }
     ];
   }

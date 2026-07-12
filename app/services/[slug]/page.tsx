@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
+import { business } from "@/lib/business";
 import { projects, servicePages, services } from "@/lib/content";
 
-const baseUrl = "https://www.pprglobal.online";
+const baseUrl = business.url;
 
 function getService(slug: string) {
   const detailed = servicePages.find((service) => service.slug === slug);
@@ -115,10 +116,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": `${baseUrl}/services/${service.slug}#webpage`,
+        name: service.name,
+        description: service.description,
+        isPartOf: {
+          "@id": `${baseUrl}/#website`
+        },
+        about: {
+          "@id": `${baseUrl}/services/${service.slug}#service`
+        }
+      },
+      {
         "@type": "Service",
         "@id": `${baseUrl}/services/${service.slug}#service`,
         name: service.name,
         description: service.description,
+        serviceType: service.shortName,
+        url: `${baseUrl}/services/${service.slug}`,
         provider: {
           "@id": `${baseUrl}/#localbusiness`
         },
@@ -133,6 +148,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               : undefined,
           availability: "https://schema.org/InStock"
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Services", item: `${baseUrl}/#services` },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.name,
+            item: `${baseUrl}/services/${service.slug}`
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -176,6 +204,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           >
             Back to services <ArrowUpRight size={15} />
           </Link>
+          <nav aria-label="Breadcrumb" className="mt-8 text-sm text-white/45">
+            <ol className="flex flex-wrap gap-2">
+              <li><Link href="/" className="hover:text-acid">Home</Link></li>
+              <li>/</li>
+              <li><Link href="/#services" className="hover:text-acid">Services</Link></li>
+              <li>/</li>
+              <li className="text-white/70">{service.name}</li>
+            </ol>
+          </nav>
           <p className="mt-12 font-display text-sm font-black uppercase tracking-[0.22em] text-acid">
             PPR Global / Kolkata Service
           </p>
@@ -243,9 +280,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
                   Service area
                 </p>
-                <p className="mt-3 text-sm leading-6 text-white/66">
-                  Kolkata, West Bengal, India, with remote delivery for clients worldwide.
-                </p>
+              <p className="mt-3 text-sm leading-6 text-white/66">
+                  Provider: {business.shortDescription} Service area: Kolkata, West Bengal,
+                  India, with remote delivery for clients worldwide.
+              </p>
               </div>
             </div>
           </div>

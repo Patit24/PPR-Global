@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Check } from "lucide-react";
+import { business } from "@/lib/business";
 import { projects } from "@/lib/content";
 
-const baseUrl = "https://www.pprglobal.online";
+const baseUrl = business.url;
 
 function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);
@@ -93,10 +94,16 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         name: project.title,
         description: caseStudy.summary,
         creator: {
+          "@id": `${baseUrl}/#founder`
+        },
+        publisher: {
           "@id": `${baseUrl}/#organization`
         },
         about: project.tags,
         dateCreated: project.year,
+        datePublished: "2026-07-08",
+        dateModified: "2026-07-12",
+        image: mainImageSrc ? `${baseUrl}${mainImageSrc}` : business.primaryImage,
         url: `${baseUrl}/case-studies/${project.slug}`
       },
       {
@@ -107,6 +114,19 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         isPartOf: {
           "@id": `${baseUrl}/#website`
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Work", item: `${baseUrl}/#work` },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: project.title,
+            item: `${baseUrl}/case-studies/${project.slug}`
+          }
+        ]
       }
     ]
   };
@@ -134,6 +154,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           >
             Back to work <ArrowUpRight size={15} />
           </Link>
+          <nav aria-label="Breadcrumb" className="mt-8 text-sm text-white/45">
+            <ol className="flex flex-wrap gap-2">
+              <li><Link href="/" className="hover:text-acid">Home</Link></li>
+              <li>/</li>
+              <li><Link href="/#work" className="hover:text-acid">Work</Link></li>
+              <li>/</li>
+              <li className="text-white/70">{project.title}</li>
+            </ol>
+          </nav>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
             <aside className="lg:sticky lg:top-28">

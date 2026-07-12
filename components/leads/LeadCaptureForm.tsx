@@ -5,6 +5,7 @@ import type { ReactElement } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowUpRight, Check, Loader2, MessageCircle, Send } from "lucide-react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import type { LeadSubmissionInput } from "@/lib/lead/schema";
 import { budgetOptions, leadSubmissionSchema, serviceOptions } from "@/lib/lead/schema";
@@ -206,7 +207,11 @@ export function LeadCaptureForm({
         />
         <span>
           I consent to PPR Global storing and contacting me about this enquiry. We only collect
-          contact details you submit explicitly.
+          contact details you submit explicitly. Read the{" "}
+          <Link href="/privacy-policy" className="font-semibold text-acid underline">
+            privacy policy
+          </Link>
+          .
         </span>
       </label>
       {errors.consent?.message ? (

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { business } from "@/lib/business";
 import { resourcePosts } from "@/lib/content";
 
-const baseUrl = "https://www.pprglobal.online";
+const baseUrl = business.url;
 
 function getPost(slug: string) {
   return resourcePosts.find((post) => post.slug === slug);
@@ -67,16 +68,36 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    author: {
-      "@id": `${baseUrl}/#organization`
-    },
-    publisher: {
-      "@id": `${baseUrl}/#organization`
-    },
-    mainEntityOfPage: `${baseUrl}/resources/${post.slug}`
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${baseUrl}/resources/${post.slug}#article`,
+        headline: post.title,
+        description: post.description,
+        author: {
+          "@id": `${baseUrl}/#founder`
+        },
+        publisher: {
+          "@id": `${baseUrl}/#organization`
+        },
+        datePublished: "2026-07-08",
+        dateModified: "2026-07-12",
+        mainEntityOfPage: `${baseUrl}/resources/${post.slug}`
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Resources", item: `${baseUrl}/#resources` },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: `${baseUrl}/resources/${post.slug}`
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -110,10 +131,31 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           </h1>
           <p className="mt-7 text-xl leading-9 text-white/70">{post.description}</p>
           <div className="mt-10 space-y-6 rounded-lg bg-white/[0.055] p-6 text-lg leading-9 text-white/74 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+            <p className="rounded-md bg-acid/10 p-4 text-base leading-7 text-white/78">
+              Direct answer: {post.description}
+            </p>
             {post.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          <aside className="mt-8 rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+              Author
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold">{business.founder}</h2>
+            <p className="mt-3 text-sm leading-6 text-white/62">
+              Patit Roy is the founder of PPR Global, a website, app and automation agency in
+              Kolkata. This resource is based on practical project planning across websites,
+              WhatsApp automation, CRM systems, ads and SEO/GEO work.
+            </p>
+            <Link
+              href="/about/patit-roy"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid"
+            >
+              View founder profile <ArrowUpRight size={15} />
+            </Link>
+          </aside>
+          <p className="mt-5 text-sm text-white/42">Published: July 8, 2026 · Updated: July 12, 2026</p>
           <Link
             href="/#contact"
             className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-acid px-5 text-sm font-black uppercase tracking-[0.16em] text-ink"

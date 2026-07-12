@@ -66,3 +66,20 @@ Login with the Supabase Auth user created for the admin team. The dashboard supp
 2. Deploy from GitHub.
 3. Test the live popup, contact form, floating WhatsApp button, and `/admin/leads`.
 
+## 9. Optional IndexNow
+
+Add:
+
+- `INDEXNOW_KEY`
+- `INDEXNOW_SUBMIT_SECRET`
+
+Then submit changed canonical URLs manually:
+
+```bash
+curl -X POST "https://www.pprglobal.online/api/indexnow" \
+  -H "authorization: Bearer YOUR_INDEXNOW_SUBMIT_SECRET" \
+  -H "content-type: application/json" \
+  -d '{"urls":["https://www.pprglobal.online/"]}'
+```
+
+IndexNow can notify supported search engines about changed URLs, but it does not guarantee indexing.

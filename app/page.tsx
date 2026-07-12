@@ -35,6 +35,7 @@ import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
+import { business } from "@/lib/business";
 import {
   navItems,
   pricing,
@@ -49,8 +50,8 @@ import { trackEvent } from "@/lib/lead/analytics";
 const marquee = "WEBSITES • APPS • ADS • SEO • AUTOMATION • CRM • UI/UX • ";
 const whatsappNowNumber = "919609079663";
 const bookCallNumber = "919734019005";
-const googleMapsListingLink = "";
-const googleMapsEmbedSrc = "";
+const googleMapsListingLink = business.googleBusinessProfileUrl;
+const googleMapsEmbedSrc = business.mapsEmbedUrl;
 const footerServiceLinks = [
   "website-development-kolkata",
   "whatsapp-automation-kolkata",
@@ -160,6 +161,12 @@ export default function Home() {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[120] focus:rounded-full focus:bg-acid focus:px-4 focus:py-3 focus:text-sm focus:font-black focus:uppercase focus:tracking-[0.14em] focus:text-ink"
+      >
+        Skip to content
+      </a>
       <CursorGlow />
       <FloatingObjects />
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white/88 px-4 py-4 text-ink backdrop-blur-xl">
@@ -195,7 +202,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <main id="top" className="relative">
+      <main id="main-content" className="relative">
         <section
           className="relative isolate min-h-[calc(100dvh-2rem)] overflow-hidden bg-[#f7f7f1] px-4 pb-5 pt-24 text-ink md:pt-32"
           onMouseMove={(event) => {
@@ -249,12 +256,12 @@ export default function Home() {
                     className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-acid"
                   >
                     <Star size={15} aria-hidden="true" />
-                    4.9 · 25+ Google Reviews · PPR Global, Kolkata
+                    PPR Global on Google Maps · Barasat, Kolkata
                   </a>
                 ) : (
                   <div className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)]">
                     <MapPin size={15} aria-hidden="true" />
-                    Google Business Profile launching soon · PPR Global, Kolkata
+                    PPR Global on Google Maps · Barasat, Kolkata
                   </div>
                 )}
               </div>
@@ -386,14 +393,14 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section id="work" ref={workRef} className="defer-section relative scroll-mt-28 px-4 py-20 md:h-[300vh] md:pb-0 md:pt-16">
+        <section id="work" ref={workRef} className="defer-section relative scroll-mt-28 px-4 pb-28 pt-16 md:h-[300vh] md:pb-0 md:pt-16">
           <div className="mx-auto max-w-7xl md:sticky md:top-20 md:flex md:h-[calc(100dvh-5rem)] md:flex-col md:justify-center md:overflow-hidden md:py-3">
             <Reveal className="mb-8 flex flex-col justify-between gap-5 md:mb-5 md:flex-row md:items-end">
               <div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
                   Featured Work
                 </p>
-                <h2 className="max-w-3xl font-display text-5xl font-semibold leading-none text-white md:max-w-[44rem] md:text-4xl xl:text-5xl">
+                <h2 className="max-w-3xl font-display text-4xl font-semibold leading-[0.98] text-white md:max-w-[44rem] md:text-4xl xl:text-5xl">
                   Website case studies for Kolkata, healthcare, interior, automation, and app projects.
                 </h2>
               </div>
@@ -411,7 +418,7 @@ export default function Home() {
               </div>
             </Reveal>
             <motion.div
-              className="project-track -mx-4 flex gap-5 overflow-x-auto px-4 pb-4 md:mx-0 md:w-max md:overflow-visible md:px-0 md:pb-0 md:pr-[35vw]"
+              className="project-track -mx-4 flex gap-4 overflow-x-auto px-4 pb-28 md:mx-0 md:w-max md:gap-5 md:overflow-visible md:px-0 md:pb-0 md:pr-[35vw]"
               style={{ x: shouldReduceMotion ? undefined : workX, willChange: "transform" }}
             >
               {projects.map((project, index) => (
@@ -683,7 +690,7 @@ Please send me a proposal.`
         <section className="defer-section px-4 py-20">
           <div className="mx-auto max-w-7xl">
             <Reveal className="mb-5 inline-flex min-h-11 items-center rounded-full border border-white/12 bg-white/[0.055] px-4 text-sm font-black uppercase tracking-[0.16em] text-white/74">
-              Founded 2024 · Based in Kolkata, West Bengal
+              Founded 2024 · Based at {business.address.display}
             </Reveal>
           </div>
           <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -786,8 +793,7 @@ Please send me a proposal.`
                   Google Maps
                 </p>
                 <p className="mt-2 text-base leading-7 text-white/66">
-                  PPR Global, Kolkata. The live map embed will appear here once the Google
-                  Business Profile is published.
+                  {business.address.display}
                 </p>
               </div>
               {googleMapsListingLink ? (
@@ -838,17 +844,32 @@ Please send me a proposal.`
             </div>
             <div>
               <p className="font-semibold uppercase tracking-[0.16em] text-acid">Service Area</p>
-              <p className="mt-3 leading-7">Kolkata, West Bengal, India</p>
+              <p className="mt-3 leading-7">{business.address.display}</p>
               <p className="leading-7">Remote projects worldwide</p>
             </div>
             <div>
               <p className="font-semibold uppercase tracking-[0.16em] text-acid">Contact</p>
-              <a className="mt-3 block leading-7 hover:text-white" href="tel:+919609079663">
-                +91 96090 79663
-              </a>
-              <a className="leading-7 hover:text-white" href="tel:+919734019005">
-                +91 97340 19005
-              </a>
+              {business.phoneNumbers.map((phone) => (
+                <a
+                  key={phone.href}
+                  className="mt-3 block leading-7 hover:text-white"
+                  href={phone.href}
+                >
+                  {phone.display}
+                </a>
+              ))}
+              <Link className="mt-3 block leading-7 hover:text-white" href="/privacy-policy">
+                Privacy Policy
+              </Link>
+              <Link className="leading-7 hover:text-white" href="/terms">
+                Terms
+              </Link>
+              <Link className="leading-7 hover:text-white" href="/contact">
+                Contact Page
+              </Link>
+              <Link className="leading-7 hover:text-white" href="/about/patit-roy">
+                Founder: Patit Roy
+              </Link>
             </div>
           </div>
           <div className="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-6">
