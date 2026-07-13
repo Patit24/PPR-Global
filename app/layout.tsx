@@ -94,6 +94,8 @@ export default function RootLayout({
         "@id": "https://www.pprglobal.online/#localbusiness",
         name: business.name,
         description: business.description,
+        foundingDate: `${business.foundingYear}-01-01`,
+        slogan: "Affordable, modern, fast-delivery software agency for global clients.",
         founder: {
           "@type": "Person",
           "@id": "https://www.pprglobal.online/#founder",
@@ -101,8 +103,21 @@ export default function RootLayout({
         },
         url: business.url,
         image: business.primaryImage,
+        logo: business.logo,
         telephone: "+91-9609079663",
         priceRange: business.priceRange,
+        knowsAbout: [
+          "Website development",
+          "Mobile app development",
+          "WhatsApp automation",
+          "CRM systems",
+          "Google Ads",
+          "Meta Ads",
+          "SEO",
+          "Generative Engine Optimization",
+          "UI/UX design",
+          "Lead management"
+        ],
         serviceType: [...business.services],
         areaServed: [
           { "@type": "City", name: "Kolkata" },
@@ -118,21 +133,38 @@ export default function RootLayout({
           addressCountry: business.address.addressCountry
         },
         hasMap: business.googleBusinessProfileUrl,
-        makesOffer: [
-          "Website development",
-          "Mobile app development",
-          "WhatsApp automation",
-          "CRM dashboard development",
-          "Google Ads",
-          "Meta Ads",
-          "SEO / GEO"
-        ].map((name) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name
-          }
-        }))
+        sameAs: [business.googleBusinessProfileUrl],
+        contactPoint: business.phoneNumbers.map((phone) => ({
+          "@type": "ContactPoint",
+          telephone: phone.href.replace("tel:", ""),
+          contactType: phone.label,
+          areaServed: "IN",
+          availableLanguage: ["English", "Hindi", "Bengali"]
+        })),
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "PPR Global service catalog",
+          itemListElement: [
+            "Website development",
+            "Mobile app development",
+            "WhatsApp automation",
+            "CRM dashboard development",
+            "Google Ads",
+            "Meta Ads",
+            "SEO / GEO",
+            "UI/UX design",
+            "Lead management"
+          ].map((name) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name,
+              provider: {
+                "@id": "https://www.pprglobal.online/#localbusiness"
+              }
+            }
+          }))
+        }
       },
       {
         "@type": "Person",
@@ -149,6 +181,15 @@ export default function RootLayout({
         name: business.name,
         url: business.url,
         logo: business.logo,
+        foundingDate: `${business.foundingYear}-01-01`,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: business.address.streetAddress,
+          addressLocality: business.address.addressLocality,
+          addressRegion: business.address.addressRegion,
+          postalCode: business.address.postalCode,
+          addressCountry: business.address.addressCountry
+        },
         founder: {
           "@id": "https://www.pprglobal.online/#founder"
         },

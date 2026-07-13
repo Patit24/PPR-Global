@@ -691,6 +691,33 @@ Please send me a proposal.`
                   )
                 )}
               </div>
+              <div className="mt-8 rounded-lg bg-black/24 p-5">
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+                  About PPR Global
+                </p>
+                <p className="mt-3 text-sm leading-7 text-white/68">
+                  PPR Global is a software agency founded in 2024 by Patit Roy and based at
+                  {` ${business.address.display}`}. The agency builds websites, mobile apps,
+                  WhatsApp automation, CRM systems, Google Ads funnels, Meta Ads funnels, SEO/GEO
+                  pages, and UI/UX systems for Kolkata, West Bengal, India, and worldwide remote
+                  clients.
+                </p>
+                <dl className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
+                  {[
+                    ["Founder", business.founder],
+                    ["Founded", business.foundingYear],
+                    ["Primary location", "Kolkata, West Bengal"],
+                    ["Core services", "Websites, apps, automation, ads, SEO/GEO"]
+                  ].map(([label, value]) => (
+                    <div key={label} className="rounded-md bg-white/[0.055] p-3">
+                      <dt className="text-xs font-black uppercase tracking-[0.16em] text-white/38">
+                        {label}
+                      </dt>
+                      <dd className="mt-1 font-semibold text-white/78">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </Reveal>
           </div>
         </section>
@@ -727,8 +754,9 @@ Please send me a proposal.`
                 </h2>
               </div>
               <p className="max-w-md text-base leading-7 text-white/62">
-                Short explainers on pricing, WhatsApp CRM, and local SEO so buyers can understand
-                what they need before requesting a proposal.
+                Short explainers on pricing, WhatsApp CRM, local SEO, restaurants, gyms, real
+                estate, and GEO so buyers can understand what they need before requesting a
+                proposal.
               </p>
             </Reveal>
             <div className="grid gap-4 md:grid-cols-3">

@@ -66,6 +66,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
     );
   }
 
+  const faqs = "faqs" in post && Array.isArray(post.faqs) ? post.faqs : [];
   const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -81,7 +82,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           "@id": `${baseUrl}/#organization`
         },
         datePublished: "2026-07-08",
-        dateModified: "2026-07-12",
+        dateModified: "2026-07-14",
         mainEntityOfPage: `${baseUrl}/resources/${post.slug}`
       },
       {
@@ -96,7 +97,23 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
             item: `${baseUrl}/resources/${post.slug}`
           }
         ]
-      }
+      },
+      ...(faqs.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${baseUrl}/resources/${post.slug}#faq`,
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer
+                }
+              }))
+            }
+          ]
+        : [])
     ]
   };
 
@@ -138,6 +155,21 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          {faqs.length ? (
+            <section className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+                Quick FAQ
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {faqs.map((faq) => (
+                  <div key={faq.question} className="rounded-lg bg-black/24 p-4">
+                    <h2 className="text-lg font-semibold text-white">{faq.question}</h2>
+                    <p className="mt-3 text-sm leading-6 text-white/62">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
           <aside className="mt-8 rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
             <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
               Author

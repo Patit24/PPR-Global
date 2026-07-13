@@ -848,6 +848,105 @@ export const resourcePosts = [
       "Generative Engine Optimization helps AI search systems understand a business clearly enough to summarize it, compare it, and connect it to relevant service searches. For Indian businesses, that means clear service pages, consistent location details, real case studies, FAQ answers, schema markup, and content that explains who the service is for.",
       "GEO is strongest when it sits on top of good SEO. A website still needs fast pages, helpful titles, internal links, local keywords, Google Business Profile signals, and useful body copy. The extra GEO layer makes the information easier for answer engines to parse: services, prices, coverage area, process, proof, and contact options.",
       "A practical first step is to turn thin service pages into focused pages of 150-300 words or more, add FAQ schema, link related case studies, and keep the brand entity consistent across the site, Google Business Profile, maps, social profiles, and directories."
+    ],
+    faqs: [
+      {
+        question: "What is Generative Engine Optimization?",
+        answer:
+          "Generative Engine Optimization is the process of making website content easier for AI search tools and answer engines to understand, summarize, and cite."
+      },
+      {
+        question: "Does GEO replace SEO?",
+        answer:
+          "No. GEO works best with SEO, local search signals, schema markup, helpful service pages, and consistent business entity information."
+      }
+    ]
+  },
+  {
+    slug: "restaurant-website-whatsapp-ordering-kolkata",
+    title: "Restaurant Website and WhatsApp Ordering Setup in Kolkata",
+    description:
+      "What Kolkata restaurants should include on a website: menu pages, WhatsApp ordering, Google reviews, table booking, QR menus, and local SEO.",
+    keywords: [
+      "restaurant website Kolkata",
+      "WhatsApp ordering website Kolkata",
+      "restaurant website development India",
+      "QR menu website Kolkata"
+    ],
+    body: [
+      "A restaurant website in Kolkata should make ordering and table enquiries fast. The most useful setup includes a clear menu, opening hours, location, Google Maps link, photo gallery, offers, WhatsApp ordering, table booking, and a mobile layout that loads quickly for customers checking from their phones.",
+      "WhatsApp ordering is often the simplest first step because many local customers already use it. A good button can pass the item name, pickup or delivery request, and customer message into WhatsApp so the restaurant team does not have to ask for the same details again.",
+      "For local SEO, restaurants should publish cuisine, neighbourhood, delivery area, menu categories, reviews, photos, and frequently asked questions as readable text. This helps Google and AI search systems understand what the restaurant serves and where it is relevant."
+    ],
+    faqs: [
+      {
+        question: "What should a restaurant website include?",
+        answer:
+          "It should include menu pages, WhatsApp ordering, table booking, location, opening hours, reviews, photos, offers, and clear call-to-action buttons."
+      },
+      {
+        question: "Can WhatsApp ordering work without a full ecommerce system?",
+        answer:
+          "Yes. A restaurant can start with WhatsApp ordering and later add cart, payment, delivery tracking, or CRM features when needed."
+      }
+    ]
+  },
+  {
+    slug: "gym-booking-website-kolkata",
+    title: "Why Gyms in Kolkata Need a Booking Website",
+    description:
+      "A practical guide for Kolkata gyms planning membership pages, trial booking, trainer profiles, class schedules, and WhatsApp lead capture.",
+    keywords: [
+      "gym booking website Kolkata",
+      "gym website Kolkata",
+      "fitness website development India",
+      "gym membership landing page Kolkata"
+    ],
+    body: [
+      "A gym website in Kolkata should turn interest into trial bookings and membership enquiries. The page should quickly show facilities, membership options, trainer profiles, class schedules, transformation proof, location, opening hours, and a direct WhatsApp or callback action.",
+      "Most gym visitors are comparing trust, price, distance, trainer quality, and convenience. A good website answers those questions before the person calls. For campaigns, a focused landing page can promote a trial pass, personal training program, weight-loss offer, or new membership plan.",
+      "A booking website can also connect with CRM or WhatsApp follow-up. That gives the gym team a simple way to track who requested a trial, who visited, who needs a reminder, and which campaign generated the lead."
+    ],
+    faqs: [
+      {
+        question: "Can a gym website collect trial bookings?",
+        answer:
+          "Yes. The site can use a form, WhatsApp button, or CRM-connected lead flow to collect trial booking requests."
+      },
+      {
+        question: "Should gyms show prices online?",
+        answer:
+          "Showing starting prices or membership ranges can improve trust and qualify leads, especially when paired with a consultation or trial offer."
+      }
+    ]
+  },
+  {
+    slug: "real-estate-website-crm-kolkata",
+    title: "Real Estate Website and CRM Setup for Kolkata Agents",
+    description:
+      "How real estate agents can use property pages, buyer lead forms, WhatsApp enquiries, CRM stages, and local SEO to manage serious buyers.",
+    keywords: [
+      "real estate website CRM Kolkata",
+      "property website Kolkata",
+      "real estate lead management India",
+      "real estate website for agents Kolkata"
+    ],
+    body: [
+      "A real estate website for Kolkata agents should help buyers understand properties quickly and send a serious enquiry. Useful sections include property listings, location details, price range, floor plan, amenities, photos, map context, buyer budget forms, and WhatsApp buttons tied to each property.",
+      "The CRM side matters because property leads often need repeated follow-up. A simple dashboard can track buyer name, budget, preferred location, property interest, next follow-up date, notes, files, and current status. This stops serious conversations from getting lost inside WhatsApp history.",
+      "For SEO, each property or project page should include readable location and feature details instead of only images. Local area names, property type, budget range, and FAQs help search engines understand the listing and help buyers decide faster."
+    ],
+    faqs: [
+      {
+        question: "Can property enquiries go directly to WhatsApp?",
+        answer:
+          "Yes. Each listing can open WhatsApp with the property name, budget range, and enquiry context already included."
+      },
+      {
+        question: "Do real estate agents need a CRM?",
+        answer:
+          "A CRM is useful when enquiries come from multiple channels and the agent needs reminders, status tracking, notes, and buyer history."
+      }
     ]
   }
 ];
