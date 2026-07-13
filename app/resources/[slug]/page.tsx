@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { business } from "@/lib/business";
-import { resourcePosts } from "@/lib/content";
+import { resourcePosts, servicePages, services } from "@/lib/content";
 
 const baseUrl = business.url;
 
@@ -67,6 +67,33 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
   }
 
   const faqs = "faqs" in post && Array.isArray(post.faqs) ? post.faqs : [];
+  const relatedServiceSlugs =
+    "relatedServiceSlugs" in post && Array.isArray(post.relatedServiceSlugs)
+      ? post.relatedServiceSlugs
+      : [];
+  const relatedServices = relatedServiceSlugs
+    .map((relatedSlug) => {
+      const detailed = servicePages.find((service) => service.slug === relatedSlug);
+      if (detailed) {
+        return {
+          slug: detailed.slug,
+          name: detailed.shortName,
+          description: detailed.description
+        };
+      }
+
+      const basic = services.find((service) => service.slug === relatedSlug);
+      return basic
+        ? {
+            slug: basic.slug,
+            name: basic.name,
+            description: `Explore ${basic.name.toLowerCase()} services from PPR Global.`
+          }
+        : null;
+    })
+    .filter((service): service is { slug: string; name: string; description: string } =>
+      Boolean(service)
+    );
   const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -155,6 +182,30 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          {relatedServices.length ? (
+            <section className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+                Related PPR Global services
+              </p>
+              <div className="mt-6 grid gap-3 md:grid-cols-2">
+                {relatedServices.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="group rounded-lg bg-black/24 p-4 outline-none transition-colors hover:bg-black/36 focus-visible:ring-2 focus-visible:ring-acid"
+                  >
+                    <h2 className="text-lg font-semibold text-white">{service.name}</h2>
+                    <p className="mt-3 line-clamp-2 text-sm leading-6 text-white/58">
+                      {service.description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-acid transition-colors group-hover:text-white">
+                      View service <ArrowUpRight size={14} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
           {faqs.length ? (
             <section className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
@@ -187,7 +238,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
               View founder profile <ArrowUpRight size={15} />
             </Link>
           </aside>
-          <p className="mt-5 text-sm text-white/42">Published: July 8, 2026 · Updated: July 12, 2026</p>
+          <p className="mt-5 text-sm text-white/42">Published: July 8, 2026 · Updated: July 14, 2026</p>
           <Link
             href="/#contact"
             className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-acid px-5 text-sm font-black uppercase tracking-[0.16em] text-ink"

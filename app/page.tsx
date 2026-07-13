@@ -70,6 +70,11 @@ const footerServiceLinks = [
   "healthcare-meta-ads-kolkata",
   "digital-marketing-kolkata"
 ];
+const featuredResourceLinks = [
+  "restaurant-website-whatsapp-ordering-kolkata",
+  "gym-booking-website-kolkata",
+  "real-estate-website-crm-kolkata"
+];
 type Project = (typeof projects)[number];
 
 function whatsappLink(phone: string, message: string) {
@@ -758,6 +763,37 @@ Please send me a proposal.`
                 estate, and GEO so buyers can understand what they need before requesting a
                 proposal.
               </p>
+            </Reveal>
+            <Reveal className="mb-6 rounded-lg bg-acid p-5 text-ink">
+              <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.18em] text-black/55">
+                    New SEO guides
+                  </p>
+                  <h3 className="mt-2 max-w-3xl font-display text-3xl font-semibold leading-none md:text-5xl">
+                    Fresh vertical guides for restaurants, gyms, and real estate.
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {featuredResourceLinks.map((slug) => {
+                    const post = resourcePosts.find((item) => item.slug === slug);
+
+                    if (!post) {
+                      return null;
+                    }
+
+                    return (
+                      <Link
+                        key={post.slug}
+                        href={`/resources/${post.slug}`}
+                        className="inline-flex min-h-11 items-center rounded-full bg-ink px-4 text-xs font-black uppercase tracking-[0.14em] text-white outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white"
+                      >
+                        {post.title.replace(" in Kolkata", "")}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
             </Reveal>
             <div className="grid gap-4 md:grid-cols-3">
               {resourcePosts.map((post, index) => (

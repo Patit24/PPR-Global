@@ -847,7 +847,8 @@ export const resourcePosts = [
     body: [
       "Generative Engine Optimization helps AI search systems understand a business clearly enough to summarize it, compare it, and connect it to relevant service searches. For Indian businesses, that means clear service pages, consistent location details, real case studies, FAQ answers, schema markup, and content that explains who the service is for.",
       "GEO is strongest when it sits on top of good SEO. A website still needs fast pages, helpful titles, internal links, local keywords, Google Business Profile signals, and useful body copy. The extra GEO layer makes the information easier for answer engines to parse: services, prices, coverage area, process, proof, and contact options.",
-      "A practical first step is to turn thin service pages into focused pages of 150-300 words or more, add FAQ schema, link related case studies, and keep the brand entity consistent across the site, Google Business Profile, maps, social profiles, and directories."
+      "A practical first step is to turn thin service pages into focused pages of 150-300 words or more, add FAQ schema, link related case studies, and keep the brand entity consistent across the site, Google Business Profile, maps, social profiles, and directories.",
+      "For PPR Global clients, GEO work usually starts with the pages that buyers and AI systems both need: service pages, pricing explanations, founder and business facts, location signals, FAQs, project proof, and clean internal links. Once those are in place, blog guides and directory citations can support the same entity from outside the website."
     ],
     faqs: [
       {
@@ -859,8 +860,19 @@ export const resourcePosts = [
         question: "Does GEO replace SEO?",
         answer:
           "No. GEO works best with SEO, local search signals, schema markup, helpful service pages, and consistent business entity information."
+      },
+      {
+        question: "What pages help GEO the most?",
+        answer:
+          "Service pages, pricing guides, FAQ pages, case studies, founder pages, and location pages are useful because they give AI systems clear facts to extract."
+      },
+      {
+        question: "How quickly can GEO improvements be added?",
+        answer:
+          "Basic schema, FAQs, internal links, and service-page copy can often be improved quickly, while broader authority signals need consistent publishing and citations."
       }
-    ]
+    ],
+    relatedServiceSlugs: ["geo-optimization", "seo-kolkata", "website-development-kolkata"]
   },
   {
     slug: "restaurant-website-whatsapp-ordering-kolkata",
@@ -876,7 +888,8 @@ export const resourcePosts = [
     body: [
       "A restaurant website in Kolkata should make ordering and table enquiries fast. The most useful setup includes a clear menu, opening hours, location, Google Maps link, photo gallery, offers, WhatsApp ordering, table booking, and a mobile layout that loads quickly for customers checking from their phones.",
       "WhatsApp ordering is often the simplest first step because many local customers already use it. A good button can pass the item name, pickup or delivery request, and customer message into WhatsApp so the restaurant team does not have to ask for the same details again.",
-      "For local SEO, restaurants should publish cuisine, neighbourhood, delivery area, menu categories, reviews, photos, and frequently asked questions as readable text. This helps Google and AI search systems understand what the restaurant serves and where it is relevant."
+      "For local SEO, restaurants should publish cuisine, neighbourhood, delivery area, menu categories, reviews, photos, and frequently asked questions as readable text. This helps Google and AI search systems understand what the restaurant serves and where it is relevant.",
+      "Cost depends on how advanced the ordering flow needs to be. A starter restaurant website can begin as a static site with menu and WhatsApp buttons, then expand into QR menu pages, table booking, payment links, an admin panel for menu updates, or a CRM for order and enquiry follow-up."
     ],
     faqs: [
       {
@@ -888,7 +901,28 @@ export const resourcePosts = [
         question: "Can WhatsApp ordering work without a full ecommerce system?",
         answer:
           "Yes. A restaurant can start with WhatsApp ordering and later add cart, payment, delivery tracking, or CRM features when needed."
+      },
+      {
+        question: "Does WhatsApp ordering need a separate app?",
+        answer:
+          "No. Most restaurants can start with website buttons, menu pages, and pre-filled WhatsApp messages before investing in a separate customer app."
+      },
+      {
+        question: "Can a restaurant update its menu without a developer?",
+        answer:
+          "Yes. A website with an admin panel can let the restaurant update menu items, prices, offers, photos, and availability."
+      },
+      {
+        question: "How long does a restaurant website take to build?",
+        answer:
+          "A simple restaurant website can launch quickly when content and photos are ready. More advanced booking, payment, and admin features add extra build time."
       }
+    ],
+    relatedServiceSlugs: [
+      "website-development-kolkata",
+      "whatsapp-automation-kolkata",
+      "website-with-admin-panel-kolkata",
+      "digital-marketing-kolkata"
     ]
   },
   {
@@ -905,7 +939,8 @@ export const resourcePosts = [
     body: [
       "A gym website in Kolkata should turn interest into trial bookings and membership enquiries. The page should quickly show facilities, membership options, trainer profiles, class schedules, transformation proof, location, opening hours, and a direct WhatsApp or callback action.",
       "Most gym visitors are comparing trust, price, distance, trainer quality, and convenience. A good website answers those questions before the person calls. For campaigns, a focused landing page can promote a trial pass, personal training program, weight-loss offer, or new membership plan.",
-      "A booking website can also connect with CRM or WhatsApp follow-up. That gives the gym team a simple way to track who requested a trial, who visited, who needs a reminder, and which campaign generated the lead."
+      "A booking website can also connect with CRM or WhatsApp follow-up. That gives the gym team a simple way to track who requested a trial, who visited, who needs a reminder, and which campaign generated the lead.",
+      "PPR Global usually builds this as a conversion path: membership offer, proof, class schedule, trainer trust, trial form, WhatsApp follow-up, and optional CRM stages. That keeps the first version practical while leaving room for payment links, member dashboards, or mobile app features later."
     ],
     faqs: [
       {
@@ -917,7 +952,28 @@ export const resourcePosts = [
         question: "Should gyms show prices online?",
         answer:
           "Showing starting prices or membership ranges can improve trust and qualify leads, especially when paired with a consultation or trial offer."
+      },
+      {
+        question: "How long does a gym booking website take to build?",
+        answer:
+          "A focused gym website can launch quickly when photos, pricing, schedule, and offer details are ready. CRM, payment, or app features add more time."
+      },
+      {
+        question: "Can gym leads go to WhatsApp and CRM together?",
+        answer:
+          "Yes. A trial form can open WhatsApp for fast response and also save the lead into a CRM dashboard for follow-up tracking."
+      },
+      {
+        question: "Can the gym website support ads campaigns?",
+        answer:
+          "Yes. A landing page can be created for trial passes, personal training, weight-loss programs, or local membership campaigns."
       }
+    ],
+    relatedServiceSlugs: [
+      "website-for-gyms-kolkata",
+      "crm-kolkata",
+      "lead-management",
+      "meta-ads-kolkata"
     ]
   },
   {
@@ -934,7 +990,8 @@ export const resourcePosts = [
     body: [
       "A real estate website for Kolkata agents should help buyers understand properties quickly and send a serious enquiry. Useful sections include property listings, location details, price range, floor plan, amenities, photos, map context, buyer budget forms, and WhatsApp buttons tied to each property.",
       "The CRM side matters because property leads often need repeated follow-up. A simple dashboard can track buyer name, budget, preferred location, property interest, next follow-up date, notes, files, and current status. This stops serious conversations from getting lost inside WhatsApp history.",
-      "For SEO, each property or project page should include readable location and feature details instead of only images. Local area names, property type, budget range, and FAQs help search engines understand the listing and help buyers decide faster."
+      "For SEO, each property or project page should include readable location and feature details instead of only images. Local area names, property type, budget range, and FAQs help search engines understand the listing and help buyers decide faster.",
+      "PPR Global can build a starter property website first, then add admin listing controls, WhatsApp automation, buyer requirements, CRM stages, and campaign landing pages. That approach helps agents launch quickly without losing the option to scale into a more complete lead system."
     ],
     faqs: [
       {
@@ -946,7 +1003,28 @@ export const resourcePosts = [
         question: "Do real estate agents need a CRM?",
         answer:
           "A CRM is useful when enquiries come from multiple channels and the agent needs reminders, status tracking, notes, and buyer history."
+      },
+      {
+        question: "Can agents update property listings themselves?",
+        answer:
+          "Yes. A website with an admin panel can let agents add, edit, hide, or update property listings without touching code."
+      },
+      {
+        question: "Can a real estate website show buyer budget forms?",
+        answer:
+          "Yes. Forms can collect budget, preferred location, property type, timeline, and contact details before the sales call."
+      },
+      {
+        question: "Can real estate leads be tracked by property?",
+        answer:
+          "Yes. CRM stages can store which property each buyer asked about, source, follow-up date, notes, and current status."
       }
+    ],
+    relatedServiceSlugs: [
+      "website-for-real-estate-kolkata",
+      "crm-kolkata",
+      "lead-management",
+      "whatsapp-automation-kolkata"
     ]
   }
 ];
