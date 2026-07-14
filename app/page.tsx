@@ -122,6 +122,12 @@ const agencySystemChannels = [
   "Meta Ads"
 ];
 
+const agencySystemFrames = [
+  { label: "Discovery", value: "01", detail: "Offer, audience, pages" },
+  { label: "Interface", value: "02", detail: "Premium UI and mobile flow" },
+  { label: "Automation", value: "03", detail: "WhatsApp, CRM, follow-up" }
+];
+
 const processSteps = [
   {
     number: "01",
@@ -538,21 +544,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="defer-section relative overflow-hidden border-y border-white/10 bg-white/[0.035] px-4 py-24">
-          <motion.div
+        <section className="defer-section relative overflow-hidden border-y border-white/10 bg-[#050505] px-4 py-24">
+          <div
             aria-hidden="true"
-            className="absolute left-[8%] top-16 h-52 w-52 rounded-full border border-acid/20"
-            animate={shouldReduceMotion ? undefined : { rotate: 360 }}
-            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-          />
-          <motion.div
-            aria-hidden="true"
-            className="absolute bottom-10 right-[12%] h-36 w-36 rounded-full bg-acid/10 blur-3xl"
-            animate={shouldReduceMotion ? undefined : { scale: [1, 1.25, 1], opacity: [0.35, 0.75, 0.35] }}
-            transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute inset-0 opacity-35"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)",
+              backgroundSize: "46px 46px"
+            }}
           />
           <div className="relative mx-auto max-w-7xl">
-            <Reveal className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+            <Reveal className="mb-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
               <div>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
                   Agency system
@@ -562,75 +565,109 @@ export default function Home() {
                 </h2>
               </div>
               <p className="max-w-xl text-lg leading-8 text-white/66">
-                Inspired by premium studio presentations, this is the PPR Global way: strategy,
-                interface, automation, tracking, and follow-up shaped into one fast-moving delivery
-                flow before you choose a package.
+                Strategy, interface, automation, tracking, and follow-up are framed as one
+                production system before you choose a package.
               </p>
             </Reveal>
 
-            <div className="mt-12 grid gap-4 lg:grid-cols-12">
-              <Reveal className="relative overflow-hidden rounded-lg bg-acid p-6 text-ink lg:col-span-5">
-                <motion.div
-                  aria-hidden="true"
-                  className="absolute -right-16 -top-16 h-44 w-44 rounded-full border border-black/15"
-                  animate={shouldReduceMotion ? undefined : { rotate: -360 }}
-                  transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-                />
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-black/55">
-                  Launch command
-                </p>
-                <h3 className="mt-4 max-w-md font-display text-4xl font-semibold leading-none md:text-5xl">
-                  From idea to live funnel without agency confusion.
-                </h3>
-                <div className="mt-8 grid gap-3">
-                  {agencySystemSteps.map((step, index) => (
-                    <motion.div
-                      key={step}
-                      className="flex min-h-14 items-center justify-between rounded-md bg-black/8 px-4"
-                      initial={shouldReduceMotion ? false : { opacity: 0, x: -18 }}
-                      whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
-                      viewport={{ once: true, margin: "-80px" }}
-                      transition={{ type: "spring", duration: 0.5, bounce: 0, delay: index * 0.06 }}
-                    >
-                      <span className="font-semibold">{step}</span>
-                      <span className="font-display text-lg font-black">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </motion.div>
-                  ))}
-                </div>
-              </Reveal>
+            <Reveal className="relative overflow-hidden rounded-lg border border-white/14 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-3 shadow-[0_30px_120px_rgba(0,0,0,0.35)]">
+              <span aria-hidden="true" className="absolute left-3 top-3 h-9 w-9 border-l-2 border-t-2 border-acid" />
+              <span aria-hidden="true" className="absolute right-3 top-3 h-9 w-9 border-r-2 border-t-2 border-acid" />
+              <span aria-hidden="true" className="absolute bottom-3 left-3 h-9 w-9 border-b-2 border-l-2 border-acid" />
+              <span aria-hidden="true" className="absolute bottom-3 right-3 h-9 w-9 border-b-2 border-r-2 border-acid" />
 
-              <div className="grid gap-4 lg:col-span-7">
-                <div className="grid gap-4 md:grid-cols-3">
-                  {agencySystemStats.map((item, index) => (
-                    <Reveal
-                      key={item.label}
-                      delay={index * 0.04}
-                      className="rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]"
-                    >
-                      <motion.p
-                        className="font-display text-5xl font-semibold leading-none text-acid"
+              <motion.div
+                aria-hidden="true"
+                className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-acid to-transparent"
+                animate={shouldReduceMotion ? undefined : { y: [0, 520, 0], opacity: [0.25, 1, 0.25] }}
+                transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut" }}
+              />
+
+              <div className="relative grid min-h-[36rem] gap-4 rounded-md border border-white/10 bg-black/42 p-4 md:p-6 lg:grid-cols-12">
+                <div className="flex flex-col justify-between gap-6 lg:col-span-5">
+                  <motion.div
+                    className="rounded-md border border-acid/45 bg-acid p-6 text-ink"
+                    initial={shouldReduceMotion ? false : { opacity: 0, y: 24, scale: 0.97 }}
+                    whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ type: "spring", duration: 0.7, bounce: 0.06 }}
+                  >
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-black/55">
+                      Launch command
+                    </p>
+                    <h3 className="mt-4 max-w-md font-display text-4xl font-semibold leading-none md:text-5xl">
+                      From idea to live funnel without agency confusion.
+                    </h3>
+                    <div className="mt-8 grid gap-3">
+                      {agencySystemSteps.map((step, index) => (
+                        <motion.div
+                          key={step}
+                          className="flex min-h-14 items-center justify-between rounded-md bg-black/8 px-4"
+                          initial={shouldReduceMotion ? false : { opacity: 0, x: -20 }}
+                          whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
+                          viewport={{ once: true, margin: "-80px" }}
+                          transition={{ type: "spring", duration: 0.5, bounce: 0, delay: index * 0.07 }}
+                          whileHover={shouldReduceMotion ? undefined : { x: 6 }}
+                        >
+                          <span className="font-semibold">{step}</span>
+                          <span className="font-display text-lg font-black">
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+
+                  <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                    {agencySystemStats.map((item, index) => (
+                      <motion.div
+                        key={item.label}
+                        className="rounded-md border border-white/10 bg-white/[0.055] p-4"
                         initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
                         whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ type: "spring", duration: 0.55, bounce: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ type: "spring", duration: 0.55, bounce: 0, delay: index * 0.08 }}
+                        whileHover={shouldReduceMotion ? undefined : { y: -4 }}
                       >
-                        {item.value}
-                      </motion.p>
-                      <h3 className="mt-4 text-lg font-semibold text-white">{item.label}</h3>
-                      <p className="mt-3 text-sm leading-6 text-white/58">{item.detail}</p>
-                    </Reveal>
-                  ))}
+                        <p className="font-display text-4xl font-semibold leading-none text-acid">
+                          {item.value}
+                        </p>
+                        <h3 className="mt-3 text-base font-semibold text-white">{item.label}</h3>
+                        <p className="mt-2 text-sm leading-6 text-white/56">{item.detail}</p>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
 
-                <Reveal className="overflow-hidden rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-6">
-                  <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+                <div className="relative min-h-[30rem] overflow-hidden rounded-md border border-white/10 bg-[#080808] p-5 lg:col-span-7">
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-50"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(circle, rgba(184,255,61,0.18) 1px, transparent 1px)",
+                      backgroundSize: "28px 28px"
+                    }}
+                  />
+                  <motion.div
+                    aria-hidden="true"
+                    className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-acid/25"
+                    animate={shouldReduceMotion ? undefined : { rotate: 360, scale: [1, 1.06, 1] }}
+                    transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.div
+                    aria-hidden="true"
+                    className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/15"
+                    animate={shouldReduceMotion ? undefined : { rotate: -360 }}
+                    transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+                  />
+
+                  <div className="relative z-10 flex flex-col justify-between gap-5 md:flex-row md:items-start">
                     <div>
                       <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
-                        Connected stack
+                        Framed delivery
                       </p>
-                      <h3 className="mt-3 max-w-xl text-3xl font-semibold leading-tight text-white">
+                      <h3 className="mt-3 max-w-xl text-3xl font-semibold leading-tight text-white md:text-4xl">
                         Every channel points back to one measurable customer journey.
                       </h3>
                     </div>
@@ -641,11 +678,30 @@ export default function Home() {
                       See pricing <ArrowUpRight size={15} aria-hidden="true" />
                     </a>
                   </div>
-                  <div className="mt-6 grid gap-2 sm:grid-cols-3">
+
+                  <div className="relative z-10 mt-8 grid gap-3 sm:grid-cols-3">
+                    {agencySystemFrames.map((frame, index) => (
+                      <motion.div
+                        key={frame.label}
+                        className="min-h-36 rounded-md border border-white/12 bg-white/[0.06] p-4 backdrop-blur-md"
+                        initial={shouldReduceMotion ? false : { opacity: 0, y: 26, rotateX: 12 }}
+                        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ type: "spring", duration: 0.68, bounce: 0.04, delay: index * 0.09 }}
+                        whileHover={shouldReduceMotion ? undefined : { y: -8, rotate: index === 1 ? 0 : index === 0 ? -1.5 : 1.5 }}
+                      >
+                        <p className="font-display text-4xl font-semibold text-acid">{frame.value}</p>
+                        <h4 className="mt-4 text-lg font-semibold text-white">{frame.label}</h4>
+                        <p className="mt-2 text-sm leading-6 text-white/56">{frame.detail}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <div className="relative z-10 mt-8 grid gap-2 sm:grid-cols-3">
                     {agencySystemChannels.map((channel, index) => (
                       <motion.div
                         key={channel}
-                        className="relative overflow-hidden rounded-md border border-white/10 bg-black/24 px-4 py-3"
+                        className="relative overflow-hidden rounded-md border border-white/10 bg-black/40 px-4 py-3"
                         whileHover={shouldReduceMotion ? undefined : { y: -3 }}
                         transition={{ type: "spring", duration: 0.32, bounce: 0 }}
                       >
@@ -662,9 +718,16 @@ export default function Home() {
                       </motion.div>
                     ))}
                   </div>
-                </Reveal>
+
+                  <motion.div
+                    aria-hidden="true"
+                    className="absolute bottom-8 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent"
+                    animate={shouldReduceMotion ? undefined : { opacity: [0.2, 0.8, 0.2], scaleX: [0.8, 1, 0.8] }}
+                    transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
