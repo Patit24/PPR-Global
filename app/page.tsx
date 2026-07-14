@@ -100,6 +100,28 @@ const buildNeeds = [
 
 const calculatorBaseCost = 6000;
 
+const agencySystemStats = [
+  { value: "72h", label: "First design direction", detail: "Structure, offer, pages, and launch path." },
+  { value: "4", label: "Build lanes", detail: "Website, app, ads, and automation move together." },
+  { value: "24/7", label: "Lead routes", detail: "Forms and WhatsApp keep enquiries visible." }
+];
+
+const agencySystemSteps = [
+  "Scope the offer",
+  "Design the journey",
+  "Build the system",
+  "Track the leads"
+];
+
+const agencySystemChannels = [
+  "Website",
+  "WhatsApp",
+  "CRM",
+  "SEO/GEO",
+  "Google Ads",
+  "Meta Ads"
+];
+
 const processSteps = [
   {
     number: "01",
@@ -516,7 +538,137 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="defer-section relative overflow-hidden px-4 py-24">
+        <section className="defer-section relative overflow-hidden border-y border-white/10 bg-white/[0.035] px-4 py-24">
+          <motion.div
+            aria-hidden="true"
+            className="absolute left-[8%] top-16 h-52 w-52 rounded-full border border-acid/20"
+            animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div
+            aria-hidden="true"
+            className="absolute bottom-10 right-[12%] h-36 w-36 rounded-full bg-acid/10 blur-3xl"
+            animate={shouldReduceMotion ? undefined : { scale: [1, 1.25, 1], opacity: [0.35, 0.75, 0.35] }}
+            transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <div className="relative mx-auto max-w-7xl">
+            <Reveal className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+              <div>
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
+                  Agency system
+                </p>
+                <h2 className="max-w-4xl font-display text-5xl font-semibold leading-none text-white md:text-7xl">
+                  Not just a website. A launch system built around enquiries.
+                </h2>
+              </div>
+              <p className="max-w-xl text-lg leading-8 text-white/66">
+                Inspired by premium studio presentations, this is the PPR Global way: strategy,
+                interface, automation, tracking, and follow-up shaped into one fast-moving delivery
+                flow before you choose a package.
+              </p>
+            </Reveal>
+
+            <div className="mt-12 grid gap-4 lg:grid-cols-12">
+              <Reveal className="relative overflow-hidden rounded-lg bg-acid p-6 text-ink lg:col-span-5">
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute -right-16 -top-16 h-44 w-44 rounded-full border border-black/15"
+                  animate={shouldReduceMotion ? undefined : { rotate: -360 }}
+                  transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+                />
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-black/55">
+                  Launch command
+                </p>
+                <h3 className="mt-4 max-w-md font-display text-4xl font-semibold leading-none md:text-5xl">
+                  From idea to live funnel without agency confusion.
+                </h3>
+                <div className="mt-8 grid gap-3">
+                  {agencySystemSteps.map((step, index) => (
+                    <motion.div
+                      key={step}
+                      className="flex min-h-14 items-center justify-between rounded-md bg-black/8 px-4"
+                      initial={shouldReduceMotion ? false : { opacity: 0, x: -18 }}
+                      whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ type: "spring", duration: 0.5, bounce: 0, delay: index * 0.06 }}
+                    >
+                      <span className="font-semibold">{step}</span>
+                      <span className="font-display text-lg font-black">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </Reveal>
+
+              <div className="grid gap-4 lg:col-span-7">
+                <div className="grid gap-4 md:grid-cols-3">
+                  {agencySystemStats.map((item, index) => (
+                    <Reveal
+                      key={item.label}
+                      delay={index * 0.04}
+                      className="rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]"
+                    >
+                      <motion.p
+                        className="font-display text-5xl font-semibold leading-none text-acid"
+                        initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+                        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ type: "spring", duration: 0.55, bounce: 0 }}
+                      >
+                        {item.value}
+                      </motion.p>
+                      <h3 className="mt-4 text-lg font-semibold text-white">{item.label}</h3>
+                      <p className="mt-3 text-sm leading-6 text-white/58">{item.detail}</p>
+                    </Reveal>
+                  ))}
+                </div>
+
+                <Reveal className="overflow-hidden rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-6">
+                  <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+                    <div>
+                      <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
+                        Connected stack
+                      </p>
+                      <h3 className="mt-3 max-w-xl text-3xl font-semibold leading-tight text-white">
+                        Every channel points back to one measurable customer journey.
+                      </h3>
+                    </div>
+                    <a
+                      href="#pricing"
+                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 text-xs font-black uppercase tracking-[0.15em] text-ink outline-none transition-transform hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-acid"
+                    >
+                      See pricing <ArrowUpRight size={15} aria-hidden="true" />
+                    </a>
+                  </div>
+                  <div className="mt-6 grid gap-2 sm:grid-cols-3">
+                    {agencySystemChannels.map((channel, index) => (
+                      <motion.div
+                        key={channel}
+                        className="relative overflow-hidden rounded-md border border-white/10 bg-black/24 px-4 py-3"
+                        whileHover={shouldReduceMotion ? undefined : { y: -3 }}
+                        transition={{ type: "spring", duration: 0.32, bounce: 0 }}
+                      >
+                        <motion.span
+                          aria-hidden="true"
+                          className="absolute inset-y-0 left-0 w-1 bg-acid"
+                          initial={shouldReduceMotion ? false : { scaleY: 0 }}
+                          whileInView={shouldReduceMotion ? undefined : { scaleY: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ type: "spring", duration: 0.5, bounce: 0, delay: index * 0.04 }}
+                          style={{ transformOrigin: "bottom" }}
+                        />
+                        <span className="text-sm font-semibold text-white/76">{channel}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" className="defer-section relative overflow-hidden px-4 py-24 scroll-mt-24">
           <motion.div
             aria-hidden="true"
             className="absolute left-1/2 top-24 h-72 w-[min(54rem,80vw)] -translate-x-1/2 rounded-full bg-acid/10 blur-3xl"
