@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
-import { LeadSystem } from "@/components/leads/LeadSystem";
 import { business } from "@/lib/business";
 import "./globals.css";
 
@@ -93,6 +91,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const delayedScripts = `
+    window.addEventListener('load', function () {
+      window.setTimeout(function () {
+        ${gaMeasurementId ? `
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}';
+        document.head.appendChild(gaScript);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = window.gtag || gtag;
+        gtag('js', new Date());
+        gtag('config', '${gaMeasurementId}');
+        ` : ""}
+        var adScript = document.createElement('script');
+        adScript.async = true;
+        adScript.crossOrigin = 'anonymous';
+        adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334';
+        document.head.appendChild(adScript);
+      }, 15000);
+    });
+  `;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -223,27 +243,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {gaMeasurementId ? (
-          <>
-            <Script
-              id="google-analytics-loader"
-              strategy="lazyOnload"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-            />
-            <Script
-              id="google-analytics-init"
-              strategy="lazyOnload"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gaMeasurementId}');
-                `
-              }}
-            />
-          </>
-        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -251,13 +250,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${space.variable} ${inter.className}`}>
         {children}
-        <LeadSystem />
-        <Script
-          id="adsense-loader"
-          strategy="lazyOnload"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
-          crossOrigin="anonymous"
-        />
+        <script dangerouslySetInnerHTML={{ __html: delayedScripts }} />
       </body>
     </html>
   );

@@ -1,6 +1,4 @@
 import { ArrowUpRight, MapPin, MessageCircle, Star } from "lucide-react";
-import Link from "next/link";
-import { DesktopHomeClientLoader } from "@/components/DesktopHomeClientLoader";
 import { business } from "@/lib/business";
 import { projects, servicePages, services, stats } from "@/lib/content";
 
@@ -17,16 +15,7 @@ function getServiceSlug(name: string) {
 }
 
 export default function Home() {
-  return (
-    <>
-      <div className="md:hidden">
-        <MobileHome />
-      </div>
-      <div className="hidden md:block">
-        <DesktopHomeClientLoader />
-      </div>
-    </>
-  );
+  return <MobileHome />;
 }
 
 function MobileHome() {
@@ -108,7 +97,7 @@ function MobileHome() {
           </h2>
           <div className="mt-6 grid gap-4">
             {featuredProjects.map((project) => (
-              <Link
+              <a
                 key={project.slug}
                 href={`/case-studies/${project.slug}`}
                 className="rounded-lg bg-white/[0.055] p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]"
@@ -119,7 +108,7 @@ function MobileHome() {
                 <span className="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-acid">
                   View Case Study <ArrowUpRight size={14} aria-hidden="true" />
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -135,14 +124,14 @@ function MobileHome() {
           </h2>
           <div className="mt-6 grid gap-3">
             {featuredServices.map((service) => (
-              <Link
+              <a
                 key={service}
                 href={`/services/${getServiceSlug(service)}`}
                 className="flex min-h-14 items-center justify-between rounded-lg bg-white/[0.055] px-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]"
               >
                 <span className="font-semibold">{service}</span>
                 <ArrowUpRight size={16} aria-hidden="true" className="text-acid" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -198,6 +187,25 @@ function MobileHome() {
           </div>
         </div>
       </section>
+      <nav
+        aria-label="Quick contact"
+        className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 border-t border-white/10 bg-black/94 text-white"
+      >
+        <a
+          href={whatsappLink(whatsappNowNumber, "Hi Patit, I want to discuss a project with PPR Global.")}
+          className="inline-flex min-h-16 items-center justify-center gap-2 border-r border-white/10 text-sm font-black uppercase tracking-[0.16em]"
+        >
+          <MessageCircle size={18} aria-hidden="true" />
+          WhatsApp
+        </a>
+        <a
+          href={whatsappLink(bookCallNumber, "Hi Patit, I want to book a call for my project.")}
+          className="inline-flex min-h-16 items-center justify-center gap-2 text-sm font-black uppercase tracking-[0.16em]"
+        >
+          <ArrowUpRight size={18} aria-hidden="true" />
+          Callback
+        </a>
+      </nav>
     </main>
   );
 }
