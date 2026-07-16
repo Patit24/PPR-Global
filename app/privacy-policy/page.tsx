@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | PPR Global",
+  title: "Privacy Policy",
   description:
     "Privacy policy for PPR Global enquiry forms, WhatsApp contact, analytics and lead management.",
   alternates: {
@@ -47,4 +47,3 @@ export default function PrivacyPolicyPage() {
     </main>
   );
 }
-

@@ -5,7 +5,7 @@ import { business } from "@/lib/business";
 import { projects, resourcePosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Patit Roy | Founder of PPR Global",
+  title: "Patit Roy | Founder",
   description:
     "Patit Roy is the founder of PPR Global, a website, mobile app and business automation agency based in Kolkata, West Bengal, India.",
   alternates: {
@@ -135,4 +135,3 @@ export default function PatitRoyPage() {
     </main>
   );
 }
-

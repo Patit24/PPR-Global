@@ -24,12 +24,12 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Resources | PPR Global"
+      title: "Resources"
     };
   }
 
   return {
-    title: `${post.title} | PPR Global Resources`,
+    title: `${post.title} | Resources`,
     description: post.description,
     keywords: post.keywords,
     alternates: {
@@ -125,22 +125,20 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           }
         ]
       },
-      ...(faqs.length
-        ? [
-            {
-              "@type": "FAQPage",
-              "@id": `${baseUrl}/resources/${post.slug}#faq`,
-              mainEntity: faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer
-                }
-              }))
-            }
-          ]
-        : [])
+      ...faqs.map((faq, index) => ({
+        "@type": "QAPage",
+        "@id": `${baseUrl}/resources/${post.slug}#qa-${index + 1}`,
+        mainEntity: {
+          "@type": "Question",
+          name: faq.question,
+          text: faq.question,
+          answerCount: 1,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer
+          }
+        }
+      }))
     ]
   };
 

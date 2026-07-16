@@ -5,7 +5,7 @@ import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Contact PPR Global | Website, App & Automation Agency in Kolkata",
+  title: "Contact | Website, App & Automation Agency in Kolkata",
   description:
     "Contact PPR Global in Barasat, Kolkata for website development, mobile apps, WhatsApp automation, CRM, SEO/GEO and ads projects.",
   alternates: {
@@ -48,4 +48,3 @@ export default function ContactPage() {
     </main>
   );
 }
-

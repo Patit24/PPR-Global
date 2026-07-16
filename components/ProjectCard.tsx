@@ -30,21 +30,7 @@ export function ProjectCard({
 
   return (
     <motion.article
-      role={onOpenCaseStudy ? "button" : undefined}
-      tabIndex={onOpenCaseStudy ? 0 : undefined}
-      onClick={onOpenCaseStudy}
-      onKeyDown={(event) => {
-        if (!onOpenCaseStudy) {
-          return;
-        }
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          onOpenCaseStudy();
-        }
-      }}
-      className={`group relative w-[78vw] shrink-0 overflow-hidden rounded-lg bg-white/[0.045] outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:w-[72vw] md:w-[380px] lg:w-[405px] xl:w-[430px] ${
-        onOpenCaseStudy ? "cursor-pointer" : ""
-      }`}
+      className="group relative w-[78vw] shrink-0 overflow-hidden rounded-lg bg-white/[0.045] outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:w-[72vw] md:w-[380px] lg:w-[405px] xl:w-[430px]"
       initial={shouldReduceMotion ? false : { opacity: 0, y: 24, filter: "blur(6px)" }}
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-80px" }}
@@ -140,7 +126,7 @@ export function ProjectCard({
         {onOpenCaseStudy ? (
           <Link
             href={`/case-studies/${project.slug}`}
-            onClick={(event) => event.stopPropagation()}
+            onClick={() => onOpenCaseStudy?.()}
             className="inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-acid outline-none transition-colors group-hover:text-white focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
             View Case Study <ArrowUpRight size={16} aria-hidden="true" />

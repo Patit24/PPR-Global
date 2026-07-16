@@ -148,21 +148,25 @@ export function LeadCaptureForm({
     <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
       <div className={`grid gap-4 ${isCompact ? "" : "md:grid-cols-2"}`}>
         <Field
+          id="lead-full-name"
           label="Full name"
           error={errors.name?.message}
           input={<input {...register("name")} autoComplete="name" onFocus={() => trackEvent("lead_form_start", { source })} />}
         />
         <Field
+          id="lead-mobile-number"
           label="Mobile number"
           error={errors.phone?.message}
           input={<input {...register("phone")} autoComplete="tel" inputMode="tel" />}
         />
         <Field
+          id="lead-email-address"
           label="Email address"
           error={errors.email?.message}
           input={<input {...register("email")} autoComplete="email" inputMode="email" />}
         />
         <Field
+          id="lead-service-required"
           label="Service required"
           error={errors.service?.message}
           input={
@@ -174,6 +178,7 @@ export function LeadCaptureForm({
           }
         />
         <Field
+          id="lead-estimated-budget"
           label="Estimated budget"
           error={errors.budget?.message}
           input={
@@ -186,6 +191,7 @@ export function LeadCaptureForm({
         />
         <div className={isCompact ? "" : "md:col-span-2"}>
           <Field
+            id="lead-project-message"
             label="Project message"
             error={errors.message?.message}
             input={
@@ -257,28 +263,42 @@ export function LeadCaptureForm({
 }
 
 function Field({
+  id,
   label,
   input,
   error
 }: {
+  id: string;
   label: string;
-  input: ReactElement<{ className?: string }>;
+  input: ReactElement<{
+    className?: string;
+    id?: string;
+    "aria-invalid"?: boolean;
+    "aria-describedby"?: string;
+  }>;
   error?: string;
 }) {
+  const errorId = `${id}-error`;
+
   return (
-    <label className="block">
-      <span className="mb-2 block text-sm font-semibold text-white/78">{label}</span>
+    <div className="block">
+      <label htmlFor={id} className="mb-2 block text-sm font-semibold text-white/78">
+        {label}
+      </label>
       {cloneElement(input, {
+        id,
+        "aria-invalid": Boolean(error),
+        "aria-describedby": error ? errorId : undefined,
         className:
           input.type === "textarea"
             ? "w-full resize-y rounded-md bg-black/34 px-4 py-3 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow placeholder:text-white/34 focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
             : "min-h-12 w-full rounded-md bg-black/34 px-4 text-base text-white outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-shadow placeholder:text-white/34 focus:shadow-[inset_0_0_0_2px_#b8ff3d]"
       })}
       {error ? (
-        <p role="alert" className="mt-2 text-sm font-semibold text-acid">
+        <p id={errorId} role="alert" className="mt-2 text-sm font-semibold text-acid">
           {error}
         </p>
       ) : null}
-    </label>
+    </div>
   );
 }

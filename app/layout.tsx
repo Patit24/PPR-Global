@@ -216,6 +216,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${space.variable}`}>
       <head>
+        <link rel="preload" as="image" href="/images/patit-banner-card-poster.jpg" />
         {gaMeasurementId ? (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />

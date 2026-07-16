@@ -70,25 +70,25 @@ export async function generateMetadata({
 
   if (!service) {
     return {
-      title: "Service | PPR Global"
+      title: "Service"
     };
   }
 
   return {
-    title: `${service.name} | PPR Global`,
+    title: service.name,
     description: service.description,
     keywords: service.keywords,
     alternates: {
       canonical: `/services/${service.slug}`
     },
     openGraph: {
-      title: `${service.name} | PPR Global`,
+      title: service.name,
       description: service.description,
       url: `${baseUrl}/services/${service.slug}`
     },
     twitter: {
       card: "summary_large_image",
-      title: `${service.name} | PPR Global`,
+      title: service.name,
       description: service.description,
       images: ["/opengraph-image"]
     }
@@ -162,18 +162,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           }
         ]
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${baseUrl}/services/${service.slug}#faq`,
-        mainEntity: service.faqs.map((faq) => ({
+      ...service.faqs.map((faq, index) => ({
+        "@type": "QAPage",
+        "@id": `${baseUrl}/services/${service.slug}#qa-${index + 1}`,
+        mainEntity: {
           "@type": "Question",
           name: faq.question,
+          text: faq.question,
+          answerCount: 1,
           acceptedAnswer: {
             "@type": "Answer",
             text: faq.answer
           }
-        }))
-      }
+        }
+      }))
     ]
   };
   const relatedProject = projects.find((project) => project.slug === service.relatedProjectSlug);

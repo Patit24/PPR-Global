@@ -369,9 +369,7 @@ export default function Home() {
               <motion.div
                 className="absolute bottom-0 left-0 hidden w-64 rounded-md border border-black/16 bg-[#f7f7f1] p-3 shadow-[0_18px_70px_rgba(0,0,0,0.13)] md:block"
                 style={{ x: shouldReduceMotion ? undefined : cardX, y: shouldReduceMotion ? undefined : cardY }}
-                initial={shouldReduceMotion ? false : { opacity: 0, x: -24, filter: "blur(6px)" }}
-                animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0, filter: "blur(0px)" }}
-                transition={{ type: "spring", duration: 0.72, bounce: 0, delay: 0.24 }}
+                initial={false}
               >
                 <div className="mb-2 flex items-center justify-between font-display text-sm font-black uppercase tracking-[0.15em]">
                   <span>Launch Sprint</span>
@@ -386,6 +384,7 @@ export default function Home() {
                     loop
                     playsInline
                     preload="metadata"
+                    poster="/images/patit-banner-card-poster.jpg"
                     aria-label="Patit Roy banner video preview"
                   >
                     <source src="/videos/patit-banner-card.mp4" media="(min-width: 768px)" type="video/mp4" />
@@ -417,9 +416,7 @@ export default function Home() {
               <motion.a
                 href={whatsappLink(bookCallNumber, "Hi Patit, I want to book a call for my project.")}
                 className="absolute bottom-0 right-0 hidden min-h-16 items-center gap-4 rounded-md bg-black px-4 py-3 font-display text-base font-black uppercase tracking-[0.18em] text-white outline-none focus-visible:ring-2 focus-visible:ring-acid md:inline-flex"
-                initial={shouldReduceMotion ? false : { opacity: 0, x: 24, filter: "blur(6px)" }}
-                animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0, filter: "blur(0px)" }}
-                transition={{ type: "spring", duration: 0.72, bounce: 0, delay: 0.28 }}
+                initial={false}
                 whileHover={shouldReduceMotion ? undefined : { y: -4 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -1466,6 +1463,8 @@ Please guide me with the next step.`;
                   <motion.button
                     key={business.name}
                     type="button"
+                    aria-pressed={selected}
+                    aria-label={`Select ${business.name} business type`}
                     onClick={() => setSelectedBusiness(business.name)}
                     className={`group relative min-h-32 overflow-hidden rounded-lg p-4 text-left outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-colors focus-visible:ring-2 focus-visible:ring-acid ${
                       selected ? "bg-acid text-ink" : "bg-black/30 text-white hover:bg-white/[0.075]"
@@ -1500,6 +1499,8 @@ Please guide me with the next step.`;
                       <button
                         key={need.name}
                         type="button"
+                        aria-pressed={selected}
+                        aria-label={`${selected ? "Remove" : "Add"} ${need.name} feature, plus ₹${need.cost.toLocaleString("en-IN")}`}
                         onClick={() => toggleNeed(need.name)}
                         className={`flex min-h-12 items-center justify-between rounded-md px-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-acid ${
                           selected ? "bg-acid text-ink" : "bg-black/32 text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]"

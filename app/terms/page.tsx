@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Terms | PPR Global",
+  title: "Terms",
   description: "Basic website and enquiry terms for PPR Global.",
   alternates: {
     canonical: "/terms"
@@ -42,4 +42,3 @@ export default function TermsPage() {
     </main>
   );
 }
-

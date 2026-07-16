@@ -37,6 +37,8 @@ export const projects = [
       headline: "Interior Design Website.",
       summary:
         "A warm, editorial website system for an interior brand, designed to show high-value project photography, explain services clearly, and convert visitors into qualified enquiries.",
+      narrative:
+        "Interior Amit needed a digital presence that could match the premium feel of its physical design work. Before the project, the studio's visual proof, services, and consultation path were not presented in a way that helped high-intent visitors understand the quality quickly. PPR Global shaped the website around large interior visuals, warm editorial typography, clear service sections, and a WhatsApp-first enquiry journey. The final experience gives the brand a more polished portfolio, makes completed work easier to explore on mobile, and gives potential clients a direct route from inspiration to consultation without searching through scattered contact points.",
       scope: "Website + UI/UX",
       duration: "3 weeks",
       accent: "#e7c08c",
@@ -97,6 +99,8 @@ export const projects = [
       headline: "Premium Studio Website.",
       summary:
         "A cinematic interior studio landing experience built around aspirational spaces, clear services, and consultation-focused conversion.",
+      narrative:
+        "AS Interior Studio needed a website concept that could feel aspirational without hiding the practical details clients look for before booking a consultation. The design direction started with a rich hero, strong device previews, and a luxury palette that supports the studio's positioning. PPR Global organized the experience around services, portfolio browsing, and consultation calls to action so visitors can move from visual interest to enquiry with fewer steps. The outcome is a cinematic, responsive presentation that helps the studio look more established, keeps the service journey clear, and gives mobile users the same premium first impression as desktop visitors.",
       scope: "UI/UX + Frontend",
       duration: "3 weeks",
       accent: "#c9a24a",
@@ -125,6 +129,8 @@ export const projects = [
       headline: "Dental Clinic Website.",
       summary:
         "A clean, trustworthy healthcare website designed to help patients discover treatments, understand credibility, and book appointments quickly.",
+      narrative:
+        "Dr. Shaheen's Dental Clinic needed a patient-friendly website that could build trust before someone called the clinic. Before the project, treatment information, credibility signals, and appointment actions were not packaged into a clear digital journey. PPR Global designed a calm healthcare interface with treatment discovery, local trust sections, appointment-focused calls to action, and mobile layouts for patients searching from their phones. The result is a clinic website that explains care with more confidence, reduces friction for first-time visitors, and turns interested patients into same-day appointment requests through clear booking and WhatsApp contact paths.",
       scope: "Website + Booking Flow",
       duration: "4 weeks",
       accent: "#0fa3a3",
@@ -153,6 +159,8 @@ export const projects = [
       headline: "Interior Group Website.",
       summary:
         "A premium dark interface for an interior company, built to showcase expertise, service proof, and high-intent consultation access.",
+      narrative:
+        "Deinterio Interior Group needed a darker, more premium web presence that could communicate trust, execution quality, and service depth in one place. The challenge was to present interior expertise without making the site feel generic or overly decorative. PPR Global created a structured business website with craft highlights, premium material messaging, responsive device presentation, and consultation-ready calls to action. The final experience gives prospects a clearer reason to trust the company, helps the brand explain its strengths faster, and creates a polished path for visitors who are ready to discuss a design or turnkey interior project.",
       scope: "UI/UX + Frontend",
       duration: "4 weeks",
       accent: "#d4af37",
@@ -179,6 +187,8 @@ export const projects = [
       headline: "WhatsApp Automation CRM.",
       summary:
         "A lightweight lead-management system that routes WhatsApp enquiries, tracks follow-ups, and gives teams a simple view of daily sales activity.",
+      narrative:
+        "Many small teams rely on WhatsApp for sales but lose follow-ups once chats become busy. This CRM concept was built for businesses that need a simple operating layer above daily messages. PPR Global planned a WhatsApp-first workflow that captures lead details, tracks status stages, reminds teams about follow-ups, and gives owners a compact dashboard for daily visibility. The system is intentionally lightweight so restaurants, clinics, interiors, and service teams can adopt it without changing how they already communicate. The outcome is cleaner lead handling, fewer missed enquiries, and a more professional proposal-to-invoice flow from one practical dashboard.",
       scope: "Automation + CRM",
       duration: "2-5 weeks",
       accent: "#b8ff3d",
@@ -207,6 +217,8 @@ export const projects = [
       headline: "Mobile App Development.",
       summary:
         "A feature-led app build process for founders and businesses that need clean UX, scalable architecture, and launch-ready product screens.",
+      narrative:
+        "Mobile app projects often begin with a good idea but no clear product flow, feature priority, or launch structure. PPR Global's mobile app process starts by defining the core user journey, essential screens, data needs, and integrations before development begins. The showcased app direction focuses on clean UX, cross-platform planning, API-ready architecture, payment possibilities, and a roadmap that can grow after launch. This gives founders and business owners a practical path from concept to usable product. Instead of only creating screens, the work clarifies how customers move through the app and how the business can support future versions.",
       scope: "UX + App Build",
       duration: "4-10 weeks",
       accent: "#9ea7ff",

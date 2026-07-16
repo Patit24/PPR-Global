@@ -26,11 +26,11 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Case Study | PPR Global"
+      title: "Case Study"
     };
   }
 
-  const title = `${project.title} Case Study | PPR Global`;
+  const title = `${project.title} Case Study`;
   const description = `${project.caseStudy.summary} Built by PPR Global, a website and app development agency in Kolkata.`;
   const image = "imageSrc" in project && project.imageSrc ? project.imageSrc : "/opengraph-image";
   const keywords = [
@@ -44,6 +44,24 @@ export async function generateMetadata({
     title,
     description,
     keywords,
+    applicationName: business.name,
+    authors: [{ name: business.founder, url: `${business.url}/about/patit-roy` }],
+    creator: business.founder,
+    publisher: business.name,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1
+      }
+    },
+    verification: {
+      google: "4koPAwDMsATxjb_F9L6fQunPPHnBnRWUFB0BYv9UHmk"
+    },
     alternates: {
       canonical: `/case-studies/${project.slug}`
     },
@@ -272,6 +290,16 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                     ))}
                   </div>
                 </div>
+                {"narrative" in caseStudy && typeof caseStudy.narrative === "string" ? (
+                  <div className="md:col-span-3">
+                    <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-acid">
+                      Project Story
+                    </p>
+                    <p className="max-w-4xl text-base leading-8 text-white/70">
+                      {caseStudy.narrative}
+                    </p>
+                  </div>
+                ) : null}
                 <div>
                   <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-acid">
                     Stack
