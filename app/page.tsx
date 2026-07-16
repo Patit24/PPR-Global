@@ -270,7 +270,7 @@ export default function Home() {
 
       <main id="main-content" className="relative">
         <section
-          className="relative isolate min-h-[calc(100dvh-2rem)] overflow-hidden bg-[#f7f7f1] px-4 pb-5 pt-24 text-ink md:pt-32"
+          className="relative isolate min-h-[100svh] overflow-hidden bg-[#f7f7f1] px-4 pb-16 pt-24 text-ink md:min-h-[calc(100dvh-2rem)] md:pb-5 md:pt-32"
           onMouseMove={(event) => {
             const rect = event.currentTarget.getBoundingClientRect();
             heroMouseX.set(((event.clientX - rect.left) / rect.width - 0.5) * 2);
@@ -298,14 +298,14 @@ export default function Home() {
             transition={{ duration: 2.8, repeat: Infinity, ease: "linear" }}
           />
           <div
-            className="relative mx-auto grid min-h-[calc(100dvh-9rem)] w-full max-w-7xl grid-rows-[auto_1fr] gap-4 md:min-h-[calc(100dvh-8.5rem)]"
+            className="relative mx-auto grid w-full max-w-7xl gap-4 md:min-h-[calc(100dvh-8.5rem)] md:grid-rows-[auto_1fr]"
           >
             <div className="relative z-20 grid gap-5 md:grid-cols-[minmax(0,0.72fr)_0.28fr]">
               <div className="max-w-[52rem]">
                 <p className="mb-3 font-display text-sm font-black uppercase tracking-[0.2em] text-black/48">
                   Founder of PPR Global
                 </p>
-                <h1 className="font-display text-4xl font-semibold uppercase leading-[0.94] tracking-normal text-ink md:text-5xl lg:text-6xl">
+                <h1 className="font-sans text-4xl font-bold uppercase leading-[0.94] tracking-normal text-ink [font-family:Arial,system-ui,sans-serif] md:font-display md:text-5xl md:font-semibold lg:text-6xl">
                   Website & app development for Kolkata businesses.
                 </h1>
                 <p className="mt-5 max-w-xl text-base font-semibold leading-7 text-black/62 md:text-lg">
