@@ -192,12 +192,10 @@ export default function Home() {
   const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
   const workRef = useRef<HTMLElement>(null);
   const bannerVideoRef = useRef<HTMLVideoElement>(null);
-  const { scrollYProgress } = useScroll();
   const { scrollYProgress: workScrollProgress } = useScroll({
     target: workRef,
     offset: ["start start", "end end"]
   });
-  const heroY = useTransform(scrollYProgress, [0, 0.22], [0, -54]);
   const heroMouseX = useMotionValue(0);
   const heroMouseY = useMotionValue(0);
   const heroSpringX = useSpring(heroMouseX, { stiffness: 120, damping: 22, mass: 0.4 });
@@ -294,14 +292,13 @@ export default function Home() {
           />
           <motion.div
             aria-hidden="true"
-            className="absolute z-10 h-5 w-5 rounded-full bg-acid shadow-[0_0_42px_rgba(184,255,61,0.72)]"
+            className="absolute z-10 hidden h-5 w-5 rounded-full bg-acid shadow-[0_0_42px_rgba(184,255,61,0.72)] md:block"
             style={{ left: dotX, top: dotY }}
             animate={shouldReduceMotion ? undefined : { scale: [1, 1.18, 1] }}
             transition={{ duration: 2.8, repeat: Infinity, ease: "linear" }}
           />
-          <motion.div
+          <div
             className="relative mx-auto grid min-h-[calc(100dvh-9rem)] w-full max-w-7xl grid-rows-[auto_1fr] gap-4 md:min-h-[calc(100dvh-8.5rem)]"
-            style={{ y: shouldReduceMotion ? undefined : heroY }}
           >
             <div className="relative z-20 grid gap-5 md:grid-cols-[minmax(0,0.72fr)_0.28fr]">
               <div className="max-w-[52rem]">
@@ -344,7 +341,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative z-10 grid min-h-[25rem] items-center py-4 md:min-h-[29rem] xl:min-h-[31rem]">
+            <div className="relative z-10 hidden min-h-[25rem] items-center py-4 md:grid md:min-h-[29rem] xl:min-h-[31rem]">
               <motion.div
                 className="mx-auto grid w-full max-w-[720px] place-items-center md:max-w-[760px]"
                 style={{
@@ -385,6 +382,8 @@ export default function Home() {
                     playsInline
                     preload="metadata"
                     poster="/images/patit-banner-card-poster.jpg"
+                    width={640}
+                    height={533}
                     aria-label="Patit Roy banner video preview"
                   >
                     <source src="/videos/patit-banner-card.mp4" media="(min-width: 768px)" type="video/mp4" />
@@ -444,7 +443,7 @@ export default function Home() {
             >
               Scroll ↓
             </motion.a>
-          </motion.div>
+          </div>
         </section>
 
         <section className="defer-section overflow-hidden border-y border-white/10 bg-white/[0.035] py-5">
