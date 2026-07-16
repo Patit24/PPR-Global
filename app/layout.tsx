@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import { LeadSystem } from "@/components/leads/LeadSystem";
 import { business } from "@/lib/business";
 import "./globals.css";
@@ -8,7 +9,7 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  preload: true,
+  preload: false,
   fallback: ["Arial", "system-ui", "sans-serif"],
   adjustFontFallback: true
 });
@@ -17,7 +18,7 @@ const space = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space",
   display: "swap",
-  preload: true,
+  preload: false,
   fallback: ["Arial", "system-ui", "sans-serif"],
   adjustFontFallback: true
 });
@@ -222,11 +223,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preload" as="image" href="/images/patit-banner-card-poster.jpg" />
         {gaMeasurementId ? (
           <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
-            <script
+            <Script
+              id="google-analytics-loader"
+              strategy="lazyOnload"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+            />
+            <Script
+              id="google-analytics-init"
+              strategy="lazyOnload"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
@@ -239,11 +245,6 @@ export default function RootLayout({
           </>
         ) : null}
         <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
-          crossOrigin="anonymous"
-        />
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
@@ -251,6 +252,12 @@ export default function RootLayout({
       <body className={`${inter.variable} ${space.variable} ${inter.className}`}>
         {children}
         <LeadSystem />
+        <Script
+          id="adsense-loader"
+          strategy="lazyOnload"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
