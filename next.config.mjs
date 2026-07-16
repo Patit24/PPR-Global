@@ -3,19 +3,6 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"]
   },
-  async headers() {
-    return [
-      {
-        source: "/home-static.html",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=3600, stale-while-revalidate=86400"
-          }
-        ]
-      }
-    ];
-  },
   async redirects() {
     return [
       {
