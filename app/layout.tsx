@@ -7,13 +7,19 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap"
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "system-ui", "sans-serif"],
+  adjustFontFallback: true
 });
 
 const space = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space",
-  display: "swap"
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "system-ui", "sans-serif"],
+  adjustFontFallback: true
 });
 
 export const metadata: Metadata = {
@@ -214,7 +220,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${space.variable}`}>
+    <html lang="en">
       <head>
         <link rel="preload" as="image" href="/images/patit-banner-card-poster.jpg" />
         {gaMeasurementId ? (
@@ -242,7 +248,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body>
+      <body className={`${inter.variable} ${space.variable} ${inter.className}`}>
         {children}
         <LeadSystem />
       </body>
