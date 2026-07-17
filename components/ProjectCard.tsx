@@ -62,7 +62,6 @@ export function ProjectCard({
                 hasContainedImage ? "object-contain p-2 opacity-100 md:p-3" : "object-cover opacity-90"
               }
               style={{ objectPosition: imagePosition ?? "center" }}
-              priority={index === 0}
             />
           </motion.div>
         ) : null}

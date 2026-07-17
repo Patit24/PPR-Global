@@ -31,7 +31,7 @@ import type { CSSProperties } from "react";
 import { useRef, useState } from "react";
 import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingObjects } from "@/components/FloatingObjects";
-import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
+import { LazyLeadCaptureForm } from "@/components/leads/LazyLeadCaptureForm";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
@@ -1033,7 +1033,7 @@ Please send me a proposal.`
 
             <Reveal>
               <div className="rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
-                <LeadCaptureForm source="homepage_contact" />
+                <LazyLeadCaptureForm source="homepage_contact" />
               </div>
             </Reveal>
           </div>
