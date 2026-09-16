@@ -123,7 +123,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-          { "@type": "ListItem", position: 2, name: "Resources", item: `${baseUrl}/#resources` },
+          { "@type": "ListItem", position: 2, name: "Resources", item: `${baseUrl}/resources` },
           {
             "@type": "ListItem",
             position: 3,
@@ -168,18 +168,51 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           }}
         />
         <article className="relative mx-auto max-w-4xl">
-          <Link
-            href="/#resources"
-            className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid"
-          >
-            Back to resources <ArrowUpRight size={15} />
-          </Link>
-          <p className="mt-12 font-display text-sm font-black uppercase tracking-[0.22em] text-acid">
-            PPR Global Resources
-          </p>
-          <h1 className="mt-5 font-display text-5xl font-semibold leading-none md:text-7xl">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/50">
+            <Link href="/" className="text-acid hover:underline">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/resources" className="text-acid hover:underline">
+              Resources
+            </Link>
+            <span>/</span>
+            <span className="text-white/40 truncate max-w-[280px] sm:max-w-md">{post.title}</span>
+          </nav>
+
+          <div className="mt-8 flex items-center justify-between">
+            <Link
+              href="/resources"
+              className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid hover:underline"
+            >
+              ← Back to all resources
+            </Link>
+            <span className="text-xs uppercase tracking-widest text-white/40">PPR Global Engineering</span>
+          </div>
+
+          <h1 className="mt-8 font-display text-4xl font-semibold leading-tight md:text-6xl lg:text-7xl">
             {post.title}
           </h1>
+
+          {/* Author & Editorial Metadata Badge */}
+          <div className="mt-6 flex flex-wrap items-center gap-4 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-xs text-white/70">
+            <div className="flex items-center gap-2">
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-acid text-[11px] font-black text-ink">
+                PR
+              </span>
+              <span>
+                Written by <Link href="/about/patit-roy" className="font-bold text-white hover:text-acid underline">Patit Roy</Link>
+              </span>
+            </div>
+            <span>•</span>
+            <span>Founder & Lead Engineer</span>
+            <span>•</span>
+            <span>Updated: Sep 16, 2026</span>
+            <span>•</span>
+            <span className="text-acid font-semibold">5 min read</span>
+          </div>
+
           <p className="mt-7 text-xl leading-9 text-white/70">{post.description}</p>
           <div className="mt-10 space-y-6 rounded-lg bg-white/[0.055] p-6 text-lg leading-9 text-white/74 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
             <p className="rounded-md bg-acid/10 p-4 text-base leading-7 text-white/78">
@@ -230,22 +263,55 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           ) : null}
           <aside className="mt-8 rounded-lg bg-white/[0.055] p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
             <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
-              Author
+              About The Author
             </p>
             <h2 className="mt-3 text-2xl font-semibold">{business.founder}</h2>
             <p className="mt-3 text-sm leading-6 text-white/62">
-              Patit Roy is the founder of PPR Global, a website, app and automation agency in
-              Kolkata. This resource is based on practical project planning across websites,
-              WhatsApp automation, CRM systems, ads and SEO/GEO work.
+              Patit Roy is the founder and lead engineer of PPR Global, a software agency in
+              Kolkata, West Bengal. Every resource is derived from practical engineering across Next.js websites,
+              mobile applications, WhatsApp automation, and custom CRM systems.
             </p>
             <Link
               href="/about/patit-roy"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid hover:underline"
             >
-              View founder profile <ArrowUpRight size={15} />
+              View founder profile & credentials <ArrowUpRight size={15} />
             </Link>
           </aside>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+
+          {/* More Related Guides */}
+          <section className="mt-12 border-t border-white/10 pt-8">
+            <div className="flex items-center justify-between">
+              <h2 className="font-display text-xl font-semibold uppercase tracking-wider text-white">
+                Explore More Technical Guides
+              </h2>
+              <Link href="/resources" className="text-xs font-bold uppercase tracking-wider text-acid hover:underline">
+                View All ({resourcePosts.length}) →
+              </Link>
+            </div>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {resourcePosts
+                .filter((r) => r.slug !== post.slug)
+                .slice(0, 4)
+                .map((guide) => (
+                  <Link
+                    key={guide.slug}
+                    href={`/resources/${guide.slug}`}
+                    className="group rounded-xl border border-white/10 bg-white/[0.025] p-4 transition-colors hover:border-acid/30 hover:bg-white/[0.05]"
+                  >
+                    <p className="text-xs font-semibold text-acid uppercase">{guide.keywords?.[0] || "Guide"}</p>
+                    <h3 className="mt-2 text-sm font-semibold text-white group-hover:text-acid transition-colors">
+                      {guide.title}
+                    </h3>
+                    <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-white/50 group-hover:text-white">
+                      Read Guide <ArrowUpRight size={12} />
+                    </span>
+                  </Link>
+                ))}
+            </div>
+          </section>
+
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/contact"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-acid px-6 text-sm font-black uppercase tracking-[0.16em] text-ink shadow-[0_10px_30px_rgba(184,255,61,0.25)] transition-transform hover:scale-105"

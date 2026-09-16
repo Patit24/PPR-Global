@@ -19,6 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1
     },
     {
+      url: `${baseUrl}/resources`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
       url: `${baseUrl}/about/patit-roy`,
       lastModified,
       changeFrequency: "monthly",
@@ -33,14 +45,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified,
-      changeFrequency: "yearly",
-      priority: 0.3
+      changeFrequency: "monthly",
+      priority: 0.5
     },
     {
       url: `${baseUrl}/terms`,
       lastModified,
       changeFrequency: "yearly",
-      priority: 0.25
+      priority: 0.4
+    },
+    {
+      url: `${baseUrl}/disclaimer`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.4
     },
     ...Array.from(serviceSlugs).map((slug) => ({
       url: `${baseUrl}/services/${slug}`,

@@ -44,6 +44,16 @@ const nextConfig = {
         source: "/privacy",
         destination: "/privacy-policy",
         permanent: true
+      },
+      {
+        source: "/blog",
+        destination: "/resources",
+        permanent: true
+      },
+      {
+        source: "/blog/:slug*",
+        destination: "/resources/:slug*",
+        permanent: true
       }
     ];
   }

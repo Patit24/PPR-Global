@@ -83,6 +83,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "4koPAwDMsATxjb_F9L6fQunPPHnBnRWUFB0BYv9UHmk"
+  },
+  other: {
+    "google-adsense-account": "ca-pub-3048767030984334"
   }
 };
 
@@ -94,24 +97,17 @@ export default function RootLayout({
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const delayedScripts = `
     window.addEventListener('load', function () {
-      window.setTimeout(function () {
-        ${gaMeasurementId ? `
-        var gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}';
-        document.head.appendChild(gaScript);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = window.gtag || gtag;
-        gtag('js', new Date());
-        gtag('config', '${gaMeasurementId}');
-        ` : ""}
-        var adScript = document.createElement('script');
-        adScript.async = true;
-        adScript.crossOrigin = 'anonymous';
-        adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334';
-        document.head.appendChild(adScript);
-      }, 15000);
+      ${gaMeasurementId ? `
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}';
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = window.gtag || gtag;
+      gtag('js', new Date());
+      gtag('config', '${gaMeasurementId}');
+      ` : ""}
     });
   `;
   const structuredData = {
@@ -256,6 +252,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

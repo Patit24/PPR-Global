@@ -14,10 +14,11 @@ import {
 } from "lucide-react";
 
 export const navItems = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" }
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Resources", href: "/resources" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" }
 ];
 
 export const projects = [

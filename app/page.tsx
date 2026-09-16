@@ -1113,44 +1113,53 @@ Please send me a proposal.`
             )}
           </Reveal>
         </section>
-        <footer className="defer-section border-t border-white/10 px-4 py-10">
-          <div className="mx-auto grid max-w-7xl gap-8 text-sm text-white/58 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+        <footer className="defer-section border-t border-white/10 px-4 py-12">
+          <div className="mx-auto grid max-w-7xl gap-8 text-sm text-white/58 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <p className="font-display text-lg font-black uppercase tracking-[0.18em] text-white">
                 PPR Global
               </p>
-              <p className="mt-3 max-w-xl leading-7">
-                Website development company in Kolkata, West Bengal, serving Indian SMBs and
-                global clients with websites, apps, WhatsApp automation, ads, SEO/GEO, and CRM systems.
+              <p className="mt-3 leading-7">
+                Modern website, mobile app and WhatsApp automation agency founded by Patit Roy in Kolkata,
+                serving Indian SMBs and global clients with high-speed software.
+              </p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-acid">
+                Google Publisher ID: pub-3048767030984334
               </p>
             </div>
             <div>
-              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Service Area</p>
-              <p className="mt-3 leading-7">{business.address.display}</p>
-              <p className="leading-7">Remote projects worldwide</p>
+              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Navigation</p>
+              <ul className="mt-3 space-y-2">
+                <li><Link className="hover:text-white transition-colors" href="/#work">Our Work & Portfolio</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/#services">Core Services</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/resources">Resources & Guides (18)</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/about">About PPR Global</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/about/patit-roy">Founder: Patit Roy</Link></li>
+              </ul>
             </div>
             <div>
-              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Contact</p>
+              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Trust & Legal</p>
+              <ul className="mt-3 space-y-2">
+                <li><Link className="hover:text-white transition-colors" href="/privacy-policy">Privacy Policy & Cookies</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/terms">Terms and Conditions</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/disclaimer">Website & Ad Disclaimer</Link></li>
+                <li><a className="hover:text-white transition-colors" href="/ads.txt" target="_blank" rel="noopener noreferrer">Authorized ads.txt</a></li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Contact & Location</p>
+              <p className="mt-3 leading-6">{business.address.display}</p>
               {business.phoneNumbers.map((phone) => (
                 <a
                   key={phone.href}
-                  className="mt-3 block leading-7 hover:text-white"
+                  className="mt-2 block leading-6 hover:text-white transition-colors"
                   href={phone.href}
                 >
                   {phone.display}
                 </a>
               ))}
-              <Link className="mt-3 block leading-7 hover:text-white" href="/privacy-policy">
-                Privacy Policy
-              </Link>
-              <Link className="block leading-7 hover:text-white" href="/terms">
-                Terms
-              </Link>
-              <Link className="block leading-7 hover:text-white" href="/contact">
-                Contact Page
-              </Link>
-              <Link className="block leading-7 hover:text-white" href="/about/patit-roy">
-                Founder: Patit Roy
+              <Link className="mt-3 inline-flex items-center gap-1.5 font-bold uppercase tracking-wider text-acid hover:underline" href="/contact">
+                Book Consultation →
               </Link>
             </div>
           </div>
