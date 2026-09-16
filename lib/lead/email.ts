@@ -16,6 +16,7 @@ function leadRows(lead: LeadSubmission) {
     ["Mobile", lead.phone || "Not provided"],
     ["Service", lead.service],
     ["Budget", lead.budget],
+    ["Preferred Call Slot", lead.preferred_slot || "ASAP"],
     ["Message", lead.message],
     ["Page", lead.page_url || "Unknown"],
     ["Submitted", new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })]

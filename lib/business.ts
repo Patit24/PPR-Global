@@ -19,7 +19,35 @@ export const business = {
     addressCountry: "IN",
     display: "PPR Global, Jessore Rd, Kazipara, Barasat, Kolkata, West Bengal 700124"
   },
-  serviceArea: ["Kolkata", "West Bengal", "India", "Worldwide remote clients"],
+  serviceArea: [
+    "Kolkata",
+    "Salt Lake Sector V",
+    "New Town",
+    "Rajarhat",
+    "Park Street",
+    "Ballygunge",
+    "Howrah",
+    "Barasat",
+    "West Bengal",
+    "India",
+    "Worldwide remote clients"
+  ],
+  localities: [
+    "Salt Lake Sector V",
+    "New Town",
+    "Rajarhat",
+    "Park Street",
+    "Ballygunge",
+    "Camac Street",
+    "Howrah",
+    "Barasat",
+    "Dum Dum",
+    "Kolkata"
+  ],
+  geo: {
+    latitude: 22.7233,
+    longitude: 88.4803
+  },
   phoneNumbers: [
     { label: "WhatsApp", href: "tel:+919609079663", display: "+91 96090 79663" },
     { label: "Book a Call", href: "tel:+919734019005", display: "+91 97340 19005" }
@@ -38,8 +66,8 @@ export const business = {
   priceRange: "₹₹"
   ,
   defaultMetadata: {
-    title: "PPR Global | Website, App & Automation Agency in Kolkata",
+    title: "PPR Global | Website Development & App Agency Kolkata | Starts ₹6,000",
     description:
-      "PPR Global builds websites, mobile apps, WhatsApp automation and CRM systems for businesses in Kolkata and worldwide. Founded by Patit Roy."
+      "Top-rated website development, mobile apps & WhatsApp automation agency in Kolkata. Fast 7-day delivery, custom CRM & pricing from ₹6,000. Get a free quote!"
   }
 } as const;

@@ -317,6 +317,41 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </div>
               </div>
             </div>
+
+            <div className="mt-10 rounded-lg border border-acid/25 bg-[#0d0d0f] p-6 shadow-[0_20px_70px_rgba(0,0,0,0.5)] md:p-8">
+              <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-acid">
+                    Start Your Project
+                  </p>
+                  <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
+                    Want Results Like {project.title}?
+                  </h2>
+                  <p className="mt-2 max-w-xl text-sm leading-6 text-white/70">
+                    Book a free 15-minute consultation with Patit Roy. We deliver your first design
+                    preview within 72 hours with milestone-based delivery.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/contact"
+                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-acid px-6 text-xs font-black uppercase tracking-[0.16em] text-ink shadow-[0_10px_25px_rgba(184,255,61,0.25)] transition-transform hover:scale-105"
+                  >
+                    Book Free Strategy Call <ArrowUpRight size={15} />
+                  </Link>
+                  <a
+                    href={`https://wa.me/919609079663?text=${encodeURIComponent(
+                      `Hi Patit, I was reviewing your case study on ${project.title} and want to discuss a similar build.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-5 text-xs font-black uppercase tracking-[0.16em] text-white transition-colors hover:border-acid hover:text-acid"
+                  >
+                    WhatsApp Chat <ArrowUpRight size={14} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -5,6 +5,8 @@ import {
   Building2,
   CalendarDays,
   Check,
+  ChevronDown,
+  ChevronUp,
   Dumbbell,
   MapPin,
   MessageCircle,
@@ -190,6 +192,7 @@ export default function Home() {
   const shouldReduceMotion = useReducedMotion();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
+  const [visibleGuidesCount, setVisibleGuidesCount] = useState(6);
   const workRef = useRef<HTMLElement>(null);
   const bannerVideoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress: workScrollProgress } = useScroll({
@@ -209,7 +212,7 @@ export default function Home() {
   const cardY = useTransform(heroSpringY, [-1, 1], [8, -8]);
   const dotX = useTransform(heroSpringX, [-1, 1], ["18%", "74%"]);
   const dotY = useTransform(heroSpringY, [-1, 1], ["72%", "28%"]);
-  const workX = useTransform(workScrollProgress, [0, 1], ["0%", "-56%"]);
+  const workX = useTransform(workScrollProgress, [0, 1], ["0%", "-75%"]);
   const workProgressWidth = useTransform(workScrollProgress, [0, 1], ["8%", "100%"]);
   const toggleBannerSound = () => {
     const video = bannerVideoRef.current;
@@ -457,7 +460,7 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section id="work" ref={workRef} className="defer-section relative scroll-mt-28 px-4 pb-28 pt-16 md:h-[300vh] md:pb-0 md:pt-16">
+        <section id="work" ref={workRef} className="defer-section relative scroll-mt-28 px-4 pb-28 pt-16 md:h-[420vh] md:pb-0 md:pt-16">
           <div className="mx-auto max-w-7xl md:sticky md:top-20 md:flex md:h-[calc(100dvh-5rem)] md:flex-col md:justify-center md:overflow-hidden md:py-3">
             <Reveal className="mb-8 flex flex-col justify-between gap-5 md:mb-5 md:flex-row md:items-end">
               <div>
@@ -975,7 +978,7 @@ Please send me a proposal.`
               </div>
             </Reveal>
             <div className="grid gap-4 md:grid-cols-3">
-              {resourcePosts.map((post, index) => (
+              {resourcePosts.slice(0, visibleGuidesCount).map((post, index) => (
                 <Reveal
                   key={post.slug}
                   delay={index * 0.04}
@@ -996,6 +999,30 @@ Please send me a proposal.`
                 </Reveal>
               ))}
             </div>
+            {resourcePosts.length > 6 && (
+              <div className="mt-8 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setVisibleGuidesCount((prev) =>
+                      prev >= resourcePosts.length ? 6 : resourcePosts.length
+                    )
+                  }
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-sm transition-all duration-200 hover:border-acid hover:bg-acid hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid"
+                >
+                  {visibleGuidesCount >= resourcePosts.length ? (
+                    <>
+                      Show Less <ChevronUp size={15} aria-hidden="true" />
+                    </>
+                  ) : (
+                    <>
+                      Load More Guides ({resourcePosts.length - 6} More){" "}
+                      <ChevronDown size={15} aria-hidden="true" />
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
@@ -1017,6 +1044,8 @@ Please send me a proposal.`
                     whatsappNowNumber,
                     "Hi Patit, I want to discuss a project with PPR Global."
                   )}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <MessageCircle className="mr-2" size={17} aria-hidden="true" />
                   WhatsApp Now
@@ -1024,6 +1053,8 @@ Please send me a proposal.`
                 <MagneticButton
                   href={whatsappLink(bookCallNumber, "Hi Patit, I want to book a call for my project.")}
                   variant="secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <CalendarDays className="mr-2" size={17} aria-hidden="true" />
                   Book a Call

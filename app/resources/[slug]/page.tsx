@@ -28,22 +28,29 @@ export async function generateMetadata({
     };
   }
 
+  const pageTitle =
+    "metaTitle" in post && post.metaTitle ? (post.metaTitle as string) : post.title;
+  const pageDescription =
+    "metaDescription" in post && post.metaDescription
+      ? (post.metaDescription as string)
+      : post.description;
+
   return {
-    title: `${post.title} | Resources`,
-    description: post.description,
+    title: `${pageTitle} | Resources`,
+    description: pageDescription,
     keywords: post.keywords,
     alternates: {
       canonical: `/resources/${post.slug}`
     },
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: pageTitle,
+      description: pageDescription,
       url: `${baseUrl}/resources/${post.slug}`
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
+      title: pageTitle,
+      description: pageDescription,
       images: ["/opengraph-image"]
     }
   };
@@ -125,20 +132,22 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           }
         ]
       },
-      ...faqs.map((faq, index) => ({
-        "@type": "QAPage",
-        "@id": `${baseUrl}/resources/${post.slug}#qa-${index + 1}`,
-        mainEntity: {
-          "@type": "Question",
-          name: faq.question,
-          text: faq.question,
-          answerCount: 1,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer
-          }
-        }
-      }))
+      ...(faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${baseUrl}/resources/${post.slug}#faq`,
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer
+                }
+              }))
+            }
+          ]
+        : [])
     ]
   };
 
@@ -236,13 +245,24 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
               View founder profile <ArrowUpRight size={15} />
             </Link>
           </aside>
-          <p className="mt-5 text-sm text-white/42">Published: July 8, 2026 · Updated: July 14, 2026</p>
-          <Link
-            href="/#contact"
-            className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-acid px-5 text-sm font-black uppercase tracking-[0.16em] text-ink"
-          >
-            Discuss a Project <ArrowUpRight size={16} />
-          </Link>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-acid px-6 text-sm font-black uppercase tracking-[0.16em] text-ink shadow-[0_10px_30px_rgba(184,255,61,0.25)] transition-transform hover:scale-105"
+            >
+              Book Free Strategy Call <ArrowUpRight size={16} />
+            </Link>
+            <a
+              href={`https://wa.me/919609079663?text=${encodeURIComponent(
+                `Hi Patit, I was reading your guide on ${post.title} and want to discuss my project.`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-6 text-sm font-black uppercase tracking-[0.16em] text-white transition-colors hover:border-acid hover:text-acid"
+            >
+              Chat on WhatsApp <ArrowUpRight size={15} />
+            </a>
+          </div>
         </article>
       </section>
     </main>

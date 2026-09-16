@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
+import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
 import { business } from "@/lib/business";
 import { projects, servicePages, services } from "@/lib/content";
 
@@ -74,22 +75,29 @@ export async function generateMetadata({
     };
   }
 
+  const pageTitle =
+    "metaTitle" in service && service.metaTitle ? (service.metaTitle as string) : service.name;
+  const pageDescription =
+    "metaDescription" in service && service.metaDescription
+      ? (service.metaDescription as string)
+      : service.description;
+
   return {
-    title: service.name,
-    description: service.description,
+    title: pageTitle,
+    description: pageDescription,
     keywords: service.keywords,
     alternates: {
       canonical: `/services/${service.slug}`
     },
     openGraph: {
-      title: service.name,
-      description: service.description,
+      title: pageTitle,
+      description: pageDescription,
       url: `${baseUrl}/services/${service.slug}`
     },
     twitter: {
       card: "summary_large_image",
-      title: service.name,
-      description: service.description,
+      title: pageTitle,
+      description: pageDescription,
       images: ["/opengraph-image"]
     }
   };
@@ -162,20 +170,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           }
         ]
       },
-      ...service.faqs.map((faq, index) => ({
-        "@type": "QAPage",
-        "@id": `${baseUrl}/services/${service.slug}#qa-${index + 1}`,
-        mainEntity: {
-          "@type": "Question",
-          name: faq.question,
-          text: faq.question,
-          answerCount: 1,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer
-          }
-        }
-      }))
+      ...(service.faqs && service.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${baseUrl}/services/${service.slug}#faq`,
+              mainEntity: service.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer
+                }
+              }))
+            }
+          ]
+        : [])
     ]
   };
   const relatedProject = projects.find((project) => project.slug === service.relatedProjectSlug);
@@ -228,12 +238,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 Starting point
               </p>
               <p className="mt-4 font-display text-4xl font-semibold">{service.price}</p>
-              <Link
-                href="/#contact"
-                className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-5 text-xs font-black uppercase tracking-[0.16em] text-white"
+              <a
+                href="#service-quote"
+                className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-6 text-xs font-black uppercase tracking-[0.16em] text-white transition-transform hover:scale-105"
               >
-                Request Quote <ArrowUpRight size={15} />
-              </Link>
+                Book Consultation & Quote <ArrowUpRight size={15} />
+              </a>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {service.highlights.map((item) => (
@@ -302,6 +312,42 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </div>
           </div>
+          <div
+            id="service-quote"
+            className="mt-8 rounded-lg border border-acid/25 bg-[#0d0d0f] p-6 shadow-[0_20px_70px_rgba(0,0,0,0.5)] md:p-10"
+          >
+            <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-acid">
+                  Book a Consultation
+                </p>
+                <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-white md:text-5xl">
+                  Get a Free Strategy Call & Custom Quote for {service.name}
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70 md:text-base md:leading-7">
+                  Speak directly with founder Patit Roy. Fast 7-day turnaround, transparent
+                  milestone pricing, and a first design preview within 72 hours.
+                </p>
+              </div>
+              <a
+                href={`https://wa.me/919609079663?text=${encodeURIComponent(
+                  `Hi Patit, I want to discuss ${service.name} for my business.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-acid px-6 text-xs font-black uppercase tracking-[0.16em] text-ink transition-transform hover:scale-105"
+              >
+                Instant WhatsApp Chat <ArrowUpRight size={15} />
+              </a>
+            </div>
+            <div className="mt-8 border-t border-white/10 pt-8">
+              <LeadCaptureForm
+                variant="contact"
+                source={`service_${service.slug}`}
+              />
+            </div>
+          </div>
+
           <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
               Related Kolkata service pages

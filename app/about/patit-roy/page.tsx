@@ -5,16 +5,16 @@ import { business } from "@/lib/business";
 import { projects, resourcePosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Patit Roy | Founder",
+  title: "Patit Roy - Software Developer & Founder of PPR Global Kolkata",
   description:
-    "Patit Roy is the founder of PPR Global, a website, mobile app and business automation agency based in Kolkata, West Bengal, India.",
+    "Patit Roy is the founder of PPR Global in Kolkata, building high-performance websites, mobile apps, and WhatsApp automation systems for global businesses.",
   alternates: {
     canonical: "/about/patit-roy"
   },
   openGraph: {
-    title: "Patit Roy | Founder of PPR Global",
+    title: "Patit Roy - Software Developer & Founder of PPR Global Kolkata",
     description:
-      "Founder profile for Patit Roy of PPR Global, a website, app and automation agency in Kolkata.",
+      "Patit Roy is the founder of PPR Global in Kolkata, building high-performance websites, mobile apps, and WhatsApp automation systems for global businesses.",
     url: `${business.url}/about/patit-roy`
   }
 };

@@ -69,9 +69,16 @@ export const leadSubmissionSchema = z
     email: optionalEmail,
     phone: optionalPhone,
     service: z.enum(serviceOptions),
-    budget: z.enum(budgetOptions),
-    message: z.string().trim().min(8, "Tell us a little about the project.").max(1800),
-    consent: z.boolean().refine((value) => value, "Please confirm consent before submitting."),
+    budget: z.enum(budgetOptions).optional().default("Not decided"),
+    message: z
+      .string()
+      .trim()
+      .max(1800)
+      .optional()
+      .default("")
+      .transform((val) => val || "Requesting project consultation and quote from PPR Global."),
+    consent: z.boolean().optional().default(true),
+    preferred_slot: z.string().trim().max(100).optional().default("ASAP"),
     page_url: z.string().trim().max(500).optional().default(""),
     page_title: z.string().trim().max(180).optional().default(""),
     project_viewed: z.string().trim().max(180).optional().default(""),

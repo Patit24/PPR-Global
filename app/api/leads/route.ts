@@ -78,51 +78,62 @@ export async function POST(request: NextRequest) {
     browser: parsed.data.browser || getBrowser(userAgent)
   });
 
+  const insertPayload = {
+    name: lead.name,
+    email: lead.email || null,
+    phone: lead.phone || null,
+    service: lead.service,
+    budget: lead.budget || "Not decided",
+    message: lead.message,
+    consent: lead.consent ?? true,
+    page_url: lead.page_url || null,
+    page_title: lead.page_title || null,
+    project_viewed: lead.project_viewed || null,
+    referrer: lead.referrer || null,
+    utm_source: lead.utm_source || null,
+    utm_medium: lead.utm_medium || null,
+    utm_campaign: lead.utm_campaign || null,
+    device_type: lead.device_type || null,
+    browser: lead.browser || null,
+    lead_status: "new"
+  };
+
+  let leadId = `lead_${Date.now()}`;
+
+  // Always attempt email and webhook notifications
+  const notificationPromises = [
+    sendLeadEmails(lead).catch((err) => console.error("Failed to send lead email:", err)),
+    forwardToGoogleSheets(insertPayload).catch((err) => console.error("Failed to forward to sheets:", err))
+  ];
+
+  // Try Supabase insert gracefully without blocking if unconfigured
   try {
     const supabase = createServiceSupabaseClient();
-    const insertPayload = {
-      name: lead.name,
-      email: lead.email || null,
-      phone: lead.phone || null,
-      service: lead.service,
-      budget: lead.budget,
-      message: lead.message,
-      consent: lead.consent,
-      page_url: lead.page_url || null,
-      page_title: lead.page_title || null,
-      project_viewed: lead.project_viewed || null,
-      referrer: lead.referrer || null,
-      utm_source: lead.utm_source || null,
-      utm_medium: lead.utm_medium || null,
-      utm_campaign: lead.utm_campaign || null,
-      device_type: lead.device_type || null,
-      browser: lead.browser || null,
-      lead_status: "new"
-    };
-
     const { data, error } = await supabase
       .from("leads")
       .insert(insertPayload)
       .select("id")
       .single();
 
-    if (error) {
-      throw error;
+    if (!error && data?.id) {
+      leadId = data.id;
+    } else if (error) {
+      console.warn("Supabase lead insertion warning:", error.message);
     }
-
-    await Promise.allSettled([sendLeadEmails(lead), forwardToGoogleSheets(insertPayload)]);
-
-    return NextResponse.json({
-      ok: true,
-      leadId: data.id,
-      message: "Thanks. We received your enquiry."
-    });
-  } catch (error) {
-    console.error("Lead submission failed", error);
-    return NextResponse.json(
-      { ok: false, message: "We could not submit the enquiry right now." },
-      { status: 500 }
-    );
+  } catch (supabaseError) {
+    console.warn("Supabase client init/insert skipped:", supabaseError);
   }
+
+  await Promise.allSettled(notificationPromises);
+
+  const whatsAppMessage = `Hi PPR Global, I submitted a consultation request on your website. Name: ${lead.name}, Phone: ${lead.phone || "N/A"}, Service: ${lead.service}, Preferred Slot: ${lead.preferred_slot || "ASAP"}.`;
+  const whatsappUrl = `https://wa.me/919609079663?text=${encodeURIComponent(whatsAppMessage)}`;
+
+  return NextResponse.json({
+    ok: true,
+    leadId,
+    whatsappUrl,
+    message: "Thanks! We received your request and will contact you shortly."
+  });
 }
 

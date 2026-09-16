@@ -50,6 +50,8 @@ export function LeadCaptureForm({
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
   const isCompact = variant === "compact";
 
+  const [customWhatsAppUrl, setCustomWhatsAppUrl] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -64,18 +66,23 @@ export function LeadCaptureForm({
       service: "Website Development",
       budget: "Not decided",
       message: "",
-      consent: false,
+      consent: true,
+      preferred_slot: "ASAP",
       turnstileToken: ""
     }
   });
 
   const whatsAppHref = useMemo(() => {
+    if (customWhatsAppUrl) {
+      return customWhatsAppUrl;
+    }
+
     const message = successLead
-      ? `Hi PPR Global, I submitted an enquiry. Name: ${successLead.name}. Service: ${successLead.service}. Budget: ${successLead.budget}.`
-      : "Hi PPR Global, I visited your portfolio and would like to discuss a project.";
+      ? `Hi PPR Global, I booked a consultation. Name: ${successLead.name}. Service: ${successLead.service}. Budget: ${successLead.budget}. Preferred slot: ${successLead.preferred_slot || "ASAP"}.`
+      : "Hi PPR Global, I visited your website and would like to book a 15-minute consultation.";
 
     return `/api/whatsapp?message=${encodeURIComponent(message)}`;
-  }, [successLead]);
+  }, [successLead, customWhatsAppUrl]);
 
   const onSubmit = async (values: LeadSubmissionInput) => {
     setServerMessage("");
@@ -103,6 +110,7 @@ export function LeadCaptureForm({
     const result = (await response.json()) as {
       ok: boolean;
       message?: string;
+      whatsappUrl?: string;
       errors?: Record<string, string[]>;
     };
 
@@ -114,6 +122,10 @@ export function LeadCaptureForm({
       return;
     }
 
+    if (result.whatsappUrl) {
+      setCustomWhatsAppUrl(result.whatsappUrl);
+    }
+
     setSuccessLead(payload);
     trackEvent("lead_form_success", { source, service: payload.service, budget: payload.budget });
     onSuccess?.(payload);
@@ -122,24 +134,29 @@ export function LeadCaptureForm({
 
   if (successLead) {
     return (
-      <div className="rounded-lg border border-acid/30 bg-acid/10 p-5 text-white">
+      <div className="rounded-lg border border-acid/30 bg-acid/10 p-6 text-white">
         <div className="grid h-12 w-12 place-items-center rounded-full bg-acid text-ink">
           <Check size={22} aria-hidden="true" />
         </div>
-        <h3 className="mt-5 font-display text-3xl font-semibold leading-none">
-          Enquiry received.
+        <h3 className="mt-5 font-display text-3xl font-semibold leading-none text-white">
+          Consultation Request Confirmed!
         </h3>
-        <p className="mt-4 text-sm leading-6 text-white/68">
-          We&apos;ll contact you shortly. You can also continue on WhatsApp with your enquiry
-          details already prepared.
+        <p className="mt-4 text-sm leading-6 text-white/78">
+          Thanks {successLead.name}! Patit Roy has received your request. To lock in your preferred
+          time right now or get an instant reply, click below to connect on WhatsApp directly.
         </p>
-        <a
-          href={whatsAppHref}
-          onClick={() => trackEvent("whatsapp_click", { source: "lead_success" })}
-          className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-acid px-5 text-sm font-black uppercase tracking-[0.14em] text-ink"
-        >
-          Continue on WhatsApp <ArrowUpRight size={15} aria-hidden="true" />
-        </a>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={whatsAppHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("whatsapp_click", { source: "lead_success" })}
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-acid px-6 text-sm font-black uppercase tracking-[0.14em] text-ink shadow-[0_10px_30px_rgba(184,255,61,0.25)] transition-transform hover:scale-105"
+          >
+            <MessageCircle size={18} />
+            Chat with Patit on WhatsApp Now <ArrowUpRight size={15} aria-hidden="true" />
+          </a>
+        </div>
       </div>
     );
   }
@@ -189,6 +206,20 @@ export function LeadCaptureForm({
             </select>
           }
         />
+        <Field
+          id="lead-preferred-call-slot"
+          label="Preferred Call Time"
+          error={errors.preferred_slot?.message}
+          input={
+            <select {...register("preferred_slot")}>
+              <option value="ASAP">⚡ ASAP / Next available</option>
+              <option value="Morning (10 AM - 1 PM)">🌅 Morning (10 AM – 1 PM)</option>
+              <option value="Afternoon (1 PM - 5 PM)">☀️ Afternoon (1 PM – 5 PM)</option>
+              <option value="Evening (5 PM - 9 PM)">🌙 Evening (5 PM – 9 PM)</option>
+              <option value="Weekend">📅 Weekend Consultation</option>
+            </select>
+          }
+        />
         <div className={isCompact ? "" : "md:col-span-2"}>
           <Field
             id="lead-project-message"
@@ -197,8 +228,8 @@ export function LeadCaptureForm({
             input={
               <textarea
                 {...register("message")}
-                rows={isCompact ? 4 : 5}
-                placeholder="Tell us what you want to build..."
+                rows={isCompact ? 3 : 4}
+                placeholder="Tell us what you want to build (optional)..."
               />
             }
           />
@@ -212,8 +243,7 @@ export function LeadCaptureForm({
           className="mt-1 h-4 w-4 accent-acid"
         />
         <span>
-          I consent to PPR Global storing and contacting me about this enquiry. We only collect
-          contact details you submit explicitly. Read the{" "}
+          I consent to PPR Global contacting me about this project. Zero spam guarantee. Read our{" "}
           <Link href="/privacy-policy" className="font-semibold text-acid underline">
             privacy policy
           </Link>
@@ -237,26 +267,38 @@ export function LeadCaptureForm({
       <div className="flex flex-col gap-3 sm:flex-row">
         <button
           type="submit"
-          disabled={isSubmitting || (Boolean(siteKey) && !turnstileToken)}
-          className="inline-flex min-h-12 items-center justify-center rounded-full bg-acid px-5 text-sm font-black uppercase tracking-[0.14em] text-ink outline-none transition-transform hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-55"
+          disabled={isSubmitting}
+          className="inline-flex min-h-12 items-center justify-center rounded-full bg-acid px-6 text-sm font-black uppercase tracking-[0.14em] text-ink outline-none transition-transform hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-55 shadow-[0_10px_25px_rgba(184,255,61,0.2)]"
         >
           {isSubmitting ? (
             <Loader2 className="mr-2 animate-spin" size={17} aria-hidden="true" />
           ) : (
             <Send className="mr-2" size={17} aria-hidden="true" />
           )}
-          Request Free Consultation
+          Book Free Strategy Call
         </button>
         <a
           href={`/api/whatsapp?message=${encodeURIComponent(
-            "Hi PPR Global, I visited your portfolio and would like to discuss a project."
+            "Hi PPR Global, I visited your website and would like to book a 15-minute consultation."
           )}`}
           onClick={() => trackEvent("whatsapp_click", { source })}
           className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/14 px-5 text-sm font-black uppercase tracking-[0.14em] text-white outline-none transition-colors hover:border-acid hover:text-acid"
         >
           <MessageCircle className="mr-2" size={17} aria-hidden="true" />
-          Continue on WhatsApp
+          Instant WhatsApp Chat
         </a>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/10 pt-4 text-xs font-semibold text-white/60">
+        <span className="inline-flex items-center gap-1.5">
+          <Check size={14} className="text-acid" /> 100% Free Strategy Session
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <Check size={14} className="text-acid" /> 72h Design Preview
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <Check size={14} className="text-acid" /> Direct Founder Access
+        </span>
       </div>
     </form>
   );

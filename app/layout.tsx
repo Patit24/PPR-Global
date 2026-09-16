@@ -149,9 +149,21 @@ export default function RootLayout({
         serviceType: [...business.services],
         areaServed: [
           { "@type": "City", name: "Kolkata" },
+          { "@type": "AdministrativeArea", name: "Salt Lake Sector V, Kolkata" },
+          { "@type": "AdministrativeArea", name: "New Town, Kolkata" },
+          { "@type": "AdministrativeArea", name: "Rajarhat, Kolkata" },
+          { "@type": "AdministrativeArea", name: "Park Street, Kolkata" },
+          { "@type": "AdministrativeArea", name: "Ballygunge, Kolkata" },
+          { "@type": "AdministrativeArea", name: "Howrah" },
+          { "@type": "AdministrativeArea", name: "Barasat, Kolkata" },
           { "@type": "AdministrativeArea", name: "West Bengal" },
           { "@type": "Country", name: "India" }
         ],
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: business.geo.latitude,
+          longitude: business.geo.longitude
+        },
         address: {
           "@type": "PostalAddress",
           streetAddress: business.address.streetAddress,

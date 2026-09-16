@@ -20,8 +20,17 @@ export function LeadPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    const handleManualTrigger = () => {
+      setIsOpen(true);
+      trackEvent("lead_popup_view", { reason: "manual_trigger" });
+    };
+
+    window.addEventListener("ppr:open-lead-popup", handleManualTrigger);
+
     if (wasDismissedRecently()) {
-      return;
+      return () => {
+        window.removeEventListener("ppr:open-lead-popup", handleManualTrigger);
+      };
     }
 
     const open = (reason: string) => {
@@ -59,6 +68,7 @@ export function LeadPopup() {
 
     return () => {
       window.clearTimeout(timer);
+      window.removeEventListener("ppr:open-lead-popup", handleManualTrigger);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("ppr:portfolio-project-view", onProjectView);
       document.removeEventListener("mouseleave", onMouseLeave);
@@ -75,7 +85,7 @@ export function LeadPopup() {
     <AnimatePresence>
       {isOpen ? (
         <motion.div
-          className="fixed inset-0 z-[100] grid place-items-end bg-black/62 px-3 py-3 text-white backdrop-blur-md md:place-items-center md:p-6"
+          className="fixed inset-0 z-[100] grid place-items-end bg-black/75 px-3 py-3 text-white backdrop-blur-md md:place-items-center md:p-6"
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1 }}
           exit={shouldReduceMotion ? undefined : { opacity: 0 }}
@@ -87,7 +97,7 @@ export function LeadPopup() {
             onClick={dismiss}
           />
           <motion.div
-            className="relative max-h-[92dvh] w-full max-w-3xl overflow-y-auto rounded-lg border border-white/12 bg-[#0d0d0f] p-5 shadow-[0_30px_120px_rgba(0,0,0,0.48)] md:p-7"
+            className="relative max-h-[92dvh] w-full max-w-3xl overflow-y-auto rounded-lg border border-white/12 bg-[#0d0d0f] p-5 shadow-[0_30px_120px_rgba(0,0,0,0.6)] md:p-8"
             initial={shouldReduceMotion ? false : { y: 28, scale: 0.98, filter: "blur(8px)" }}
             animate={shouldReduceMotion ? undefined : { y: 0, scale: 1, filter: "blur(0px)" }}
             exit={shouldReduceMotion ? undefined : { y: 18, scale: 0.99, filter: "blur(6px)" }}
@@ -101,12 +111,15 @@ export function LeadPopup() {
             >
               <X size={18} aria-hidden="true" />
             </button>
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-acid">Free consultation</p>
-            <h2 className="mt-4 max-w-xl font-display text-4xl font-semibold leading-none md:text-6xl">
-              Planning Your Next Digital Project?
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-acid">
+              Free 15-Minute Consultation
+            </p>
+            <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-5xl">
+              Book a Strategy Call with Patit Roy
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-white/68">
-              Share your requirements and receive a free consultation from PPR Global.
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/72 md:text-base md:leading-7">
+              Select your preferred time slot. Get an exact timeline, transparent pricing, and your
+              first design preview in 72 hours.
             </p>
             <div className="mt-6">
               <LeadCaptureForm variant="popup" source="popup" onSuccess={dismiss} />

@@ -3,10 +3,16 @@ import { business } from "@/lib/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/"
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/"
+      },
+      {
+        userAgent: ["GPTBot", "PerplexityBot", "ClaudeBot", "Google-Extended", "Applebot-Extended"],
+        allow: ["/", "/llms.txt"]
+      }
+    ],
     sitemap: `${business.url}/sitemap.xml`,
     host: business.url
   };

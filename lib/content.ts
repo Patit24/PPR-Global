@@ -230,6 +230,146 @@ export const projects = [
       ],
       technologies: ["React Native", "Next.js APIs", "Firebase", "Payments"]
     }
+  },
+  {
+    slug: "wedstory-wedding-photography",
+    title: "WedStory Wedding Studio",
+    year: "2026",
+    tags: ["Wedding", "Photography", "Booking"],
+    description:
+      "A luxury wedding photography and cinematic film portfolio featuring full-screen visual storytelling, package breakdowns, and instant WhatsApp booking.",
+    image: "linear-gradient(135deg, #f7d794 0%, #c44569 48%, #1f0b18 100%)",
+    imageAlt: "WedStory Wedding Studio photography website Kolkata",
+    caseStudy: {
+      category: "Photography / Portfolio / Booking",
+      headline: "Luxury Wedding Photography Portfolio.",
+      summary:
+        "A cinematic visual portfolio built for a high-end wedding photography studio, designed to showcase couple love stories, highlight package tiers, and drive instant consultation requests on WhatsApp.",
+      narrative:
+        "Wedding photography clients make decisions based on emotion, visual aesthetic, and trust. WedStory needed a digital experience that reflected the elegance of destination weddings and cinematic films. PPR Global developed a mobile-first visual experience with full-screen photography grids, wedding film embeds, transparent package breakdowns (Pre-Wedding, Traditional, Candid, Cinematic), and direct WhatsApp booking. Since launching, inquiries from high-budget couples increased significantly, and client consultations became much easier to qualify.",
+      scope: "Website + Booking Journey",
+      duration: "3 weeks",
+      accent: "#f7d794",
+      highlights: [
+        "Cinematic full-screen photo & film showcase",
+        "Transparent package pricing comparison",
+        "Direct WhatsApp booking & availability check",
+        "Lightning-fast mobile image loading"
+      ],
+      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "WhatsApp CTA"]
+    }
+  },
+  {
+    slug: "pulse-smart-gym",
+    title: "Pulse Smart Gym",
+    year: "2026",
+    tags: ["Fitness", "SaaS", "Membership"],
+    description:
+      "A modern fitness club platform with class schedules, trainer rosters, membership tiers, and free trial pass booking via WhatsApp.",
+    image: "linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #051329 100%)",
+    imageAlt: "Pulse Smart Gym website and membership booking Kolkata",
+    caseStudy: {
+      category: "Fitness / Membership / Local SEO",
+      headline: "High-Energy Fitness Club Platform.",
+      summary:
+        "A conversion-focused gym website built to drive free trial passes, explain membership perks, and turn nearby fitness enthusiasts into active members.",
+      narrative:
+        "Pulse Smart Gym needed to stand out in a competitive local market where gyms typically rely only on word-of-mouth. PPR Global created an energetic, dark-themed fitness platform highlighting cutting-edge gym equipment, certified trainer credentials, daily class schedules (CrossFit, Strength, HIIT, Yoga), and transparent membership plans. A prominent 'Claim Free Day Pass' conversion funnel routes prospective members straight to the front desk WhatsApp, giving the sales team immediate contact with high-intent leads.",
+      scope: "Web Design + Trial Funnel",
+      duration: "2 weeks",
+      accent: "#4facfe",
+      highlights: [
+        "Interactive weekly class timetable",
+        "Certified trainer profiles & specialties",
+        "Instant 1-Day Pass WhatsApp booking",
+        "Local SEO ranking for nearby gym searches"
+      ],
+      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Lead Funnel"]
+    }
+  },
+  {
+    slug: "rp-sports-activewear",
+    title: "RP Sports & Activewear",
+    year: "2026",
+    tags: ["Ecommerce", "Sports", "Catalog"],
+    description:
+      "A high-energy sports equipment and custom teamwear catalog with instant product enquiry, size guides, and WhatsApp order flow.",
+    image: "linear-gradient(135deg, #ff5e62 0%, #ff9966 52%, #1a0808 100%)",
+    imageAlt: "RP Sports activewear and athletic gear website",
+    caseStudy: {
+      category: "Ecommerce / Sports / Catalog",
+      headline: "Performance Sports & Custom Teamwear Catalog.",
+      summary:
+        "A responsive digital catalog built for sports apparel, professional athletic gear, and customized team jersey bulk orders with direct WhatsApp checkout.",
+      narrative:
+        "RP Sports distributes athletic gear, cricket equipment, and customized team jerseys for schools, clubs, and corporate tournaments. The challenge was displaying a massive inventory without the heavy friction of standard cart checkouts that cause high drop-offs in India. PPR Global implemented a dynamic product catalog with category filtering, size charts, and a one-click WhatsApp order button that automatically pre-populates product name, SKU, and sizing into the message. This streamlined customer inquiries and expedited wholesale teamwear orders.",
+      scope: "Catalog + WhatsApp Commerce",
+      duration: "3 weeks",
+      accent: "#ff5e62",
+      highlights: [
+        "Category filtering across multi-sport gear",
+        "Custom team jersey bulk order builder",
+        "One-click WhatsApp order with pre-filled SKU",
+        "Mobile-optimized product galleries"
+      ],
+      technologies: ["Next.js", "Tailwind CSS", "Lucide React", "WhatsApp API"]
+    }
+  },
+  {
+    slug: "daily-roast-cafe",
+    title: "The Daily Roast Cafe",
+    year: "2026",
+    tags: ["Hospitality", "Menu", "Ordering"],
+    description:
+      "An artisan cafe and bistro website with interactive categorized menu, digital QR access, table reservation system, and direct WhatsApp ordering.",
+    image: "linear-gradient(135deg, #e67e22 0%, #d35400 45%, #180900 100%)",
+    imageAlt: "The Daily Roast Cafe website and digital menu Kolkata",
+    caseStudy: {
+      category: "Hospitality / Restaurant / QR Menu",
+      headline: "Artisan Cafe Website & WhatsApp Ordering.",
+      summary:
+        "A warm, aesthetic digital presence for an artisan specialty coffee roastery and bistro, eliminating 3rd-party aggregator fees through direct WhatsApp ordering.",
+      narrative:
+        "The Daily Roast wanted to offer their customers an effortless way to view the seasonal coffee menu, reserve tables, and place takeaway orders without paying exorbitant 25-30% aggregator commission fees. PPR Global built a warm, editorial restaurant website featuring an interactive digital QR menu, dietary tags (Vegan, Gluten-Free), table booking forms, and a zero-commission WhatsApp ordering system. The site also established local SEO visibility for coffee lovers and remote workers seeking work-friendly cafes in the city.",
+      scope: "Branding + Digital Menu + Ordering",
+      duration: "2 weeks",
+      accent: "#e67e22",
+      highlights: [
+        "Interactive digital QR menu with search & tags",
+        "Zero-commission WhatsApp takeout ordering",
+        "Table reservation request flow",
+        "Work-friendly amenities & reviews showcase"
+      ],
+      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "QR Menu Engine"]
+    }
+  },
+  {
+    slug: "sahil-erp-system",
+    title: "Sahil ERP Business Suite",
+    year: "2026",
+    tags: ["Enterprise", "ERP", "Dashboard"],
+    description:
+      "A custom cloud ERP software for small and medium businesses featuring inventory tracking, GST billing, client ledgers, and team role permissions.",
+    image: "linear-gradient(135deg, #6a11cb 0%, #2575fc 55%, #050d21 100%)",
+    imageAlt: "Sahil ERP business management software dashboard",
+    caseStudy: {
+      category: "Enterprise / SaaS / CRM & ERP",
+      headline: "Custom Cloud ERP & Inventory Management.",
+      summary:
+        "A bespoke, lightweight ERP solution engineered for growing Indian enterprises to replace chaotic spreadsheets with real-time stock tracking, invoicing, and profit analytics.",
+      narrative:
+        "Operating multiple warehouses and retail distribution channels on manual spreadsheets led to stock discrepancies, delayed billing, and lack of clarity on daily profit margins. PPR Global engineered Sahil ERP—a tailored, web-based business management suite designed for simplicity and speed. The system integrates real-time inventory management, GST-compliant invoice generation, supplier purchase orders, client credit ledgers, and role-based access for warehouse staff and managers. Daily operations became 3x faster, with zero inventory losses reported post-implementation.",
+      scope: "Full-Stack ERP Architecture",
+      duration: "6 weeks",
+      accent: "#2575fc",
+      highlights: [
+        "Real-time multi-warehouse inventory sync",
+        "1-click GST-compliant PDF invoice creation",
+        "Client & vendor ledger tracking",
+        "Granular role-based security & audit logs"
+      ],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL / Supabase"]
+    }
   }
 ];
 
@@ -252,6 +392,9 @@ export const servicePages = [
     slug: "website-development-kolkata",
     name: "Website Development Company in Kolkata",
     shortName: "Website Development",
+    metaTitle: "Website Development Company in Kolkata | Starts ₹6,000 (7-Day Launch)",
+    metaDescription:
+      "Looking for a top website development company in Kolkata? We build fast, responsive websites with WhatsApp integration & SEO from ₹6,000. Get a free quote!",
     description:
       "PPR Global builds fast, affordable websites for Kolkata and West Bengal businesses, including static websites, dynamic websites, admin panels, and SEO-ready landing pages.",
     price: "Starts from ₹6,000",
@@ -285,6 +428,9 @@ export const servicePages = [
     slug: "whatsapp-automation-kolkata",
     name: "WhatsApp Automation for Small Business in Kolkata",
     shortName: "WhatsApp Automation",
+    metaTitle: "WhatsApp Automation for Business in Kolkata | Instant CRM & Chatbots",
+    metaDescription:
+      "Automate enquiries, follow-ups & customer CRM on WhatsApp for your Kolkata business. Stop losing leads in chat. 48-hour setup. Book a free live demo today!",
     description:
       "WhatsApp automation for small business in Kolkata helps owners capture enquiries, follow up faster, and manage leads without losing chats.",
     price: "Custom quote",
@@ -318,6 +464,9 @@ export const servicePages = [
     slug: "crm-kolkata",
     name: "CRM for Small Business in Kolkata",
     shortName: "Small Business CRM",
+    metaTitle: "CRM for Small Business in Kolkata | Custom Sales & Lead Dashboard",
+    metaDescription:
+      "Affordable custom CRM dashboards for small businesses in Kolkata. Track leads, sales pipelines, follow-up alerts & WhatsApp chats in one place. Try a free demo!",
     description:
       "CRM for small business in Kolkata gives owners a simple dashboard for leads, follow-ups, files, invoices, and team visibility.",
     price: "Custom quote",
@@ -351,6 +500,9 @@ export const servicePages = [
     slug: "lead-management",
     name: "Lead Management System for Small Business in India",
     shortName: "Lead Management",
+    metaTitle: "Lead Management System for Small Business in India | PPR Global",
+    metaDescription:
+      "Never lose another sales lead. Simple, high-impact lead management software for Indian SMBs. Track WhatsApp, calls & website enquiries. Free consultation!",
     description:
       "A lead management system for small business in India helps teams capture, assign, follow up, and report on enquiries from one place.",
     price: "Custom quote",
@@ -384,6 +536,9 @@ export const servicePages = [
     slug: "website-for-dentists-kolkata",
     name: "Website for Dentists in Kolkata",
     shortName: "Dentist Website",
+    metaTitle: "Dental Clinic Website Design in Kolkata | Instant WhatsApp Booking",
+    metaDescription:
+      "Attract more patients with custom dental clinic websites in Kolkata. WhatsApp appointment booking, patient reviews, treatment guides & local SEO. Starts ₹6,000.",
     description:
       "A website for dentists in Kolkata should build trust, explain treatments, support appointment booking, and connect patients through WhatsApp.",
     price: "Starts from ₹6,000",
@@ -417,6 +572,9 @@ export const servicePages = [
     slug: "website-for-interior-designers-kolkata",
     name: "Website for Interior Designers in Kolkata",
     shortName: "Interior Website",
+    metaTitle: "Interior Design Website Company in Kolkata | Luxury Studio Portfolios",
+    metaDescription:
+      "Showcase your interior projects with high-converting portfolio websites in Kolkata. Luxury UI, project galleries & direct WhatsApp consultations. Starts ₹6,000.",
     description:
       "A website for interior designers in Kolkata should showcase premium work, explain services, and convert visitors into consultation enquiries.",
     price: "Starts from ₹6,000",
@@ -450,6 +608,9 @@ export const servicePages = [
     slug: "website-for-gyms-kolkata",
     name: "Website for Gyms in Kolkata",
     shortName: "Gym Website",
+    metaTitle: "Gym & Fitness Website Design in Kolkata | Free Trial Pass Booking",
+    metaDescription:
+      "Grow gym memberships with high-converting fitness websites in Kolkata. Includes trial pass booking, class schedules, trainer profiles & WhatsApp CTAs. Starts ₹6,000.",
     description:
       "A website for gyms in Kolkata helps fitness businesses promote memberships, class schedules, trainers, trials, and WhatsApp bookings.",
     price: "Starts from ₹6,000",
@@ -463,7 +624,7 @@ export const servicePages = [
     body: [
       "A website for gyms in Kolkata should turn attention into trial bookings, membership enquiries, and class signups. PPR Global builds fitness websites with clear pricing sections, trainer profiles, class schedules, transformation proof, WhatsApp CTAs, and mobile-first layouts for people browsing quickly.",
       "The site can include personal training, group classes, facilities, gallery, offers, reviews, trial forms, QR membership links, and location-focused SEO content. For gyms running ads, PPR Global can also create landing pages focused on trial passes, weight loss programs, or local membership campaigns.",
-      "As the gym grows, the website can connect to CRM tracking, follow-up reminders, payment links, attendance tools, or simple dashboards. The first goal is always clear: help more nearby people enquire and visit."
+      "As the gym grows, the website can connect to CRM tracking, follow-up reminders, payment links, attendance tools, or simple dashboards. The first goal is always clear: help more nearby people enquire and visit.",
     ],
     faqs: [
       {
@@ -483,6 +644,9 @@ export const servicePages = [
     slug: "website-for-real-estate-kolkata",
     name: "Website for Real Estate Agents in Kolkata",
     shortName: "Real Estate Website",
+    metaTitle: "Real Estate Website & CRM in Kolkata | Property Buyer Lead System",
+    metaDescription:
+      "Custom real estate websites in Kolkata with verified property listings, buyer requirement forms & WhatsApp CRM. Capture serious property enquiries fast. Free quote!",
     description:
       "A website for real estate agents in Kolkata helps showcase properties, capture buyer leads, and manage enquiries through WhatsApp or CRM.",
     price: "Starts from ₹6,000",
@@ -516,6 +680,9 @@ export const servicePages = [
     slug: "mobile-app-development-kolkata",
     name: "Mobile App Development Company in Kolkata",
     shortName: "Mobile Apps",
+    metaTitle: "Mobile App Development Company in Kolkata | iOS & Android Apps from ₹14,999",
+    metaDescription:
+      "Leading mobile app development agency in Kolkata. Custom iOS & Android apps, startup MVPs, sleek UI/UX & fast turnaround. Packages from ₹14,999. Talk to our founder!",
     description:
       "Mobile app development company in Kolkata building clean iOS, Android, and MVP products with UX planning, APIs, dashboards, and launch support.",
     price: "Starts from ₹14,999",
@@ -549,6 +716,9 @@ export const servicePages = [
     slug: "seo-kolkata",
     name: "SEO Company in Kolkata",
     shortName: "SEO Kolkata",
+    metaTitle: "Best SEO Company in Kolkata | #1 Google Rankings & AI Search (GEO)",
+    metaDescription:
+      "Rank #1 on Google with Kolkata's top SEO company. Technical SEO, local search optimization, and Generative Engine Optimization (GEO). Request a free SEO audit!",
     description:
       "SEO company in Kolkata helping businesses improve technical SEO, local service pages, schema, internal links, and search-intent content.",
     price: "Custom quote",
@@ -582,6 +752,9 @@ export const servicePages = [
     slug: "geo-optimization",
     name: "Generative Engine Optimization India",
     shortName: "GEO Optimization",
+    metaTitle: "Generative Engine Optimization (GEO) India | AI Search Visibility",
+    metaDescription:
+      "Get your business cited in Google AI Overviews, ChatGPT & Perplexity. Generative Engine Optimization (GEO) services for Indian businesses. Free AI audit!",
     description:
       "Generative Engine Optimization India service for businesses that want clearer visibility in AI answers, search summaries, and entity-based discovery.",
     price: "Custom quote",
@@ -615,6 +788,9 @@ export const servicePages = [
     slug: "digital-marketing-kolkata",
     name: "Affordable Digital Marketing Agency in Kolkata",
     shortName: "Digital Marketing",
+    metaTitle: "Affordable Digital Marketing Agency in Kolkata | Google Ads, Meta & SEO",
+    metaDescription:
+      "High-ROI digital marketing in Kolkata. Search ads, Meta campaigns & landing pages designed to generate qualified leads directly on WhatsApp. Book a free call!",
     description:
       "Affordable digital marketing agency in Kolkata helping small businesses with SEO, Google Ads, Meta Ads, landing pages, and WhatsApp lead funnels.",
     price: "Custom quote",
@@ -648,6 +824,9 @@ export const servicePages = [
     slug: "google-ads-kolkata",
     name: "Google Ads Agency in Kolkata",
     shortName: "Google Ads",
+    metaTitle: "Google Ads Agency in Kolkata | High-Intent PPC & Direct WhatsApp Leads",
+    metaDescription:
+      "Certified Google Ads management in Kolkata. Stop wasting ad budget with high-converting landing pages, targeted search campaigns & instant leads. Free strategy call!",
     description:
       "Google Ads agency in Kolkata creating search campaigns, landing pages, conversion tracking, and WhatsApp-ready lead funnels.",
     price: "Custom quote",
@@ -681,6 +860,9 @@ export const servicePages = [
     slug: "meta-ads-kolkata",
     name: "Meta Ads Agency in Kolkata",
     shortName: "Meta Ads",
+    metaTitle: "Meta Ads Agency in Kolkata | Facebook & Instagram Lead Generation",
+    metaDescription:
+      "Drive qualified customer enquiries with Facebook & Instagram ads in Kolkata. High-converting creative testing, landing pages & WhatsApp follow-ups. Get a proposal!",
     description:
       "Meta Ads agency in Kolkata building Facebook and Instagram lead funnels with creative direction, landing pages, and WhatsApp follow-up.",
     price: "Custom quote",
@@ -714,6 +896,9 @@ export const servicePages = [
     slug: "healthcare-meta-ads-kolkata",
     name: "Healthcare Meta Ads Agency in Kolkata",
     shortName: "Healthcare Meta Ads",
+    metaTitle: "Healthcare Meta Ads Agency in Kolkata | Patient Appointment Funnels",
+    metaDescription:
+      "Ethical, high-converting Facebook & Instagram ads for doctors & clinics in Kolkata. Generate genuine patient enquiries directly on WhatsApp. Free consultation!",
     description:
       "Healthcare Meta Ads agency in Kolkata helping clinics and medical service providers build compliant, trust-led Facebook and Instagram lead funnels.",
     price: "Custom quote",
@@ -747,6 +932,9 @@ export const servicePages = [
     slug: "ui-ux-design-kolkata",
     name: "UI UX Design Agency in Kolkata",
     shortName: "UI/UX Design",
+    metaTitle: "UI UX Design Agency in Kolkata | Web, Mobile App & Dashboard Design",
+    metaDescription:
+      "Award-winning UI/UX design in Kolkata. We design modern website interfaces, mobile apps, and SaaS dashboards with conversion-focused UX. View our design showcase!",
     description:
       "UI UX design agency in Kolkata designing websites, apps, dashboards, landing pages, and conversion-focused digital product interfaces.",
     price: "Custom quote",
@@ -780,6 +968,9 @@ export const servicePages = [
     slug: "ecommerce-development-kolkata",
     name: "Ecommerce Website Development in Kolkata",
     shortName: "Ecommerce",
+    metaTitle: "Ecommerce Website Development Kolkata | Online Stores & WhatsApp Order",
+    metaDescription:
+      "Launch your online store with Kolkata's trusted ecommerce developer. Fast mobile checkout, WhatsApp ordering & secure payment gateways. Start selling online now!",
     description:
       "Ecommerce website development in Kolkata for stores that need product pages, checkout flows, payment setup, order management, and mobile-first shopping.",
     price: "Custom quote",
@@ -815,6 +1006,9 @@ export const resourcePosts = [
   {
     slug: "website-cost-kolkata",
     title: "How Much Does a Website Cost in Kolkata?",
+    metaTitle: "How Much Does a Website Cost in Kolkata? (2026 Price Breakdown)",
+    metaDescription:
+      "Complete 2026 website cost guide in Kolkata: static websites (₹6,000), admin panels (₹7,500), dynamic sites, and apps. Avoid hidden fees & pick the right tier.",
     description:
       "A practical pricing guide for Kolkata business owners comparing static websites, admin panels, dynamic websites, and add-on features.",
     keywords: ["website cost Kolkata", "website development pricing India", "affordable website Kolkata"],
@@ -826,6 +1020,9 @@ export const resourcePosts = [
   {
     slug: "whatsapp-crm-small-business",
     title: "Why Small Businesses Need WhatsApp CRM",
+    metaTitle: "Why Small Businesses Need WhatsApp CRM (Convert 40% More Leads)",
+    metaDescription:
+      "Discover how Indian small businesses use WhatsApp CRM automation to respond in 30 seconds, automate follow-ups, and stop losing sales in chat history. Free guide!",
     description:
       "How WhatsApp automation helps Indian SMBs capture leads, follow up faster, and avoid losing enquiries in chat history.",
     keywords: ["WhatsApp CRM small business", "WhatsApp automation India", "lead tracking WhatsApp"],
@@ -837,6 +1034,9 @@ export const resourcePosts = [
   {
     slug: "local-seo-service-pages",
     title: "Why Service Pages Help Local SEO",
+    metaTitle: "Why Dedicated Service Pages Dominate Local SEO in Kolkata",
+    metaDescription:
+      "Why a 1-page website hurts your rankings. Learn how dedicated local service pages help your Kolkata business rank on Google Page 1 for high-intent search queries.",
     description:
       "Why a one-page website struggles to rank for multiple services, and how dedicated service pages help Google understand your business.",
     keywords: ["local SEO service pages", "SEO for Kolkata business", "service page SEO"],
@@ -848,6 +1048,9 @@ export const resourcePosts = [
   {
     slug: "generative-engine-optimization-india",
     title: "What Is Generative Engine Optimization for Indian Businesses?",
+    metaTitle: "What is GEO? Complete Generative Engine Optimization Guide India",
+    metaDescription:
+      "Learn how Generative Engine Optimization (GEO) helps Indian businesses get cited in Google AI Overviews, ChatGPT, and Perplexity answers. Free actionable guide.",
     description:
       "A practical guide to GEO, AI search visibility, structured service pages, schema, FAQs, and local entity signals for Indian businesses.",
     keywords: [
@@ -889,6 +1092,9 @@ export const resourcePosts = [
   {
     slug: "restaurant-website-whatsapp-ordering-kolkata",
     title: "Restaurant Website and WhatsApp Ordering Setup in Kolkata",
+    metaTitle: "Restaurant Website & WhatsApp Ordering in Kolkata | Zero Commission",
+    metaDescription:
+      "Eliminate third-party aggregator commissions with a custom restaurant website, digital QR menus & direct WhatsApp ordering in Kolkata. Full setup guide!",
     description:
       "What Kolkata restaurants should include on a website: menu pages, WhatsApp ordering, Google reviews, table booking, QR menus, and local SEO.",
     keywords: [
@@ -940,6 +1146,9 @@ export const resourcePosts = [
   {
     slug: "gym-booking-website-kolkata",
     title: "Why Gyms in Kolkata Need a Booking Website",
+    metaTitle: "Why Gyms in Kolkata Need a Booking Website (Trial Pass Funnels)",
+    metaDescription:
+      "How Kolkata gyms double trial bookings and membership sales using mobile-friendly websites, class schedules & instant WhatsApp booking flows. Read the guide.",
     description:
       "A practical guide for Kolkata gyms planning membership pages, trial booking, trainer profiles, class schedules, and WhatsApp lead capture.",
     keywords: [
@@ -991,6 +1200,9 @@ export const resourcePosts = [
   {
     slug: "real-estate-website-crm-kolkata",
     title: "Real Estate Website and CRM Setup for Kolkata Agents",
+    metaTitle: "Real Estate Website & CRM for Kolkata Agents | Buyer Lead Funnel",
+    metaDescription:
+      "How Kolkata property brokers capture and close high-intent buyer leads with custom property listing websites and automated WhatsApp CRM follow-ups. Full guide.",
     description:
       "How real estate agents can use property pages, buyer lead forms, WhatsApp enquiries, CRM stages, and local SEO to manage serious buyers.",
     keywords: [
