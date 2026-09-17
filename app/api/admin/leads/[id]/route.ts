@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { verifyAdminUser } from "@/lib/lead/auth";
 import { adminLeadUpdateSchema } from "@/lib/lead/schema";
 import { sanitizeLeadValues } from "@/lib/lead/sanitize";
 import { createAuthenticatedSupabaseClient } from "@/lib/lead/supabase";
@@ -15,6 +16,14 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
 
   if (!token) {
     return NextResponse.json({ ok: false, message: "Unauthorized." }, { status: 401 });
+  }
+
+  const authCheck = await verifyAdminUser(token);
+  if (!authCheck.authorized) {
+    return NextResponse.json(
+      { ok: false, message: authCheck.error || "Forbidden." },
+      { status: authCheck.user ? 403 : 401 }
+    );
   }
 
   let body: unknown;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { LeadSystem } from "@/components/leads/LeadSystem";
 import { business } from "@/lib/business";
@@ -95,21 +96,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-  const delayedScripts = `
-    window.addEventListener('load', function () {
-      ${gaMeasurementId ? `
-      var gaScript = document.createElement('script');
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}';
-      document.head.appendChild(gaScript);
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = window.gtag || gtag;
-      gtag('js', new Date());
-      gtag('config', '${gaMeasurementId}');
-      ` : ""}
-    });
-  `;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -253,11 +239,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
-          crossOrigin="anonymous"
-        />
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
@@ -265,7 +246,27 @@ export default function RootLayout({
       <body className={`${inter.variable} ${space.variable} ${inter.className}`}>
         {children}
         <LeadSystem />
-        <script dangerouslySetInnerHTML={{ __html: delayedScripts }} />
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
+        {gaMeasurementId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="lazyOnload"
+            />
+            <Script id="google-analytics" strategy="lazyOnload">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}');
+              `}
+            </Script>
+          </>
+        ) : null}
       </body>
     </html>
   );

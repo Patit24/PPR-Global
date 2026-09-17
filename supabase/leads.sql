@@ -70,13 +70,25 @@ create policy "Authenticated admins can read leads"
 on public.leads
 for select
 to authenticated
-using (true);
+using (
+  (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+  or (auth.jwt() -> 'user_metadata' ->> 'role') = 'admin'
+  or (auth.jwt() ->> 'role') = 'service_role'
+);
 
 drop policy if exists "Authenticated admins can update leads" on public.leads;
 create policy "Authenticated admins can update leads"
 on public.leads
 for update
 to authenticated
-using (true)
-with check (true);
+using (
+  (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+  or (auth.jwt() -> 'user_metadata' ->> 'role') = 'admin'
+  or (auth.jwt() ->> 'role') = 'service_role'
+)
+with check (
+  (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+  or (auth.jwt() -> 'user_metadata' ->> 'role') = 'admin'
+  or (auth.jwt() ->> 'role') = 'service_role'
+);
 

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { verifyAdminUser } from "@/lib/lead/auth";
 import { createAuthenticatedSupabaseClient } from "@/lib/lead/supabase";
 
 export const runtime = "nodejs";
@@ -13,6 +14,14 @@ export async function GET(request: NextRequest) {
 
   if (!token) {
     return NextResponse.json({ ok: false, message: "Unauthorized." }, { status: 401 });
+  }
+
+  const authCheck = await verifyAdminUser(token);
+  if (!authCheck.authorized) {
+    return NextResponse.json(
+      { ok: false, message: authCheck.error || "Forbidden." },
+      { status: authCheck.user ? 403 : 401 }
+    );
   }
 
   const searchParams = request.nextUrl.searchParams;

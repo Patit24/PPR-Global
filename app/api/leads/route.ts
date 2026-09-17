@@ -9,11 +9,18 @@ import { verifyTurnstile } from "@/lib/lead/turnstile";
 export const runtime = "nodejs";
 
 function getClientIp(request: NextRequest) {
-  return (
-    request.headers.get("cf-connecting-ip") ||
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    "unknown"
-  );
+  const cfIp = request.headers.get("cf-connecting-ip");
+  if (cfIp) return cfIp.trim();
+
+  const realIp = request.headers.get("x-real-ip");
+  if (realIp) return realIp.trim();
+
+  const forwarded = request.headers.get("x-forwarded-for");
+  if (forwarded) {
+    return forwarded.split(",")[0].trim();
+  }
+
+  return "unknown";
 }
 
 async function forwardToGoogleSheets(payload: Record<string, unknown>) {

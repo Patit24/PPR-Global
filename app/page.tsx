@@ -1123,9 +1123,6 @@ Please send me a proposal.`
                 Modern website, mobile app and WhatsApp automation agency founded by Patit Roy in Kolkata,
                 serving Indian SMBs and global clients with high-speed software.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-acid">
-                Google Publisher ID: pub-3048767030984334
-              </p>
             </div>
             <div>
               <p className="font-semibold uppercase tracking-[0.16em] text-acid">Navigation</p>
@@ -1143,7 +1140,6 @@ Please send me a proposal.`
                 <li><Link className="hover:text-white transition-colors" href="/privacy-policy">Privacy Policy & Cookies</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/terms">Terms and Conditions</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/disclaimer">Website & Ad Disclaimer</Link></li>
-                <li><a className="hover:text-white transition-colors" href="/ads.txt" target="_blank" rel="noopener noreferrer">Authorized ads.txt</a></li>
               </ul>
             </div>
             <div>
