@@ -3,7 +3,7 @@ import Link from "next/link";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | PPR Global",
+  title: "Terms and Conditions",
   description: "Comprehensive website, engineering, and client service terms for PPR Global.",
   alternates: {
     canonical: "/terms"

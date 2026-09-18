@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
 import { business } from "@/lib/business";
-import { projects, servicePages, services } from "@/lib/content";
+import { projects, resourcePosts, servicePages, services } from "@/lib/content";
 
 const baseUrl = business.url;
 
@@ -161,7 +161,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-          { "@type": "ListItem", position: 2, name: "Services", item: `${baseUrl}/#services` },
+          { "@type": "ListItem", position: 2, name: "Services", item: `${baseUrl}/services` },
           {
             "@type": "ListItem",
             position: 3,
@@ -192,6 +192,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const relatedServices = servicePages
     .filter((item) => item.slug !== service.slug)
     .slice(0, 6);
+  const relatedGuides = resourcePosts
+    .filter((post) =>
+      post.relatedServiceSlugs?.includes(service.slug) ||
+      ("relatedResourceSlugs" in service &&
+        Array.isArray(service.relatedResourceSlugs) &&
+        service.relatedResourceSlugs.includes(post.slug))
+    )
+    .slice(0, 3);
 
   return (
     <main className="min-h-screen bg-ink text-white">
@@ -211,7 +219,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         />
         <div className="relative mx-auto max-w-6xl">
           <Link
-            href="/#services"
+            href="/services"
             className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid"
           >
             Back to services <ArrowUpRight size={15} />
@@ -220,7 +228,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ol className="flex flex-wrap gap-2">
               <li><Link href="/" className="hover:text-acid">Home</Link></li>
               <li>/</li>
-              <li><Link href="/#services" className="hover:text-acid">Services</Link></li>
+              <li><Link href="/services" className="hover:text-acid">Services</Link></li>
               <li>/</li>
               <li className="text-white/70">{service.name}</li>
             </ol>
@@ -259,9 +267,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
             <div className="rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+              <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
                 What&apos;s included
-              </p>
+              </h2>
               <div className="mt-6 space-y-5 text-base leading-8 text-white/72">
                 {service.body.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
@@ -277,9 +285,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <p className="text-xs font-black uppercase tracking-[0.18em] text-black/55">
                     Related case study
                   </p>
-                  <h2 className="mt-3 font-display text-3xl font-semibold leading-none">
+                  <h3 className="mt-3 font-display text-3xl font-semibold leading-none">
                     {relatedProject.title}
-                  </h2>
+                  </h3>
                   <p className="mt-4 text-sm leading-6 text-black/62">
                     {relatedProject.description}
                   </p>
@@ -299,14 +307,46 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
           </div>
+
+          {/* Related Technical & Growth Guides */}
+          {relatedGuides.length > 0 ? (
+            <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+              <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+                Matching Engineering & Growth Guides
+              </h2>
+              <p className="mt-2 text-sm text-white/60">
+                In-depth blueprints, pricing breakdowns, and implementation guides written by lead engineer Patit Roy.
+              </p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {relatedGuides.map((guide) => (
+                  <Link
+                    key={guide.slug}
+                    href={`/resources/${guide.slug}`}
+                    className="group rounded-lg bg-black/24 p-5 outline-none transition-colors hover:bg-black/40 focus-visible:ring-2 focus-visible:ring-acid"
+                  >
+                    <h3 className="text-base font-semibold leading-snug text-white group-hover:text-acid transition-colors">
+                      {guide.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-xs leading-5 text-white/60">
+                      {guide.description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-acid">
+                      Read Blueprint <ArrowUpRight size={13} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
-            <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
-              Questions
-            </p>
+            <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+              Frequently Asked Questions
+            </h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {service.faqs.map((faq) => (
                 <div key={faq.question} className="rounded-lg bg-black/24 p-4">
-                  <h2 className="text-lg font-semibold text-white">{faq.question}</h2>
+                  <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
                   <p className="mt-3 text-sm leading-6 text-white/62">{faq.answer}</p>
                 </div>
               ))}
@@ -349,9 +389,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
 
           <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
-            <p className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+            <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
               Related Kolkata service pages
-            </p>
+            </h2>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-white/60">
               Explore connected PPR Global services and vertical landing pages built for local SEO,
               lead generation, and better buyer journeys.
@@ -363,9 +403,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   href={`/services/${item.slug}`}
                   className="group rounded-lg bg-black/24 p-4 outline-none transition-colors hover:bg-black/36 focus-visible:ring-2 focus-visible:ring-acid"
                 >
-                  <h2 className="text-lg font-semibold leading-tight text-white">
+                  <h3 className="text-lg font-semibold leading-tight text-white">
                     {item.name}
-                  </h2>
+                  </h3>
                   <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/58">
                     {item.description}
                   </p>

@@ -3,7 +3,7 @@ import { business } from "@/lib/business";
 import { projects, resourcePosts, servicePages, services } from "@/lib/content";
 
 const baseUrl = business.url;
-const lastModified = new Date("2026-07-12");
+const lastModified = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const serviceSlugs = new Set([

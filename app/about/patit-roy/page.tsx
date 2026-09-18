@@ -5,14 +5,14 @@ import { business } from "@/lib/business";
 import { projects, resourcePosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Patit Roy - Software Developer & Founder of PPR Global Kolkata",
+  title: "Patit Roy - Software Developer & Agency Founder in Kolkata",
   description:
     "Patit Roy is the founder of PPR Global in Kolkata, building high-performance websites, mobile apps, and WhatsApp automation systems for global businesses.",
   alternates: {
     canonical: "/about/patit-roy"
   },
   openGraph: {
-    title: "Patit Roy - Software Developer & Founder of PPR Global Kolkata",
+    title: "Patit Roy - Software Developer & Agency Founder in Kolkata",
     description:
       "Patit Roy is the founder of PPR Global in Kolkata, building high-performance websites, mobile apps, and WhatsApp automation systems for global businesses.",
     url: `${business.url}/about/patit-roy`

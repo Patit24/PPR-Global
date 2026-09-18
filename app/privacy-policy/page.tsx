@@ -4,7 +4,7 @@ import { ArrowUpRight, ShieldCheck, Lock, Cookie, Eye } from "lucide-react";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy & Cookie Disclosures | PPR Global",
+  title: "Privacy Policy & Cookie Disclosures",
   description:
     "Privacy policy, Google AdSense cookie disclosures, personal data handling, GDPR/CCPA compliance, and contact options for PPR Global.",
   alternates: {

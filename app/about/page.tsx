@@ -4,14 +4,14 @@ import { ArrowUpRight, CheckCircle2, ShieldCheck, Zap, Code2, Users, MapPin, Glo
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "About PPR Global | Web Design & Software Engineering Agency Kolkata",
+  title: "About Us | Web Design & Software Engineering Agency Kolkata",
   description:
     "Learn about PPR Global, a modern software and web development agency founded by Patit Roy in Kolkata. We build high-speed websites, apps, and automation pipelines for Indian businesses and global clients.",
   alternates: {
     canonical: "/about"
   },
   openGraph: {
-    title: "About PPR Global | Web Design & Software Engineering Agency Kolkata",
+    title: "About Us | Web Design & Software Engineering Agency Kolkata",
     description:
       "Learn about PPR Global, a modern software and web development agency founded by Patit Roy in Kolkata. We build high-speed websites, apps, and automation pipelines.",
     url: `${business.url}/about`

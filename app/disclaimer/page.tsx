@@ -3,7 +3,7 @@ import Link from "next/link";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Website & Advertising Disclaimer | PPR Global",
+  title: "Website & Advertising Disclaimer",
   description:
     "Website disclaimer, advertising policy, third-party services disclosure, and professional advice terms for PPR Global.",
   alternates: {

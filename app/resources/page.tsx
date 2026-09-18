@@ -5,14 +5,14 @@ import { business } from "@/lib/business";
 import { resourcePosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Engineering Guides & Growth Resources | PPR Global",
+  title: "Engineering Guides, Website Pricing & Growth Playbooks",
   description:
     "Explore in-depth technical guides, website pricing breakdowns, local SEO playbooks, WhatsApp CRM automation blueprints, and digital growth strategies by PPR Global.",
   alternates: {
     canonical: "/resources"
   },
   openGraph: {
-    title: "Engineering Guides & Growth Resources | PPR Global",
+    title: "Engineering Guides, Website Pricing & Growth Playbooks",
     description:
       "Explore in-depth technical guides, website pricing breakdowns, local SEO playbooks, WhatsApp CRM automation blueprints, and digital growth strategies by PPR Global.",
     url: `${business.url}/resources`

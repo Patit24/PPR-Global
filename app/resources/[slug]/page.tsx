@@ -109,14 +109,31 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
         "@id": `${baseUrl}/resources/${post.slug}#article`,
         headline: post.title,
         description: post.description,
+        image: `${baseUrl}/opengraph-image`,
         author: {
-          "@id": `${baseUrl}/#founder`
+          "@type": "Person",
+          "@id": `${baseUrl}/#founder`,
+          name: business.founder,
+          jobTitle: "Founder & Lead Engineer",
+          url: `${baseUrl}/about/patit-roy`,
+          worksFor: {
+            "@type": "Organization",
+            name: business.name,
+            url: baseUrl
+          }
         },
         publisher: {
-          "@id": `${baseUrl}/#organization`
+          "@type": "Organization",
+          "@id": `${baseUrl}/#organization`,
+          name: business.name,
+          url: baseUrl,
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/opengraph-image`
+          }
         },
         datePublished: "2026-07-08",
-        dateModified: "2026-07-14",
+        dateModified: "2026-09-18",
         mainEntityOfPage: `${baseUrl}/resources/${post.slug}`
       },
       {

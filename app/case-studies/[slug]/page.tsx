@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Check } from "lucide-react";
 import { business } from "@/lib/business";
-import { projects } from "@/lib/content";
+import { projects, resourcePosts, servicePages } from "@/lib/content";
 
 const baseUrl = business.url;
 
@@ -103,6 +103,18 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       : `${project.title} ${project.tags.join(" ")} Kolkata`;
   const gallery =
     "gallery" in caseStudy && Array.isArray(caseStudy.gallery) ? caseStudy.gallery : [];
+
+  const matchingService = "serviceSlug" in project && project.serviceSlug
+    ? servicePages.find((s) => s.slug === project.serviceSlug)
+    : null;
+
+  const matchingGuide = "resourceSlug" in project && project.resourceSlug
+    ? resourcePosts.find((r) => r.slug === project.resourceSlug)
+    : null;
+
+  const relatedCaseStudies = "relatedSlugs" in project && Array.isArray(project.relatedSlugs)
+    ? projects.filter((p) => project.relatedSlugs.includes(p.slug))
+    : projects.filter((p) => p.slug !== project.slug).slice(0, 3);
   const projectSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -137,7 +149,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-          { "@type": "ListItem", position: 2, name: "Work", item: `${baseUrl}/#work` },
+          { "@type": "ListItem", position: 2, name: "Case Studies", item: `${baseUrl}/case-studies` },
           {
             "@type": "ListItem",
             position: 3,
@@ -167,16 +179,16 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         />
         <div className="relative mx-auto max-w-7xl">
           <Link
-            href="/#work"
+            href="/case-studies"
             className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-acid"
           >
-            Back to work <ArrowUpRight size={15} />
+            Back to case studies <ArrowUpRight size={15} />
           </Link>
           <nav aria-label="Breadcrumb" className="mt-8 text-sm text-white/45">
             <ol className="flex flex-wrap gap-2">
               <li><Link href="/" className="hover:text-acid">Home</Link></li>
               <li>/</li>
-              <li><Link href="/#work" className="hover:text-acid">Work</Link></li>
+              <li><Link href="/case-studies" className="hover:text-acid">Case Studies</Link></li>
               <li>/</li>
               <li className="text-white/70">{project.title}</li>
             </ol>
@@ -317,6 +329,86 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </div>
               </div>
             </div>
+
+            {/* Related Service & Guide Links */}
+            {(matchingService || matchingGuide) && (
+              <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+                <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+                  Connected Capabilities & Technical Blueprints
+                </h2>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {matchingService ? (
+                    <Link
+                      href={`/services/${matchingService.slug}`}
+                      className="group block rounded-lg bg-black/24 p-5 transition-colors hover:bg-black/40 focus-visible:ring-2 focus-visible:ring-acid"
+                    >
+                      <span className="text-[11px] font-black uppercase tracking-wider text-acid">
+                        Specialized Service
+                      </span>
+                      <h3 className="mt-2 text-lg font-semibold text-white group-hover:text-acid transition-colors">
+                        {matchingService.name}
+                      </h3>
+                      <p className="mt-2 text-xs leading-5 text-white/60">
+                        {matchingService.description}
+                      </p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-acid">
+                        Explore Service Package <ArrowUpRight size={13} />
+                      </span>
+                    </Link>
+                  ) : null}
+                  {matchingGuide ? (
+                    <Link
+                      href={`/resources/${matchingGuide.slug}`}
+                      className="group block rounded-lg bg-black/24 p-5 transition-colors hover:bg-black/40 focus-visible:ring-2 focus-visible:ring-acid"
+                    >
+                      <span className="text-[11px] font-black uppercase tracking-wider text-acid">
+                        Engineering Blueprint
+                      </span>
+                      <h3 className="mt-2 text-lg font-semibold text-white group-hover:text-acid transition-colors">
+                        {matchingGuide.title}
+                      </h3>
+                      <p className="mt-2 text-xs leading-5 text-white/60">
+                        {matchingGuide.description}
+                      </p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-acid">
+                        Read In-Depth Guide <ArrowUpRight size={13} />
+                      </span>
+                    </Link>
+                  ) : null}
+                </div>
+              </div>
+            )}
+
+            {/* Related Client Case Studies */}
+            {relatedCaseStudies.length > 0 && (
+              <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
+                <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
+                  Related Case Studies
+                </h2>
+                <p className="mt-2 text-sm text-white/60">
+                  Explore other recent web and app engineering projects delivered by PPR Global in Kolkata.
+                </p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {relatedCaseStudies.map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/case-studies/${item.slug}`}
+                      className="group block rounded-lg bg-black/24 p-5 transition-colors hover:bg-black/40 focus-visible:ring-2 focus-visible:ring-acid"
+                    >
+                      <h3 className="text-base font-semibold leading-snug text-white group-hover:text-acid transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 line-clamp-2 text-xs leading-5 text-white/60">
+                        {item.caseStudy.summary}
+                      </p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-acid">
+                        View Case Study <ArrowUpRight size={13} />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="mt-10 rounded-lg border border-acid/25 bg-[#0d0d0f] p-6 shadow-[0_20px_70px_rgba(0,0,0,0.5)] md:p-8">
               <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
