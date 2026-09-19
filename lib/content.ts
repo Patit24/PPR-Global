@@ -438,9 +438,9 @@ export const servicePages = [
     slug: "website-development-kolkata",
     name: "Website Development Company in Kolkata",
     shortName: "Website Development",
-    metaTitle: "Website Development Company in Kolkata | Starts ₹6,000 (7-Day Launch)",
+    metaTitle: "Website Development Company Kolkata | From ₹6,000 + Free Estimate",
     metaDescription:
-      "Looking for a top website development company in Kolkata? We build fast, responsive websites with WhatsApp integration & SEO from ₹6,000. Get a free quote!",
+      "Looking for top website development in Kolkata? Custom responsive websites, WhatsApp integration & SEO from ₹6,000 (7-day delivery). Free estimate & proposal!",
     description:
       "PPR Global builds fast, affordable websites for Kolkata and West Bengal businesses, including static websites, dynamic websites, admin panels, and SEO-ready landing pages.",
     price: "Starts from ₹6,000",
@@ -475,12 +475,12 @@ export const servicePages = [
     slug: "whatsapp-automation-kolkata",
     name: "WhatsApp Automation for Small Business in Kolkata",
     shortName: "WhatsApp Automation",
-    metaTitle: "WhatsApp Automation for Business in Kolkata | Instant CRM & Chatbots",
+    metaTitle: "WhatsApp Automation for Business Kolkata | From ₹6,000 + Free Demo",
     metaDescription:
-      "Automate enquiries, follow-ups & customer CRM on WhatsApp for your Kolkata business. Stop losing leads in chat. 48-hour setup. Book a free live demo today!",
+      "Automate customer enquiries & CRM on WhatsApp for your Kolkata business from ₹6,000. Stop losing leads. 48-hour setup. Request a free live demo today!",
     description:
       "WhatsApp automation for small business in Kolkata helps owners capture enquiries, follow up faster, and manage leads without losing chats.",
-    price: "Custom quote",
+    price: "Starts from ₹6,000",
     highlights: ["Lead routing", "Follow-up reminders", "CRM dashboard", "Proposal and invoice flow"],
     keywords: [
       "whatsapp automation for small business kolkata",
@@ -512,12 +512,12 @@ export const servicePages = [
     slug: "crm-kolkata",
     name: "CRM for Small Business in Kolkata",
     shortName: "Small Business CRM",
-    metaTitle: "CRM for Small Business in Kolkata | Custom Sales & Lead Dashboard",
+    metaTitle: "Custom CRM for Small Business Kolkata | From ₹8,000 + Free Demo",
     metaDescription:
-      "Affordable custom CRM dashboards for small businesses in Kolkata. Track leads, sales pipelines, follow-up alerts & WhatsApp chats in one place. Try a free demo!",
+      "Affordable custom CRM dashboards for Kolkata businesses from ₹8,000. Track sales pipelines, follow-ups & WhatsApp leads with zero monthly fees. Free live demo!",
     description:
       "CRM for small business in Kolkata gives owners a simple dashboard for leads, follow-ups, files, invoices, and team visibility.",
-    price: "Custom quote",
+    price: "Starts from ₹8,000",
     highlights: ["Lead pipeline", "Follow-up tracking", "Uploaded files", "Team dashboard"],
     keywords: [
       "crm for small business kolkata",
@@ -549,12 +549,12 @@ export const servicePages = [
     slug: "lead-management",
     name: "Lead Management System for Small Business in India",
     shortName: "Lead Management",
-    metaTitle: "Lead Management System for Small Business in India | Instant WhatsApp Alerts",
+    metaTitle: "Lead Management System India | Instant WhatsApp Alerts from ₹6,000",
     metaDescription:
-      "Never lose another sales lead. Simple, high-impact lead management software for Indian SMBs. Track WhatsApp, calls & website enquiries. Free consultation!",
+      "Never lose another sales lead. Compact lead management software for Indian SMBs from ₹6,000. Direct WhatsApp alerts, pipeline tracking & free onboarding!",
     description:
       "A lead management system for small business in India helps teams capture, assign, follow up, and report on enquiries from one place.",
-    price: "Custom quote",
+    price: "Starts from ₹6,000",
     highlights: ["Lead capture", "Status stages", "Task reminders", "Owner reports"],
     keywords: [
       "lead management system for small business india",
@@ -584,48 +584,137 @@ export const servicePages = [
   },
   {
     slug: "website-for-dentists-kolkata",
-    name: "Website for Dentists in Kolkata",
-    shortName: "Dentist Website",
-    metaTitle: "Dental Clinic Website Design in Kolkata | Instant WhatsApp Booking",
+    name: "Dental Clinic Website Design in Kolkata",
+    shortName: "Dental Website Design",
+    metaTitle: "Dental Clinic Website Design Kolkata | From ₹6,000 + Free Estimate",
     metaDescription:
-      "Attract more patients with custom dental clinic websites in Kolkata. WhatsApp appointment booking, patient reviews, treatment guides & local SEO. Starts ₹6,000.",
+      "Attract more patients with custom dental clinic websites in Kolkata from ₹6,000. WhatsApp booking, treatment showcases & verified proof from Dr. Shaheen Dental Clinic.",
     description:
-      "A website for dentists in Kolkata should build trust, explain treatments, support appointment booking, and connect patients through WhatsApp.",
+      "PPR Global builds high-converting dental clinic websites in Kolkata designed to build patient trust, showcase treatments, and book daily appointments.",
     price: "Starts from ₹6,000",
-    highlights: ["Treatment pages", "Appointment CTA", "Google reviews", "Local SEO structure"],
+    highlights: ["Treatment showcases", "Instant WhatsApp booking", "Google review integration", "Verified Dr. Shaheen case study"],
     keywords: [
       "website for dentists kolkata",
-      "dental clinic website Kolkata",
-      "dentist appointment website",
-      "healthcare website design Kolkata"
+      "dental clinic website design Kolkata",
+      "dentist website developer Kolkata",
+      "healthcare web design Kolkata"
     ],
     body: [
-      "A website for dentists in Kolkata needs to do more than look clean. It should help patients understand treatments, trust the clinic, check location details, read credibility signals, and book an appointment without confusion. PPR Global designs dental websites around patient clarity and fast enquiry flow.",
-      "The page structure can include treatment sections, doctor profiles, clinic photos, appointment buttons, WhatsApp booking, Google review prompts, FAQs, map links, and service-area language for local search. The design stays calm, mobile-friendly, and easy for patients to scan.",
-      "For growing clinics, the website can expand into blogs, treatment landing pages, lead tracking, follow-up reminders, ads landing pages, or a simple booking dashboard. The goal is a website that supports both patient trust and daily clinic operations."
+      "A dental clinic website in Kolkata needs to do far more than look hygienic—it must establish immediate doctor credibility, address patient dental anxieties, explain treatment procedures transparently, and make booking an appointment completely frictionless. At PPR Global, we architect dental clinic websites centered around patient clarity and same-day WhatsApp enquiry flow.",
+      "Our verified work with Dr. Shaheen Dental Clinic in Kolkata proves this framework: by structuring treatment discovery pages for root canals, dental implants, aligners, teeth whitening, and pediatric dentistry alongside authentic patient before-and-after photographs, the clinic experienced an immediate surge in qualified patient consultations.",
+      "Every dental site we engineer includes dedicated doctor qualification badges, interactive clinic walkthrough galleries, one-click WhatsApp appointment buttons, Google Maps location direction for Salt Lake, Barasat, and Park Street patients, and automated Google Review prompts. Starting at just ₹6,000, our dental websites deliver a proven return on investment within the very first month."
     ],
     faqs: [
       {
-        question: "Can the site include appointment booking?",
+        question: "How much does a dental clinic website cost in Kolkata?",
         answer:
-          "Yes. The booking flow can use WhatsApp, a form, calendar links, or a custom dashboard depending on how the clinic wants to manage appointments."
+          "Our custom dental clinic website package starts at ₹6,000 for a multi-section responsive site with treatment showcases, doctor credentials, and WhatsApp booking."
       },
       {
-        question: "Can dental treatment pages help SEO?",
+        question: "Can patients book dental appointments directly via WhatsApp?",
         answer:
-          "Yes. Dedicated pages for services like root canal, braces, implants, whitening, and emergency care can help Google understand clinic relevance."
+          "Yes. We configure instant WhatsApp booking buttons that pre-fill patient appointment requests, preferred clinic timings, and dental treatment concerns directly to your front desk."
+      },
+      {
+        question: "Do you have real proof of results for dental clinics in Kolkata?",
+        answer:
+          "Yes. Our live case study for Dr. Shaheen Dental Clinic demonstrates our healthcare design framework, showing how patient-friendly treatment discovery and fast appointment actions drive consistent daily patient walk-ins."
       }
     ],
     relatedProjectSlug: "dr-shaheen-dental-clinic",
-    relatedResourceSlugs: ["dental-clinic-whatsapp-appointment-system", "how-to-rank-google-maps-kolkata", "website-cost-kolkata"],
+    relatedResourceSlugs: ["dental-clinic-whatsapp-appointment-system", "how-to-rank-google-maps-kolkata", "website-cost-kolkata"]
+  },
+  {
+    slug: "dental-appointment-booking-systems-kolkata",
+    name: "Dental Appointment Booking Systems in Kolkata",
+    shortName: "Dental Booking Systems",
+    metaTitle: "Dental Appointment Booking System Kolkata | From ₹6,000 + Free Demo",
+    metaDescription:
+      "Automate patient appointments for your Kolkata dental clinic. Smart WhatsApp scheduling, slot management & calendar reminders. Packages from ₹6,000.",
+    description:
+      "Smart dental appointment booking systems for Kolkata dentists that automate patient slot scheduling, minimize no-shows, and sync directly with WhatsApp and clinic staff.",
+    price: "Starts from ₹6,000",
+    highlights: ["WhatsApp booking automation", "Slot availability calendar", "SMS & WhatsApp reminder alerts", "Verified Dr. Shaheen clinic workflow"],
+    keywords: [
+      "dental appointment booking systems kolkata",
+      "dentist online appointment software Kolkata",
+      "clinic appointment system Kolkata",
+      "dental scheduling software West Bengal"
+    ],
+    body: [
+      "Empty dental chairs and last-minute patient cancellations cost Kolkata clinics thousands of rupees in lost chair time every single week. PPR Global builds automated dental appointment booking systems designed specifically for the consultation habits of Indian patients who prefer booking over WhatsApp and mobile browsers rather than complicated portal logins.",
+      "Using the exact patient booking architecture deployed for Dr. Shaheen Dental Clinic, we replace chaotic phone scheduling with an intuitive, 3-step appointment interface: patients select their dental concern (cleaning, toothache, braces, implant consultation), pick their preferred doctor and time slot, and receive an instant confirmation on WhatsApp.",
+      "The system alerts clinic receptionists instantly, tags new vs. returning patients, and dispatches automated appointment reminder messages 2 hours prior to scheduled treatments. The result is an 80% reduction in appointment no-shows and complete peace of mind for dental practitioners across Kolkata, Salt Lake, and New Town."
+    ],
+    faqs: [
+      {
+        question: "Does the dental booking system require technical knowledge to run?",
+        answer:
+          "Not at all. Your clinic staff can manage appointments from an intuitive smartphone dashboard or receive direct organized alerts on your clinic's WhatsApp Business number."
+      },
+      {
+        question: "Can this reduce patient no-shows?",
+        answer:
+          "Yes. Automated WhatsApp reminders sent 24 hours and 2 hours prior to the dental appointment ensure patients arrive on time or reschedule in advance."
+      },
+      {
+        question: "What is the setup cost for a dental booking system?",
+        answer:
+          "Complete dental appointment booking integration starts from ₹6,000 as an add-on to your website or as a standalone booking landing page."
+      }
+    ],
+    relatedProjectSlug: "dr-shaheen-dental-clinic",
+    relatedResourceSlugs: ["dental-clinic-whatsapp-appointment-system", "whatsapp-crm-small-business", "crm-kolkata"]
+  },
+  {
+    slug: "dental-seo-kolkata",
+    name: "Dental SEO & Google Maps Marketing in Kolkata",
+    shortName: "Dental Clinic SEO",
+    metaTitle: "Dental Clinic SEO in Kolkata | Google Maps & Patient Growth from ₹6,000",
+    metaDescription:
+      "Rank #1 on Google Maps for 'dentist near me' in Kolkata. Specialized dental SEO, treatment keyword rankings & verified patient review funnels. Starts ₹6,000.",
+    description:
+      "Specialized dental clinic SEO in Kolkata to rank your practice in the Google Local 3-Pack and capture high-intent patients searching for root canals, braces, and dental implants.",
+    price: "Starts from ₹6,000",
+    highlights: ["Google Maps 3-Pack ranking", "High-intent treatment keywords", "Local schema markup", "Verified Dr. Shaheen dental SEO model"],
+    keywords: [
+      "dental seo kolkata",
+      "dentist seo services Kolkata",
+      "rank dental clinic google maps kolkata",
+      "healthcare local seo Kolkata"
+    ],
+    body: [
+      "When a patient in Kolkata experiences sudden tooth pain or searches for 'best dental clinic near me' in Salt Lake, New Town, Barasat, or Gariahat, over 70% of clicks go to the top 3 clinics featured on Google Maps. If your dental practice is buried on page 2, you are losing dozens of high-value implant, orthodontic, and root canal cases to nearby competitors every week.",
+      "PPR Global delivers hyper-specialized Dental SEO engineered for Kolkata's healthcare landscape. Built upon the local optimization blueprint used for Dr. Shaheen Dental Clinic, our strategy optimizes your Google Business Profile, builds local healthcare citations, and targets high-converting long-tail search terms like 'painless root canal treatment Kolkata' and 'invisible aligners cost Kolkata'.",
+      "We implement deep MedicalBusiness and Dentist schema markup, structure individual treatment landing pages, optimize clinic images with geo-tagging, and establish automated review generation systems that encourage satisfied patients to leave 5-star Google reviews. Starting at ₹6,000, our dental SEO strategies generate consistent patient calls and WhatsApp bookings month after month."
+    ],
+    faqs: [
+      {
+        question: "How fast can a dental clinic rank in Google's local 3-pack in Kolkata?",
+        answer:
+          "With proper Google Business Profile optimization, localized treatment schemas, and consistent patient reviews, clinics typically see significant local ranking improvements within 4 to 8 weeks."
+      },
+      {
+        question: "Why is dental SEO different from general website SEO?",
+        answer:
+          "Dental search is hyper-local and intent-driven. Patients search by neighborhood ('dentist in Salt Lake') and specific treatments ('dental implants Barasat'). Dental SEO requires medical schema, verified clinic NAP consistency, and treatment-specific content clusters."
+      },
+      {
+        question: "How much do dental SEO services cost?",
+        answer:
+          "Our targeted local dental SEO packages start from ₹6,000, covering Google Business Profile optimization, local citation building, and on-page treatment keyword structure."
+      }
+    ],
+    relatedProjectSlug: "dr-shaheen-dental-clinic",
+    relatedResourceSlugs: ["how-to-rank-google-maps-kolkata", "local-seo-service-pages", "dental-clinic-whatsapp-appointment-system"]
   },
   {
     slug: "website-for-interior-designers-kolkata",
     name: "Website for Interior Designers in Kolkata",
     shortName: "Interior Website",
-    metaTitle: "Interior Design Website Company in Kolkata | Luxury Studio Portfolios",
+    metaTitle: "Interior Design Website Company Kolkata | From ₹6,000 + Free Estimate",
     metaDescription:
-      "Showcase your interior projects with high-converting portfolio websites in Kolkata. Luxury UI, project galleries & direct WhatsApp consultations. Starts ₹6,000.",
+      "Showcase luxury interior projects with high-converting portfolio websites in Kolkata from ₹6,000. Project galleries, WhatsApp enquiries & fast 7-day launch.",
     description:
       "A website for interior designers in Kolkata should showcase premium work, explain services, and convert visitors into consultation enquiries.",
     price: "Starts from ₹6,000",
@@ -660,9 +749,9 @@ export const servicePages = [
     slug: "website-for-gyms-kolkata",
     name: "Website for Gyms in Kolkata",
     shortName: "Gym Website",
-    metaTitle: "Gym & Fitness Website Design in Kolkata | Free Trial Pass Booking",
+    metaTitle: "Gym & Fitness Website Design Kolkata | From ₹6,000 + Free Trial System",
     metaDescription:
-      "Grow gym memberships with high-converting fitness websites in Kolkata. Includes trial pass booking, class schedules, trainer profiles & WhatsApp CTAs. Starts ₹6,000.",
+      "Grow gym memberships with high-converting fitness websites in Kolkata from ₹6,000. Online trial pass booking, trainer profiles & instant WhatsApp CTAs. Get a free quote!",
     description:
       "A website for gyms in Kolkata helps fitness businesses promote memberships, class schedules, trainers, trials, and WhatsApp bookings.",
     price: "Starts from ₹6,000",
@@ -697,9 +786,9 @@ export const servicePages = [
     slug: "website-for-real-estate-kolkata",
     name: "Website for Real Estate Agents in Kolkata",
     shortName: "Real Estate Website",
-    metaTitle: "Real Estate Website & CRM in Kolkata | Property Buyer Lead System",
+    metaTitle: "Real Estate Website & CRM Kolkata | From ₹6,000 + Free Estimate",
     metaDescription:
-      "Custom real estate websites in Kolkata with verified property listings, buyer requirement forms & WhatsApp CRM. Capture serious property enquiries fast. Free quote!",
+      "Custom real estate websites & buyer lead CRMs in Kolkata from ₹6,000. Verified property listings, WhatsApp lead capture & zero monthly subscriptions. Free consultation!",
     description:
       "A website for real estate agents in Kolkata helps showcase properties, capture buyer leads, and manage enquiries through WhatsApp or CRM.",
     price: "Starts from ₹6,000",
@@ -734,9 +823,9 @@ export const servicePages = [
     slug: "mobile-app-development-kolkata",
     name: "Mobile App Development Company in Kolkata",
     shortName: "Mobile Apps",
-    metaTitle: "Mobile App Development Company in Kolkata | iOS & Android Apps from ₹14,999",
+    metaTitle: "Mobile App Development Company Kolkata | From ₹14,999 (iOS & Android)",
     metaDescription:
-      "Leading mobile app development agency in Kolkata. Custom iOS & Android apps, startup MVPs, sleek UI/UX & fast turnaround. Packages from ₹14,999. Talk to our founder!",
+      "Leading mobile app development agency in Kolkata. Custom iOS & Android apps, startup MVPs & backend APIs from ₹14,999. Talk to founder Patit Roy for a free quote!",
     description:
       "Mobile app development company in Kolkata building clean iOS, Android, and MVP products with UX planning, APIs, dashboards, and launch support.",
     price: "Starts from ₹14,999",

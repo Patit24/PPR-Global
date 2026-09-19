@@ -63,8 +63,21 @@ export const business = {
     "UI/UX Design",
     "Lead Management"
   ],
-  priceRange: "₹₹"
-  ,
+  priceRange: "₹₹",
+  citations: [
+    { name: "Google Business Profile", url: "https://share.google/FeZQgspdDBgAnBavG" },
+    { name: "Clutch.co", url: "https://clutch.co/profile/ppr-global" },
+    { name: "Justdial", url: "https://www.justdial.com/Kolkata/PPR-Global" },
+    { name: "GoodFirms", url: "https://www.goodfirms.co/company/ppr-global" },
+    { name: "Sulekha", url: "https://kolkata.sulekha.com/ppr-global" }
+  ],
+  sameAs: [
+    "https://share.google/FeZQgspdDBgAnBavG",
+    "https://clutch.co/profile/ppr-global",
+    "https://www.justdial.com/Kolkata/PPR-Global",
+    "https://www.goodfirms.co/company/ppr-global",
+    "https://kolkata.sulekha.com/ppr-global"
+  ],
   defaultMetadata: {
     title: "PPR Global | Website Development & App Agency Kolkata | Starts ₹6,000",
     description:

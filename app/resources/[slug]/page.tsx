@@ -133,7 +133,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
           }
         },
         datePublished: "2026-07-08",
-        dateModified: "2026-09-18",
+        dateModified: "2026-09-19",
         mainEntityOfPage: `${baseUrl}/resources/${post.slug}`
       },
       {
@@ -212,7 +212,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
             {post.title}
           </h1>
 
-          {/* Author & Editorial Metadata Badge */}
+          {/* Author & Editorial Metadata Badge with Quarterly Review Cadence */}
           <div className="mt-6 flex flex-wrap items-center gap-4 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-xs text-white/70">
             <div className="flex items-center gap-2">
               <span className="grid h-7 w-7 place-items-center rounded-full bg-acid text-[11px] font-black text-ink">
@@ -225,9 +225,12 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
             <span>•</span>
             <span>Founder & Lead Engineer</span>
             <span>•</span>
-            <span>Updated: Sep 16, 2026</span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-acid/15 px-2.5 py-0.5 font-semibold text-acid">
+              <span className="h-1.5 w-1.5 rounded-full bg-acid" />
+              Reviewed: September 2026 (Quarterly Cadence)
+            </span>
             <span>•</span>
-            <span className="text-acid font-semibold">5 min read</span>
+            <span className="text-white/60 font-semibold">5 min read</span>
           </div>
 
           <p className="mt-7 text-xl leading-9 text-white/70">{post.description}</p>

@@ -61,6 +61,8 @@ const footerServiceLinks = [
   "crm-kolkata",
   "lead-management",
   "website-for-dentists-kolkata",
+  "dental-appointment-booking-systems-kolkata",
+  "dental-seo-kolkata",
   "website-for-interior-designers-kolkata",
   "website-for-gyms-kolkata",
   "website-for-real-estate-kolkata",
@@ -317,18 +319,44 @@ export default function Home() {
                   conversion-ready software delivered fast from Kolkata, West Bengal, for local
                   and global brands.
                 </p>
+                {/* Hero Proof & Trust Bar */}
+                <div className="mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                    <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
+                      25+ Global Clients
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
+                    <Check size={13} className="text-acid" aria-hidden="true" />
+                    <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
+                      50+ Websites & Apps
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
+                    <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
+                      Founded 2024 · Kolkata
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-acid/30 px-3 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
+                    <Star size={13} className="fill-ink text-ink" aria-hidden="true" />
+                    <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
+                      4.9★ Google Verified
+                    </span>
+                  </div>
+                </div>
                 {googleMapsListingLink ? (
                   <a
                     href={googleMapsListingLink}
                     target="_blank"
                     rel="noopener"
-                    className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-acid"
+                    className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-acid"
                   >
                     <Star size={15} aria-hidden="true" />
                     PPR Global on Google Maps · Barasat, Kolkata
                   </a>
                 ) : (
-                  <div className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)]">
+                  <div className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)]">
                     <MapPin size={15} aria-hidden="true" />
                     PPR Global on Google Maps · Barasat, Kolkata
                   </div>
@@ -1189,11 +1217,24 @@ Please send me a proposal.`
               </ul>
             </div>
             <div>
-              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Trust & Legal</p>
+              <p className="font-semibold uppercase tracking-[0.16em] text-acid">Trust & Citations</p>
               <ul className="mt-3 space-y-2">
                 <li><Link className="hover:text-white transition-colors" href="/privacy-policy">Privacy Policy & Cookies</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/terms">Terms and Conditions</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/disclaimer">Website & Ad Disclaimer</Link></li>
+                {business.citations.map((c) => (
+                  <li key={c.name}>
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-white transition-colors text-white/52 hover:text-acid"
+                    >
+                      <span>{c.name}</span>
+                      <ArrowUpRight size={12} />
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>

@@ -155,7 +155,7 @@ export default function RootLayout({
           addressCountry: business.address.addressCountry
         },
         hasMap: business.googleBusinessProfileUrl,
-        sameAs: [business.googleBusinessProfileUrl],
+        sameAs: [...business.sameAs],
         contactPoint: business.phoneNumbers.map((phone) => ({
           "@type": "ContactPoint",
           telephone: phone.href.replace("tel:", ""),
@@ -167,20 +167,30 @@ export default function RootLayout({
           "@type": "OfferCatalog",
           name: "PPR Global service catalog",
           itemListElement: [
-            "Website development",
-            "Mobile app development",
-            "WhatsApp automation",
-            "CRM dashboard development",
-            "Google Ads",
-            "Meta Ads",
-            "SEO / GEO",
-            "UI/UX design",
-            "Lead management"
-          ].map((name) => ({
+            { name: "Website Development", price: "6000", minPrice: "6000" },
+            { name: "Static Website Design", price: "6000", minPrice: "6000" },
+            { name: "Website with Admin Panel", price: "12000", minPrice: "12000" },
+            { name: "Dental Clinic Website Design", price: "6000", minPrice: "6000" },
+            { name: "Dental Appointment Booking Systems", price: "6000", minPrice: "6000" },
+            { name: "Dental Clinic SEO", price: "6000", minPrice: "6000" },
+            { name: "Mobile App Development", price: "14999", minPrice: "14999" },
+            { name: "WhatsApp Automation & CRM", price: "6000", minPrice: "6000" },
+            { name: "Dynamic Website Development", price: "14999", minPrice: "14999" },
+            { name: "Google & Meta Ads", price: "8000", minPrice: "8000" },
+            { name: "Local SEO & GEO", price: "6000", minPrice: "6000" }
+          ].map((item) => ({
             "@type": "Offer",
+            priceCurrency: "INR",
+            price: item.price,
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price: item.price,
+              priceCurrency: "INR",
+              minPrice: item.minPrice
+            },
             itemOffered: {
               "@type": "Service",
-              name,
+              name: item.name,
               provider: {
                 "@id": "https://www.pprglobal.online/#localbusiness"
               }
@@ -192,7 +202,12 @@ export default function RootLayout({
         "@type": "Person",
         "@id": "https://www.pprglobal.online/#founder",
         name: business.founder,
-        jobTitle: "Founder",
+        jobTitle: "Founder & Lead Engineer",
+        url: "https://www.pprglobal.online/about/patit-roy",
+        sameAs: [
+          "https://github.com/patitpabanroy",
+          "https://www.pprglobal.online/about/patit-roy"
+        ],
         worksFor: {
           "@id": "https://www.pprglobal.online/#organization"
         }
@@ -215,7 +230,7 @@ export default function RootLayout({
         founder: {
           "@id": "https://www.pprglobal.online/#founder"
         },
-        sameAs: [business.googleBusinessProfileUrl],
+        sameAs: [...business.sameAs],
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+91-9609079663",
