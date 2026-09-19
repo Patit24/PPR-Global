@@ -61,8 +61,8 @@ const nextConfig = {
         permanent: true
       },
       {
-        source: "/case-studies",
-        destination: "/#work",
+        source: "/work",
+        destination: "/case-studies",
         permanent: true
       }
     ];

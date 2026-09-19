@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1
     },
     {
+      url: `${baseUrl}/case-studies`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9
+    },
+    {
       url: `${baseUrl}/resources`,
       lastModified,
       changeFrequency: "weekly",

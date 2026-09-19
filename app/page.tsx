@@ -10,6 +10,7 @@ import {
   Dumbbell,
   MapPin,
   MessageCircle,
+  Sparkles,
   Star,
   Stethoscope,
   Store,
@@ -212,7 +213,7 @@ export default function Home() {
   const cardY = useTransform(heroSpringY, [-1, 1], [8, -8]);
   const dotX = useTransform(heroSpringX, [-1, 1], ["18%", "74%"]);
   const dotY = useTransform(heroSpringY, [-1, 1], ["72%", "28%"]);
-  const workX = useTransform(workScrollProgress, [0, 1], ["0%", "-75%"]);
+  const workX = useTransform(workScrollProgress, [0, 1], ["0%", "-80%"]);
   const workProgressWidth = useTransform(workScrollProgress, [0, 1], ["8%", "100%"]);
   const toggleBannerSound = () => {
     const video = bannerVideoRef.current;
@@ -500,6 +501,59 @@ export default function Home() {
                   }}
                 />
               ))}
+
+              {/* Show More Work Card */}
+              <motion.article
+                className="group relative flex w-[78vw] shrink-0 flex-col justify-between overflow-hidden rounded-lg border border-acid/30 bg-gradient-to-br from-white/[0.07] via-black/50 to-[#0d0d0f] p-8 outline-none shadow-[inset_0_0_0_1px_rgba(184,255,61,0.15),0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-acid hover:shadow-[0_20px_60px_rgba(184,255,61,0.15)] focus-visible:ring-2 focus-visible:ring-acid sm:w-[72vw] md:w-[380px] lg:w-[405px] xl:w-[430px]"
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+                whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                whileHover={shouldReduceMotion ? undefined : { y: -6 }}
+              >
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-acid/30 bg-acid/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-acid">
+                      <Sparkles size={12} /> Full Portfolio
+                    </span>
+                    <span className="text-xs font-semibold uppercase tracking-widest text-white/40">
+                      11+ Projects
+                    </span>
+                  </div>
+
+                  <h3 className="mt-8 font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
+                    Explore All Our Work & Case Studies
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-6 text-white/68">
+                    Deep dive into live web applications, custom CRM platforms, WhatsApp lead automation workflows, and healthcare clinic booking systems.
+                  </p>
+
+                  <div className="mt-8 space-y-2 border-t border-white/10 pt-6 text-xs text-white/60">
+                    <div className="flex items-center gap-2">
+                      <Check size={14} className="text-acid" />
+                      <span>Verified client performance metrics</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check size={14} className="text-acid" />
+                      <span>Mobile-first Next.js architecture</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check size={14} className="text-acid" />
+                      <span>Local Kolkata & global business results</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-10">
+                  <Link
+                    href="/case-studies"
+                    className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-acid px-6 text-xs font-black uppercase tracking-[0.16em] text-ink shadow-[0_10px_25px_rgba(184,255,61,0.25)] transition-transform hover:scale-105 group-hover:bg-white"
+                  >
+                    <span>Show Me All Work</span>
+                    <ArrowUpRight size={16} />
+                  </Link>
+                </div>
+              </motion.article>
             </motion.div>
           </div>
         </section>
