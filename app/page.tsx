@@ -1211,7 +1211,7 @@ Please send me a proposal.`
               <ul className="mt-3 space-y-2">
                 <li><Link className="hover:text-white transition-colors" href="/#work">Our Work & Portfolio</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/#services">Core Services</Link></li>
-                <li><Link className="hover:text-white transition-colors" href="/resources">Resources & Guides (18)</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/resources">Resources & Guides (21)</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/about">About PPR Global</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/about/patit-roy">Founder: Patit Roy</Link></li>
               </ul>
