@@ -5,16 +5,16 @@ import { business } from "@/lib/business";
 import { projects, resourcePosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Patit Roy - Software Developer & Agency Founder in Kolkata",
+  title: "Patit Roy - Founder & Lead Engineer Behind PPR Global",
   description:
-    "Patit Roy is the founder of PPR Global in Kolkata, building high-performance websites, mobile apps, and WhatsApp automation systems for global businesses.",
+    "Patit Roy is the founder, software engineer, and agency lead behind PPR Global in Kolkata, building high-speed websites, mobile apps, and WhatsApp automation systems.",
   alternates: {
     canonical: "/about/patit-roy"
   },
   openGraph: {
-    title: "Patit Roy - Software Developer & Agency Founder in Kolkata",
+    title: "Patit Roy - Founder & Lead Engineer Behind PPR Global",
     description:
-      "Patit Roy is the founder of PPR Global in Kolkata, building high-performance websites, mobile apps, and WhatsApp automation systems for global businesses.",
+      "Patit Roy is the founder, software engineer, and agency lead behind PPR Global in Kolkata, building high-speed websites, mobile apps, and WhatsApp automation systems.",
     url: `${business.url}/about/patit-roy`
   }
 };
@@ -51,6 +51,28 @@ export default function PatitRoyPage() {
             position: 2,
             name: "Patit Roy",
             item: `${business.url}/about/patit-roy`
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${business.url}/about/patit-roy#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Who is behind PPR Global?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "PPR Global is founded and led by Patit Roy, a software engineer and web developer based in Barasat, Kolkata, West Bengal, India."
+            }
+          },
+          {
+            "@type": "Question",
+            name: "Who is Patit Roy?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Patit Roy is a software engineer, agency founder, and full-stack developer in Kolkata. He founded PPR Global in 2024 to build high-performance Next.js websites, mobile apps, WhatsApp automation pipelines, and custom CRM systems for Indian SMBs and global clients."
+            }
           }
         ]
       }
@@ -126,6 +148,24 @@ export default function PatitRoyPage() {
                   {post.title}
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
+          <h2 className="font-display text-2xl font-semibold text-white">Frequently Asked Questions</h2>
+          <div className="mt-6 space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-acid">Who is behind PPR Global?</h3>
+              <p className="mt-2 text-base leading-7 text-white/76">
+                PPR Global is founded and operated by Patit Roy, a software engineer and web developer based in Barasat, Kolkata, West Bengal, India.
+              </p>
+            </div>
+            <div className="border-t border-white/10 pt-5">
+              <h3 className="text-lg font-bold text-acid">Who is Patit Roy?</h3>
+              <p className="mt-2 text-base leading-7 text-white/76">
+                Patit Roy is a software engineer, agency founder, and full-stack developer in Kolkata. He founded PPR Global in 2024 to build high-performance Next.js websites, mobile apps, WhatsApp automation pipelines, and custom CRM systems for Indian SMBs and global clients.
+              </p>
             </div>
           </div>
         </section>

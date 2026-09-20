@@ -964,16 +964,19 @@ Please send me a proposal.`
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-acid">
                   About PPR Global
                 </p>
-                <p className="mt-3 text-sm leading-7 text-white/68">
-                  PPR Global is a software agency founded in 2024 by Patit Roy and based at
-                  {` ${business.address.display}`}. The agency builds websites, mobile apps,
-                  WhatsApp automation, CRM systems, Google Ads funnels, Meta Ads funnels, SEO/GEO
-                  pages, and UI/UX systems for Kolkata, West Bengal, India, and worldwide remote
-                  clients.
+                <h3 className="mt-2 font-display text-lg font-bold text-white">
+                  Who is behind PPR Global?
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-white/68">
+                  PPR Global is founded and operated by <strong>Patit Roy</strong>, a software engineer
+                  and agency lead based in Barasat, Kolkata, West Bengal. Founded in 2024 at
+                  {` ${business.address.display}`}, PPR Global builds high-speed websites, mobile apps,
+                  WhatsApp automation pipelines, and custom CRM systems for Kolkata businesses and
+                  global remote clients.
                 </p>
                 <dl className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
                   {[
-                    ["Founder", business.founder],
+                    ["Founder & Lead Engineer", business.founder],
                     ["Founded", business.foundingYear],
                     ["Primary location", "Kolkata, West Bengal"],
                     ["Core services", "Websites, apps, automation, ads, SEO/GEO"]

@@ -61,6 +61,28 @@ export default function AboutPage() {
           telephone: business.phoneNumbers[0].display,
           contactType: "customer service"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${business.url}/about#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Who is behind PPR Global?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "PPR Global is founded and operated by Patit Roy, a software engineer and web developer based in Barasat, Kolkata, West Bengal, India."
+            }
+          },
+          {
+            "@type": "Question",
+            name: "What does PPR Global do?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "PPR Global is a software engineering agency in Kolkata that builds high-speed custom websites, mobile applications, WhatsApp automation workflows, and custom CRM systems with starting prices from ₹6,000."
+            }
+          }
+        ]
       }
     ]
   };
@@ -191,6 +213,30 @@ export default function AboutPage() {
             <div className="rounded-lg bg-white/5 p-3 text-center border border-white/10">New Town & Rajarhat</div>
             <div className="rounded-lg bg-white/5 p-3 text-center border border-white/10">Park Street & Central</div>
             <div className="rounded-lg bg-white/5 p-3 text-center border border-white/10">Global Remote</div>
+          </div>
+        </section>
+
+        {/* Entity FAQ Section */}
+        <section className="mt-16 rounded-xl border border-white/10 bg-white/[0.02] p-8">
+          <span className="text-xs font-black uppercase tracking-[0.2em] text-acid">Verification & FAQ</span>
+          <h2 className="mt-2 font-display text-2xl font-semibold">Frequently Asked Questions About PPR Global</h2>
+          <div className="mt-6 space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-white">Who is behind PPR Global?</h3>
+              <p className="mt-2 text-sm leading-7 text-white/70">
+                PPR Global is founded and operated by <strong>Patit Roy</strong>, a Kolkata-based software engineer
+                and full-stack developer. Headquartered in Barasat, Kolkata, the agency delivers custom web apps,
+                mobile applications, and CRM automation solutions for Indian and international clients.
+              </p>
+            </div>
+            <div className="border-t border-white/10 pt-5">
+              <h3 className="text-lg font-bold text-white">What services does PPR Global provide?</h3>
+              <p className="mt-2 text-sm leading-7 text-white/70">
+                PPR Global specializes in high-speed Next.js websites, cross-platform mobile apps, WhatsApp
+                business automation, custom internal CRMs, and conversion-focused local SEO/GEO campaigns. Pricing
+                starts transparently from ₹6,000 with zero vendor lock-in.
+              </p>
+            </div>
           </div>
         </section>
 
