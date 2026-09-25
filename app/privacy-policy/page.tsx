@@ -4,9 +4,9 @@ import { ArrowUpRight, ShieldCheck, Lock, Cookie, Eye } from "lucide-react";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy & Cookie Disclosures",
+  title: "Privacy Policy & Client Data Protection",
   description:
-    "Privacy policy, Google AdSense cookie disclosures, personal data handling, GDPR/CCPA compliance, and contact options for PPR Global.",
+    "Privacy policy, data handling, client confidentiality, GDPR/CCPA compliance, and contact options for PPR Global.",
   alternates: {
     canonical: "/privacy-policy"
   }
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
         <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-white/50">
-          Effective Date: September 16, 2026 · AdSense & GDPR Compliant
+          Effective Date: September 2026 · Client Data Confidentiality & GDPR/DPDP Compliant
         </p>
 
         <div className="mt-8 space-y-8 rounded-xl border border-white/10 bg-white/[0.04] p-6 text-base leading-8 text-white/75 md:p-10">
@@ -36,68 +36,30 @@ export default function PrivacyPolicyPage() {
               At PPR Global ({business.url}), accessible from any web browser and device, the privacy of our
               visitors and clients is of utmost importance to us. This Privacy Policy document outlines the types
               of personal information that is collected and recorded by PPR Global, how we use it, and the rights
-              you have over your data in compliance with Google AdSense policies, the European General Data
+              you have over your data in compliance with the European General Data
               Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and the Digital Personal
               Data Protection (DPDP) Act of India.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white">2. Google AdSense & Third-Party Advertising Cookies</h2>
+            <h2 className="text-xl font-bold text-white">2. Cookies & Conversion Tracking</h2>
             <div className="mt-3 rounded-lg border border-acid/30 bg-acid/5 p-4 text-sm leading-7 text-white/85">
-              <p className="font-semibold text-acid">Mandatory Google Publisher Disclosure:</p>
+              <p className="font-semibold text-acid">Analytics & Performance Tracking:</p>
               <ul className="mt-2 list-disc pl-5 space-y-1">
                 <li>
-                  Third-party vendors, including Google, use cookies to serve ads based on a user&apos;s prior visits
-                  to our website or other websites across the internet.
+                  We use cookies and telemetry tools (such as Google Analytics 4) to analyze how visitors interact with our agency portfolio, measure load performance, and optimize our lead inquiry forms.
                 </li>
                 <li>
-                  Google&apos;s use of advertising cookies (such as the DoubleClick DART cookie) enables it and its
-                  partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.
+                  These cookies do not collect identifiable personal details or payment credentials.
                 </li>
                 <li>
-                  Users may opt out of personalized advertising by visiting{" "}
-                  <a
-                    href="https://www.google.com/settings/ads"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-acid underline font-semibold"
-                  >
-                    Google Ads Settings
-                  </a>.
-                </li>
-                <li>
-                  Alternatively, users can opt out of a third-party vendor&apos;s use of cookies for personalized advertising
-                  by visiting{" "}
-                  <a
-                    href="https://www.aboutads.info/choices"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-acid underline font-semibold"
-                  >
-                    www.aboutads.info/choices
-                  </a>{" "}
-                  or{" "}
-                  <a
-                    href="https://youronlinechoices.eu/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-acid underline font-semibold"
-                  >
-                    Your Online Choices
-                  </a>.
+                  Users may disable cookies at any time via their web browser privacy settings without affecting their ability to browse our services or contact us.
                 </li>
               </ul>
             </div>
             <p className="mt-3">
-              These third-party ad servers or ad networks use technology in their respective advertisements and links
-              that appear on PPR Global, which are sent directly to your browser. They automatically receive your IP
-              address when this occurs. Other technologies (such as cookies, JavaScript, or Web Beacons) may also be
-              used by our site&apos;s third-party ad networks to measure the effectiveness of their advertising campaigns
-              and/or to personalize the advertising content that you see on the site.
-            </p>
-            <p className="mt-2 text-sm text-white/60">
-              Note: PPR Global has no access to or control over these cookies that are used by third-party advertisers.
+              We do not serve disruptive third-party banner advertisements on our website. All telemetry is strictly used to maintain uptime, protect inquiry forms from spam, and measure website performance.
             </p>
           </section>
 

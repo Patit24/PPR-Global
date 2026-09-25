@@ -251,26 +251,34 @@ export default function Home() {
           </a>
           <div className="hidden items-center gap-7 md:flex">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="font-display text-sm font-black uppercase tracking-[0.2em] outline-none transition-colors hover:text-black/55 focus-visible:ring-2 focus-visible:ring-acid"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
-          <a
-            href={whatsappLink(
-              whatsappNowNumber,
-              "Hi Patit, I want to discuss a project with PPR Global."
-            )}
-            className="grid h-10 min-w-10 place-items-center rounded-full bg-acid px-4 text-xs font-black uppercase tracking-[0.16em] outline-none transition-transform hover:scale-[1.04] focus-visible:ring-2 focus-visible:ring-ink"
-            aria-label="Chat on WhatsApp"
-          >
-            <span className="hidden md:inline">IND 2026</span>
-            <MessageCircle className="md:hidden" size={18} aria-hidden="true" />
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="#calculator"
+              className="hidden lg:inline-flex items-center gap-1.5 rounded-full border border-black/15 bg-black/5 px-3.5 py-2 text-xs font-black uppercase tracking-[0.16em] text-ink hover:bg-black hover:text-white transition-colors"
+            >
+              Cost Calculator
+            </a>
+            <a
+              href={whatsappLink(
+                whatsappNowNumber,
+                "Hi Patit, I want to discuss a project with PPR Global."
+              )}
+              className="grid h-10 min-w-10 place-items-center rounded-full bg-acid px-4 text-xs font-black uppercase tracking-[0.16em] text-ink outline-none transition-transform hover:scale-[1.04] focus-visible:ring-2 focus-visible:ring-ink shadow-sm"
+              aria-label="Chat on WhatsApp with Patit Roy"
+            >
+              <span className="hidden md:inline font-bold">Start Project</span>
+              <MessageCircle className="md:hidden" size={18} aria-hidden="true" />
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -361,6 +369,27 @@ export default function Home() {
                     PPR Global on Google Maps · Barasat, Kolkata
                   </div>
                 )}
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <a
+                    href={whatsappLink(
+                      whatsappNowNumber,
+                      "Hi Patit, I want to discuss a new website/app project for my business."
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-12 items-center gap-2.5 rounded-full bg-ink px-6 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg transition-transform hover:scale-105 hover:bg-black focus-visible:ring-2 focus-visible:ring-acid"
+                  >
+                    <MessageCircle size={17} className="text-acid" aria-hidden="true" />
+                    <span>Get Fast Quote on WhatsApp</span>
+                  </a>
+                  <a
+                    href="#calculator"
+                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-black/15 bg-white/80 px-5 text-xs font-black uppercase tracking-[0.16em] text-ink transition-transform hover:scale-105 hover:bg-white focus-visible:ring-2 focus-visible:ring-ink"
+                  >
+                    <span>Calculate Build Cost (₹6,000+)</span>
+                    <ArrowUpRight size={15} aria-hidden="true" />
+                  </a>
+                </div>
               </div>
               <p
                 className="justify-self-start text-left font-display text-sm font-black uppercase leading-[1.2] tracking-[0.15em] md:max-w-xs md:justify-self-end md:text-right md:text-base"
@@ -1212,9 +1241,9 @@ Please send me a proposal.`
             <div>
               <p className="font-semibold uppercase tracking-[0.16em] text-acid">Navigation</p>
               <ul className="mt-3 space-y-2">
-                <li><Link className="hover:text-white transition-colors" href="/#work">Our Work & Portfolio</Link></li>
-                <li><Link className="hover:text-white transition-colors" href="/#services">Core Services</Link></li>
-                <li><Link className="hover:text-white transition-colors" href="/resources">Resources & Guides (21)</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/case-studies">Portfolio & Case Studies</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/#services">Core Services & Pricing</Link></li>
+                <li><Link className="hover:text-white transition-colors" href="/resources">Resources & Guides ({resourcePosts.length})</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/about">About PPR Global</Link></li>
                 <li><Link className="hover:text-white transition-colors" href="/about/patit-roy">Founder: Patit Roy</Link></li>
               </ul>
@@ -1546,7 +1575,7 @@ Please guide me with the next step.`;
   };
 
   return (
-    <section className="defer-section relative overflow-hidden px-4 py-24 md:py-32">
+    <section id="calculator" className="defer-section relative overflow-hidden px-4 py-24 md:py-32">
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 opacity-55"

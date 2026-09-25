@@ -84,9 +84,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "4koPAwDMsATxjb_F9L6fQunPPHnBnRWUFB0BYv9UHmk"
-  },
-  other: {
-    "google-adsense-account": "ca-pub-3048767030984334"
   }
 };
 
@@ -291,11 +288,6 @@ export default function RootLayout({
       <body className={`${inter.variable} ${space.variable} ${inter.className}`}>
         {children}
         <LeadSystem />
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048767030984334"
-          strategy="lazyOnload"
-          crossOrigin="anonymous"
-        />
         {gaMeasurementId ? (
           <>
             <Script
