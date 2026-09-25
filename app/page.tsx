@@ -349,7 +349,7 @@ export default function Home() {
                   <div className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-acid/30 px-3 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
                     <Star size={13} className="fill-ink text-ink" aria-hidden="true" />
                     <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
-                      4.9★ Google Verified
+                      4.9★ (27 Reviews) · Google Verified
                     </span>
                   </div>
                 </div>

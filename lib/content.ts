@@ -362,7 +362,7 @@ export const projects = [
     imageSrc: "/projects/showcase/daily-roast-showcase.webp",
     imageAlt: "The Daily Roast Cafe website and digital menu Kolkata",
     imageFit: "contain",
-    serviceSlug: "website-development-kolkata",
+    serviceSlug: "website-for-restaurants-kolkata",
     resourceSlug: "restaurant-website-whatsapp-ordering-kolkata",
     relatedSlugs: ["swiggy-zomato-alternative-direct-ordering", "wedstory-wedding-photography", "rp-sports-activewear"],
     caseStudy: {
@@ -779,8 +779,51 @@ export const servicePages = [
           "Yes. PPR Global can build focused landing pages for membership offers, transformation programs, personal training, and local campaigns."
       }
     ],
-    relatedProjectSlug: "mobile-app-development",
+    relatedProjectSlug: "pulse-smart-gym",
     relatedResourceSlugs: ["gym-booking-website-kolkata", "gym-fitness-club-marketing-strategy", "website-cost-kolkata"],
+  },
+  {
+    slug: "website-for-restaurants-kolkata",
+    name: "Restaurant & Cafe Website Design in Kolkata",
+    shortName: "Restaurant Website Design",
+    metaTitle: "Restaurant & Cafe Website Design Kolkata | From ₹6,000 + Zero Commission",
+    metaDescription:
+      "Custom restaurant websites, digital QR menus & direct WhatsApp food ordering in Kolkata from ₹6,000. Save 25-30% aggregator fees. Case study proof: The Daily Roast Cafe!",
+    description:
+      "PPR Global builds high-converting restaurant, cafe, and cloud kitchen websites in Kolkata with digital QR menus, table booking, and zero-commission WhatsApp ordering.",
+    price: "Starts from ₹6,000",
+    highlights: ["Interactive digital QR menu", "Direct WhatsApp ordering (0% commission)", "Table reservation flow", "Verified The Daily Roast Cafe case study"],
+    keywords: [
+      "restaurant website kolkata",
+      "cafe website design Kolkata",
+      "whatsapp food ordering system Kolkata",
+      "zero commission restaurant website India",
+      "cloud kitchen web design Kolkata"
+    ],
+    body: [
+      "Operating a restaurant, cafe, or cloud kitchen in Kolkata—whether on Park Street, in Salt Lake Sector V, Southern Avenue, or New Town—means battling aggressive food aggregator commissions that swallow 25% to 32% of every delivery order. A custom restaurant website with direct WhatsApp ordering allows you to take control of your customer relationships, keep 100% of order revenue, and offer diners a premium digital menu experience.",
+      "Our verified client proof with The Daily Roast Cafe demonstrates the impact: by implementing an interactive digital QR menu, dietary filters (Vegan, Gluten-Free, Chef's Specials), table reservation requests, and a frictionless WhatsApp ordering workflow, the cafe dramatically reduced middleman platform fees while boosting repeat neighborhood orders.",
+      "Every restaurant and cafe website engineered by PPR Global includes responsive mobile-first layouts, Google Maps local SEO integration for nearby diner discovery, mouthwatering food photography presentation, instant UPI QR payment prompts, and automated customer review generation. Starting at just ₹6,000, your direct ordering website pays for itself in commission savings within weeks."
+    ],
+    faqs: [
+      {
+        question: "How does direct WhatsApp food ordering save restaurant commission fees?",
+        answer:
+          "Instead of losing 25% to 30% per order to platforms like Swiggy or Zomato, customers select items from your digital menu and send a structured order directly to your WhatsApp. You collect payment via UPI or Cash on Delivery, retaining 100% of the food margin."
+      },
+      {
+        question: "Can diners scan a QR code at our tables to see the menu?",
+        answer:
+          "Yes. We generate custom high-resolution table QR codes that instantly load your fast, mobile-optimized digital menu on any smartphone without requiring diners to download any app."
+      },
+      {
+        question: "Do you have real case study proof for Kolkata restaurants?",
+        answer:
+          "Yes. Our live case study with The Daily Roast Cafe showcases how an artisan bistro implemented direct WhatsApp ordering and digital menu management to eliminate third-party commissions."
+      }
+    ],
+    relatedProjectSlug: "daily-roast-cafe",
+    relatedResourceSlugs: ["restaurant-website-whatsapp-ordering-kolkata", "website-cost-kolkata", "how-to-rank-google-maps-kolkata"],
   },
   {
     slug: "website-for-real-estate-kolkata",
@@ -1337,25 +1380,26 @@ export const resourcePosts = [
       "website development cost India 2026"
     ],
     "body": [
-      "If you are a business owner in Kolkata planning to launch or rebuild your online presence, the first question you inevitably ask is: 'How much does a website cost in Kolkata in 2026?' Depending on who you ask, quotes can range anywhere from \u20b93,000 from a student freelancer to \u20b92,50,000+ from legacy Salt Lake Sector V agencies. This wide variance causes confusion and often leads businesses to make one of two costly mistakes: choosing a bargain-basement template that breaks within months, or overpaying a massive agency for bloated features they will never use.",
-      "At PPR Global, we believe in radical pricing transparency. In this guide, we break down exact market pricing across Kolkata, West Bengal, and India, detailing what each budget tier delivers, what hidden fees to avoid, and how to choose the right website architecture for your specific business stage.",
-      "1. Starter Static Business Websites (\u20b96,000 \u2013 \u20b910,000): Ideal for independent consultants, legal professionals, dental clinics, local tutors, and small service providers. A static website consists of pre-rendered HTML/CSS/Next.js pages (typically Home, About, Services, Portfolio, and Contact). Because there is no complex database attached, static websites load in under 1 second, have zero vulnerability to database injection hacks, and require zero monthly database hosting expenses. At PPR Global, our \u20b96,000 starter package includes custom responsive design, high-converting copywriting, mobile optimization, Google Business Profile location integration, and direct WhatsApp enquiry routing.",
-      "2. Websites with Self-Managed Admin Panels (\u20b912,000 \u2013 \u20b918,000): Best for interior design studios, real estate brokers, beauty salons, and coaching institutes that frequently update photos, post client reviews, change package pricing, or publish fresh blog content. Rather than paying a developer \u20b9500 every time a phone number or photo changes, a custom admin panel gives you a secure, private dashboard to upload images, edit service text, and download customer inquiries. Unlike clunky WordPress backends with 30 conflicting plugins, our admin panels are built with Next.js and Supabase for zero-friction daily operations.",
-      "3. Custom Dynamic Web Applications (\u20b915,000 \u2013 \u20b935,000+): Essential for multi-doctor healthcare clinics with online appointment slot booking, gyms with class timetables and trial pass checkouts, equipment rental catalogs, and recruitment portals. Dynamic websites connect directly to secure cloud databases (PostgreSQL/Supabase) to handle live data, user accounts, search filters, and automated notifications.",
-      "4. E-Commerce Stores & Direct WhatsApp Catalogs (\u20b918,000 \u2013 \u20b945,000): For retail boutiques in Gariahat, activewear brands, specialty food roasters, and manufacturing distributors. Options range from lightweight direct WhatsApp ordering catalogs (0% transaction fees) to full Shopify or custom Next.js e-commerce engines with payment gateways (Razorpay, Cashfree, UPI), automated shipping slip generation, inventory sync, and customer accounts.",
-      "Understanding Hidden Fees: When comparing agency quotes in Kolkata, always ask about recurring costs. Unscrupulous agencies often pitch a low upfront fee (e.g. \u20b94,000) and later bill you \u20b915,000 annually for domain renewal, hosting markups, SSL certificates, or maintenance retainers. At PPR Global, you own 100% of your source code, domain, and hosting accounts with zero vendor lock-in.",
-      "Return on Investment (ROI) Perspective: A website is not an expense\u2014it is your hardest-working 24/7 sales representative. If a dental clinic in Barasat spends \u20b98,000 on a website that attracts just two dental implant or root canal patients in its first month, the website has paid for itself completely. When evaluating website cost in Kolkata, always measure cost against the lifetime value of the customer inquiries the site will generate.",
-      "Hidden Costs Kolkata Businesses Must Watch Out For: When evaluating low-cost agencies offering '\u20b92,999 complete websites', examine what is left out. Usually, these packages do not include secure SSL certificates, domain renewal fees (which jump from \u20b9899 to \u20b93,500 after year one), ongoing security patches, or mobile responsiveness. Worse, cheap templates frequently bundle bloated nulled themes that slow down load times past 6 seconds\u2014causing 60%+ of mobile visitors to bounce before viewing your contact number.",
-      "The Real ROI Calculation for a Kolkata Business: Consider a boutique legal chamber in High Court Kolkata or a dental clinic in Kasba paying \u20b914,999 for a professional PPR Global website. If that optimized website captures just two high-value consultation clients per month who would have otherwise chosen a competitor, the entire digital asset pays for itself within 45 days. From month two onwards, every inbound inquiry generates pure profit."
+      "If you are a business owner in Kolkata planning to launch or rebuild your online presence, the first question you inevitably ask is: 'How much does a website cost in Kolkata in 2026?' Depending on who you ask, quotes can range anywhere from ₹3,000 from a student freelancer to ₹2,50,000+ from legacy Salt Lake Sector V agencies. This wide variance causes massive confusion and often leads local businesses to make one of two costly mistakes: choosing a bargain-basement WordPress template that breaks within months, or overpaying a legacy agency for bloated features they will never use.",
+      "At PPR Global, we believe in radical pricing transparency. As an engineering agency founded right here in Barasat, Kolkata, we have built digital systems for dental clinics, interior designers, fitness clubs, restaurants, real estate brokers, and global clients. In this exhaustive 2026 benchmark guide, we break down exact market pricing across Kolkata and West Bengal, detailing what each budget tier delivers, hidden fees to watch out for, and how to choose the right architecture for your business.",
+      "Tier 1: Starter Static Business Websites (₹6,000 – ₹10,000 | Delivery: 3–7 Days): Ideal for independent consultants, legal chambers, dental practices, solo tutors, and local service professionals in Kolkata. A static website consists of pre-rendered, server-side optimized pages (typically Home, About, Services, Case Studies/Portfolio, and Contact). Built with Next.js and Tailwind CSS rather than sluggish PHP, these sites achieve sub-second load times (<0.8s), have zero vulnerable SQL databases for hackers to breach, and require ₹0 monthly database hosting expenses. At PPR Global, our ₹6,000 starter package includes custom responsive UI design, conversion-focused copywriting, mobile PageSpeed optimization (95+ score), Google Business Profile Map integration, and instant WhatsApp enquiry routing.",
+      "Tier 2: Websites with Self-Managed Admin Panels (₹12,000 – ₹18,000 | Delivery: 10–14 Days): Best for interior design studios, real estate brokers, beauty clinics, and coaching institutes that frequently upload project photos, publish client testimonials, update pricing packages, or post new articles. Rather than paying a webmaster ₹500 every time a phone number or photo changes, a custom admin panel gives your front desk a secure, private dashboard to upload images, edit service text, and download customer inquiries to CSV. Unlike clunky WordPress dashboards requiring 30 conflicting plugins and weekly updates, our custom admin dashboards are engineered with Next.js and Supabase for lightning-fast, zero-friction daily operations.",
+      "Tier 3: Custom Dynamic Web Applications (₹15,000 – ₹35,000+ | Delivery: 2–4 Weeks): Essential for multi-doctor healthcare clinics with online patient slot booking, gyms with class timetables and trial pass checkouts, equipment rental catalogs, and recruitment portals. Dynamic websites connect directly to secure cloud databases (PostgreSQL/Supabase) to handle live data, user accounts, search filters, automated SMS/WhatsApp alerts, and interactive calculators.",
+      "Tier 4: E-Commerce Stores & Direct WhatsApp Catalogs (₹18,000 – ₹45,000 | Delivery: 2–5 Weeks): Built for retail boutiques in Gariahat, activewear brands, specialty coffee roasters, and manufacturing distributors in Kolkata. Solutions range from lightweight direct WhatsApp ordering catalogs (0% transaction fees) to full custom Next.js e-commerce engines with payment gateways (Razorpay, Cashfree, UPI), automated shipping slip generation, live inventory sync, and customer accounts.",
+      "Full Kolkata Market Comparison Table: To help you evaluate quotes objectively, here is how the primary website tiers compare in Kolkata across cost, timeline, tech stack, and ideal business use cases: 1. Static Business Website | ₹6,000 – ₹10,000 | 3–7 Days | Next.js, Tailwind, Vercel | Best for: Dentists, Consultants, Lawyers, Salons, Local Trades. 2. Admin Panel Website | ₹12,000 – ₹18,000 | 10–14 Days | Next.js, Supabase, Tailwind | Best for: Interior Designers, Real Estate Agents, Training Institutes, Boutiques. 3. Dynamic Web Application | ₹15,000 – ₹35,000+ | 2–4 Weeks | Next.js, PostgreSQL, Auth | Best for: Multi-Doctor Clinics, Gyms with Class Booking, SaaS MVPs, Rental Directories. 4. E-Commerce & WhatsApp Catalog | ₹18,000 – ₹45,000 | 2–5 Weeks | Next.js, Razorpay/Shopify, Inventory API | Best for: Clothing Brands, Direct-to-Consumer Brands, Cloud Kitchens, Distributors.",
+      "Hidden Agency Costs Kolkata Businesses Must Watch Out For: When evaluating low-cost agencies offering '₹2,999 complete websites', examine what is left out. In Kolkata's web market, low upfront quotes are almost always bait-and-switch tactics. Here are the hidden traps: 1. Mandatory Hosting Markups: Agencies lock your domain to their private server and demand ₹8,000–₹15,000 annually for 'hosting renewal'—even though modern static sites can be hosted for ₹0 on Vercel or Cloudflare. 2. Unlicensed Nulled WordPress Themes: Cheap agencies install pirated premium themes that contain malware, crypto-miners, or backdoors that eventually get your domain blacklisted by Google. 3. Hostage Code & Domain Ownership: Some firms register your domain under their own personal GoDaddy account. When you attempt to switch providers, they charge ₹10,000+ 'transfer release fees'. At PPR Global, you own 100% of your source code, domain, and hosting accounts from day one.",
+      "WordPress vs. Next.js: The 2026 Reality for Indian Businesses: For over 15 years, WordPress powered most agency sites. But in 2026, WordPress has become bloated, slow, and expensive to maintain. A typical WordPress site requires 20+ plugins (Elementor, Yoast, Contact Form 7, Wordfence, WP Rocket) that constantly conflict, break during updates, and drag mobile load times down to 5–8 seconds. In Kolkata, where 80%+ of local consumers browse over mobile 4G/5G connections, a 3-second delay increases bounce rates by over 50%. PPR Global builds on Next.js—the modern framework created by Vercel and used by Nike, TikTok, and Target. Next.js pre-renders pages into pure, static HTML that loads in milliseconds, scores 95+ on Google PageSpeed Insights, and ranks significantly higher on Google Search.",
+      "Real-World Kolkata Case Studies: Measuring True ROI: A website should never be treated as an overhead cost—it is an automated 24/7 revenue engine. Consider two real client examples from our Kolkata portfolio: First, Dr. Shaheen Dental Clinic invested in a targeted healthcare website with treatment showcases and instant WhatsApp booking. By capturing just two high-value dental implant and aligner patients in month one, the entire project investment was fully recouped. Second, The Daily Roast Cafe launched a direct WhatsApp ordering website with digital QR menus. By routing 35% of repeat takeout orders away from Swiggy/Zomato (which charge 28% commission), the cafe saved over ₹68,000 every single month in platform fees alone.",
+      "Summary Checklist Before Signing a Website Contract in Kolkata: Before you wire an advance payment to any web design agency in Kolkata, demand written confirmation of these 5 points: 1. Will I own 100% of my source code and domain name? 2. What is the guaranteed Google PageSpeed score on mobile devices? 3. Are there any compulsory annual maintenance or server fees? 4. Does the quote include custom mobile design or just a pre-made template? 5. Does the site include verified Local Schema markup (LocalBusiness, GeoCoordinates, AggregateRating) for Google Maps 3-pack rankings?"
     ],
     "faqs": [
       {
         "question": "What is the average cost of a small business website in Kolkata?",
-        "answer": "In 2026, a professional 5-page small business website with custom design, mobile responsiveness, WhatsApp integration, and local SEO typically costs between \u20b96,000 and \u20b912,000 in Kolkata."
+        "answer": "In 2026, a professional 5-page small business website with custom Next.js design, mobile responsiveness, WhatsApp integration, and local SEO typically costs between ₹6,000 and ₹12,000 in Kolkata."
       },
       {
         "question": "Are there recurring monthly fees after the website is built?",
-        "answer": "No. With PPR Global, you only pay the one-time project development fee. Your only recurring costs are standard annual domain registration (~\u20b9800\u2013\u20b91,000/year) and cloud hosting, which is completely free on Vercel/Cloudflare for most small business traffic levels."
+        "answer": "No. With PPR Global, you only pay the one-time project development fee. Your only recurring costs are standard annual domain registration (~₹800–₹1,000/year) and cloud hosting, which is completely free on Vercel/Cloudflare for standard business traffic levels."
       },
       {
         "question": "How long does it take to design and launch a website in Kolkata?",
@@ -1364,12 +1408,18 @@ export const resourcePosts = [
       {
         "question": "Do you provide website maintenance and content updates?",
         "answer": "Yes. We offer both on-demand pay-per-update support and flexible monthly maintenance retainers for businesses that want continuous SEO optimization, security monitoring, and new page additions."
+      },
+      {
+        "question": "Why is Next.js better than WordPress for small business websites?",
+        "answer": "Next.js websites load under 1 second, have zero database vulnerabilities, require zero monthly plugin subscriptions, and score 95+ on Google PageSpeed, which directly improves organic search rankings."
       }
     ],
     "relatedServiceSlugs": [
       "website-development-kolkata",
       "static-website-design-kolkata",
-      "website-with-admin-panel-kolkata"
+      "website-with-admin-panel-kolkata",
+      "dynamic-website-development-kolkata",
+      "ecommerce-development-kolkata"
     ]
   },
   {
@@ -1551,9 +1601,9 @@ export const resourcePosts = [
       }
     ],
     "relatedServiceSlugs": [
+      "website-for-restaurants-kolkata",
       "website-development-kolkata",
-      "whatsapp-automation-kolkata",
-      "ecommerce-development-kolkata"
+      "whatsapp-automation-kolkata"
     ]
   },
   {

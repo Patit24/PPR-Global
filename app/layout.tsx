@@ -138,10 +138,17 @@ export default function RootLayout({
           { "@type": "AdministrativeArea", name: "West Bengal" },
           { "@type": "Country", name: "India" }
         ],
+        aggregateRating: {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "27",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: business.geo.latitude,
-          longitude: business.geo.longitude
+          latitude: 22.72330,
+          longitude: 88.48030
         },
         address: {
           "@type": "PostalAddress",
