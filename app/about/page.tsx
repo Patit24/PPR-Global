@@ -79,7 +79,7 @@ export default function AboutPage() {
             name: "What does PPR Global do?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "PPR Global is a software engineering agency in Kolkata that builds high-speed custom websites, mobile applications, WhatsApp automation workflows, and custom CRM systems with starting prices from $300 USD (₹6,000 INR) for domestic and global clients."
+              text: "PPR Global is a software engineering agency in Kolkata that builds high-speed custom websites, mobile applications, WhatsApp automation workflows, and custom CRM systems with starting prices from $300 USD (approx ₹28,750 INR) for domestic and global clients."
             }
           }
         ]
@@ -234,7 +234,7 @@ export default function AboutPage() {
               <p className="mt-2 text-sm leading-7 text-white/70">
                 PPR Global specializes in high-speed Next.js websites, cross-platform mobile apps, WhatsApp
                 business automation, custom internal CRMs, and conversion-focused local SEO/GEO campaigns. Pricing
-                starts transparently from $300 USD (₹6,000 INR) with zero vendor lock-in and global USD invoicing support.
+                starts transparently from $300 USD (approx ₹28,750 INR) with zero vendor lock-in and global USD invoicing support.
               </p>
             </div>
           </div>

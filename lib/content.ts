@@ -2767,11 +2767,11 @@ export const resourcePosts = [
 
 
 export const pricing = [
-  { name: "Static Website", price: "$300 / ₹6,000", priceUsd: "$300", priceInr: "₹6,000", detail: "Fast-launch one-page or starter website" },
-  { name: "Website with Admin Panel", price: "$390 / ₹7,500", priceUsd: "$390", priceInr: "₹7,500", detail: "Editable business website with control panel" },
-  { name: "Dynamic Website", price: "$499 / ₹9,999", priceUsd: "$499", priceInr: "₹9,999", detail: "Database-backed website for growing teams" },
-  { name: "3D Motion Animated Website", price: "$699 / ₹13,999", priceUsd: "$699", priceInr: "₹13,999", detail: "Premium animated experience with motion polish" },
-  { name: "Apps", price: "Starts $750 / ₹14,999", priceUsd: "Starts $750", priceInr: "Starts ₹14,999", detail: "Based on features, platforms, and integrations" }
+  { name: "Static Website", price: "$300 / ₹28,750", priceUsd: "$300", priceInr: "₹28,750", detail: "Fast-launch one-page or starter website" },
+  { name: "Website with Admin Panel", price: "$390 / ₹37,400", priceUsd: "$390", priceInr: "₹37,400", detail: "Editable business website with control panel" },
+  { name: "Dynamic Website", price: "$499 / ₹47,800", priceUsd: "$499", priceInr: "₹47,800", detail: "Database-backed website for growing teams" },
+  { name: "3D Motion Animated Website", price: "$699 / ₹67,000", priceUsd: "$699", priceInr: "₹67,000", detail: "Premium animated experience with motion polish" },
+  { name: "Apps", price: "Starts $750 / ₹72,000", priceUsd: "Starts $750", priceInr: "Starts ₹72,000", detail: "Based on features, platforms, and integrations" }
 ];
 
 export const stats = [
@@ -2791,11 +2791,11 @@ export const fieldOptions = {
     "Automation / CRM"
   ],
   budgets: [
-    "Under $300 / ₹10,000",
-    "$300 - $600 / ₹10,000 - ₹25,000",
-    "$600 - $1,200 / ₹25,000 - ₹50,000",
-    "$1,200 - $2,500 / ₹50,000 - ₹1,00,000",
-    "Above $2,500 / ₹1,00,000+",
+    "Under $300 / ₹28,000",
+    "$300 - $600 / ₹28,000 - ₹57,000",
+    "$600 - $1,200 / ₹57,000 - ₹1,15,000",
+    "$1,200 - $2,500 / ₹1,15,000 - ₹2,40,000",
+    "Above $2,500 / ₹2,40,000+",
     "Not decided"
   ]
 };

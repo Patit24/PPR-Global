@@ -79,8 +79,8 @@ export const business = {
     "https://kolkata.sulekha.com/ppr-global"
   ],
   defaultMetadata: {
-    title: "PPR Global | Website Development & App Agency | Starts $300 USD (₹6,000)",
+    title: "PPR Global | Website Development & App Agency | Starts $300 USD (₹28,750)",
     description:
-      "Top-rated website development, mobile apps & WhatsApp automation agency. Fast 7-day delivery, custom CRM & transparent pricing from $300 USD (₹6,000). Get a free quote!"
+      "Top-rated website development, mobile apps & WhatsApp automation agency. Fast 7-day delivery, custom CRM & transparent pricing from $300 USD (₹28,750 INR). Get a free quote!"
   }
 } as const;

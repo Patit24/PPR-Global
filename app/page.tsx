@@ -96,15 +96,15 @@ const businessTypes = [
 ];
 
 const buildNeeds = [
-  { name: "Booking", cost: 1500, costUsd: 50 },
-  { name: "Admin Panel", cost: 1500, costUsd: 50 },
-  { name: "Payment", cost: 1500, costUsd: 50 },
-  { name: "WhatsApp", cost: 1500, costUsd: 50 },
-  { name: "SEO", cost: 1500, costUsd: 50 }
+  { name: "Booking", cost: 4800, costUsd: 50 },
+  { name: "Admin Panel", cost: 4800, costUsd: 50 },
+  { name: "Payment", cost: 4800, costUsd: 50 },
+  { name: "WhatsApp", cost: 4800, costUsd: 50 },
+  { name: "SEO", cost: 4800, costUsd: 50 }
 ];
 
-const calculatorBaseCost = 6000;
-const calculatorBaseCostInr = 6000;
+const calculatorBaseCost = 28750;
+const calculatorBaseCostInr = 28750;
 const calculatorBaseCostUsd = 300;
 
 const agencySystemStats = [
@@ -139,7 +139,7 @@ const agencySprintCards = [
   {
     title: "UI/UX Sprint",
     role: "Visual design + mobile flow",
-    total: "$300+ / ₹6k+",
+    total: "$300+ / ₹28k+",
     month: "Launch",
     accent: "#f66ab7",
     sprints: ["12", "18", "10", "08"]
@@ -147,7 +147,7 @@ const agencySprintCards = [
   {
     title: "Build Sprint",
     role: "Frontend, admin, integrations",
-    total: "$499+ / ₹10k+",
+    total: "$499+ / ₹48k+",
     month: "Build",
     accent: "#17a8ff",
     sprints: ["16", "24", "18", "12"]
@@ -389,7 +389,7 @@ export default function Home() {
                     href="#calculator"
                     className="inline-flex min-h-12 items-center gap-2 rounded-full border border-black/15 bg-white/80 px-5 text-xs font-black uppercase tracking-[0.16em] text-ink transition-transform hover:scale-105 hover:bg-white focus-visible:ring-2 focus-visible:ring-ink"
                   >
-                    <span>Calculate Build Cost ({currency === "USD" ? "$300+" : "₹6,000+"})</span>
+                    <span>Calculate Build Cost ({currency === "USD" ? "$300+" : "₹28,750+"})</span>
                     <ArrowUpRight size={15} aria-hidden="true" />
                   </a>
                 </div>
@@ -1611,7 +1611,7 @@ function ProjectBuilderSection({
     baseCost +
     selectedNeeds.reduce((total, need) => {
       const needData = buildNeeds.find((item) => item.name === need);
-      const cost = isUsd ? (needData?.costUsd ?? 50) : (needData?.cost ?? 1500);
+      const cost = isUsd ? (needData?.costUsd ?? 50) : (needData?.cost ?? 4800);
       return total + cost;
     }, 0);
 
@@ -1785,8 +1785,8 @@ Please guide me with the next step.`;
                 </p>
                 <p className="mt-4 text-sm leading-6 text-black/64">
                   {isUsd
-                    ? `All websites start from $${calculatorBaseCostUsd} USD. Each selected feature adds $50.`
-                    : `All websites start from ₹${calculatorBaseCostInr.toLocaleString("en-IN")}. Each selected feature adds ₹1,500.`}
+                    ? `All websites start from $${calculatorBaseCostUsd} USD (~₹${calculatorBaseCostInr.toLocaleString("en-IN")}). Each selected feature adds $50 (~₹4,800).`
+                    : `All websites start from ₹${calculatorBaseCostInr.toLocaleString("en-IN")} (~$${calculatorBaseCostUsd} USD). Each selected feature adds ₹4,800 (~$50 USD).`}
                 </p>
                 <a
                   href={whatsappLink(whatsappNowNumber, proposalMessage)}

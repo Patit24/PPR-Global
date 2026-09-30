@@ -7,7 +7,7 @@ import { business } from "@/lib/business";
 export const metadata: Metadata = {
   title: "Book Free 15-Min Strategy Call | PPR Global",
   description:
-    "Book a free strategy session with founder Patit Roy. Fast 7-day website & app delivery, custom WhatsApp CRM, transparent pricing starting at $300 USD (₹6,000 INR) with global delivery.",
+    "Book a free strategy session with founder Patit Roy. Fast 7-day website & app delivery, custom WhatsApp CRM, transparent pricing starting at $300 USD (approx ₹28,750 INR) with global delivery.",
   alternates: {
     canonical: "/contact"
   }
