@@ -2767,11 +2767,11 @@ export const resourcePosts = [
 
 
 export const pricing = [
-  { name: "Static Website", price: "₹6,000", detail: "Fast-launch one-page or starter website" },
-  { name: "Website with Admin Panel", price: "₹7,500", detail: "Editable business website with control panel" },
-  { name: "Dynamic Website", price: "₹9,999", detail: "Database-backed website for growing teams" },
-  { name: "3D Motion Animated Website", price: "₹13,999", detail: "Premium animated experience with motion polish" },
-  { name: "Apps", price: "Starts ₹14,999", detail: "Based on features, platforms, and integrations" }
+  { name: "Static Website", price: "$300 / ₹6,000", priceUsd: "$300", priceInr: "₹6,000", detail: "Fast-launch one-page or starter website" },
+  { name: "Website with Admin Panel", price: "$390 / ₹7,500", priceUsd: "$390", priceInr: "₹7,500", detail: "Editable business website with control panel" },
+  { name: "Dynamic Website", price: "$499 / ₹9,999", priceUsd: "$499", priceInr: "₹9,999", detail: "Database-backed website for growing teams" },
+  { name: "3D Motion Animated Website", price: "$699 / ₹13,999", priceUsd: "$699", priceInr: "₹13,999", detail: "Premium animated experience with motion polish" },
+  { name: "Apps", price: "Starts $750 / ₹14,999", priceUsd: "Starts $750", priceInr: "Starts ₹14,999", detail: "Based on features, platforms, and integrations" }
 ];
 
 export const stats = [
@@ -2790,7 +2790,14 @@ export const fieldOptions = {
     "Ads / SEO",
     "Automation / CRM"
   ],
-  budgets: ["₹3,999 - ₹9,999", "₹10,000 - ₹25,000", "₹25,000 - ₹75,000", "₹75,000+"]
+  budgets: [
+    "Under $300 / ₹10,000",
+    "$300 - $600 / ₹10,000 - ₹25,000",
+    "$600 - $1,200 / ₹25,000 - ₹50,000",
+    "$1,200 - $2,500 / ₹50,000 - ₹1,00,000",
+    "Above $2,500 / ₹1,00,000+",
+    "Not decided"
+  ]
 };
 
 export const BadgeIcon = BadgeIndianRupee;

@@ -5,9 +5,9 @@ import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Book Free 15-Min Strategy Call | PPR Global Kolkata",
+  title: "Book Free 15-Min Strategy Call | PPR Global",
   description:
-    "Book a free strategy session with founder Patit Roy. Fast 7-day website & app delivery, custom WhatsApp CRM, transparent pricing starting at ₹6,000 in Kolkata.",
+    "Book a free strategy session with founder Patit Roy. Fast 7-day website & app delivery, custom WhatsApp CRM, transparent pricing starting at $300 USD (₹6,000 INR) with global delivery.",
   alternates: {
     canonical: "/contact"
   }
@@ -32,6 +32,9 @@ export default function ContactPage() {
           <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-white/60">
             <span className="rounded-full bg-white/5 px-3 py-1.5 border border-white/10 text-acid">
               ⚡ 7-Day Fast Delivery
+            </span>
+            <span className="rounded-full bg-white/5 px-3 py-1.5 border border-white/10 text-white/80">
+              🌍 US & Global USD Payments
             </span>
             <span className="rounded-full bg-white/5 px-3 py-1.5 border border-white/10 text-white/80">
               🎯 100% Free Consultation

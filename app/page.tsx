@@ -96,14 +96,16 @@ const businessTypes = [
 ];
 
 const buildNeeds = [
-  { name: "Booking", cost: 1500 },
-  { name: "Admin Panel", cost: 1500 },
-  { name: "Payment", cost: 1500 },
-  { name: "WhatsApp", cost: 1500 },
-  { name: "SEO", cost: 1500 }
+  { name: "Booking", cost: 1500, costUsd: 50 },
+  { name: "Admin Panel", cost: 1500, costUsd: 50 },
+  { name: "Payment", cost: 1500, costUsd: 50 },
+  { name: "WhatsApp", cost: 1500, costUsd: 50 },
+  { name: "SEO", cost: 1500, costUsd: 50 }
 ];
 
 const calculatorBaseCost = 6000;
+const calculatorBaseCostInr = 6000;
+const calculatorBaseCostUsd = 300;
 
 const agencySystemStats = [
   { value: "72h", label: "First design direction", detail: "Structure, offer, pages, and launch path." },
@@ -137,7 +139,7 @@ const agencySprintCards = [
   {
     title: "UI/UX Sprint",
     role: "Visual design + mobile flow",
-    total: "₹6,000+",
+    total: "$300+ / ₹6k+",
     month: "Launch",
     accent: "#f66ab7",
     sprints: ["12", "18", "10", "08"]
@@ -145,7 +147,7 @@ const agencySprintCards = [
   {
     title: "Build Sprint",
     role: "Frontend, admin, integrations",
-    total: "₹9,999+",
+    total: "$499+ / ₹10k+",
     month: "Build",
     accent: "#17a8ff",
     sprints: ["16", "24", "18", "12"]
@@ -193,6 +195,7 @@ const processSteps = [
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
+  const [currency, setCurrency] = useState<"USD" | "INR">("USD");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
   const [visibleGuidesCount, setVisibleGuidesCount] = useState(6);
@@ -386,7 +389,7 @@ export default function Home() {
                     href="#calculator"
                     className="inline-flex min-h-12 items-center gap-2 rounded-full border border-black/15 bg-white/80 px-5 text-xs font-black uppercase tracking-[0.16em] text-ink transition-transform hover:scale-105 hover:bg-white focus-visible:ring-2 focus-visible:ring-ink"
                   >
-                    <span>Calculate Build Cost (₹6,000+)</span>
+                    <span>Calculate Build Cost ({currency === "USD" ? "$300+" : "₹6,000+"})</span>
                     <ArrowUpRight size={15} aria-hidden="true" />
                   </a>
                 </div>
@@ -819,20 +822,45 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <Reveal className="relative mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
               <div>
-                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-acid">
-                  Pricing
-                </p>
-                <h2 className="max-w-4xl font-display text-5xl font-semibold leading-none text-white md:text-7xl">
-                  Premium delivery. Clear entry pricing.
+                <div className="flex flex-wrap items-center gap-3">
+                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-acid">
+                    Pricing
+                  </p>
+                  <div className="flex items-center rounded-full border border-white/15 bg-white/[0.08] p-1 shadow-inner backdrop-blur-md">
+                    <button
+                      type="button"
+                      onClick={() => setCurrency("USD")}
+                      aria-pressed={currency === "USD"}
+                      className={`rounded-full px-3.5 py-1 text-xs font-black uppercase tracking-wider transition-all ${
+                        currency === "USD" ? "bg-acid text-ink shadow-sm" : "text-white/60 hover:text-white"
+                      }`}
+                    >
+                      USD ($)
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setCurrency("INR")}
+                      aria-pressed={currency === "INR"}
+                      className={`rounded-full px-3.5 py-1 text-xs font-black uppercase tracking-wider transition-all ${
+                        currency === "INR" ? "bg-acid text-ink shadow-sm" : "text-white/60 hover:text-white"
+                      }`}
+                    >
+                      INR (₹)
+                    </button>
+                  </div>
+                </div>
+                <h2 className="mt-4 max-w-4xl font-display text-5xl font-semibold leading-none text-white md:text-7xl">
+                  {currency === "USD" ? "Global standard. Clear entry pricing." : "Premium delivery. Clear entry pricing."}
                 </h2>
               </div>
               <div className="max-w-sm rounded-lg bg-white/[0.045] p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/42">
-                  Built for speed
+                  {currency === "USD" ? "US & International Delivery" : "Built for speed"}
                 </p>
                 <p className="mt-2 text-base leading-7 text-white/68">
-                  Transparent starting prices for sharp launches, upgrade-ready systems, and
-                  premium motion builds.
+                  {currency === "USD"
+                    ? "Production-grade websites starting at $300 USD. Direct founder engineering, milestone delivery, and zero fluff."
+                    : "Transparent starting prices for sharp launches, upgrade-ready systems, and premium motion builds."}
                 </p>
               </div>
             </Reveal>
@@ -849,6 +877,9 @@ export default function Home() {
                         : index === 1
                           ? ["Admin control", "Editable content", "Secure dashboard"]
                           : ["Fast delivery", "Responsive layout", "SEO basics"];
+
+                const mainPrice = currency === "USD" ? (plan.priceUsd ?? plan.price) : (plan.priceInr ?? plan.price);
+                const subPrice = currency === "USD" ? (plan.priceInr ?? "") : (plan.priceUsd ?? "");
 
                 return (
                   <Reveal
@@ -912,13 +943,24 @@ export default function Home() {
                             <ArrowUpRight size={18} aria-hidden="true" />
                           </span>
                         </div>
-                        <p
-                          className={`font-display text-4xl font-semibold leading-none md:text-5xl ${
-                            featured ? "text-ink" : "text-acid"
-                          }`}
-                        >
-                          {plan.price}
-                        </p>
+                        <div>
+                          <p
+                            className={`font-display text-4xl font-semibold leading-none md:text-5xl ${
+                              featured ? "text-ink" : "text-acid"
+                            }`}
+                          >
+                            {mainPrice}
+                          </p>
+                          {subPrice && (
+                            <span
+                              className={`mt-1.5 block text-xs font-bold uppercase tracking-wider ${
+                                featured ? "text-black/50" : "text-white/45"
+                              }`}
+                            >
+                              ({subPrice})
+                            </span>
+                          )}
+                        </div>
                         <p className={`mt-5 text-sm leading-6 ${featured ? "text-black/66" : "text-white/62"}`}>
                           {plan.detail}
                         </p>
@@ -940,7 +982,7 @@ export default function Home() {
                             whatsappNowNumber,
                             `Hi Patit, I want to start a project with PPR Global.
 Service: ${plan.name}
-Starting Price: ${plan.price}
+Starting Price: ${mainPrice} (${currency})
 Please send me a proposal.`
                           )}
                           className={`mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-5 text-xs font-black uppercase tracking-[0.15em] outline-none transition-transform hover:scale-[1.02] focus-visible:ring-2 ${
@@ -960,7 +1002,7 @@ Please send me a proposal.`
           </div>
         </section>
 
-        <ProjectBuilderSection />
+        <ProjectBuilderSection currency={currency} setCurrency={setCurrency} />
 
         <section id="about" className="defer-section px-4 py-24 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -1551,21 +1593,37 @@ function CaseStudyModal({
   );
 }
 
-function ProjectBuilderSection() {
+function ProjectBuilderSection({
+  currency,
+  setCurrency
+}: {
+  currency: "USD" | "INR";
+  setCurrency: (c: "USD" | "INR") => void;
+}) {
   const shouldReduceMotion = useReducedMotion();
   const [selectedBusiness, setSelectedBusiness] = useState("Restaurant");
   const [selectedNeeds, setSelectedNeeds] = useState(["Booking", "Admin Panel", "WhatsApp", "SEO"]);
 
+  const isUsd = currency === "USD";
+  const baseCost = isUsd ? calculatorBaseCostUsd : calculatorBaseCostInr;
+
   const estimatedCost =
-    calculatorBaseCost +
+    baseCost +
     selectedNeeds.reduce((total, need) => {
       const needData = buildNeeds.find((item) => item.name === need);
-      return total + (needData?.cost ?? 0);
+      const cost = isUsd ? (needData?.costUsd ?? 50) : (needData?.cost ?? 1500);
+      return total + cost;
     }, 0);
+
+  const formattedEstimate = isUsd
+    ? `$${estimatedCost.toLocaleString("en-US")} USD`
+    : `₹${estimatedCost.toLocaleString("en-IN")}`;
+
   const proposalMessage = `Hi Patit, I want a website proposal from PPR Global.
 Business Type: ${selectedBusiness}
 Selected Features: ${selectedNeeds.length ? selectedNeeds.join(", ") : "No extra features selected"}
-Estimated Cost: ₹${estimatedCost.toLocaleString("en-IN")}
+Estimated Cost: ${formattedEstimate}
+Currency: ${currency}
 Please guide me with the next step.`;
 
   const toggleNeed = (need: string) => {
@@ -1603,7 +1661,7 @@ Please guide me with the next step.`;
 
         <div className="space-y-8">
           <Reveal className="rounded-lg bg-white/[0.045] p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-6">
-            <div className="mb-6 flex items-center justify-between gap-4">
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-acid">
                   Build Cost Calculator
@@ -1612,8 +1670,32 @@ Please guide me with the next step.`;
                   Configure your website.
                 </h3>
               </div>
-              <div className="hidden rounded-full bg-acid/12 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-acid md:block">
-                Instant Estimate
+              <div className="flex items-center gap-3">
+                <div className="flex items-center rounded-full border border-white/15 bg-white/[0.08] p-1 shadow-inner backdrop-blur-md">
+                  <button
+                    type="button"
+                    onClick={() => setCurrency("USD")}
+                    aria-pressed={currency === "USD"}
+                    className={`rounded-full px-3.5 py-1 text-xs font-black uppercase tracking-wider transition-all ${
+                      currency === "USD" ? "bg-acid text-ink shadow-sm" : "text-white/60 hover:text-white"
+                    }`}
+                  >
+                    USD ($)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCurrency("INR")}
+                    aria-pressed={currency === "INR"}
+                    className={`rounded-full px-3.5 py-1 text-xs font-black uppercase tracking-wider transition-all ${
+                      currency === "INR" ? "bg-acid text-ink shadow-sm" : "text-white/60 hover:text-white"
+                    }`}
+                  >
+                    INR (₹)
+                  </button>
+                </div>
+                <div className="hidden rounded-full bg-acid/12 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-acid md:block">
+                  Instant Estimate
+                </div>
               </div>
             </div>
 
@@ -1642,7 +1724,7 @@ Please guide me with the next step.`;
                     <Icon className={selected ? "text-ink" : "text-acid"} size={24} aria-hidden="true" />
                     <span className="mt-8 block text-base font-semibold">{business.name}</span>
                     <span className={`mt-1 block text-xs ${selected ? "text-black/55" : "text-white/40"}`}>
-                      Base ₹{calculatorBaseCost.toLocaleString("en-IN")}
+                      Base {isUsd ? `$${calculatorBaseCostUsd}` : `₹${calculatorBaseCostInr.toLocaleString("en-IN")}`}
                     </span>
                   </motion.button>
                 );
@@ -1657,12 +1739,13 @@ Please guide me with the next step.`;
                 <div className="grid gap-3 sm:grid-cols-2">
                   {buildNeeds.map((need) => {
                     const selected = selectedNeeds.includes(need.name);
+                    const costDisplay = isUsd ? `$${need.costUsd ?? 50}` : `₹${need.cost.toLocaleString("en-IN")}`;
                     return (
                       <button
                         key={need.name}
                         type="button"
                         aria-pressed={selected}
-                        aria-label={`${selected ? "Remove" : "Add"} ${need.name} feature, plus ₹${need.cost.toLocaleString("en-IN")}`}
+                        aria-label={`${selected ? "Remove" : "Add"} ${need.name} feature, plus ${costDisplay}`}
                         onClick={() => toggleNeed(need.name)}
                         className={`flex min-h-12 items-center justify-between rounded-md px-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-acid ${
                           selected ? "bg-acid text-ink" : "bg-black/32 text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]"
@@ -1679,7 +1762,7 @@ Please guide me with the next step.`;
                           {need.name}
                         </span>
                         <span className={`text-xs font-bold ${selected ? "text-black/54" : "text-white/40"}`}>
-                          +₹{need.cost.toLocaleString("en-IN")}
+                          +{costDisplay}
                         </span>
                       </button>
                     );
@@ -1695,13 +1778,15 @@ Please guide me with the next step.`;
                 transition={{ type: "spring", duration: 0.5, bounce: 0 }}
               >
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-black/55">
-                  Estimated Cost
+                  Estimated Cost ({currency})
                 </p>
                 <p className="mt-3 font-display text-5xl font-semibold leading-none">
-                  ₹{estimatedCost.toLocaleString("en-IN")}
+                  {formattedEstimate}
                 </p>
                 <p className="mt-4 text-sm leading-6 text-black/64">
-                  All websites start from ₹{calculatorBaseCost.toLocaleString("en-IN")}. Each selected feature adds ₹1,500.
+                  {isUsd
+                    ? `All websites start from $${calculatorBaseCostUsd} USD. Each selected feature adds $50.`
+                    : `All websites start from ₹${calculatorBaseCostInr.toLocaleString("en-IN")}. Each selected feature adds ₹1,500.`}
                 </p>
                 <a
                   href={whatsappLink(whatsappNowNumber, proposalMessage)}

@@ -32,12 +32,25 @@ export const serviceOptions = [
 ] as const;
 
 export const budgetOptions = [
+  "Under $300 / ₹10,000",
+  "$300–$600 / ₹10,000–₹25,000",
+  "$600–$1,200 / ₹25,000–₹50,000",
+  "$1,200–$2,500 / ₹50,000–₹1,00,000",
+  "Above $2,500 / ₹1,00,000+",
+  "Not decided"
+] as const;
+
+export const legacyBudgetOptions = [
   "Under ₹10,000",
   "₹10,000–₹25,000",
   "₹25,000–₹50,000",
   "₹50,000–₹1,00,000",
-  "Above ₹1,00,000",
-  "Not decided"
+  "Above ₹1,00,000"
+] as const;
+
+export const allBudgetOptions = [
+  ...budgetOptions,
+  ...legacyBudgetOptions
 ] as const;
 
 const optionalEmail = z
