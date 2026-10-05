@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     template: "%s | PPR Global"
   },
   description: business.defaultMetadata.description,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ]
+  },
   authors: [{ name: business.founder, url: `${business.url}/about/patit-roy` }],
   creator: business.founder,
   publisher: business.name,
