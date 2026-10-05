@@ -35,21 +35,29 @@ export async function generateMetadata({
       ? (post.metaDescription as string)
       : post.description;
 
+  const fullTitle = pageTitle.includes("PPR Global")
+    ? pageTitle
+    : pageTitle.length > 50
+      ? pageTitle
+      : `${pageTitle} | PPR Global`;
+
   return {
-    title: `${pageTitle} | Resources`,
+    title: {
+      absolute: fullTitle
+    },
     description: pageDescription,
     keywords: post.keywords,
     alternates: {
       canonical: `/resources/${post.slug}`
     },
     openGraph: {
-      title: pageTitle,
+      title: fullTitle,
       description: pageDescription,
       url: `${baseUrl}/resources/${post.slug}`
     },
     twitter: {
       card: "summary_large_image",
-      title: pageTitle,
+      title: fullTitle,
       description: pageDescription,
       images: ["/opengraph-image"]
     }

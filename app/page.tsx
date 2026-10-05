@@ -349,12 +349,18 @@ export default function Home() {
                       Founded 2024 · Kolkata
                     </span>
                   </div>
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-acid/30 px-3 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
+                  <a
+                    href={googleMapsListingLink}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-acid/30 px-3 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md transition-transform hover:scale-105"
+                    title="View PPR Global 4.9★ reviews on Google Maps"
+                  >
                     <Star size={13} className="fill-ink text-ink" aria-hidden="true" />
                     <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
                       4.9★ (27 Reviews) · Google Verified
                     </span>
-                  </div>
+                  </a>
                 </div>
                 {googleMapsListingLink ? (
                   <a
@@ -363,13 +369,14 @@ export default function Home() {
                     rel="noopener"
                     className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-acid"
                   >
-                    <Star size={15} aria-hidden="true" />
-                    PPR Global on Google Maps · Barasat, Kolkata
+                    <MapPin size={15} className="text-acid" aria-hidden="true" />
+                    <span>View 27 Google Reviews · Barasat, Kolkata HQ</span>
+                    <ArrowUpRight size={13} aria-hidden="true" />
                   </a>
                 ) : (
                   <div className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-full border border-black/12 bg-white/70 px-4 text-xs font-black uppercase tracking-[0.12em] text-ink shadow-[0_12px_36px_rgba(0,0,0,0.08)]">
                     <MapPin size={15} aria-hidden="true" />
-                    PPR Global on Google Maps · Barasat, Kolkata
+                    <span>PPR Global on Google Maps · Barasat, Kolkata</span>
                   </div>
                 )}
                 <div className="mt-5 flex flex-wrap items-center gap-3">

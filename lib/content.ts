@@ -438,12 +438,12 @@ export const servicePages = [
     slug: "website-development-kolkata",
     name: "Website Development Company in Kolkata",
     shortName: "Website Development",
-    metaTitle: "Website Development Company Kolkata | From ₹6,000 + Free Estimate",
+    metaTitle: "Website Development Company Kolkata | PPR Global [4.9★]",
     metaDescription:
-      "Looking for top website development in Kolkata? Custom responsive websites, WhatsApp integration & SEO from ₹6,000 (7-day delivery). Free estimate & proposal!",
+      "Top website development company in Kolkata. Custom responsive websites, WhatsApp integration & SEO from $300 USD (₹28,750 INR). 7-day launch. Free estimate!",
     description:
       "PPR Global builds fast, affordable websites for Kolkata and West Bengal businesses, including static websites, dynamic websites, admin panels, and SEO-ready landing pages.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Static and dynamic websites", "Admin panel options", "WhatsApp enquiry flow", "SEO-ready structure"],
     keywords: [
       "website development company in Kolkata",
@@ -460,7 +460,7 @@ export const servicePages = [
       {
         question: "How much does a website cost in Kolkata?",
         answer:
-          "A starter static website begins from ₹6,000. Final pricing depends on page count, admin panel needs, booking, payment, WhatsApp automation, SEO, and design complexity."
+          "A starter static website begins from $300 USD (₹28,750 INR). Final pricing depends on page count, admin panel needs, booking, payment, WhatsApp automation, SEO, and design complexity."
       },
       {
         question: "Can the website include an admin panel?",
@@ -475,12 +475,12 @@ export const servicePages = [
     slug: "whatsapp-automation-kolkata",
     name: "WhatsApp Automation for Small Business in Kolkata",
     shortName: "WhatsApp Automation",
-    metaTitle: "WhatsApp Automation for Business Kolkata | From ₹6,000 + Free Demo",
+    metaTitle: "WhatsApp Automation for Business Kolkata | PPR Global",
     metaDescription:
-      "Automate customer enquiries & CRM on WhatsApp for your Kolkata business from ₹6,000. Stop losing leads. 48-hour setup. Request a free live demo today!",
+      "Automate customer enquiries & CRM on WhatsApp for your Kolkata business from $300 USD (₹28,750 INR). Stop losing leads. 48-hour setup. Free demo!",
     description:
       "WhatsApp automation for small business in Kolkata helps owners capture enquiries, follow up faster, and manage leads without losing chats.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Lead routing", "Follow-up reminders", "CRM dashboard", "Proposal and invoice flow"],
     keywords: [
       "whatsapp automation for small business kolkata",
@@ -512,12 +512,12 @@ export const servicePages = [
     slug: "crm-kolkata",
     name: "CRM for Small Business in Kolkata",
     shortName: "Small Business CRM",
-    metaTitle: "Custom CRM for Small Business Kolkata | From ₹8,000 + Free Demo",
+    metaTitle: "Custom CRM for Small Business Kolkata | PPR Global",
     metaDescription:
-      "Affordable custom CRM dashboards for Kolkata businesses from ₹8,000. Track sales pipelines, follow-ups & WhatsApp leads with zero monthly fees. Free live demo!",
+      "Affordable custom CRM dashboards for Kolkata businesses from $390 USD (₹37,400 INR). Track sales pipelines, follow-ups & WhatsApp leads with zero monthly fees.",
     description:
       "CRM for small business in Kolkata gives owners a simple dashboard for leads, follow-ups, files, invoices, and team visibility.",
-    price: "Starts from ₹8,000",
+    price: "Starts from $390 USD (₹37,400 INR)",
     highlights: ["Lead pipeline", "Follow-up tracking", "Uploaded files", "Team dashboard"],
     keywords: [
       "crm for small business kolkata",
@@ -549,12 +549,12 @@ export const servicePages = [
     slug: "lead-management",
     name: "Lead Management System for Small Business in India",
     shortName: "Lead Management",
-    metaTitle: "Lead Management System India | Instant WhatsApp Alerts from ₹6,000",
+    metaTitle: "Lead Management System India | PPR Global [WhatsApp Alerts]",
     metaDescription:
-      "Never lose another sales lead. Compact lead management software for Indian SMBs from ₹6,000. Direct WhatsApp alerts, pipeline tracking & free onboarding!",
+      "Never lose another sales lead. Compact lead management software for Indian SMBs from $300 USD (₹28,750 INR). Direct WhatsApp alerts, pipeline tracking & free onboarding!",
     description:
       "A lead management system for small business in India helps teams capture, assign, follow up, and report on enquiries from one place.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Lead capture", "Status stages", "Task reminders", "Owner reports"],
     keywords: [
       "lead management system for small business india",
@@ -586,12 +586,12 @@ export const servicePages = [
     slug: "website-for-dentists-kolkata",
     name: "Dental Clinic Website Design in Kolkata",
     shortName: "Dental Website Design",
-    metaTitle: "Dental Clinic Website Design Kolkata | From ₹6,000 + Free Estimate",
+    metaTitle: "Dental Clinic Website Design Kolkata | PPR Global [4.9★]",
     metaDescription:
-      "Attract more patients with custom dental clinic websites in Kolkata from ₹6,000. WhatsApp booking, treatment showcases & verified proof from Dr. Shaheen Dental Clinic.",
+      "Attract more patients with custom dental clinic websites in Kolkata from $300 USD (₹28,750 INR). WhatsApp booking, doctor showcases & Dr. Shaheen case study.",
     description:
       "PPR Global builds high-converting dental clinic websites in Kolkata designed to build patient trust, showcase treatments, and book daily appointments.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Treatment showcases", "Instant WhatsApp booking", "Google review integration", "Verified Dr. Shaheen case study"],
     keywords: [
       "website for dentists kolkata",
@@ -602,13 +602,13 @@ export const servicePages = [
     body: [
       "A dental clinic website in Kolkata needs to do far more than look hygienic—it must establish immediate doctor credibility, address patient dental anxieties, explain treatment procedures transparently, and make booking an appointment completely frictionless. At PPR Global, we architect dental clinic websites centered around patient clarity and same-day WhatsApp enquiry flow.",
       "Our verified work with Dr. Shaheen Dental Clinic in Kolkata proves this framework: by structuring treatment discovery pages for root canals, dental implants, aligners, teeth whitening, and pediatric dentistry alongside authentic patient before-and-after photographs, the clinic experienced an immediate surge in qualified patient consultations.",
-      "Every dental site we engineer includes dedicated doctor qualification badges, interactive clinic walkthrough galleries, one-click WhatsApp appointment buttons, Google Maps location direction for Salt Lake, Barasat, and Park Street patients, and automated Google Review prompts. Starting at just ₹6,000, our dental websites deliver a proven return on investment within the very first month."
+      "Every dental site we engineer includes dedicated doctor qualification badges, interactive clinic walkthrough galleries, one-click WhatsApp appointment buttons, Google Maps location direction for Salt Lake, Barasat, and Park Street patients, and automated Google Review prompts. Starting from $300 USD (₹28,750 INR), our dental websites deliver a proven return on investment within the very first month."
     ],
     faqs: [
       {
         question: "How much does a dental clinic website cost in Kolkata?",
         answer:
-          "Our custom dental clinic website package starts at ₹6,000 for a multi-section responsive site with treatment showcases, doctor credentials, and WhatsApp booking."
+          "Our custom dental clinic website package starts at $300 USD (₹28,750 INR) for a multi-section responsive site with treatment showcases, doctor credentials, and WhatsApp booking."
       },
       {
         question: "Can patients book dental appointments directly via WhatsApp?",
@@ -628,12 +628,12 @@ export const servicePages = [
     slug: "dental-appointment-booking-systems-kolkata",
     name: "Dental Appointment Booking Systems in Kolkata",
     shortName: "Dental Booking Systems",
-    metaTitle: "Dental Appointment Booking System Kolkata | From ₹6,000 + Free Demo",
+    metaTitle: "Dental Appointment Booking System Kolkata | PPR Global",
     metaDescription:
-      "Automate patient appointments for your Kolkata dental clinic. Smart WhatsApp scheduling, slot management & calendar reminders. Packages from ₹6,000.",
+      "Automate patient appointments for your Kolkata dental clinic. Smart WhatsApp scheduling, slot management & calendar reminders from $300 USD (₹28,750 INR).",
     description:
       "Smart dental appointment booking systems for Kolkata dentists that automate patient slot scheduling, minimize no-shows, and sync directly with WhatsApp and clinic staff.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["WhatsApp booking automation", "Slot availability calendar", "SMS & WhatsApp reminder alerts", "Verified Dr. Shaheen clinic workflow"],
     keywords: [
       "dental appointment booking systems kolkata",
@@ -660,7 +660,7 @@ export const servicePages = [
       {
         question: "What is the setup cost for a dental booking system?",
         answer:
-          "Complete dental appointment booking integration starts from ₹6,000 as an add-on to your website or as a standalone booking landing page."
+          "Complete dental appointment booking integration starts from $300 USD (₹28,750 INR) as an add-on to your website or as a standalone booking landing page."
       }
     ],
     relatedProjectSlug: "dr-shaheen-dental-clinic",
@@ -670,12 +670,12 @@ export const servicePages = [
     slug: "dental-seo-kolkata",
     name: "Dental SEO & Google Maps Marketing in Kolkata",
     shortName: "Dental Clinic SEO",
-    metaTitle: "Dental Clinic SEO in Kolkata | Google Maps & Patient Growth from ₹6,000",
+    metaTitle: "Dental Clinic SEO in Kolkata | PPR Global [Rank #1 Maps]",
     metaDescription:
-      "Rank #1 on Google Maps for 'dentist near me' in Kolkata. Specialized dental SEO, treatment keyword rankings & verified patient review funnels. Starts ₹6,000.",
+      "Rank #1 on Google Maps for 'dentist near me' in Kolkata. Specialized dental SEO, treatment keyword rankings & patient review funnels from $300 USD (₹28,750 INR).",
     description:
       "Specialized dental clinic SEO in Kolkata to rank your practice in the Google Local 3-Pack and capture high-intent patients searching for root canals, braces, and dental implants.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Google Maps 3-Pack ranking", "High-intent treatment keywords", "Local schema markup", "Verified Dr. Shaheen dental SEO model"],
     keywords: [
       "dental seo kolkata",
@@ -686,7 +686,7 @@ export const servicePages = [
     body: [
       "When a patient in Kolkata experiences sudden tooth pain or searches for 'best dental clinic near me' in Salt Lake, New Town, Barasat, or Gariahat, over 70% of clicks go to the top 3 clinics featured on Google Maps. If your dental practice is buried on page 2, you are losing dozens of high-value implant, orthodontic, and root canal cases to nearby competitors every week.",
       "PPR Global delivers hyper-specialized Dental SEO engineered for Kolkata's healthcare landscape. Built upon the local optimization blueprint used for Dr. Shaheen Dental Clinic, our strategy optimizes your Google Business Profile, builds local healthcare citations, and targets high-converting long-tail search terms like 'painless root canal treatment Kolkata' and 'invisible aligners cost Kolkata'.",
-      "We implement deep MedicalBusiness and Dentist schema markup, structure individual treatment landing pages, optimize clinic images with geo-tagging, and establish automated review generation systems that encourage satisfied patients to leave 5-star Google reviews. Starting at ₹6,000, our dental SEO strategies generate consistent patient calls and WhatsApp bookings month after month."
+      "We implement deep MedicalBusiness and Dentist schema markup, structure individual treatment landing pages, optimize clinic images with geo-tagging, and establish automated review generation systems that encourage satisfied patients to leave 5-star Google reviews. Starting from $300 USD (₹28,750 INR), our dental SEO strategies generate consistent patient calls and WhatsApp bookings month after month."
     ],
     faqs: [
       {
@@ -702,7 +702,7 @@ export const servicePages = [
       {
         question: "How much do dental SEO services cost?",
         answer:
-          "Our targeted local dental SEO packages start from ₹6,000, covering Google Business Profile optimization, local citation building, and on-page treatment keyword structure."
+          "Our targeted local dental SEO packages start from $300 USD (₹28,750 INR), covering Google Business Profile optimization, local citation building, and on-page treatment keyword structure."
       }
     ],
     relatedProjectSlug: "dr-shaheen-dental-clinic",
@@ -712,12 +712,12 @@ export const servicePages = [
     slug: "website-for-interior-designers-kolkata",
     name: "Website for Interior Designers in Kolkata",
     shortName: "Interior Website",
-    metaTitle: "Interior Design Website Company Kolkata | From ₹6,000 + Free Estimate",
+    metaTitle: "Interior Design Website Company Kolkata | PPR Global",
     metaDescription:
-      "Showcase luxury interior projects with high-converting portfolio websites in Kolkata from ₹6,000. Project galleries, WhatsApp enquiries & fast 7-day launch.",
+      "Showcase luxury interior projects with high-converting portfolio websites in Kolkata from $300 USD (₹28,750 INR). Project galleries, WhatsApp enquiries & 7-day launch.",
     description:
       "A website for interior designers in Kolkata should showcase premium work, explain services, and convert visitors into consultation enquiries.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Portfolio showcase", "Consultation CTA", "Luxury UI", "Project gallery"],
     keywords: [
       "website for interior designers kolkata",
@@ -749,12 +749,12 @@ export const servicePages = [
     slug: "website-for-gyms-kolkata",
     name: "Website for Gyms in Kolkata",
     shortName: "Gym Website",
-    metaTitle: "Gym & Fitness Website Design Kolkata | From ₹6,000 + Free Trial System",
+    metaTitle: "Gym & Fitness Website Design Kolkata | PPR Global",
     metaDescription:
-      "Grow gym memberships with high-converting fitness websites in Kolkata from ₹6,000. Online trial pass booking, trainer profiles & instant WhatsApp CTAs. Get a free quote!",
+      "Grow gym memberships with high-converting fitness websites in Kolkata from $300 USD (₹28,750 INR). Online trial pass booking, trainer profiles & instant WhatsApp CTAs.",
     description:
       "A website for gyms in Kolkata helps fitness businesses promote memberships, class schedules, trainers, trials, and WhatsApp bookings.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Membership sections", "Class booking", "Trainer profiles", "Trial enquiry flow"],
     keywords: [
       "website for gym kolkata",
@@ -786,12 +786,12 @@ export const servicePages = [
     slug: "website-for-restaurants-kolkata",
     name: "Restaurant & Cafe Website Design in Kolkata",
     shortName: "Restaurant Website Design",
-    metaTitle: "Restaurant & Cafe Website Design Kolkata | From ₹6,000 + Zero Commission",
+    metaTitle: "Restaurant & Cafe Website Design Kolkata | PPR Global",
     metaDescription:
-      "Custom restaurant websites, digital QR menus & direct WhatsApp food ordering in Kolkata from ₹6,000. Save 25-30% aggregator fees. Case study proof: The Daily Roast Cafe!",
+      "Custom restaurant websites, digital QR menus & direct WhatsApp food ordering in Kolkata from $300 USD (₹28,750 INR). Zero commission fees. Free demo!",
     description:
       "PPR Global builds high-converting restaurant, cafe, and cloud kitchen websites in Kolkata with digital QR menus, table booking, and zero-commission WhatsApp ordering.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Interactive digital QR menu", "Direct WhatsApp ordering (0% commission)", "Table reservation flow", "Verified The Daily Roast Cafe case study"],
     keywords: [
       "restaurant website kolkata",
@@ -803,7 +803,7 @@ export const servicePages = [
     body: [
       "Operating a restaurant, cafe, or cloud kitchen in Kolkata—whether on Park Street, in Salt Lake Sector V, Southern Avenue, or New Town—means battling aggressive food aggregator commissions that swallow 25% to 32% of every delivery order. A custom restaurant website with direct WhatsApp ordering allows you to take control of your customer relationships, keep 100% of order revenue, and offer diners a premium digital menu experience.",
       "Our verified client proof with The Daily Roast Cafe demonstrates the impact: by implementing an interactive digital QR menu, dietary filters (Vegan, Gluten-Free, Chef's Specials), table reservation requests, and a frictionless WhatsApp ordering workflow, the cafe dramatically reduced middleman platform fees while boosting repeat neighborhood orders.",
-      "Every restaurant and cafe website engineered by PPR Global includes responsive mobile-first layouts, Google Maps local SEO integration for nearby diner discovery, mouthwatering food photography presentation, instant UPI QR payment prompts, and automated customer review generation. Starting at just ₹6,000, your direct ordering website pays for itself in commission savings within weeks."
+      "Every restaurant and cafe website engineered by PPR Global includes responsive mobile-first layouts, Google Maps local SEO integration for nearby diner discovery, mouthwatering food photography presentation, instant UPI QR payment prompts, and automated customer review generation. Starting from $300 USD (₹28,750 INR), your direct ordering website pays for itself in commission savings within weeks."
     ],
     faqs: [
       {
@@ -829,12 +829,12 @@ export const servicePages = [
     slug: "website-for-real-estate-kolkata",
     name: "Website for Real Estate Agents in Kolkata",
     shortName: "Real Estate Website",
-    metaTitle: "Real Estate Website & CRM Kolkata | From ₹6,000 + Free Estimate",
+    metaTitle: "Real Estate Website & CRM Kolkata | PPR Global",
     metaDescription:
-      "Custom real estate websites & buyer lead CRMs in Kolkata from ₹6,000. Verified property listings, WhatsApp lead capture & zero monthly subscriptions. Free consultation!",
+      "Custom real estate websites & buyer lead CRMs in Kolkata from $300 USD (₹28,750 INR). Verified property listings, WhatsApp lead capture & zero monthly fees.",
     description:
       "A website for real estate agents in Kolkata helps showcase properties, capture buyer leads, and manage enquiries through WhatsApp or CRM.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Property listings", "Buyer lead forms", "WhatsApp enquiry", "CRM integration"],
     keywords: [
       "website for real estate agents kolkata",
@@ -866,12 +866,12 @@ export const servicePages = [
     slug: "mobile-app-development-kolkata",
     name: "Mobile App Development Company in Kolkata",
     shortName: "Mobile Apps",
-    metaTitle: "Mobile App Development Company Kolkata | From ₹14,999 (iOS & Android)",
+    metaTitle: "Mobile App Development Company Kolkata | PPR Global",
     metaDescription:
-      "Leading mobile app development agency in Kolkata. Custom iOS & Android apps, startup MVPs & backend APIs from ₹14,999. Talk to founder Patit Roy for a free quote!",
+      "Custom iOS & Android mobile app development in Kolkata from $750 USD (₹72,000 INR). React Native, Flutter, clean backend & App Store deployment.",
     description:
       "Mobile app development company in Kolkata building clean iOS, Android, and MVP products with UX planning, APIs, dashboards, and launch support.",
-    price: "Starts from ₹14,999",
+    price: "Starts from $750 USD (₹72,000 INR)",
     highlights: ["iOS and Android planning", "UX flows", "API integrations", "Launch support"],
     keywords: [
       "mobile app development company kolkata",
@@ -903,12 +903,12 @@ export const servicePages = [
     slug: "seo-kolkata",
     name: "SEO Company in Kolkata",
     shortName: "SEO Kolkata",
-    metaTitle: "Best SEO Company in Kolkata | #1 Google Rankings & AI Search (GEO)",
+    metaTitle: "Best SEO Company in Kolkata | PPR Global [4.9★ Rated]",
     metaDescription:
-      "Rank #1 on Google with Kolkata's top SEO company. Technical SEO, local search optimization, and Generative Engine Optimization (GEO). Request a free SEO audit!",
+      "Rank #1 on Google with ROI-driven local SEO and GEO in Kolkata from $300 USD (₹28,750 INR). Google Maps 3-Pack, citations, and transparent reporting.",
     description:
       "SEO company in Kolkata helping businesses improve technical SEO, local service pages, schema, internal links, and search-intent content.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Local SEO", "Service page strategy", "Schema setup", "Search-intent content"],
     keywords: [
       "seo company kolkata",
@@ -940,12 +940,12 @@ export const servicePages = [
     slug: "geo-optimization",
     name: "Generative Engine Optimization India",
     shortName: "GEO Optimization",
-    metaTitle: "Generative Engine Optimization (GEO) India | AI Search Visibility",
+    metaTitle: "Generative Engine Optimization (GEO) India | PPR Global",
     metaDescription:
-      "Get your business cited in Google AI Overviews, ChatGPT & Perplexity. Generative Engine Optimization (GEO) services for Indian businesses. Free AI audit!",
+      "Get your brand cited in ChatGPT, Perplexity, and Google Gemini with Generative Engine Optimization in India from $300 USD (₹28,750 INR).",
     description:
       "Generative Engine Optimization India service for businesses that want clearer visibility in AI answers, search summaries, and entity-based discovery.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["AI-search-ready pages", "Entity signals", "FAQ structure", "Schema markup"],
     keywords: [
       "generative engine optimization india",
@@ -977,12 +977,12 @@ export const servicePages = [
     slug: "digital-marketing-kolkata",
     name: "Affordable Digital Marketing Agency in Kolkata",
     shortName: "Digital Marketing",
-    metaTitle: "Affordable Digital Marketing Agency in Kolkata | Google Ads, Meta & SEO",
+    metaTitle: "Digital Marketing Agency Kolkata | PPR Global [4.9★]",
     metaDescription:
-      "High-ROI digital marketing in Kolkata. Search ads, Meta campaigns & landing pages designed to generate qualified leads directly on WhatsApp. Book a free call!",
+      "Data-driven Google Ads, Meta Ads & SEO for Kolkata businesses from $300 USD (₹28,750 INR). Direct WhatsApp leads, ROI tracking & transparent monthly reports.",
     description:
       "Affordable digital marketing agency in Kolkata helping small businesses with SEO, Google Ads, Meta Ads, landing pages, and WhatsApp lead funnels.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["SEO planning", "Google and Meta campaigns", "Landing pages", "WhatsApp lead capture"],
     keywords: [
       "affordable digital marketing agency kolkata",
@@ -1014,12 +1014,12 @@ export const servicePages = [
     slug: "google-ads-kolkata",
     name: "Google Ads Agency in Kolkata",
     shortName: "Google Ads",
-    metaTitle: "Google Ads Agency in Kolkata | High-Intent PPC & Direct WhatsApp Leads",
+    metaTitle: "Google Ads Agency in Kolkata | PPR Global [High PPC ROI]",
     metaDescription:
-      "Certified Google Ads management in Kolkata. Stop wasting ad budget with high-converting landing pages, targeted search campaigns & instant leads. Free strategy call!",
+      "High-intent Google Ads PPC campaigns for Kolkata businesses from $300 USD (₹28,750 INR). High quality score, negative keyword pruning & WhatsApp leads.",
     description:
       "Google Ads agency in Kolkata creating search campaigns, landing pages, conversion tracking, and WhatsApp-ready lead funnels.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Search campaigns", "Landing page copy", "Conversion tracking", "Lead quality review"],
     keywords: [
       "google ads agency kolkata",
@@ -1051,12 +1051,12 @@ export const servicePages = [
     slug: "meta-ads-kolkata",
     name: "Meta Ads Agency in Kolkata",
     shortName: "Meta Ads",
-    metaTitle: "Meta Ads Agency in Kolkata | Facebook & Instagram Lead Generation",
+    metaTitle: "Meta Ads Agency in Kolkata | PPR Global [FB & IG]",
     metaDescription:
-      "Drive qualified customer enquiries with Facebook & Instagram ads in Kolkata. High-converting creative testing, landing pages & WhatsApp follow-ups. Get a proposal!",
+      "Targeted Facebook & Instagram ad campaigns for Kolkata businesses from $300 USD (₹28,750 INR). High-converting creatives & automated WhatsApp lead routing.",
     description:
       "Meta Ads agency in Kolkata building Facebook and Instagram lead funnels with creative direction, landing pages, and WhatsApp follow-up.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Facebook ads", "Instagram ads", "Creative testing", "WhatsApp follow-up"],
     keywords: [
       "meta ads agency kolkata",
@@ -1088,12 +1088,12 @@ export const servicePages = [
     slug: "healthcare-meta-ads-kolkata",
     name: "Healthcare Meta Ads Agency in Kolkata",
     shortName: "Healthcare Meta Ads",
-    metaTitle: "Healthcare Meta Ads Agency in Kolkata | Patient Appointment Funnels",
+    metaTitle: "Healthcare Meta Ads Agency Kolkata | PPR Global",
     metaDescription:
-      "Ethical, high-converting Facebook & Instagram ads for doctors & clinics in Kolkata. Generate genuine patient enquiries directly on WhatsApp. Free consultation!",
+      "Patient appointment funnels on Facebook & Instagram for Kolkata clinics from $300 USD (₹28,750 INR). Verified medical practice lead generation.",
     description:
       "Healthcare Meta Ads agency in Kolkata helping clinics and medical service providers build compliant, trust-led Facebook and Instagram lead funnels.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Clinic lead funnels", "Appointment CTAs", "Trust-led landing pages", "WhatsApp follow-up"],
     keywords: [
       "healthcare meta ads agency kolkata",
@@ -1125,12 +1125,12 @@ export const servicePages = [
     slug: "ui-ux-design-kolkata",
     name: "UI UX Design Agency in Kolkata",
     shortName: "UI/UX Design",
-    metaTitle: "UI UX Design Agency in Kolkata | Web, Mobile App & Dashboard Design",
+    metaTitle: "UI UX Design Agency in Kolkata | PPR Global [Figma]",
     metaDescription:
-      "Award-winning UI/UX design in Kolkata. We design modern website interfaces, mobile apps, and SaaS dashboards with conversion-focused UX. View our design showcase!",
+      "Conversion-first UI/UX design for websites, mobile apps, and SaaS dashboards in Kolkata from $300 USD (₹28,750 INR). Clean Figma prototypes & design systems.",
     description:
       "UI UX design agency in Kolkata designing websites, apps, dashboards, landing pages, and conversion-focused digital product interfaces.",
-    price: "Custom quote",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Website UI", "Mobile app UX", "Dashboard design", "Conversion-focused flows"],
     keywords: [
       "ui ux design agency kolkata",
@@ -1162,12 +1162,12 @@ export const servicePages = [
     slug: "ecommerce-development-kolkata",
     name: "Ecommerce Website Development in Kolkata",
     shortName: "Ecommerce",
-    metaTitle: "Ecommerce Website Development Kolkata | Online Stores & WhatsApp Order",
+    metaTitle: "Ecommerce Website Development Kolkata | PPR Global",
     metaDescription:
-      "Launch your online store with Kolkata's trusted ecommerce developer. Fast mobile checkout, WhatsApp ordering & secure payment gateways. Start selling online now!",
+      "Custom online stores & WhatsApp ordering catalogs for Kolkata businesses from $499 USD (₹47,800 INR). Fast Next.js checkout, UPI, and inventory sync.",
     description:
       "Ecommerce website development in Kolkata for stores that need product pages, checkout flows, payment setup, order management, and mobile-first shopping.",
-    price: "Custom quote",
+    price: "Starts from $499 USD (₹47,800 INR)",
     highlights: ["Product catalog", "Checkout planning", "Payment setup", "Order management"],
     keywords: [
       "ecommerce website development kolkata",
@@ -1199,12 +1199,12 @@ export const servicePages = [
     slug: "static-website-design-kolkata",
     name: "Static Website Design Company in Kolkata",
     shortName: "Static Website",
-    metaTitle: "Static Website Design in Kolkata | Fast 3-Page Sites from ₹6,000",
+    metaTitle: "Static Website Design in Kolkata | PPR Global [7-Day Launch]",
     metaDescription:
-      "Need a clean, lightning-fast static business website in Kolkata? Custom HTML5 & Next.js design, mobile-friendly layout, WhatsApp CTA & SEO from ₹6,000. Get started!",
+      "Clean, lightning-fast static business websites in Kolkata from $300 USD (₹28,750 INR). Custom HTML5 & Next.js design, mobile-friendly & WhatsApp CTA.",
     description:
       "PPR Global designs ultra-fast, affordable static websites for Kolkata small businesses, consultants, and professionals with 5-day delivery and zero ongoing hosting headaches.",
-    price: "Starts from ₹6,000",
+    price: "Starts from $300 USD (₹28,750 INR)",
     highlights: ["Lightning-fast loading speed", "Zero maintenance & database fees", "Direct WhatsApp enquiry flow", "Local SEO metadata included"],
     keywords: [
       "static website design in kolkata",
@@ -1221,7 +1221,7 @@ export const servicePages = [
       {
         question: "How much does a static website cost in Kolkata?",
         answer:
-          "Our static business website package starts at ₹6,000 for a complete, responsive multi-section site including custom copywriting, WhatsApp integration, and local SEO setup."
+          "Our static business website package starts at $300 USD (₹28,750 INR) for a complete, responsive multi-section site including custom copywriting, WhatsApp integration, and local SEO setup."
       },
       {
         question: "Can I update content on a static website later?",
@@ -1241,12 +1241,12 @@ export const servicePages = [
     slug: "dynamic-website-development-kolkata",
     name: "Dynamic Website Development Company in Kolkata",
     shortName: "Dynamic Website",
-    metaTitle: "Dynamic Website Development Kolkata | Custom Database & Web Apps",
+    metaTitle: "Dynamic Website Development Kolkata | PPR Global",
     metaDescription:
       "Custom dynamic website development in Kolkata for growing companies. Database management, user login, search filters, APIs & high-performance Next.js builds.",
     description:
       "Custom dynamic website development in Kolkata for businesses that need real-time database management, user authentication, customer portals, and interactive web tools.",
-    price: "Starts from ₹14,999",
+    price: "Starts from $499 USD (₹47,800 INR)",
     highlights: ["Real-time database integration", "Custom filtering & search", "User authentication & roles", "API & payment gateway integrations"],
     keywords: [
       "dynamic website development kolkata",
@@ -1288,7 +1288,7 @@ export const servicePages = [
       "Get a custom website with an easy-to-use admin panel in Kolkata. Update content, products, blogs & client enquiries without touching code. Free quote!",
     description:
       "PPR Global builds custom business websites with secure, intuitive admin panels so you can update text, images, products, pricing, and view leads without writing code.",
-    price: "Starts from ₹12,000",
+    price: "Starts from $390 USD (₹37,400 INR)",
     highlights: ["Intuitive self-managed dashboard", "Zero monthly CMS subscription fees", "Lead tracking & inquiry inbox", "Media uploads & blog editor"],
     keywords: [
       "website with admin panel kolkata",
@@ -1330,7 +1330,7 @@ export const servicePages = [
       "Captivate your audience with interactive 3D motion graphics, GSAP animations & WebGL websites designed in Kolkata. Luxury visual experiences for modern brands.",
     description:
       "PPR Global engineers award-winning 3D motion animated websites with Three.js, WebGL, GSAP, and interactive scroll storytelling for luxury brands and tech startups.",
-    price: "Starts from ₹20,000",
+    price: "Starts from $699 USD (₹67,000 INR)",
     highlights: ["Interactive Three.js & WebGL visuals", "Hardware-accelerated 60fps animations", "Immersive scroll storytelling", "Mobile-optimized performance"],
     keywords: [
       "3d motion animated website kolkata",
@@ -1382,11 +1382,11 @@ export const resourcePosts = [
     "body": [
       "If you are a business owner in Kolkata planning to launch or rebuild your online presence, the first question you inevitably ask is: 'How much does a website cost in Kolkata in 2026?' Depending on who you ask, quotes can range anywhere from ₹3,000 from a student freelancer to ₹2,50,000+ from legacy Salt Lake Sector V agencies. This wide variance causes massive confusion and often leads local businesses to make one of two costly mistakes: choosing a bargain-basement WordPress template that breaks within months, or overpaying a legacy agency for bloated features they will never use.",
       "At PPR Global, we believe in radical pricing transparency. As an engineering agency founded right here in Barasat, Kolkata, we have built digital systems for dental clinics, interior designers, fitness clubs, restaurants, real estate brokers, and global clients. In this exhaustive 2026 benchmark guide, we break down exact market pricing across Kolkata and West Bengal, detailing what each budget tier delivers, hidden fees to watch out for, and how to choose the right architecture for your business.",
-      "Tier 1: Starter Static Business Websites (₹6,000 – ₹10,000 | Delivery: 3–7 Days): Ideal for independent consultants, legal chambers, dental practices, solo tutors, and local service professionals in Kolkata. A static website consists of pre-rendered, server-side optimized pages (typically Home, About, Services, Case Studies/Portfolio, and Contact). Built with Next.js and Tailwind CSS rather than sluggish PHP, these sites achieve sub-second load times (<0.8s), have zero vulnerable SQL databases for hackers to breach, and require ₹0 monthly database hosting expenses. At PPR Global, our ₹6,000 starter package includes custom responsive UI design, conversion-focused copywriting, mobile PageSpeed optimization (95+ score), Google Business Profile Map integration, and instant WhatsApp enquiry routing.",
-      "Tier 2: Websites with Self-Managed Admin Panels (₹12,000 – ₹18,000 | Delivery: 10–14 Days): Best for interior design studios, real estate brokers, beauty clinics, and coaching institutes that frequently upload project photos, publish client testimonials, update pricing packages, or post new articles. Rather than paying a webmaster ₹500 every time a phone number or photo changes, a custom admin panel gives your front desk a secure, private dashboard to upload images, edit service text, and download customer inquiries to CSV. Unlike clunky WordPress dashboards requiring 30 conflicting plugins and weekly updates, our custom admin dashboards are engineered with Next.js and Supabase for lightning-fast, zero-friction daily operations.",
-      "Tier 3: Custom Dynamic Web Applications (₹15,000 – ₹35,000+ | Delivery: 2–4 Weeks): Essential for multi-doctor healthcare clinics with online patient slot booking, gyms with class timetables and trial pass checkouts, equipment rental catalogs, and recruitment portals. Dynamic websites connect directly to secure cloud databases (PostgreSQL/Supabase) to handle live data, user accounts, search filters, automated SMS/WhatsApp alerts, and interactive calculators.",
-      "Tier 4: E-Commerce Stores & Direct WhatsApp Catalogs (₹18,000 – ₹45,000 | Delivery: 2–5 Weeks): Built for retail boutiques in Gariahat, activewear brands, specialty coffee roasters, and manufacturing distributors in Kolkata. Solutions range from lightweight direct WhatsApp ordering catalogs (0% transaction fees) to full custom Next.js e-commerce engines with payment gateways (Razorpay, Cashfree, UPI), automated shipping slip generation, live inventory sync, and customer accounts.",
-      "Full Kolkata Market Comparison Table: To help you evaluate quotes objectively, here is how the primary website tiers compare in Kolkata across cost, timeline, tech stack, and ideal business use cases: 1. Static Business Website | ₹6,000 – ₹10,000 | 3–7 Days | Next.js, Tailwind, Vercel | Best for: Dentists, Consultants, Lawyers, Salons, Local Trades. 2. Admin Panel Website | ₹12,000 – ₹18,000 | 10–14 Days | Next.js, Supabase, Tailwind | Best for: Interior Designers, Real Estate Agents, Training Institutes, Boutiques. 3. Dynamic Web Application | ₹15,000 – ₹35,000+ | 2–4 Weeks | Next.js, PostgreSQL, Auth | Best for: Multi-Doctor Clinics, Gyms with Class Booking, SaaS MVPs, Rental Directories. 4. E-Commerce & WhatsApp Catalog | ₹18,000 – ₹45,000 | 2–5 Weeks | Next.js, Razorpay/Shopify, Inventory API | Best for: Clothing Brands, Direct-to-Consumer Brands, Cloud Kitchens, Distributors.",
+      "Tier 1: Starter Static Business Websites ($300 USD / ₹28,750 INR | Delivery: 3–7 Days): Ideal for independent consultants, legal chambers, dental practices, solo tutors, and local service professionals in Kolkata. A static website consists of pre-rendered, server-side optimized pages (typically Home, About, Services, Case Studies/Portfolio, and Contact). Built with Next.js and Tailwind CSS rather than sluggish PHP, these sites achieve sub-second load times (<0.8s), have zero vulnerable SQL databases for hackers to breach, and require ₹0 monthly database hosting expenses. At PPR Global, our $300 USD (₹28,750 INR) starter package includes custom responsive UI design, conversion-focused copywriting, mobile PageSpeed optimization (95+ score), Google Business Profile Map integration, and instant WhatsApp enquiry routing.",
+      "Tier 2: Websites with Self-Managed Admin Panels ($390 USD / ₹37,400 INR | Delivery: 7–10 Days): Best for interior design studios, real estate brokers, beauty clinics, and coaching institutes that frequently upload project photos, publish client testimonials, update pricing packages, or post new articles. Rather than paying a webmaster ₹500 every time a phone number or photo changes, a custom admin panel gives your front desk a secure, private dashboard to upload images, edit service text, and download customer inquiries to CSV. Unlike clunky WordPress dashboards requiring 30 conflicting plugins and weekly updates, our custom admin dashboards are engineered with Next.js and Supabase for lightning-fast, zero-friction daily operations.",
+      "Tier 3: Custom Dynamic Web Applications ($499 USD / ₹47,800 INR | Delivery: 10–14 Days): Essential for multi-doctor healthcare clinics with online patient slot booking, gyms with class timetables and trial pass checkouts, equipment rental catalogs, and recruitment portals. Dynamic websites connect directly to secure cloud databases (PostgreSQL/Supabase) to handle live data, user accounts, search filters, automated SMS/WhatsApp alerts, and interactive calculators.",
+      "Tier 4: E-Commerce Stores & Direct WhatsApp Catalogs ($499 USD / ₹47,800 INR | Delivery: 14–21 Days): Built for retail boutiques in Gariahat, activewear brands, specialty coffee roasters, and manufacturing distributors in Kolkata. Solutions range from lightweight direct WhatsApp ordering catalogs (0% transaction fees) to full custom Next.js e-commerce engines with payment gateways (Razorpay, Cashfree, UPI), automated shipping slip generation, live inventory sync, and customer accounts.",
+      "Full Kolkata Market Comparison Table: To help you evaluate quotes objectively, here is how the primary website tiers compare in Kolkata across cost, timeline, tech stack, and ideal business use cases: 1. Static Business Website | $300 USD (₹28,750 INR) | 3–7 Days | Next.js, Tailwind, Vercel | Best for: Dentists, Consultants, Lawyers, Salons, Local Trades. 2. Admin Panel Website | $390 USD (₹37,400 INR) | 7–10 Days | Next.js, Supabase, Tailwind | Best for: Interior Designers, Real Estate Agents, Training Institutes, Boutiques. 3. Dynamic Web Application | $499 USD (₹47,800 INR) | 10–14 Days | Next.js, PostgreSQL, Auth | Best for: Multi-Doctor Clinics, Gyms with Class Booking, SaaS MVPs, Rental Directories. 4. E-Commerce & WhatsApp Catalog | $499 USD (₹47,800 INR) | 14–21 Days | Next.js, Razorpay/Shopify, Inventory API | Best for: Clothing Brands, Direct-to-Consumer Brands, Cloud Kitchens, Distributors. 5. 3D Motion Animated Website | $699 USD (₹67,000 INR) | 14–21 Days | Three.js, GSAP, WebGL | Best for: Luxury Studios, Startups. 6. Mobile Applications | Starts $750 USD (₹72,000 INR) | 3–5 Weeks | React Native, Flutter | Best for: Booking apps, on-demand platforms.",
       "Hidden Agency Costs Kolkata Businesses Must Watch Out For: When evaluating low-cost agencies offering '₹2,999 complete websites', examine what is left out. In Kolkata's web market, low upfront quotes are almost always bait-and-switch tactics. Here are the hidden traps: 1. Mandatory Hosting Markups: Agencies lock your domain to their private server and demand ₹8,000–₹15,000 annually for 'hosting renewal'—even though modern static sites can be hosted for ₹0 on Vercel or Cloudflare. 2. Unlicensed Nulled WordPress Themes: Cheap agencies install pirated premium themes that contain malware, crypto-miners, or backdoors that eventually get your domain blacklisted by Google. 3. Hostage Code & Domain Ownership: Some firms register your domain under their own personal GoDaddy account. When you attempt to switch providers, they charge ₹10,000+ 'transfer release fees'. At PPR Global, you own 100% of your source code, domain, and hosting accounts from day one.",
       "WordPress vs. Next.js: The 2026 Reality for Indian Businesses: For over 15 years, WordPress powered most agency sites. But in 2026, WordPress has become bloated, slow, and expensive to maintain. A typical WordPress site requires 20+ plugins (Elementor, Yoast, Contact Form 7, Wordfence, WP Rocket) that constantly conflict, break during updates, and drag mobile load times down to 5–8 seconds. In Kolkata, where 80%+ of local consumers browse over mobile 4G/5G connections, a 3-second delay increases bounce rates by over 50%. PPR Global builds on Next.js—the modern framework created by Vercel and used by Nike, TikTok, and Target. Next.js pre-renders pages into pure, static HTML that loads in milliseconds, scores 95+ on Google PageSpeed Insights, and ranks significantly higher on Google Search.",
       "Real-World Kolkata Case Studies: Measuring True ROI: A website should never be treated as an overhead cost—it is an automated 24/7 revenue engine. Consider two real client examples from our Kolkata portfolio: First, Dr. Shaheen Dental Clinic invested in a targeted healthcare website with treatment showcases and instant WhatsApp booking. By capturing just two high-value dental implant and aligner patients in month one, the entire project investment was fully recouped. Second, The Daily Roast Cafe launched a direct WhatsApp ordering website with digital QR menus. By routing 35% of repeat takeout orders away from Swiggy/Zomato (which charge 28% commission), the cafe saved over ₹68,000 every single month in platform fees alone.",
@@ -1395,7 +1395,7 @@ export const resourcePosts = [
     "faqs": [
       {
         "question": "What is the average cost of a small business website in Kolkata?",
-        "answer": "In 2026, a professional 5-page small business website with custom Next.js design, mobile responsiveness, WhatsApp integration, and local SEO typically costs between ₹6,000 and ₹12,000 in Kolkata."
+        "answer": "In 2026, a professional 5-page small business website with custom Next.js design, mobile responsiveness, WhatsApp integration, and local SEO typically costs starts at $300 USD (₹28,750 INR) with PPR Global for an enterprise-grade Next.js build."
       },
       {
         "question": "Are there recurring monthly fees after the website is built?",
@@ -2347,7 +2347,7 @@ export const resourcePosts = [
       },
       {
         "question": "How much does a complete patient acquisition system cost for a dental clinic?",
-        "answer": "PPR Global provides complete dental clinic website design, WhatsApp booking automation, and local SEO setup starting from ₹6,000 to ₹14,999 with zero recurring monthly subscription fees."
+        "answer": "PPR Global provides complete dental clinic website design, WhatsApp booking automation, and local SEO setup starting from $300 USD (₹28,750 INR) with zero recurring monthly subscription fees."
       }
     ],
     "relatedServiceSlugs": [
@@ -2414,7 +2414,7 @@ export const resourcePosts = [
       "The Hidden Pain of WordPress Sites: 1. Plugin Nightmare: A standard WordPress website requires 25 to 40 plugins just to handle SEO, forms, caching, security, popups, and analytics. Every plugin update risks breaking your layout or crashing your database. 2. Heavy Server Bloat: Dynamic PHP execution and database queries on every page hit slow down mobile PageSpeed scores to 30–50/100, causing prospective customers to bounce before your phone number even appears. 3. Constant Security Breaches: Over 90% of all hacked CMS websites run on WordPress, targeted through vulnerable third-party plugins. 4. Expensive Monthly Maintenance: Businesses end up paying webmasters ₹3,000 to ₹10,000 every month just to patch plugins and reboot crashing servers.",
       "The Modern Solution: Custom Next.js Engineering: Next.js—the industry-standard React framework backed by Vercel—takes a modern approach. Pages are pre-rendered into lightning-fast static HTML and distributed globally across content delivery networks (CDNs).",
       "Why Next.js Delivers Unbeatable Business ROI: 1. Sub-Second Load Speeds: Pages load in under 800 milliseconds with perfect 95+ scores on Google PageSpeed Insights. 2. Zero Vulnerable Databases: Because static pages do not execute live PHP scripts, there are no databases for hackers to inject SQL malware into. 3. Zero Monthly Plugin Subscriptions: Next.js sites use clean, tailored React code without commercial plugin licenses. 4. Superior Google Ranking: Google's Core Web Vitals directly reward fast LCP (Largest Contentful Paint) and low CLS (Cumulative Layout Shift) with higher organic search positions.",
-      "Why Choose PPR Global: While legacy agencies in Kolkata still charge ₹40,000+ to install a pre-made WordPress theme, PPR Global builds bespoke Next.js web applications starting at just ₹6,000. You get full source code ownership, enterprise security, and a digital asset that never crashes during traffic surges."
+      "Why Choose PPR Global: While legacy agencies in Kolkata still charge ₹40,000+ to install a pre-made WordPress theme, PPR Global builds bespoke Next.js web applications starting at just $300 USD (₹28,750 INR). You get full source code ownership, enterprise security, and a digital asset that never crashes during traffic surges."
     ],
     "faqs": [
       {
@@ -2467,7 +2467,7 @@ export const resourcePosts = [
       },
       {
         "question": "How much does a custom WhatsApp automation setup cost in Kolkata?",
-        "answer": "Our WhatsApp automation and lead routing setups start at ₹6,000 for standard business funnels with zero expensive monthly per-user licensing fees."
+        "answer": "Our WhatsApp automation and lead routing setups start at $300 USD (₹28,750 INR) for standard business funnels with zero expensive monthly per-user licensing fees."
       }
     ],
     "relatedServiceSlugs": [
@@ -2507,7 +2507,7 @@ export const resourcePosts = [
       },
       {
         "question": "What is the cost of an interior designer website in Kolkata?",
-        "answer": "PPR Global builds custom interior design websites starting from ₹6,000 for starter showcase portfolios to ₹14,999 for full luxury studios with custom admin panels."
+        "answer": "PPR Global builds custom interior design websites starting from $300 USD (₹28,750 INR) for starter showcase portfolios to $390 USD (₹37,400 INR) for full luxury studios with custom admin panels."
       }
     ],
     "relatedServiceSlugs": [
@@ -2534,7 +2534,7 @@ export const resourcePosts = [
       "Why Patients Miss Appointments: 1. Busy Everyday Schedules: Patients simply forget appointments booked days in advance. 2. Communication Friction: Busy front desk phone lines make it difficult for patients to call and reschedule easily. 3. Clunky Patient Portals: Forcing patients to download an unfamiliar app or remember a login password creates unnecessary friction. In India, 95% of patients prefer interacting through WhatsApp.",
       "The 3-Step Automated WhatsApp Clinic Workflow: 1. Self-Service Online Slot Discovery: Patients visit your clinic website, select the required specialty or treatment, pick an available morning or evening time slot, and tap 'Book on WhatsApp'. 2. Instant Pre-Formatted Confirmation: The clinic front desk receives the appointment request instantly, confirms the slot, and the system sends the patient a calendar invite and clinic Google Maps directions. 3. Automated Dual Reminders: A personalized reminder is sent 24 hours prior to the visit, followed by a final confirmation message 2 hours before consulting time, prompting the patient to reply '1 to Confirm' or '2 to Reschedule'.",
       "The Proven Results: Implementing this automated workflow cuts missed appointments by over 70%. When PPR Global configured this exact framework for Dr. Shaheen Dental Clinic in Kolkata, patient no-show rates plummeted from 35% down to under 10% within the first month.",
-      "Build Patient Trust with PPR Global: Our healthcare websites are designed specifically for Kolkata's medical sector. We combine clean clinic aesthetics, doctor credential badges, verified Google reviews, and patient-first WhatsApp scheduling starting at just ₹6,000."
+      "Build Patient Trust with PPR Global: Our healthcare websites are designed specifically for Kolkata's medical sector. We combine clean clinic aesthetics, doctor credential badges, verified Google reviews, and patient-first WhatsApp scheduling starting at just $300 USD (₹28,750 INR)."
     ],
     "faqs": [
       {
@@ -2547,7 +2547,7 @@ export const resourcePosts = [
       },
       {
         "question": "How much does a healthcare clinic booking website cost?",
-        "answer": "A complete clinic website with doctor credentials, treatment pages, and WhatsApp booking automation starts from ₹6,000 with zero monthly subscription fees."
+        "answer": "A complete clinic website with doctor credentials, treatment pages, and WhatsApp booking automation starts from $300 USD (₹28,750 INR) with zero monthly subscription fees."
       }
     ],
     "relatedServiceSlugs": [
@@ -2615,7 +2615,7 @@ export const resourcePosts = [
       "The Hybrid Direct-Ordering Blueprint: The most successful cafes in Kolkata are adopting a smart hybrid strategy: they maintain a presence on aggregators for cold customer discovery, but convert repeat diners into direct orders through their own website and WhatsApp ordering portal.",
       "How Direct WhatsApp Food Ordering Works: 1. Visual Digital Menu: Diners scan a QR code at their table or click your Instagram/Google link to view mouthwatering food photography, categorized into Starters, Mains, Desserts, and Chef's Specials. 2. Instant WhatsApp Cart Checkout: Customers select items, add dietary notes (e.g. 'Less Spicy', 'Extra Cheese'), and tap 'Order via WhatsApp'. 3. Structured Kitchen Alert: Your front desk receives an organized WhatsApp message with dish names, quantities, customer address, and total amount. 4. Seamless UPI Payment: The cashier sends a dynamic UPI QR code or payment link, collects payment directly into the restaurant bank account, and dispatches the food via in-house staff or flat-rate local delivery partners (Porter, Dunzo).",
       "Case Proof from The Daily Roast Cafe: In our live case study for The Daily Roast Cafe in Kolkata, routing repeat neighborhood patrons through direct WhatsApp ordering saved over ₹68,000 per month in commission deductions—money that went straight back into the business's bottom line.",
-      "Built by PPR Global: We design mouthwatering, mobile-optimized restaurant websites with QR menus and WhatsApp ordering starting at just ₹6,000, paying for themselves in commission savings within weeks."
+      "Built by PPR Global: We design mouthwatering, mobile-optimized restaurant websites with QR menus and WhatsApp ordering starting from $300 USD (₹28,750 INR), paying for themselves in commission savings within weeks."
     ],
     "faqs": [
       {
@@ -2628,7 +2628,7 @@ export const resourcePosts = [
       },
       {
         "question": "How much does a custom restaurant ordering website cost?",
-        "answer": "PPR Global builds custom restaurant websites with digital QR menus and zero-commission WhatsApp ordering starting from ₹6,000 with zero monthly platform cuts."
+        "answer": "PPR Global builds custom restaurant websites with digital QR menus and zero-commission WhatsApp ordering starting from $300 USD (₹28,750 INR) with zero monthly platform cuts."
       }
     ],
     "relatedServiceSlugs": [
@@ -2655,7 +2655,7 @@ export const resourcePosts = [
       "The Anatomy of Google's Local Algorithm: Google calculates local rankings using three primary factors: Relevance, Distance, and Prominence. While you cannot change your physical distance from a searcher, you can completely dominate Relevance and Prominence through methodical on-page and off-page optimization.",
       "The 5-Step Playbook for Local 3-Pack Dominance in Kolkata: 1. Strict NAP (Name, Address, Phone) Consistency: Your business name, street address, and phone number must match identically across your website, Google Business Profile (GBP), and major Indian directories (Justdial, Sulekha, IndiaMART, Facebook). Even small discrepancies (e.g. 'St.' vs 'Street') create entity confusion for Google's crawler. 2. Deep Local Schema Markup: Embed LocalBusiness, ProfessionalService, GeoCoordinates (with 5-decimal precision), and opening hours schema into your website code, linking directly to your verified GBP URL via the 'hasMap' property. 3. High-Precision Geo-Coordinates & Neighborhood Signals: Clearly mention target micro-localities (Salt Lake Sector V, New Town, Rajarhat, Park Street, Ballygunge, Barasat) naturally across your landing page copy. 4. Automated 5-Star Review Generation Funnels: Google places immense weight on review velocity, recent feedback, and keyword-rich customer testimonials. Set up automated WhatsApp triggers requesting reviews from satisfied clients with direct Google review links. 5. Interactive Google Map Embeds: Embedding a responsive Google Maps iframe on your contact and service pages confirms your physical operational presence to search bots.",
       "Proven Local Proof: PPR Global's own website ranks at the top of Google Maps in Barasat, Kolkata, featuring a verified 4.9★ rating from 27+ real clients. We apply this exact local SEO architecture to every client project we build.",
-      "Partner with Kolkata's Local SEO Specialists: Stop losing nearby customers to competitors. PPR Global delivers comprehensive local SEO, Google Business Profile optimization, and local citation building starting at just ₹6,000."
+      "Partner with Kolkata's Local SEO Specialists: Stop losing nearby customers to competitors. PPR Global delivers comprehensive local SEO, Google Business Profile optimization, and local citation building starting from $300 USD (₹28,750 INR)."
     ],
     "faqs": [
       {
@@ -2668,7 +2668,7 @@ export const resourcePosts = [
       },
       {
         "question": "What is the cost of local SEO and Google Maps optimization?",
-        "answer": "Our localized SEO and Google Business Profile setup packages start from ₹6,000, delivering long-term organic visibility without ongoing pay-per-click ad costs."
+        "answer": "Our localized SEO and Google Business Profile setup packages start from $300 USD (₹28,750 INR), delivering long-term organic visibility without ongoing pay-per-click ad costs."
       }
     ],
     "relatedServiceSlugs": [
@@ -2695,7 +2695,7 @@ export const resourcePosts = [
       "The Cost of Manual Lead Sorting: When your sales team spends 4 hours every day calling 50 unqualified leads, serious buyers with pre-approved home loans get neglected. In competitive property markets like New Town, Rajarhat, EM Bypass, and South Kolkata, an interested buyer who waits 2 hours for a callback has already booked a site visit with another property agent.",
       "The Automated Lead Qualification Funnel: 1. Clean Verified Property Landing Pages: Dedicated showcase pages highlighting unit floor plans, carpet area, verified RERA numbers, high-resolution walkthrough videos, and accurate starting prices. 2. Multi-Step Interactive Qualifier: When a prospect clicks 'Schedule Site Visit' or 'Download Brochure', a sleek 3-question filter captures their buying timeline (e.g. 'Ready to Move' vs 'Under Construction'), preferred BHK configuration, and budget range (e.g. '₹45L–₹75L', '₹1Cr+'). 3. Instant WhatsApp Lead Verification: The prospect receives an automated WhatsApp message with the verified property brochure PDF, confirming their valid phone number. 4. High-Intent Sales Escalation: Qualified buyers meeting budget criteria are instantly pinged to senior brokers with an automated calendar link to book VIP site visits.",
       "Lightweight Custom CRM vs. Expensive Real Estate Platforms: Traditional real estate CRMs cost ₹20,000+ monthly and are riddled with complicated enterprise features. PPR Global builds fast, tailored real estate web portals and lightweight WhatsApp qualification funnels that your agents can manage directly from their smartphones.",
-      "Trust & Delivery with PPR Global: We build high-converting real estate websites with verified property showcases, interactive search filters, and automated WhatsApp lead qualification starting from just ₹6,000."
+      "Trust & Delivery with PPR Global: We build high-converting real estate websites with verified property showcases, interactive search filters, and automated WhatsApp lead qualification starting from $300 USD (₹28,750 INR)."
     ],
     "faqs": [
       {
@@ -2708,7 +2708,7 @@ export const resourcePosts = [
       },
       {
         "question": "What is the cost of a real estate website and CRM system in Kolkata?",
-        "answer": "PPR Global builds custom real estate portals and lead qualification systems starting from ₹6,000 to ₹14,999 with zero recurring monthly subscription fees."
+        "answer": "PPR Global builds custom real estate portals and lead qualification systems starting from $300 USD (₹28,750 INR) with zero recurring monthly subscription fees."
       }
     ],
     "relatedServiceSlugs": [
@@ -2733,7 +2733,7 @@ export const resourcePosts = [
     "body": [
       "In India, consumer and B2B skepticism is at an all-time high. With thousands of amateur agencies, fly-by-night freelancers, and template website developers making grand promises online, potential clients are naturally defensive. When a visitor lands on your website, their primary subconscious question is not 'What are their features?' but rather: 'Can I actually trust these people with my money?'",
       "If your website lacks clear, verifiable trust signals, 90%+ of visitors will bounce—no matter how much money you spend on Google Ads or Instagram marketing.",
-      "The 7 Indispensable Trust Signals Every High-Converting Website Must Include: 1. A Verifiable Human Founder Face: Anonymous company websites feel untrustworthy. Highlighting your founder's name, professional credentials, and direct LinkedIn profile (such as PPR Global's founder Patit Roy) immediately establishes human accountability. 2. Real Physical Office Address & Google Map Verification: Displaying an authentic physical location (e.g. Jessore Rd, Kazipara, Barasat, Kolkata) paired with a live Google Maps embed reassures clients that you are a legitimate, reachable local business. 3. Verifiable Named Client Case Studies: Stock testimonials like 'Great service! - John D.' trigger skepticism. Use real client names, brand logos, and specific measurable outcomes (e.g. Dr. Shaheen Dental Clinic, The Daily Roast Cafe, Interior Amit). 4. Transparent Upfront Pricing: Hiding prices behind 'Contact Us for Quote' forms creates anxiety. Providing starting price tiers (e.g. 'Websites from ₹6,000') demonstrates confidence and filters out unqualified leads. 5. Independent 3rd-Party Review Badges: Highlighting verified review counts and star ratings from neutral platforms (Google Business Profile, Clutch, Justdial) provides objective social validation. 6. Transparent Technical Guarantees: Reassure clients with clear operational commitments: 100% source code ownership, zero hidden hosting fees, and guaranteed sub-second mobile loading speeds. 7. Direct, Immediate Human Communication: Providing an instant WhatsApp chat link with direct access to lead engineers proves that clients will not be trapped in automated telephone menus or endless ticket queues.",
+      "The 7 Indispensable Trust Signals Every High-Converting Website Must Include: 1. A Verifiable Human Founder Face: Anonymous company websites feel untrustworthy. Highlighting your founder's name, professional credentials, and direct LinkedIn profile (such as PPR Global's founder Patit Roy) immediately establishes human accountability. 2. Real Physical Office Address & Google Map Verification: Displaying an authentic physical location (e.g. Jessore Rd, Kazipara, Barasat, Kolkata) paired with a live Google Maps embed reassures clients that you are a legitimate, reachable local business. 3. Verifiable Named Client Case Studies: Stock testimonials like 'Great service! - John D.' trigger skepticism. Use real client names, brand logos, and specific measurable outcomes (e.g. Dr. Shaheen Dental Clinic, The Daily Roast Cafe, Interior Amit). 4. Transparent Upfront Pricing: Hiding prices behind 'Contact Us for Quote' forms creates anxiety. Providing starting price tiers (e.g. 'Websites from $300 USD (₹28,750 INR)') demonstrates confidence and filters out unqualified leads. 5. Independent 3rd-Party Review Badges: Highlighting verified review counts and star ratings from neutral platforms (Google Business Profile, Clutch, Justdial) provides objective social validation. 6. Transparent Technical Guarantees: Reassure clients with clear operational commitments: 100% source code ownership, zero hidden hosting fees, and guaranteed sub-second mobile loading speeds. 7. Direct, Immediate Human Communication: Providing an instant WhatsApp chat link with direct access to lead engineers proves that clients will not be trapped in automated telephone menus or endless ticket queues.",
       "Why Clients Choose PPR Global: At PPR Global, we do not just preach trust—we build it into every layer of our digital systems. From our verified 4.9★ Google rating to transparent starting prices and live case studies, we practice radical transparency in everything we ship.",
       "Build a Digital Presence That Converts: Transform your business website into a credible, high-converting client acquisition asset. Speak directly with founder Patit Roy today."
     ],

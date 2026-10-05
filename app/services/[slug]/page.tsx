@@ -82,21 +82,29 @@ export async function generateMetadata({
       ? (service.metaDescription as string)
       : service.description;
 
+  const fullTitle = pageTitle.includes("PPR Global")
+    ? pageTitle
+    : pageTitle.length > 50
+      ? pageTitle
+      : `${pageTitle} | PPR Global`;
+
   return {
-    title: pageTitle,
+    title: {
+      absolute: fullTitle
+    },
     description: pageDescription,
     keywords: service.keywords,
     alternates: {
       canonical: `/services/${service.slug}`
     },
     openGraph: {
-      title: pageTitle,
+      title: fullTitle,
       description: pageDescription,
       url: `${baseUrl}/services/${service.slug}`
     },
     twitter: {
       card: "summary_large_image",
-      title: pageTitle,
+      title: fullTitle,
       description: pageDescription,
       images: ["/opengraph-image"]
     }

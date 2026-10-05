@@ -63,7 +63,7 @@ export const business = {
     "UI/UX Design",
     "Lead Management"
   ],
-  priceRange: "$$ / ₹₹",
+  priceRange: "$300 - $750 USD / ₹28,750 - ₹72,000 INR",
   citations: [
     { name: "Google Business Profile", url: "https://share.google/FeZQgspdDBgAnBavG" },
     { name: "Clutch.co", url: "https://clutch.co/profile/ppr-global" },
@@ -79,8 +79,8 @@ export const business = {
     "https://kolkata.sulekha.com/ppr-global"
   ],
   defaultMetadata: {
-    title: "PPR Global | Website Development & App Agency | Starts $300 USD (₹28,750)",
+    title: "Website Development Company in Kolkata | PPR Global [4.9★ Rated]",
     description:
-      "Top-rated website development, mobile apps & WhatsApp automation agency. Fast 7-day delivery, custom CRM & transparent pricing from $300 USD (₹28,750 INR). Get a free quote!"
+      "Top-rated website & mobile app development agency in Kolkata. Custom Next.js design, WhatsApp CRM & fast 7-day launch. 4.9★ Google verified. Get a free quote!"
   }
 } as const;

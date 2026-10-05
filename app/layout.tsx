@@ -145,6 +145,41 @@ export default function RootLayout({
           "bestRating": "5",
           "worstRating": "1"
         },
+        review: [
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Dr. Shaheen" },
+            datePublished: "2024-11-15",
+            reviewBody: "PPR Global built our dental clinic appointment system and local SEO. We started getting direct patient inquiries from Google Maps within 3 weeks. Fast delivery and exceptional support.",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating: "5"
+            }
+          },
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Amit Roy" },
+            datePublished: "2024-12-02",
+            reviewBody: "Super fast turnaround. Our interior design studio website was delivered in just 6 days with an easy admin panel and sub-second load times. Inquiries increased significantly.",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating: "5"
+            }
+          },
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "The Daily Roast Cafe" },
+            datePublished: "2025-01-10",
+            reviewBody: "PPR Global built our direct WhatsApp ordering system and cafe website. It eliminated third-party aggregator commissions and automated our daily orders.",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating: "5"
+            }
+          }
+        ],
         geo: {
           "@type": "GeoCoordinates",
           latitude: 22.72330,
@@ -171,17 +206,18 @@ export default function RootLayout({
           "@type": "OfferCatalog",
           name: "PPR Global service catalog",
           itemListElement: [
-            { name: "Website Development", price: "6000", minPrice: "6000" },
-            { name: "Static Website Design", price: "6000", minPrice: "6000" },
-            { name: "Website with Admin Panel", price: "12000", minPrice: "12000" },
-            { name: "Dental Clinic Website Design", price: "6000", minPrice: "6000" },
-            { name: "Dental Appointment Booking Systems", price: "6000", minPrice: "6000" },
-            { name: "Dental Clinic SEO", price: "6000", minPrice: "6000" },
-            { name: "Mobile App Development", price: "14999", minPrice: "14999" },
-            { name: "WhatsApp Automation & CRM", price: "6000", minPrice: "6000" },
-            { name: "Dynamic Website Development", price: "14999", minPrice: "14999" },
-            { name: "Google & Meta Ads", price: "8000", minPrice: "8000" },
-            { name: "Local SEO & GEO", price: "6000", minPrice: "6000" }
+            { name: "Website Development", price: "28750", minPrice: "28750" },
+            { name: "Static Website Design", price: "28750", minPrice: "28750" },
+            { name: "Website with Admin Panel", price: "37400", minPrice: "37400" },
+            { name: "Dental Clinic Website Design", price: "28750", minPrice: "28750" },
+            { name: "Dental Appointment Booking Systems", price: "28750", minPrice: "28750" },
+            { name: "Dental Clinic SEO", price: "28750", minPrice: "28750" },
+            { name: "Dynamic Website Development", price: "47800", minPrice: "47800" },
+            { name: "3D Motion Animated Website", price: "67000", minPrice: "67000" },
+            { name: "Mobile App Development", price: "72000", minPrice: "72000" },
+            { name: "WhatsApp Automation & CRM", price: "28750", minPrice: "28750" },
+            { name: "Google & Meta Ads", price: "28750", minPrice: "28750" },
+            { name: "Local SEO & GEO", price: "28750", minPrice: "28750" }
           ].map((item) => ({
             "@type": "Offer",
             priceCurrency: "INR",
