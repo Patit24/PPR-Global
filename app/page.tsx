@@ -419,6 +419,7 @@ export default function Home() {
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent("whatsapp_click", { source: "hero_quote" })}
                     className="inline-flex min-h-12 items-center gap-2.5 rounded-full bg-ink px-6 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg transition-transform hover:scale-105 hover:bg-black focus-visible:ring-2 focus-visible:ring-acid"
                   >
                     <MessageCircle size={17} className="text-acid" aria-hidden="true" />
@@ -1254,6 +1255,7 @@ Please send me a proposal.`
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent("whatsapp_click", { source: "contact_section" })}
                 >
                   <MessageCircle className="mr-2" size={17} aria-hidden="true" />
                   WhatsApp Now
