@@ -196,7 +196,21 @@ const processSteps = [
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
-  const [currency, setCurrency] = useState<"USD" | "INR">("USD");
+  const [currency, setCurrency] = useState<"USD" | "INR">("INR");
+
+  useEffect(() => {
+    try {
+      // Safe client-side check for visitors: default INR if in India timezone or locale
+      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+      const isIndiaTimeZone = /Calcutta|Kolkata|Asia\/Kolkata/i.test(timeZone);
+      const isIndiaLocale = /en-IN|hi-IN|bn-IN/i.test(navigator.language || "");
+      if (!isIndiaTimeZone && !isIndiaLocale && timeZone) {
+        setCurrency("USD");
+      }
+    } catch {
+      // safe fallback keeps INR
+    }
+  }, []);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
   const [visibleGuidesCount, setVisibleGuidesCount] = useState(6);
@@ -1613,7 +1627,57 @@ function ProjectBuilderSection({
 }) {
   const shouldReduceMotion = useReducedMotion();
   const [selectedBusiness, setSelectedBusiness] = useState("Restaurant");
-  const [selectedNeeds, setSelectedNeeds] = useState(["Booking", "Admin Panel", "WhatsApp", "SEO"]);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [calcEmail, setCalcEmail] = useState("");
+  const [calcName, setCalcName] = useState("");
+  const [calcPhone, setCalcPhone] = useState("");
+  const [calcSubmitting, setCalcSubmitting] = useState(false);
+  const [calcSubmitted, setCalcSubmitted] = useState(false);
+  const [calcError, setCalcError] = useState("");
+
+  const handleSendEstimate = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!calcName.trim() || (!calcEmail.trim() && !calcPhone.trim())) {
+      setCalcError("Please enter your name and an email or WhatsApp number.");
+      return;
+    }
+    setCalcSubmitting(true);
+    setCalcError("");
+    try {
+      trackEvent("calculator_email_submit", {
+        business: selectedBusiness,
+        features: selectedNeeds.join(", "),
+        estimate: formattedEstimate,
+        currency
+      });
+
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          name: calcName.trim(),
+          email: calcEmail.trim(),
+          phone: calcPhone.trim(),
+          service: "Website Development",
+          budget: isUsd ? "$300–$600 / ₹28,000–₹57,000" : "Under $300 / ₹28,000",
+          source: "calculator_estimate",
+          message: `Calculator estimate requested for ${selectedBusiness}. Selected features: ${selectedNeeds.join(", ") || "None"}. Estimated total: ${formattedEstimate}. Currency: ${currency}.`,
+          page_url: typeof window !== "undefined" ? window.location.href : "",
+          page_title: typeof document !== "undefined" ? document.title : ""
+        })
+      });
+
+      if (response.ok) {
+        setCalcSubmitted(true);
+      } else {
+        setCalcError("Could not send estimate right now. Please message on WhatsApp.");
+      }
+    } catch {
+      setCalcError("Failed to submit. Please try again.");
+    } finally {
+      setCalcSubmitting(false);
+    }
+  };
 
   const isUsd = currency === "USD";
   const baseCost = isUsd ? calculatorBaseCostUsd : calculatorBaseCostInr;
@@ -1799,12 +1863,91 @@ Please guide me with the next step.`;
                     ? `All websites start from $${calculatorBaseCostUsd} USD (~₹${calculatorBaseCostInr.toLocaleString("en-IN")}). Each selected feature adds $50 (~₹4,800).`
                     : `All websites start from ₹${calculatorBaseCostInr.toLocaleString("en-IN")} (~$${calculatorBaseCostUsd} USD). Each selected feature adds ₹4,800 (~$50 USD).`}
                 </p>
-                <a
-                  href={whatsappLink(whatsappNowNumber, proposalMessage)}
-                  className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-ink px-5 text-xs font-black uppercase tracking-[0.16em] text-white outline-none transition-transform hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-ink"
-                >
-                  Get Proposal <ArrowUpRight size={15} aria-hidden="true" />
-                </a>
+                <div className="mt-6 flex flex-col gap-2.5">
+                  <a
+                    href={whatsappLink(whatsappNowNumber, proposalMessage)}
+                    onClick={() => trackEvent("whatsapp_click", { source: "calculator_proposal" })}
+                    className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-ink px-5 text-xs font-black uppercase tracking-[0.16em] text-white outline-none transition-transform hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-ink shadow-md"
+                  >
+                    Get Proposal on WhatsApp <ArrowUpRight size={15} aria-hidden="true" />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsEmailModalOpen(!isEmailModalOpen);
+                      trackEvent("calculator_complete", { estimate: formattedEstimate, currency });
+                    }}
+                    className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-black/20 bg-black/10 px-5 text-xs font-black uppercase tracking-[0.16em] text-ink outline-none transition-all hover:bg-black/20 focus-visible:ring-2 focus-visible:ring-ink"
+                  >
+                    {isEmailModalOpen ? "Close Email Option" : "✉ Email Me This Estimate"}
+                  </button>
+                </div>
+
+                {/* Optional Email/Phone estimate capture step */}
+                {isEmailModalOpen ? (
+                  <div className="mt-4 rounded-md border border-black/15 bg-white/95 p-4 text-ink shadow-lg">
+                    {calcSubmitted ? (
+                      <div className="py-2 text-center">
+                        <p className="font-display text-base font-bold text-ink">Estimate Sent!</p>
+                        <p className="mt-1 text-xs text-black/70">
+                          We&apos;ve recorded your estimate of {formattedEstimate}. Patit Roy will follow up with your custom blueprint.
+                        </p>
+                      </div>
+                    ) : (
+                      <form onSubmit={handleSendEstimate} className="space-y-3">
+                        <p className="text-xs font-bold uppercase tracking-wider text-black/70">
+                          Receive full scope &amp; breakdown
+                        </p>
+                        <div>
+                          <label htmlFor="calc-name" className="sr-only">Your Name</label>
+                          <input
+                            id="calc-name"
+                            type="text"
+                            required
+                            placeholder="Your Name *"
+                            value={calcName}
+                            onChange={(e) => setCalcName(e.target.value)}
+                            className="min-h-10 w-full rounded border border-black/20 bg-white px-3 text-xs text-ink outline-none focus:border-black focus:ring-1 focus:ring-black"
+                          />
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div>
+                            <label htmlFor="calc-phone" className="sr-only">WhatsApp / Mobile</label>
+                            <input
+                              id="calc-phone"
+                              type="tel"
+                              placeholder="Mobile / WhatsApp"
+                              value={calcPhone}
+                              onChange={(e) => setCalcPhone(e.target.value)}
+                              className="min-h-10 w-full rounded border border-black/20 bg-white px-3 text-xs text-ink outline-none focus:border-black focus:ring-1 focus:ring-black"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="calc-email" className="sr-only">Email</label>
+                            <input
+                              id="calc-email"
+                              type="email"
+                              placeholder="Email Address"
+                              value={calcEmail}
+                              onChange={(e) => setCalcEmail(e.target.value)}
+                              className="min-h-10 w-full rounded border border-black/20 bg-white px-3 text-xs text-ink outline-none focus:border-black focus:ring-1 focus:ring-black"
+                            />
+                          </div>
+                        </div>
+                        {calcError ? (
+                          <p className="text-xs font-semibold text-red-600">{calcError}</p>
+                        ) : null}
+                        <button
+                          type="submit"
+                          disabled={calcSubmitting}
+                          className="flex min-h-10 w-full items-center justify-center rounded bg-ink px-4 text-xs font-bold uppercase tracking-wider text-white transition-opacity hover:opacity-90 disabled:opacity-50"
+                        >
+                          {calcSubmitting ? "Sending..." : `Send Me ${formattedEstimate} Estimate`}
+                        </button>
+                      </form>
+                    )}
+                  </div>
+                ) : null}
               </motion.div>
             </div>
           </Reveal>
