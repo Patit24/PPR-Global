@@ -99,6 +99,7 @@ export const leadSubmissionSchema = z
     referrer: z.string().trim().max(500).optional().default(""),
     utm_source: z.string().trim().max(120).optional().default(""),
     utm_medium: z.string().trim().max(120).optional().default(""),
+    utm_campaign: z.string().trim().max(120).optional().default(""),
     source: z.string().trim().max(100).optional().default("contact"),
     website_hp: z.string().trim().optional().default(""),
     device_type: z.string().trim().max(80).optional().default(""),

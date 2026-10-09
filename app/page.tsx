@@ -204,21 +204,20 @@ const processSteps = [
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
-  const [currency, setCurrency] = useState<"USD" | "INR">("INR");
-
-  useEffect(() => {
+  const [currency, setCurrency] = useState<"USD" | "INR">(() => {
+    if (typeof window === "undefined") return "INR";
     try {
-      // Safe client-side check for visitors: default INR if in India timezone or locale
       const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
       const isIndiaTimeZone = /Calcutta|Kolkata|Asia\/Kolkata/i.test(timeZone);
       const isIndiaLocale = /en-IN|hi-IN|bn-IN/i.test(navigator.language || "");
       if (!isIndiaTimeZone && !isIndiaLocale && timeZone) {
-        setCurrency("USD");
+        return "USD";
       }
     } catch {
       // safe fallback keeps INR
     }
-  }, []);
+    return "INR";
+  });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isBannerSoundOn, setIsBannerSoundOn] = useState(false);
   const [visibleGuidesCount, setVisibleGuidesCount] = useState(6);
@@ -1657,6 +1656,7 @@ function ProjectBuilderSection({
 }) {
   const shouldReduceMotion = useReducedMotion();
   const [selectedBusiness, setSelectedBusiness] = useState("Restaurant");
+  const [selectedNeeds, setSelectedNeeds] = useState(["Booking", "Admin Panel", "WhatsApp", "SEO"]);
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const [calcEmail, setCalcEmail] = useState("");
   const [calcName, setCalcName] = useState("");
@@ -1664,6 +1664,28 @@ function ProjectBuilderSection({
   const [calcSubmitting, setCalcSubmitting] = useState(false);
   const [calcSubmitted, setCalcSubmitted] = useState(false);
   const [calcError, setCalcError] = useState("");
+
+  const isUsd = currency === "USD";
+  const baseCost = isUsd ? calculatorBaseCostUsd : calculatorBaseCostInr;
+
+  const estimatedCost =
+    baseCost +
+    selectedNeeds.reduce((total, need) => {
+      const needData = buildNeeds.find((item) => item.name === need);
+      const cost = isUsd ? (needData?.costUsd ?? 50) : (needData?.cost ?? 4800);
+      return total + cost;
+    }, 0);
+
+  const formattedEstimate = isUsd
+    ? `$${estimatedCost.toLocaleString("en-US")} USD`
+    : `₹${estimatedCost.toLocaleString("en-IN")}`;
+
+  const proposalMessage = `Hi Patit, I want a website proposal from PPR Global.
+Business Type: ${selectedBusiness}
+Selected Features: ${selectedNeeds.length ? selectedNeeds.join(", ") : "No extra features selected"}
+Estimated Cost: ${formattedEstimate}
+Currency: ${currency}
+Please guide me with the next step.`;
 
   const handleSendEstimate = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1708,28 +1730,6 @@ function ProjectBuilderSection({
       setCalcSubmitting(false);
     }
   };
-
-  const isUsd = currency === "USD";
-  const baseCost = isUsd ? calculatorBaseCostUsd : calculatorBaseCostInr;
-
-  const estimatedCost =
-    baseCost +
-    selectedNeeds.reduce((total, need) => {
-      const needData = buildNeeds.find((item) => item.name === need);
-      const cost = isUsd ? (needData?.costUsd ?? 50) : (needData?.cost ?? 4800);
-      return total + cost;
-    }, 0);
-
-  const formattedEstimate = isUsd
-    ? `$${estimatedCost.toLocaleString("en-US")} USD`
-    : `₹${estimatedCost.toLocaleString("en-IN")}`;
-
-  const proposalMessage = `Hi Patit, I want a website proposal from PPR Global.
-Business Type: ${selectedBusiness}
-Selected Features: ${selectedNeeds.length ? selectedNeeds.join(", ") : "No extra features selected"}
-Estimated Cost: ${formattedEstimate}
-Currency: ${currency}
-Please guide me with the next step.`;
 
   const toggleNeed = (need: string) => {
     setSelectedNeeds((current) =>
