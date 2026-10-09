@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { projects } from "@/lib/content";
+import { caseStudyProofBySlug } from "@/lib/social-proof";
 
 type Project = (typeof projects)[number];
 
@@ -18,6 +19,7 @@ export function ProjectCard({
   onOpenCaseStudy?: () => void;
 }) {
   const shouldReduceMotion = useReducedMotion();
+  const proof = caseStudyProofBySlug[project.slug];
   const hasContainedImage = "imageFit" in project && project.imageFit === "contain";
   const imagePosition =
     "imagePosition" in project && typeof project.imagePosition === "string"
@@ -122,22 +124,45 @@ export function ProjectCard({
         {hasContainedImage ? null : (
           <p className="max-w-xl text-sm leading-6 text-white/68">{project.description}</p>
         )}
-        {onOpenCaseStudy ? (
-          <Link
-            href={`/case-studies/${project.slug}`}
-            onClick={() => onOpenCaseStudy?.()}
-            className="inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-acid outline-none transition-colors group-hover:text-white focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
-          >
-            View Case Study <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
-        ) : (
-          <a
-            href="#contact"
-            className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-acid outline-none transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
-          >
-            View Case Study <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
-        )}
+
+        {/* Dynamic Social Proof Result Line (Hidden if empty) */}
+        {proof?.result ? (
+          <div className="inline-flex items-center gap-2 rounded border border-acid/30 bg-acid/10 px-2.5 py-1 text-xs font-bold text-acid">
+            <span>📈</span>
+            <span>{proof.result}</span>
+          </div>
+        ) : null}
+
+        <div className="flex flex-wrap items-center gap-3 pt-1">
+          {onOpenCaseStudy ? (
+            <Link
+              href={`/case-studies/${project.slug}`}
+              onClick={() => onOpenCaseStudy?.()}
+              className="inline-flex min-h-11 cursor-pointer items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-acid outline-none transition-colors group-hover:text-white focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+            >
+              Case Study <ArrowUpRight size={14} aria-hidden="true" />
+            </Link>
+          ) : (
+            <a
+              href="#contact"
+              className="inline-flex min-h-11 items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-acid outline-none transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+            >
+              Case Study <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          )}
+
+          {/* Live Site Link (Hidden if empty) */}
+          {proof?.liveUrl ? (
+            <a
+              href={proof.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:border-acid hover:text-acid focus-visible:ring-2 focus-visible:ring-acid"
+            >
+              Visit Live Site <ArrowUpRight size={13} aria-hidden="true" />
+            </a>
+          ) : null}
+        </div>
       </div>
     </motion.article>
   );

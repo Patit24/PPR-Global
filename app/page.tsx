@@ -39,6 +39,7 @@ import { LazyLeadCaptureForm } from "@/components/leads/LazyLeadCaptureForm";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { business } from "@/lib/business";
 import {
   navItems,
@@ -642,6 +643,8 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
+        <TestimonialsSection />
 
         <section id="services" className="defer-section px-4 py-24">
           <div className="mx-auto max-w-7xl">
