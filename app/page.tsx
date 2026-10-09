@@ -57,6 +57,11 @@ import { trackEvent } from "@/lib/lead/analytics";
 const marquee = "WEBSITES • APPS • ADS • SEO • AUTOMATION • CRM • UI/UX • ";
 const whatsappNowNumber = "919609079663";
 const bookCallNumber = "919734019005";
+const calendarUrl = process.env.NEXT_PUBLIC_CALENDAR_URL;
+const bookCallHref = calendarUrl && calendarUrl.trim().length > 0
+  ? calendarUrl
+  : whatsappLink(bookCallNumber, "Hi Patit, I want to book a call for my project.");
+const isExternalCalendar = Boolean(calendarUrl && calendarUrl.trim().length > 0);
 const googleMapsListingLink = business.googleBusinessProfileUrl;
 const googleMapsEmbedSrc = business.mapsEmbedUrl;
 const footerServiceLinks = [
@@ -511,14 +516,21 @@ export default function Home() {
               </motion.div>
 
               <motion.a
-                href={whatsappLink(bookCallNumber, "Hi Patit, I want to book a call for my project.")}
+                href={bookCallHref}
+                target={isExternalCalendar ? "_blank" : undefined}
+                rel={isExternalCalendar ? "noopener noreferrer" : undefined}
+                onClick={() => trackEvent("book_call_click", { source: "hero_badge" })}
                 className="absolute bottom-0 right-0 hidden min-h-16 items-center gap-4 rounded-md bg-black px-4 py-3 font-display text-base font-black uppercase tracking-[0.18em] text-white outline-none focus-visible:ring-2 focus-visible:ring-acid md:inline-flex"
                 initial={false}
                 whileHover={shouldReduceMotion ? undefined : { y: -4 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="grid h-11 w-11 place-items-center rounded-sm bg-white text-ink">
-                  <MessageCircle size={20} aria-hidden="true" />
+                  {isExternalCalendar ? (
+                    <CalendarDays size={20} aria-hidden="true" />
+                  ) : (
+                    <MessageCircle size={20} aria-hidden="true" />
+                  )}
                 </span>
                 Book a Call
               </motion.a>
@@ -1247,10 +1259,11 @@ Please send me a proposal.`
                   WhatsApp Now
                 </MagneticButton>
                 <MagneticButton
-                  href={whatsappLink(bookCallNumber, "Hi Patit, I want to book a call for my project.")}
+                  href={bookCallHref}
                   variant="secondary"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent("book_call_click", { source: "contact_section" })}
                 >
                   <CalendarDays className="mr-2" size={17} aria-hidden="true" />
                   Book a Call
