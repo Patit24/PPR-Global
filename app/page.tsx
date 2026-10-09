@@ -41,6 +41,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { HomepageFaqSection } from "@/components/HomepageFaqSection";
+import { FreeAuditSection } from "@/components/FreeAuditSection";
 import { business } from "@/lib/business";
 import {
   navItems,
@@ -1216,6 +1217,8 @@ Please send me a proposal.`
             )}
           </div>
         </section>
+
+        <FreeAuditSection />
 
         <HomepageFaqSection />
 

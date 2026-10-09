@@ -28,6 +28,7 @@ export const serviceOptions = [
   "SEO",
   "Google Ads",
   "Meta Ads",
+  "Free Website & GBP Review",
   "Other"
 ] as const;
 
