@@ -40,6 +40,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { HomepageFaqSection } from "@/components/HomepageFaqSection";
 import { business } from "@/lib/business";
 import {
   navItems,
@@ -355,6 +356,12 @@ export default function Home() {
                     <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
                     <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
                       25+ Global Clients
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-acid/40 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
+                    <Sparkles size={13} className="text-ink" aria-hidden="true" />
+                    <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
+                      ⚡ Live in 7 Days
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
@@ -1209,6 +1216,8 @@ Please send me a proposal.`
             )}
           </div>
         </section>
+
+        <HomepageFaqSection />
 
         <section id="contact" className="defer-section px-4 py-24 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">

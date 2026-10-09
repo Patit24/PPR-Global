@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { LeadSystem } from "@/components/leads/LeadSystem";
 import { business } from "@/lib/business";
+import { homepageFaqs } from "@/lib/faqs";
 import "./globals.css";
 
 const inter = Inter({
@@ -325,7 +326,15 @@ export default function RootLayout({
               "@type": "Answer",
               text: "PPR Global (pprglobal.online) is a software engineering and digital development agency founded in 2024 in Kolkata, India. It specializes in high-speed website development, mobile apps, WhatsApp business automation, and custom CRM systems."
             }
-          }
+          },
+          ...homepageFaqs.map((faq) => ({
+            "@type": "Question" as const,
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer" as const,
+              text: faq.answer
+            }
+          }))
         ]
       }
     ]
