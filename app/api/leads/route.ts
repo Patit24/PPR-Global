@@ -38,6 +38,22 @@ async function forwardToGoogleSheets(payload: Record<string, unknown>) {
   });
 }
 
+// Configurable CRM Webhook (HubSpot, Zoho, Make, Zapier, Custom CRM)
+async function forwardToCrm(payload: Record<string, unknown>) {
+  const crmWebhookUrl = process.env.CRM_WEBHOOK_URL;
+
+  if (!crmWebhookUrl) {
+    return;
+  }
+
+  await fetch(crmWebhookUrl, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(payload),
+    cache: "no-store"
+  });
+}
+
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request);
 
@@ -67,6 +83,16 @@ export async function POST(request: NextRequest) {
       },
       { status: 400 }
     );
+  }
+
+  // Honeypot anti-spam check
+  if (parsed.data.website_hp && parsed.data.website_hp.trim().length > 0) {
+    // Silently return success or 400 to discard bot submission
+    return NextResponse.json({
+      ok: true,
+      leadId: `lead_discarded`,
+      message: "Thanks! We received your request."
+    });
   }
 
   const userAgent = request.headers.get("user-agent") || "";
@@ -107,10 +133,11 @@ export async function POST(request: NextRequest) {
 
   let leadId = `lead_${Date.now()}`;
 
-  // Always attempt email and webhook notifications
+  // Configurable notification providers: Resend Email, Google Sheets, Custom CRM / Webhook
   const notificationPromises = [
     sendLeadEmails(lead).catch((err) => console.error("Failed to send lead email:", err)),
-    forwardToGoogleSheets(insertPayload).catch((err) => console.error("Failed to forward to sheets:", err))
+    forwardToGoogleSheets(insertPayload).catch((err) => console.error("Failed to forward to sheets:", err)),
+    forwardToCrm(insertPayload).catch((err) => console.error("Failed to forward to CRM:", err))
   ];
 
   // Try Supabase insert gracefully without blocking if unconfigured

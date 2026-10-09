@@ -14,9 +14,14 @@ import { trackEvent } from "@/lib/lead/analytics";
 type LeadCaptureFormProps = {
   variant?: "popup" | "contact" | "compact";
   source?: string;
+  initialService?: string;
   projectViewed?: string;
   onSuccess?: (lead: LeadSubmissionInput) => void;
 };
+
+export function LeadForm(props: LeadCaptureFormProps) {
+  return <LeadCaptureForm {...props} />;
+}
 
 function getUtmValue(key: string) {
   if (typeof window === "undefined") return "";
@@ -41,6 +46,7 @@ function getDeviceType() {
 export function LeadCaptureForm({
   variant = "contact",
   source = "contact",
+  initialService,
   projectViewed = "",
   onSuccess
 }: LeadCaptureFormProps) {
@@ -63,11 +69,12 @@ export function LeadCaptureForm({
       name: "",
       email: "",
       phone: "",
-      service: "Website Development",
+      service: (initialService as any) || "Website Development",
       budget: "Not decided",
       message: "",
       consent: true,
       preferred_slot: "ASAP",
+      website_hp: "",
       turnstileToken: ""
     }
   });
@@ -78,7 +85,7 @@ export function LeadCaptureForm({
     }
 
     const message = successLead
-      ? `Hi PPR Global, I booked a consultation. Name: ${successLead.name}. Service: ${successLead.service}. Budget: ${successLead.budget}. Preferred slot: ${successLead.preferred_slot || "ASAP"}.`
+      ? `Hi PPR Global, I submitted an enquiry. Name: ${successLead.name}. Service: ${successLead.service}. Budget: ${successLead.budget}. ${successLead.phone ? `Phone: ${successLead.phone}. ` : ""}${successLead.email ? `Email: ${successLead.email}. ` : ""}${successLead.message ? `Notes: ${successLead.message}` : ""}`
       : "Hi PPR Global, I visited your website and would like to book a 15-minute consultation.";
 
     return `/api/whatsapp?message=${encodeURIComponent(message)}`;
@@ -90,6 +97,7 @@ export function LeadCaptureForm({
 
     const payload: LeadSubmissionInput = {
       ...values,
+      source,
       turnstileToken,
       page_url: window.location.href,
       page_title: document.title,
@@ -234,6 +242,18 @@ export function LeadCaptureForm({
             }
           />
         </div>
+      </div>
+
+      {/* Honeypot field - invisible to humans, catches spam bots */}
+      <div className="hidden" aria-hidden="true" style={{ display: "none" }}>
+        <label htmlFor="website_hp">Leave this empty</label>
+        <input
+          id="website_hp"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("website_hp")}
+        />
       </div>
 
       <label className="flex items-start gap-3 rounded-md bg-black/24 p-3 text-sm leading-6 text-white/70">
