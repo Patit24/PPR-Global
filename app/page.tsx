@@ -17,6 +17,7 @@ import {
   Utensils,
   Volume2,
   VolumeX,
+  Globe,
   X
 } from "lucide-react";
 import {
@@ -248,9 +249,12 @@ export default function Home() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between">
           <a
             href="#top"
-            className="font-display text-sm font-black uppercase tracking-[0.18em] outline-none focus-visible:ring-2 focus-visible:ring-acid md:text-base"
+            className="flex items-center gap-2 font-display text-sm font-black uppercase tracking-[0.18em] outline-none focus-visible:ring-2 focus-visible:ring-acid md:text-base group"
           >
-            [PATIT ROY]
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-black text-acid border border-acid/40 transition-transform group-hover:rotate-12 group-hover:scale-105">
+              <Globe className="h-4 w-4" />
+            </span>
+            <span>[PATIT ROY]</span>
           </a>
           <div className="hidden items-center gap-7 md:flex">
             {navItems.map((item) => (
