@@ -16,6 +16,8 @@ function leadRows(lead: LeadSubmission) {
     ["Mobile", lead.phone || "Not provided"],
     ["Service", lead.service],
     ["Budget", lead.budget],
+    ["Vertical", lead.vertical || "General"],
+    ...(lead.grade ? [["Scorecard Grade", `Grade ${lead.grade} (${lead.score ?? "N/A"}/100)`]] : []),
     ["Preferred Call Slot", lead.preferred_slot || "ASAP"],
     ["Message", lead.message],
     ["Page", lead.page_url || "Unknown"],

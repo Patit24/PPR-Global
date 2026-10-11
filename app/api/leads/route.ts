@@ -111,31 +111,60 @@ export async function POST(request: NextRequest) {
     browser: parsed.data.browser || getBrowser(userAgent)
   });
 
+  // Automatic Vertical & Grade calculation
+  let vertical = lead.vertical || "general";
+  let grade = lead.grade;
+  let score = lead.score;
+
+  if (
+    lead.source?.includes("dental") ||
+    lead.service?.toLowerCase().includes("dental") ||
+    lead.message?.toLowerCase().includes("dental")
+  ) {
+    vertical = "dental";
+    if (!grade && score !== undefined) {
+      grade = score >= 80 ? "A" : score >= 50 ? "B" : "C";
+    } else if (!grade && lead.source?.includes("_grade_")) {
+      const match = lead.source.match(/_grade_([ABC])/);
+      if (match) grade = match[1];
+    }
+  }
+
+  const enrichedLead = {
+    ...lead,
+    vertical,
+    grade,
+    score
+  };
+
   const insertPayload = {
-    name: lead.name,
-    email: lead.email || null,
-    phone: lead.phone || null,
-    service: lead.service,
-    budget: lead.budget || "Not decided",
-    message: lead.message,
-    consent: lead.consent ?? true,
-    page_url: lead.page_url || null,
-    page_title: lead.page_title || null,
-    project_viewed: lead.project_viewed || null,
-    referrer: lead.referrer || null,
-    utm_source: lead.utm_source || null,
-    utm_medium: lead.utm_medium || null,
-    utm_campaign: lead.utm_campaign || null,
-    device_type: lead.device_type || null,
-    browser: lead.browser || null,
-    lead_status: "new"
+    name: enrichedLead.name,
+    email: enrichedLead.email || null,
+    phone: enrichedLead.phone || null,
+    service: enrichedLead.service,
+    budget: enrichedLead.budget || "Not decided",
+    message: enrichedLead.message,
+    consent: enrichedLead.consent ?? true,
+    page_url: enrichedLead.page_url || null,
+    page_title: enrichedLead.page_title || null,
+    project_viewed: enrichedLead.project_viewed || null,
+    referrer: enrichedLead.referrer || null,
+    utm_source: enrichedLead.utm_source || null,
+    utm_medium: enrichedLead.utm_medium || null,
+    utm_campaign: enrichedLead.utm_campaign || null,
+    device_type: enrichedLead.device_type || null,
+    browser: enrichedLead.browser || null,
+    lead_status: "new",
+    vertical,
+    grade: grade || null,
+    score: score ?? null
   };
 
   let leadId = `lead_${Date.now()}`;
 
   // Configurable notification providers: Resend Email, Google Sheets, Custom CRM / Webhook
   const notificationPromises = [
-    sendLeadEmails(lead).catch((err) => console.error("Failed to send lead email:", err)),
+    sendLeadEmails(enrichedLead).catch((err) => console.error("Failed to send lead email:", err)),
     forwardToGoogleSheets(insertPayload).catch((err) => console.error("Failed to forward to sheets:", err)),
     forwardToCrm(insertPayload).catch((err) => console.error("Failed to forward to CRM:", err))
   ];

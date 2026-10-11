@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -85,9 +85,7 @@ const availableTimeSlots = [
 
 export default function DentalDemoPage() {
   const [selectedTreatment, setSelectedTreatment] = useState<string>("implant");
-  const [selectedDate, setSelectedDate] = useState<string>(
-    new Date(Date.now() + 86400000).toISOString().split("T")[0]
-  );
+  const [selectedDate, setSelectedDate] = useState<string>("2026-10-15");
   const [selectedSlot, setSelectedSlot] = useState<string>("04:30 PM – 05:15 PM");
   const [patientName, setPatientName] = useState<string>("Debashis Mukherjee");
   const [patientPhone, setPatientPhone] = useState<string>("9830012345");
