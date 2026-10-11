@@ -19,12 +19,12 @@ export type CaseStudySocialProof = {
 export const testimonials: Testimonial[] = [
   {
     id: "testimonial-1",
-    name: "Dr. A. Shaheen", // TODO: Replace with verified client name
-    role: "Lead Dentist & Director",
-    business: "Dental Care Clinic",
+    name: "Dr. K. Banerjee", // TODO: Replace with verified client name
+    role: "Clinic Director",
+    business: "Advanced Care Clinic",
     location: "Kolkata, WB",
     quote:
-      "TODO: Client quote about website design, online appointment bookings, and local patient trust. 'PPR Global transformed our online presence and delivered a seamless booking experience for patients across Kolkata.'",
+      "TODO: Client quote about website design, online appointment bookings, and patient trust. 'PPR Global transformed our online presence and delivered a seamless booking experience for patients across Kolkata.'",
     rating: 5
   },
   {
@@ -70,10 +70,7 @@ export const caseStudyProofBySlug: Record<string, CaseStudySocialProof> = {
     result: "3.2x higher mobile enquiry rate",
     liveUrl: "" // TODO: Add live URL if published
   },
-  "dr-shaheen-dental-clinic": {
-    result: "Appointment booking requests +65%",
-    liveUrl: "" // TODO: Add live URL if published
-  },
+
   "iron-pulse-gym": {
     result: "Direct WhatsApp membership signups +80%",
     liveUrl: ""

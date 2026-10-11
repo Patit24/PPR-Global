@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { LeadCaptureForm } from "@/components/leads/LeadCaptureForm";
+import { DentalPricing } from "@/components/dental/DentalPricing";
+import { DentalScorecard } from "@/components/dental/DentalScorecard";
+import { dentalWebsitePricing } from "@/lib/dental-pricing";
 import { business } from "@/lib/business";
 import { projects, resourcePosts, servicePages, services } from "@/lib/content";
 
@@ -360,6 +363,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </div>
           </div>
+          {/* Conditional Dental Pricing & Audit Scorecard */}
+          {service.slug === "website-for-dentists-kolkata" && (
+            <div className="mt-8 space-y-8">
+              <DentalPricing
+                tiers={dentalWebsitePricing}
+                title="Kolkata Dental Clinic Website Packages"
+                subtitle="Transparent pricing for single-doctor chambers & multi-chair dental polyclinics. Zero hidden hosting lock-in."
+                scorecardHref="#dental-scorecard"
+              />
+              <DentalScorecard
+                source="dental-website-service"
+              />
+            </div>
+          )}
+
           <div
             id="service-quote"
             className="mt-8 rounded-lg border border-acid/25 bg-[#0d0d0f] p-6 shadow-[0_20px_70px_rgba(0,0,0,0.5)] md:p-10"
@@ -391,7 +409,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="mt-8 border-t border-white/10 pt-8">
               <LeadCaptureForm
                 variant="contact"
-                source={`service_${service.slug}`}
+                source={service.slug === "website-for-dentists-kolkata" ? "dental-website" : `service_${service.slug}`}
               />
             </div>
           </div>

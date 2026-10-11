@@ -584,45 +584,92 @@ export const servicePages = [
   },
   {
     slug: "website-for-dentists-kolkata",
-    name: "Dental Clinic Website Design in Kolkata",
-    shortName: "Dental Website Design",
-    metaTitle: "Dental Clinic Website Design Kolkata | PPR Global [4.9★]",
+    name: "Website Developer for Dental Clinics in Kolkata",
+    shortName: "Dental Website Developer",
+    metaTitle: "Website Developer for Dental Clinics Kolkata | PPR Global",
     metaDescription:
-      "Attract more patients with custom dental clinic websites in Kolkata from $300 USD (₹28,750 INR). WhatsApp booking, doctor showcases & Dr. Shaheen case study.",
+      "Custom dental clinic website developer in Kolkata. Online appointment booking, treatment showcases, fast mobile speed & WhatsApp flow from ₹28,750.",
     description:
-      "PPR Global builds high-converting dental clinic websites in Kolkata designed to build patient trust, showcase treatments, and book daily appointments.",
+      "PPR Global builds high-converting, sub-second dental clinic websites in Kolkata designed to establish clinical trust, showcase specialized treatments, and drive daily patient appointments.",
     price: "Starts from $300 USD (₹28,750 INR)",
-    highlights: ["Treatment showcases", "Instant WhatsApp booking", "Google review integration", "Verified Dr. Shaheen case study"],
+    highlights: [
+      "Treatment-specific pages (Implants, Root Canals, Aligners)",
+      "Instant WhatsApp appointment booking flow",
+      "Doctor credentials & clinic council registration badges",
+      "Sub-second Next.js mobile load speed",
+      "Google Maps local directions & review integration",
+      "Dental council advertising ethics compliant architecture"
+    ],
     keywords: [
-      "website for dentists kolkata",
+      "website developer for dental clinics",
+      "website developer for dental clinics kolkata",
       "dental clinic website design Kolkata",
+      "digital marketing agency in kolkata for dental clinics",
       "dentist website developer Kolkata",
-      "healthcare web design Kolkata"
+      "healthcare web development Kolkata",
+      "dental appointment booking website Kolkata"
     ],
     body: [
-      "A dental clinic website in Kolkata needs to do far more than look hygienic—it must establish immediate doctor credibility, address patient dental anxieties, explain treatment procedures transparently, and make booking an appointment completely frictionless. At PPR Global, we architect dental clinic websites centered around patient clarity and same-day WhatsApp enquiry flow.",
-      "Our verified work with Dr. Shaheen Dental Clinic in Kolkata proves this framework: by structuring treatment discovery pages for root canals, dental implants, aligners, teeth whitening, and pediatric dentistry alongside authentic patient before-and-after photographs, the clinic experienced an immediate surge in qualified patient consultations.",
-      "Every dental site we engineer includes dedicated doctor qualification badges, interactive clinic walkthrough galleries, one-click WhatsApp appointment buttons, Google Maps location direction for Salt Lake, Barasat, and Park Street patients, and automated Google Review prompts. Starting from $300 USD (₹28,750 INR), our dental websites deliver a proven return on investment within the very first month."
+      "A dental clinic website in Kolkata must do far more than look hygienic—it must establish immediate practitioner credibility, address acute patient dental anxieties, explain specialized procedures with absolute clarity, and make booking a consultation completely frictionless. For prospective patients in Salt Lake, New Town, Barasat, Ballygunge, Park Street, or Howrah, their first impression of your clinical standard happens on a 6.1-inch smartphone screen while searching for urgent toothache relief or evaluating elective cosmetic treatments like invisible aligners and dental implants.",
+      "At PPR Global, we architect custom Next.js dental websites engineered around real patient decision behavior. Instead of bloated generic WordPress themes that take 6 seconds to load and bury contact details under complex multi-tier menus, our healthcare websites deliver sub-second mobile loading speeds, intuitive single-tap WhatsApp booking actions, and crystal-clear treatment discovery journeys designed to convert neighborhood searchers into scheduled chair time.",
+      "Dedicated Treatment Pages That Answer Real Patient Concerns: Most Kolkata dental websites make the critical mistake of lumping all procedures into a single generic bulleted list. Patients seeking dental implants have completely different concerns (longevity, bone grafting, cost, surgical comfort) than a parent looking for pediatric fluoride treatment or a working professional inquiring about invisible teeth aligners. We build dedicated, SEO-optimized treatment landing pages for Dental Implants, Root Canal Treatment (RCT), Orthodontics & Clear Aligners, Teeth Whitening & Cosmetic Veneers, Crown & Bridge Restorations, and Periodontal Care. Each page outlines what the procedure entails, estimated recovery expectations, clinic sterilization standards, and clear FAQs that demystify patient apprehensions.",
+      "Doctor Profiles That Build Immediate Clinical Credibility: In medical and dental services, patients do not simply book a business—they entrust their health and smile to an individual doctor. Our clinic websites feature dedicated practitioner profiles showcasing BDS and MDS postgraduate qualifications, dental council registration numbers, clinical fellowships, years of active practice, and specific areas of clinical expertise. By presenting doctor credentials transparently alongside professional, authentic clinic photos, your website overcomes patient hesitation before they even step into your consultation chamber.",
+      "Frictionless WhatsApp & Direct Consultation Booking: In Kolkata and across West Bengal, over 85% of patients prefer inquiring and scheduling appointments via WhatsApp rather than filling out cumbersome multi-step portal forms or navigating third-party aggregators. Every page on our dental websites integrates smart, pre-filled WhatsApp action buttons. When a patient clicks 'Book Appointment' on your Dental Implants page, their WhatsApp opens with a ready-to-send message: 'Hello Doctor, I would like to schedule a consultation for Dental Implants at your clinic.' This allows your front desk or clinic coordinator to respond instantly, verify insurance or slot availability, and confirm the visit in seconds.",
+      "Google Maps Directions & Hyper-Local Kolkata Neighborhood Targeting: Dental decisions are intensely local. A patient living in Salt Lake Sector V or New Town is unlikely to travel across town for a routine check-up unless your reputation is unmatched. We integrate live interactive Google Maps embeds with 1-click GPS directions, transit landmarks (metro stations, bus stops), clinic parking availability notices, and operating hours for both morning and evening OPD shifts. Combined with local Dentist schema markup, your website reinforces your physical location signals for Google's Local 3-Pack rankings.",
+      "Social Proof & Patient Testimonials Without Compliance Risks: Showcasing patient satisfaction is essential for conversions, but healthcare practices must remain strictly responsible. We design clean patient review carousels that pull verified Google Business Profile ratings and highlight genuine written feedback regarding clinic cleanliness, gentle care, and punctuality. We consciously avoid sensationalist claims or unverified outcome promises, ensuring your online presence maintains the highest standard of medical dignity.",
+      "Transparent Pricing Ranges & Financial Clarification: Unclear treatment costs are the number one reason patients hesitate to book elective dental procedures. While exact clinical fees depend on individual diagnostics, providing transparent starting price ranges (e.g., 'Root Canal Treatment starting from ₹2,500' or 'Custom Aligners starting from ₹45,000') builds immense goodwill, filters out unqualified inquiries, and positions your clinic as an honest, patient-first practice.",
+      "Tailored Solutions for Single-Chair vs. Multi-Chair Dental Clinics: A solo dental practitioner operating a boutique neighborhood clinic in Barasat or Dunlop has different operational requirements than an advanced multi-chair dental center in Park Street with multiple visiting specialists (Endodontist, Periodontist, Oral Surgeon). For single-doctor clinics, we focus on personal doctor trust, rapid local map visibility, and direct WhatsApp routing. For multi-chair dental polyclinics, we implement multi-doctor schedule selectors, department routing, and automated calendar synchronization to keep all operatories fully scheduled.",
+      "Transparent 4-Stage Development Process & 14-Day Delivery: Working with PPR Global is structured and predictable. Week 1 begins with Clinical Discovery & Architecture, where we audit your current patient flow, gather doctor credentials, and structure treatment sitemaps. Week 2 delivers Custom High-Fidelity UI/UX Design and content drafting tailored to Kolkata healthcare audiences. Week 3 focuses on Next.js Engineering, schema integration, and WhatsApp webhook testing. Week 4 covers mobile cross-browser QA, Google Search Console indexing, and complete source code handover with zero ongoing agency lock-in.",
+      "Regulatory Compliance Footnote: All dental website designs, content frameworks, and marketing consultations delivered by PPR Global are built with strict adherence to healthcare advertising guidelines. Clinics should confirm advertising rules and promotional boundaries with their state dental council (such as the West Bengal Dental Council) or national dental association prior to launching public promotional campaigns. PPR Global does not publish misleading medical claims, outcome guarantees, or unauthorized clinical comparisons."
     ],
     faqs: [
       {
         question: "How much does a dental clinic website cost in Kolkata?",
         answer:
-          "Our custom dental clinic website package starts at $300 USD (₹28,750 INR) for a multi-section responsive site with treatment showcases, doctor credentials, and WhatsApp booking."
+          "Custom dental clinic websites at PPR Global start from ₹28,750 INR ($300 USD) for single-doctor clinics. Advanced multi-chair dental practices with multi-specialist booking, treatment calculators, and full local SEO architecture start from ₹48,500 INR ($520 USD). Full source code ownership is included with zero recurring monthly platform fees."
       },
       {
-        question: "Can patients book dental appointments directly via WhatsApp?",
+        question: "How does the WhatsApp appointment booking flow work for patients?",
         answer:
-          "Yes. We configure instant WhatsApp booking buttons that pre-fill patient appointment requests, preferred clinic timings, and dental treatment concerns directly to your front desk."
+          "When a patient clicks 'Book Appointment' on any treatment page, their phone instantly opens WhatsApp with a pre-filled message detailing their chosen treatment (e.g., Root Canal, Implants) and preferred timing. Your front desk receives the inquiry directly and can confirm the slot within minutes."
       },
       {
-        question: "Do you have real proof of results for dental clinics in Kolkata?",
+        question: "Why should a dental clinic choose Next.js over WordPress?",
         answer:
-          "Yes. Our live case study for Dr. Shaheen Dental Clinic demonstrates our healthcare design framework, showing how patient-friendly treatment discovery and fast appointment actions drive consistent daily patient walk-ins."
+          "Next.js delivers sub-second page loads, unmatched mobile performance, and enterprise-grade security with zero vulnerable plugins to maintain. In healthcare local search, fast mobile speed directly boosts Google Core Web Vitals rankings and prevents impatient patients from bouncing to a competitor."
+      },
+      {
+        question: "Can we display doctor degrees, MDS specializations, and council registrations?",
+        answer:
+          "Yes. Every dental website we build features dedicated practitioner credentials sections where BDS/MDS degrees, clinical fellowships, registration numbers, and years of experience are prominently highlighted to build patient confidence."
+      },
+      {
+        question: "Do you build dedicated pages for individual dental treatments?",
+        answer:
+          "Absolutely. We build separate, SEO-optimized pages for Root Canals, Dental Implants, Clear Aligners, Pediatric Dentistry, and Teeth Whitening. This allows each treatment page to rank independently on Google for high-intent patient queries across Kolkata."
+      },
+      {
+        question: "How long does it take to launch our clinic website?",
+        answer:
+          "A standard single-doctor dental clinic website is typically designed, reviewed, and deployed live within 10 to 14 business days. Multi-chair polyclinic platforms take approximately 2 to 3 weeks."
+      },
+      {
+        question: "Can our reception staff update clinic timings and doctor schedules easily?",
+        answer:
+          "Yes. We configure lightweight, intuitive admin panels or direct configuration files so your staff can update doctor visiting hours, vacation alerts, and emergency contact numbers without needing coding skills."
+      },
+      {
+        question: "Are your dental marketing and website practices compliant with dental council norms?",
+        answer:
+          "Yes. We strictly adhere to informative, non-promotional healthcare communication standards. We avoid misleading claims, unverified outcome guarantees, or unauthorized comparisons. Clinics should confirm specific advertising rules with their state dental council."
       }
     ],
-    relatedProjectSlug: "dr-shaheen-dental-clinic",
-    relatedResourceSlugs: ["dental-clinic-whatsapp-appointment-system", "how-to-rank-google-maps-kolkata", "website-cost-kolkata"]
+    relatedProjectSlug: undefined,
+    relatedResourceSlugs: [
+      "dental-clinic-whatsapp-appointment-system",
+      "how-to-rank-google-maps-kolkata",
+      "website-cost-kolkata"
+    ]
   },
   {
     slug: "dental-appointment-booking-systems-kolkata",
@@ -634,7 +681,7 @@ export const servicePages = [
     description:
       "Smart dental appointment booking systems for Kolkata dentists that automate patient slot scheduling, minimize no-shows, and sync directly with WhatsApp and clinic staff.",
     price: "Starts from $300 USD (₹28,750 INR)",
-    highlights: ["WhatsApp booking automation", "Slot availability calendar", "SMS & WhatsApp reminder alerts", "Verified Dr. Shaheen clinic workflow"],
+    highlights: ["WhatsApp booking automation", "Slot availability calendar", "SMS & WhatsApp reminder alerts", "Automated front-desk triage"],
     keywords: [
       "dental appointment booking systems kolkata",
       "dentist online appointment software Kolkata",
@@ -643,7 +690,7 @@ export const servicePages = [
     ],
     body: [
       "Empty dental chairs and last-minute patient cancellations cost Kolkata clinics thousands of rupees in lost chair time every single week. PPR Global builds automated dental appointment booking systems designed specifically for the consultation habits of Indian patients who prefer booking over WhatsApp and mobile browsers rather than complicated portal logins.",
-      "Using the exact patient booking architecture deployed for Dr. Shaheen Dental Clinic, we replace chaotic phone scheduling with an intuitive, 3-step appointment interface: patients select their dental concern (cleaning, toothache, braces, implant consultation), pick their preferred doctor and time slot, and receive an instant confirmation on WhatsApp.",
+      "Using our proven healthcare patient booking architecture, we replace chaotic phone scheduling with an intuitive, 3-step appointment interface: patients select their dental concern (cleaning, toothache, braces, implant consultation), pick their preferred doctor and time slot, and receive an instant confirmation on WhatsApp.",
       "The system alerts clinic receptionists instantly, tags new vs. returning patients, and dispatches automated appointment reminder messages 2 hours prior to scheduled treatments. The result is an 80% reduction in appointment no-shows and complete peace of mind for dental practitioners across Kolkata, Salt Lake, and New Town."
     ],
     faqs: [
@@ -663,7 +710,7 @@ export const servicePages = [
           "Complete dental appointment booking integration starts from $300 USD (₹28,750 INR) as an add-on to your website or as a standalone booking landing page."
       }
     ],
-    relatedProjectSlug: "dr-shaheen-dental-clinic",
+    relatedProjectSlug: undefined,
     relatedResourceSlugs: ["dental-clinic-whatsapp-appointment-system", "whatsapp-crm-small-business", "crm-kolkata"]
   },
   {
@@ -676,7 +723,7 @@ export const servicePages = [
     description:
       "Specialized dental clinic SEO in Kolkata to rank your practice in the Google Local 3-Pack and capture high-intent patients searching for root canals, braces, and dental implants.",
     price: "Starts from $300 USD (₹28,750 INR)",
-    highlights: ["Google Maps 3-Pack ranking", "High-intent treatment keywords", "Local schema markup", "Verified Dr. Shaheen dental SEO model"],
+    highlights: ["Google Maps 3-Pack ranking", "High-intent treatment keywords", "Local schema markup", "Automated Google review funnels"],
     keywords: [
       "dental seo kolkata",
       "dentist seo services Kolkata",
@@ -685,7 +732,7 @@ export const servicePages = [
     ],
     body: [
       "When a patient in Kolkata experiences sudden tooth pain or searches for 'best dental clinic near me' in Salt Lake, New Town, Barasat, or Gariahat, over 70% of clicks go to the top 3 clinics featured on Google Maps. If your dental practice is buried on page 2, you are losing dozens of high-value implant, orthodontic, and root canal cases to nearby competitors every week.",
-      "PPR Global delivers hyper-specialized Dental SEO engineered for Kolkata's healthcare landscape. Built upon the local optimization blueprint used for Dr. Shaheen Dental Clinic, our strategy optimizes your Google Business Profile, builds local healthcare citations, and targets high-converting long-tail search terms like 'painless root canal treatment Kolkata' and 'invisible aligners cost Kolkata'.",
+      "PPR Global delivers hyper-specialized Dental SEO engineered for Kolkata's healthcare landscape. Built upon our systematic local dental optimization blueprint, our strategy optimizes your Google Business Profile, builds local healthcare citations, and targets high-converting long-tail search terms like 'painless root canal treatment Kolkata' and 'invisible aligners cost Kolkata'.",
       "We implement deep MedicalBusiness and Dentist schema markup, structure individual treatment landing pages, optimize clinic images with geo-tagging, and establish automated review generation systems that encourage satisfied patients to leave 5-star Google reviews. Starting from $300 USD (₹28,750 INR), our dental SEO strategies generate consistent patient calls and WhatsApp bookings month after month."
     ],
     faqs: [
@@ -705,7 +752,7 @@ export const servicePages = [
           "Our targeted local dental SEO packages start from $300 USD (₹28,750 INR), covering Google Business Profile optimization, local citation building, and on-page treatment keyword structure."
       }
     ],
-    relatedProjectSlug: "dr-shaheen-dental-clinic",
+    relatedProjectSlug: undefined,
     relatedResourceSlugs: ["how-to-rank-google-maps-kolkata", "local-seo-service-pages", "dental-clinic-whatsapp-appointment-system"]
   },
   {
@@ -1118,7 +1165,7 @@ export const servicePages = [
           "Yes. Medical and clinic campaigns should use responsible, clear copy and avoid unrealistic claims."
       }
     ],
-    relatedProjectSlug: "dr-shaheen-dental-clinic",
+    relatedProjectSlug: undefined,
     relatedResourceSlugs: ["dental-clinic-whatsapp-appointment-system", "google-ads-vs-meta-ads-for-local-business", "how-to-rank-google-maps-kolkata"],
   },
   {
