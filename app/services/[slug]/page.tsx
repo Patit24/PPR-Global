@@ -414,6 +414,32 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
 
+          {/* Link to Full Dental Marketing Agency Guide for Dental Pages */}
+          {["website-for-dentists-kolkata", "dental-appointment-booking-systems-kolkata", "dental-seo-kolkata", "healthcare-meta-ads-kolkata"].includes(service.slug) && (
+            <div className="mt-8 rounded-lg border border-acid/30 bg-acid/10 p-5 md:p-6">
+              <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-wider text-acid">
+                    Dedicated Clinic Practice Growth
+                  </p>
+                  <h3 className="mt-1 text-lg font-bold text-white">
+                    Need an End-to-End Dental Marketing Agency in Kolkata?
+                  </h3>
+                  <p className="mt-1 text-xs text-white/70">
+                    Explore our integrated Google Maps 3-Pack, Search Ads & WhatsApp patient acquisition architecture.
+                  </p>
+                </div>
+                <Link
+                  href="/digital-marketing-agency-for-dental-clinics-kolkata"
+                  className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-acid px-5 py-2.5 text-xs font-black uppercase tracking-wider text-ink transition-transform hover:scale-105"
+                >
+                  <span>View Dental Marketing Hub</span>
+                  <ArrowUpRight size={14} />
+                </Link>
+              </div>
+            </div>
+          )}
+
           <div className="mt-8 rounded-lg bg-white/[0.055] p-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] md:p-8">
             <h2 className="text-sm font-black uppercase tracking-[0.18em] text-acid">
               Related Kolkata service pages

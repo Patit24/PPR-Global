@@ -66,6 +66,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.4
     },
+    {
+      url: `${baseUrl}/digital-marketing-agency-for-dental-clinics-kolkata`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.88
+    },
+    {
+      url: `${baseUrl}/dental-demo`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.75
+    },
     ...Array.from(serviceSlugs).map((slug) => ({
       url: `${baseUrl}/services/${slug}`,
       lastModified,

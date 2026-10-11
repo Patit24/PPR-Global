@@ -1401,6 +1401,18 @@ Please send me a proposal.`
                   </Link>
                 );
               })}
+              <Link
+                href="/digital-marketing-agency-for-dental-clinics-kolkata"
+                className="rounded-full border border-acid/40 bg-acid/10 px-3 py-2 text-xs font-semibold text-acid transition-colors hover:bg-acid hover:text-ink"
+              >
+                Dental Marketing Agency Kolkata
+              </Link>
+              <Link
+                href="/dental-demo"
+                className="rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-white/62 transition-colors hover:border-acid hover:text-acid"
+              >
+                Dental Clinic Demo
+              </Link>
             </div>
           </div>
         </footer>
