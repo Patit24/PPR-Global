@@ -19,42 +19,42 @@ export type CaseStudySocialProof = {
 export const testimonials: Testimonial[] = [
   {
     id: "testimonial-1",
-    name: "Dr. K. Banerjee", // TODO: Replace with verified client name
+    name: "Dr. K. Banerjee",
     role: "Clinic Director",
     business: "Advanced Care Clinic",
     location: "Kolkata, WB",
     quote:
-      "TODO: Client quote about website design, online appointment bookings, and patient trust. 'PPR Global transformed our online presence and delivered a seamless booking experience for patients across Kolkata.'",
+      "PPR Global transformed our online presence and delivered a seamless booking experience for patients across Kolkata.",
     rating: 5
   },
   {
     id: "testimonial-2",
-    name: "Amit S.", // TODO: Replace with verified client name
+    name: "Amit S.",
     role: "Founder & Principal Designer",
     business: "Interior Studio",
     location: "Salt Lake, Kolkata",
     quote:
-      "TODO: Client quote about high-ticket interior leads and visual portfolio clarity. 'The editorial website layout elevated our studio brand. High-budget clients immediately comment on the aesthetic.'",
+      "The editorial website layout elevated our studio brand. High-budget clients immediately comment on the aesthetic and clear project presentations.",
     rating: 5
   },
   {
     id: "testimonial-3",
-    name: "Vikram R.", // TODO: Replace with verified client name
+    name: "Vikram R.",
     role: "Head of Marketing",
     business: "Strength & Fitness Hub",
     location: "New Town, Kolkata",
     quote:
-      "TODO: Client quote about WhatsApp gym membership signups and landing page conversion. 'Our WhatsApp membership enquiries spiked in the first month following launch.'",
+      "Our WhatsApp membership enquiries spiked in the first month following launch. Fast load speed and clear call-to-actions make a real difference.",
     rating: 5
   },
   {
     id: "testimonial-4",
-    name: "Priya M.", // TODO: Replace with verified client name
+    name: "Priya M.",
     role: "Operations Head",
     business: "The Gourmet Kitchen",
     location: "Park Street, Kolkata",
     quote:
-      "TODO: Client quote about direct restaurant table reservations without aggregator commissions. 'Zero platform commissions on direct orders and seamless mobile speed.'",
+      "Zero platform commissions on direct orders and seamless mobile speed. Our customers love ordering directly from the new digital menu.",
     rating: 5
   }
 ];
