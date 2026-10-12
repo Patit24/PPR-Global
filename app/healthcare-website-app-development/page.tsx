@@ -840,11 +840,11 @@ export default function HealthcareLandingPage() {
                 <ArrowUpRight size={15} />
               </a>
               <a
-                href="tel:+919609079663"
+                href="tel:+919734019005"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-teal-500/30 bg-teal-950/40 px-6 text-xs font-black uppercase tracking-[0.16em] text-teal-200 transition-colors hover:border-teal-400 hover:text-white"
               >
                 <Phone size={15} />
-                <span>Call Now: +91 9609079663</span>
+                <span>Call Now: +91 97340 19005</span>
               </a>
             </div>
           </div>

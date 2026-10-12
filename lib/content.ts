@@ -1409,6 +1409,80 @@ export const servicePages = [
     ],
     relatedProjectSlug: "as-interior-studio",
     relatedResourceSlugs: ["nextjs-vs-wordpress-for-business", "website-cost-kolkata", "interior-designer-website-lead-generation"]
+  },
+  {
+    slug: "website-for-salons-kolkata",
+    name: "Website for Salons & Luxury Spas in Kolkata",
+    shortName: "Salon & Spa Website",
+    metaTitle: "Salon & Spa Website Design Kolkata | PPR Global",
+    metaDescription:
+      "Drive appointment bookings for your Kolkata beauty salon or spa from $300 USD (₹28,750 INR). Service menus, bridal showcases & 1-tap WhatsApp booking.",
+    description:
+      "PPR Global builds high-converting, glamorous websites for beauty salons, luxury spas, nail art studios, and makeup artists in Kolkata.",
+    price: "Starts from $300 USD (₹28,750 INR)",
+    highlights: ["Interactive service rate card", "Bridal package showcase", "Stylist portfolios", "1-tap WhatsApp appointment flow"],
+    keywords: [
+      "website for salons kolkata",
+      "beauty parlour website design Kolkata",
+      "luxury spa website Kolkata",
+      "salon appointment booking website Kolkata"
+    ],
+    body: [
+      "In the beauty, wellness, and grooming industry across Kolkata—from Park Street to Salt Lake and Ballygunge—visual elegance and booking ease decide where clients spend. When a customer searches for bridal makeup packages, hydra facials, or hair botox treatments, a slow, generic website loses high-ticket bookings to Instagram competitors.",
+      "PPR Global designs opulent, mobile-first websites for salons and luxury spas that feature interactive treatment rate cards, aesthetic stylist portfolios, bridal transformation galleries, and frictionless 1-tap WhatsApp booking that connects clients directly to receptionists.",
+      "We integrate Google Business Profile local SEO and automated Google review prompts so your salon dominates 'salon near me' map searches, filling weekday chairs and weekend slots consistently."
+    ],
+    faqs: [
+      {
+        question: "Can clients book salon appointments directly via WhatsApp?",
+        answer:
+          "Yes. Clients tap on any service (e.g., Bridal Package or Hair Spa) and a pre-formatted message opens on WhatsApp with their requested treatment and date."
+      },
+      {
+        question: "Can we showcase seasonal discount offers and bridal packages?",
+        answer:
+          "Yes. We configure dedicated sections for festive discount banners, seasonal combo packages, and membership perks that your team can easily update."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm",
+    relatedResourceSlugs: ["website-cost-kolkata", "how-to-rank-google-maps-kolkata", "local-seo-service-pages"]
+  },
+  {
+    slug: "website-for-schools-kolkata",
+    name: "Website for Schools & Coaching Institutes in Kolkata",
+    shortName: "School & Coaching Website",
+    metaTitle: "School & Coaching Website Design Kolkata | PPR Global",
+    metaDescription:
+      "Modern school, college & coaching institute websites in Kolkata from $300 USD (₹28,750 INR). Admission enquiry funnels, fee notices & course guides.",
+    description:
+      "PPR Global designs authoritative educational websites for schools, colleges, NEET/JEE coaching institutes, and training centers in Kolkata.",
+    price: "Starts from $300 USD (₹28,750 INR)",
+    highlights: ["Online admission inquiry forms", "Course curriculum guides", "Faculty profile cards", "Notice board & circular downloads"],
+    keywords: [
+      "website for schools kolkata",
+      "coaching institute website design Kolkata",
+      "educational web development Kolkata",
+      "school admission website Kolkata"
+    ],
+    body: [
+      "Educational institutions in Kolkata and West Bengal need digital platforms that project institutional authority, clarify academic curriculums, and streamline student admission enquiries. Whether for private schools in Salt Lake, New Town academies, or competitive exam coaching centers, a modern website is the primary channel for parent trust.",
+      "PPR Global builds fast, accessible educational websites featuring digital admission inquiry forms, printable prospectus downloads, faculty credentials, interactive notice boards, and student achievement showcases.",
+      "With sub-second load times and mobile-first responsive architecture, parents and students can access exam routines, fee circulars, and admission counseling on any smartphone without friction."
+    ],
+    faqs: [
+      {
+        question: "Can the website handle online student admission enquiries?",
+        answer:
+          "Yes. We build structured admission enquiry forms that capture student details, course interests, and parent contacts, sending instant alerts to your admissions desk."
+      },
+      {
+        question: "Can staff easily upload circulars and exam schedules?",
+        answer:
+          "Yes. We configure a straightforward notice board where staff can upload PDF circulars, timetables, and announcements in seconds."
+      }
+    ],
+    relatedProjectSlug: "whatsapp-automation-crm",
+    relatedResourceSlugs: ["website-cost-kolkata", "how-to-rank-google-maps-kolkata", "local-seo-service-pages"]
   }
 ];
 
