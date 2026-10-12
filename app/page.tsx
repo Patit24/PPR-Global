@@ -570,6 +570,8 @@ export default function Home() {
           </motion.div>
         </section>
 
+        <IndustryShowcase />
+
         <section id="work" ref={workRef} className="defer-section relative scroll-mt-28 px-4 pb-28 pt-16 md:h-[420vh] md:pb-0 md:pt-16">
           <div className="mx-auto max-w-7xl md:sticky md:top-20 md:flex md:h-[calc(100dvh-5rem)] md:flex-col md:justify-center md:overflow-hidden md:py-3">
             <Reveal className="mb-8 flex flex-col justify-between gap-5 md:mb-5 md:flex-row md:items-end">
@@ -668,8 +670,6 @@ export default function Home() {
         </section>
 
         <TestimonialsSection />
-
-        <IndustryShowcase />
 
         <section id="services" className="defer-section px-4 py-24">
           <div className="mx-auto max-w-7xl">

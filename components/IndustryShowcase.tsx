@@ -10,7 +10,7 @@ export function IndustryShowcase() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="industries" className="defer-section relative overflow-hidden px-4 py-24 md:py-32 scroll-mt-24">
+    <section id="industries" className="relative overflow-hidden px-4 py-24 md:py-32 scroll-mt-24">
       {/* Background radial glow */}
       <div
         aria-hidden="true"
@@ -49,7 +49,7 @@ export function IndustryShowcase() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ type: "spring", duration: 0.55, bounce: 0, delay: (index % 3) * 0.08 }}
                 whileHover={shouldReduceMotion ? undefined : { y: -8 }}
-                className={`group relative flex flex-col overflow-hidden rounded-2xl border bg-black/40 backdrop-blur-sm shadow-xl transition-all duration-300 ${industry.accentBorder}`}
+                className={`group relative flex flex-col overflow-hidden rounded-2xl border bg-slate-900/70 backdrop-blur-md shadow-2xl transition-all duration-300 ${industry.accentBorder}`}
               >
                 {/* Visual Image Banner with Link */}
                 <Link

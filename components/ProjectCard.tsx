@@ -32,7 +32,7 @@ export function ProjectCard({
 
   return (
     <motion.article
-      className="group relative w-[78vw] shrink-0 overflow-hidden rounded-lg bg-white/[0.045] outline-none shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:w-[72vw] md:w-[380px] lg:w-[405px] xl:w-[430px]"
+      className="group relative w-[78vw] shrink-0 overflow-hidden rounded-xl bg-slate-900/60 backdrop-blur-md outline-none border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.35)] focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:w-[72vw] md:w-[380px] lg:w-[405px] xl:w-[430px]"
       initial={shouldReduceMotion ? false : { opacity: 0, y: 24, filter: "blur(6px)" }}
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-80px" }}
