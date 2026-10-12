@@ -33,7 +33,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useRef, useState } from "react";
-import { CursorGlow } from "@/components/CursorGlow";
 import { FloatingObjects } from "@/components/FloatingObjects";
 import { LazyLeadCaptureForm } from "@/components/leads/LazyLeadCaptureForm";
 import { MagneticButton } from "@/components/MagneticButton";
@@ -267,7 +266,6 @@ export default function Home() {
       >
         Skip to content
       </a>
-      <CursorGlow />
       <FloatingObjects />
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white/88 px-4 py-4 text-ink backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { LeadSystem } from "@/components/leads/LeadSystem";
+import { CursorGlow } from "@/components/CursorGlow";
 import { business } from "@/lib/business";
 import { homepageFaqs } from "@/lib/faqs";
 import "./globals.css";
@@ -355,6 +356,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${space.variable} ${inter.className}`}>
+        <CursorGlow />
         {children}
         <LeadSystem />
         {gaMeasurementId ? (
