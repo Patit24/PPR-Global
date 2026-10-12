@@ -78,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.75
     },
+    {
+      url: `${baseUrl}/healthcare-website-app-development`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9
+    },
     ...Array.from(serviceSlugs).map((slug) => ({
       url: `${baseUrl}/services/${slug}`,
       lastModified,
