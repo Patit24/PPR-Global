@@ -2,19 +2,200 @@ import {
   AppWindow,
   BadgeIndianRupee,
   Bot,
+  Building2,
   ChartNoAxesCombined,
   Code2,
+  Dumbbell,
+  GraduationCap,
   Layers3,
   Megaphone,
   Palette,
   Search,
+  ShoppingBag,
   Smartphone,
   Sparkles,
+  Stethoscope,
+  UtensilsCrossed,
   Workflow
 } from "lucide-react";
 
+export interface IndustryVertical {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+  icon: typeof Building2;
+  gradientBadge: string;
+  accentColor: string;
+  accentBorder: string;
+  glowColor: string;
+  keywords: string[];
+  startingPrice: string;
+  features: string[];
+}
+
+export const industryVerticals: IndustryVertical[] = [
+  {
+    id: "real-estate",
+    name: "Real Estate & Housing",
+    tagline: "Broker Portfolios, Flat Listings & Buyer CRMs",
+    description: "Capture verified homebuyer leads with interactive property listings, floorplans, location maps, and instant WhatsApp inquiry routing.",
+    href: "/services/website-for-real-estate-kolkata",
+    imageSrc: "/projects/showcase/as-interior-showcase.webp",
+    imageAlt: "Real estate websites and property CRM development in Kolkata",
+    icon: Building2,
+    gradientBadge: "from-amber-400/20 to-yellow-500/20 text-amber-400 border-amber-500/30",
+    accentColor: "text-amber-400",
+    accentBorder: "border-amber-500/30 hover:border-amber-400/60",
+    glowColor: "rgba(251,191,36,0.15)",
+    keywords: ["real estate website kolkata", "property listing website India", "builder flat showcase", "buyer CRM"],
+    startingPrice: "₹7,999",
+    features: ["Verified Property Listings", "WhatsApp Lead Routing", "Interactive Map Embeds"]
+  },
+  {
+    id: "hospitals-clinics",
+    name: "Hospitals & Healthcare Clinics",
+    tagline: "Patient Care, OPD Portals & Diagnostic Booking",
+    description: "Build clinical trust with doctor credentials, OPD department schedules, online diagnostic tests, and HIPAA-compliant appointment booking.",
+    href: "/healthcare-website-app-development",
+    imageSrc: "/projects/showcase/dr-shaheen-dental-showcase.webp",
+    imageAlt: "Hospital and clinic website and patient appointment app development Kolkata",
+    icon: Stethoscope,
+    gradientBadge: "from-teal-400/20 to-emerald-400/20 text-teal-300 border-teal-400/30",
+    accentColor: "text-teal-300",
+    accentBorder: "border-teal-500/30 hover:border-teal-400/60",
+    glowColor: "rgba(45,212,191,0.15)",
+    keywords: ["hospital website developer kolkata", "clinic appointment app", "patient booking portal", "healthcare web design"],
+    startingPrice: "₹7,999",
+    features: ["OPD Slot Booking", "Doctor Credential Badges", "Diagnostic Test Funnel"]
+  },
+  {
+    id: "restaurants-kitchens",
+    name: "Restaurants & Cloud Kitchens",
+    tagline: "Digital QR Menus & 0% Commission Direct Ordering",
+    description: "Eliminate 25-32% third-party aggregator commissions with mouthwatering mobile menus, table booking, and direct WhatsApp takeout ordering.",
+    href: "/services/website-for-restaurants-kolkata",
+    imageSrc: "/projects/showcase/daily-roast-showcase.webp",
+    imageAlt: "Restaurant, cafe and cloud kitchen website design Kolkata with WhatsApp ordering",
+    icon: UtensilsCrossed,
+    gradientBadge: "from-orange-500/20 to-rose-500/20 text-orange-400 border-orange-500/30",
+    accentColor: "text-orange-400",
+    accentBorder: "border-orange-500/30 hover:border-orange-400/60",
+    glowColor: "rgba(249,115,22,0.15)",
+    keywords: ["restaurant website kolkata", "cloud kitchen ordering system", "digital QR menu", "zero commission food ordering"],
+    startingPrice: "₹7,999",
+    features: ["Digital Table QR Menu", "0% Commission Direct Ordering", "Table Reservations"]
+  },
+  {
+    id: "gyms-fitness",
+    name: "Gyms & Fitness Centers",
+    tagline: "Free Trial Funnels, Class Timetables & Memberships",
+    description: "Turn nearby fitness seekers into active members with high-energy transformation galleries, trainer rosters, and instant 1-day pass booking.",
+    href: "/services/website-for-gyms-kolkata",
+    imageSrc: "/projects/showcase/pulse-gym-showcase.webp",
+    imageAlt: "Gym and fitness club website design and membership booking Kolkata",
+    icon: Dumbbell,
+    gradientBadge: "from-lime-400/20 to-emerald-400/20 text-lime-400 border-lime-400/30",
+    accentColor: "text-lime-400",
+    accentBorder: "border-lime-500/30 hover:border-lime-400/60",
+    glowColor: "rgba(163,230,53,0.15)",
+    keywords: ["gym website design kolkata", "fitness club membership landing page", "free trial booking", "trainer profiles"],
+    startingPrice: "₹7,999",
+    features: ["Free Day Pass Flow", "Interactive Class Schedule", "Trainer Profiles & Bio"]
+  },
+  {
+    id: "salons-spas",
+    name: "Salons & Luxury Spas",
+    tagline: "Opulent Service Menus, Bridal Suites & Booking",
+    description: "Glamorous, high-converting digital storefronts for beauty salons, luxury spas, nail art bars, and bridal makeup artists in Kolkata.",
+    href: "/services/website-for-salons-kolkata",
+    imageSrc: "/projects/showcase/wedstory-showcase.webp",
+    imageAlt: "Beauty salon, luxury spa and bridal makeup website design Kolkata",
+    icon: Sparkles,
+    gradientBadge: "from-rose-400/20 to-pink-500/20 text-rose-300 border-rose-400/30",
+    accentColor: "text-rose-300",
+    accentBorder: "border-rose-500/30 hover:border-rose-400/60",
+    glowColor: "rgba(251,113,133,0.15)",
+    keywords: ["salon website kolkata", "beauty parlour web design", "luxury spa booking website", "bridal makeup portfolio"],
+    startingPrice: "₹7,999",
+    features: ["Interactive Service Rate Card", "Bridal Transformation Gallery", "1-Tap WhatsApp Booking"]
+  },
+  {
+    id: "schools-coaching",
+    name: "Schools & Coaching Centres",
+    tagline: "Admission Inquiries, Course Syllabi & Notice Boards",
+    description: "Authoritative educational web portals for private schools, competitive exam institutes (JEE/NEET), colleges, and academies across West Bengal.",
+    href: "/services/website-for-schools-kolkata",
+    imageSrc: "/projects/showcase/sahil-erp-showcase.webp",
+    imageAlt: "School and coaching institute website development Kolkata with online admissions",
+    icon: GraduationCap,
+    gradientBadge: "from-blue-400/20 to-indigo-500/20 text-blue-300 border-blue-400/30",
+    accentColor: "text-blue-400",
+    accentBorder: "border-blue-500/30 hover:border-blue-400/60",
+    glowColor: "rgba(96,165,250,0.15)",
+    keywords: ["school website developer kolkata", "coaching institute web design", "admission inquiry portal", "educational institute website"],
+    startingPrice: "₹7,999",
+    features: ["Online Admission Inquiry", "Downloadable Prospectus & Circulars", "Faculty Credentials"]
+  },
+  {
+    id: "retail-ecommerce",
+    name: "Retail & E-commerce",
+    tagline: "Fast Online Stores, Catalogs & UPI Checkouts",
+    description: "High-speed D2C storefronts, direct WhatsApp catalog checkouts, and custom e-commerce web applications with zero middleman commissions.",
+    href: "/services/ecommerce-development-kolkata",
+    imageSrc: "/projects/showcase/rp-sports-showcase.webp",
+    imageAlt: "Ecommerce website development and WhatsApp ordering store Kolkata",
+    icon: ShoppingBag,
+    gradientBadge: "from-purple-400/20 to-fuchsia-500/20 text-purple-300 border-purple-400/30",
+    accentColor: "text-purple-300",
+    accentBorder: "border-purple-500/30 hover:border-purple-400/60",
+    glowColor: "rgba(192,132,252,0.15)",
+    keywords: ["ecommerce development kolkata", "online store builder india", "direct whatsapp shopping", "fast nextjs checkout"],
+    startingPrice: "₹24,999",
+    features: ["Sub-Second Cart & Checkout", "Direct WhatsApp Order Pre-fill", "Razorpay, UPI & Cashfree"]
+  },
+  {
+    id: "interior-designers",
+    name: "Interior Designers & Architects",
+    tagline: "High-Ticket Editorial Showcases & Consultations",
+    description: "Opulent visual portfolios, craft storytelling, and high-converting consultation funnels for Kolkata luxury interior studios and architects.",
+    href: "/services/website-for-interior-designers-kolkata",
+    imageSrc: "/projects/showcase/interior-amit-showcase.webp",
+    imageAlt: "Interior designer and architectural website design Kolkata",
+    icon: Palette,
+    gradientBadge: "from-amber-200/20 to-stone-400/20 text-amber-200 border-amber-300/30",
+    accentColor: "text-amber-200",
+    accentBorder: "border-amber-300/30 hover:border-amber-200/60",
+    glowColor: "rgba(253,230,138,0.15)",
+    keywords: ["interior designer website kolkata", "architectural portfolio design", "luxury interior studio web development", "interior lead generation"],
+    startingPrice: "₹7,999",
+    features: ["Full-Screen High-Res Project Gallery", "Editorial Aesthetic Layout", "Consultation Booking Flow"]
+  },
+  {
+    id: "dental-clinics",
+    name: "Dental Clinics & Polyclinics",
+    tagline: "Treatment Discovery, Aligners & Patient Appointments",
+    description: "Establish immediate clinical trust with specialized treatment breakdowns (Root Canals, Implants, Aligners), doctor credentials, and instant WhatsApp booking.",
+    href: "/services/website-for-dentists-kolkata",
+    imageSrc: "/projects/showcase/dr-shaheen-dental-showcase.webp",
+    imageAlt: "Dental clinic website developer Kolkata with online patient appointment booking",
+    icon: Stethoscope,
+    gradientBadge: "from-teal-400/20 to-cyan-400/20 text-teal-300 border-teal-400/30",
+    accentColor: "text-teal-300",
+    accentBorder: "border-teal-400/30 hover:border-teal-300/60",
+    glowColor: "rgba(45,212,191,0.15)",
+    keywords: ["website developer for dental clinics kolkata", "dentist website developer", "dental clinic web design Kolkata", "dental appointment booking"],
+    startingPrice: "₹7,999",
+    features: ["Treatment-Specific Landing Sections", "1-Tap WhatsApp Appointment Flow", "Council Badges & Credentials"]
+  }
+];
+
 export const navItems = [
   { label: "Work", href: "/#work" },
+  { label: "Industries", href: "/#industries" },
   { label: "Services", href: "/#services" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
@@ -588,10 +769,10 @@ export const servicePages = [
     shortName: "Dental Website Developer",
     metaTitle: "Website Developer for Dental Clinics Kolkata | PPR Global",
     metaDescription:
-      "Custom dental clinic website developer in Kolkata. Online appointment booking, treatment showcases, fast mobile speed & WhatsApp flow from ₹28,750.",
+      "Custom dental clinic website developer in Kolkata. Online appointment booking, treatment showcases, fast mobile speed & WhatsApp flow from ₹7,999.",
     description:
       "PPR Global builds high-converting, sub-second dental clinic websites in Kolkata designed to establish clinical trust, showcase specialized treatments, and drive daily patient appointments.",
-    price: "Starts from $300 USD (₹28,750 INR)",
+    price: "Starts from ₹7,999 INR ($99 USD)",
     highlights: [
       "Treatment-specific pages (Implants, Root Canals, Aligners)",
       "Instant WhatsApp appointment booking flow",
@@ -626,7 +807,7 @@ export const servicePages = [
       {
         question: "How much does a dental clinic website cost in Kolkata?",
         answer:
-          "Custom dental clinic websites at PPR Global start from ₹28,750 INR ($300 USD) for single-doctor clinics. Advanced multi-chair dental practices with multi-specialist booking, treatment calculators, and full local SEO architecture start from ₹48,500 INR ($520 USD). Full source code ownership is included with zero recurring monthly platform fees."
+          "Custom dental clinic websites at PPR Global start from ₹7,999 INR ($99 USD) for single-doctor starter clinics. Advanced multi-chair dental practices with multi-specialist booking, treatment calculators, and full local SEO architecture start from ₹24,999 INR ($299 USD). Full source code ownership is included with zero recurring monthly platform fees."
       },
       {
         question: "How does the WhatsApp appointment booking flow work for patients?",

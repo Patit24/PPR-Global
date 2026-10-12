@@ -40,6 +40,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { IndustryShowcase } from "@/components/IndustryShowcase";
 import { HomepageFaqSection } from "@/components/HomepageFaqSection";
 import { business } from "@/lib/business";
 import {
@@ -667,6 +668,8 @@ export default function Home() {
         </section>
 
         <TestimonialsSection />
+
+        <IndustryShowcase />
 
         <section id="services" className="defer-section px-4 py-24">
           <div className="mx-auto max-w-7xl">

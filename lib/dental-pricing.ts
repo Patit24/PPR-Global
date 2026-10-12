@@ -18,8 +18,8 @@ export const dentalWebsitePricing: DentalPricingTier[] = [
     id: "single-doctor",
     name: "Starter Dental Practice",
     targetAudience: "Single-Doctor Clinics & Independent Dental Practitioners",
-    priceInr: "₹28,750", // TODO: Update starting price in INR
-    priceUsd: "$300",    // TODO: Update starting price in USD
+    priceInr: "₹7,999",
+    priceUsd: "$99",
     features: [
       "Custom responsive Next.js clinic website (under 1s load speed)",
       "Treatment pages (Root Canal, Implants, Braces, Teeth Whitening)",
