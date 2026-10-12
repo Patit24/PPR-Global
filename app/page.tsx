@@ -107,11 +107,11 @@ const businessTypes = [
 ];
 
 const buildNeeds = [
-  { name: "Booking", cost: 4800, costUsd: 50 },
-  { name: "Admin Panel", cost: 4800, costUsd: 50 },
-  { name: "Payment", cost: 4800, costUsd: 50 },
-  { name: "WhatsApp", cost: 4800, costUsd: 50 },
-  { name: "SEO", cost: 4800, costUsd: 50 }
+  { name: "Booking", cost: 1500, costUsd: 20 },
+  { name: "Admin Panel", cost: 1500, costUsd: 20 },
+  { name: "Payment", cost: 1500, costUsd: 20 },
+  { name: "WhatsApp", cost: 1500, costUsd: 20 },
+  { name: "SEO", cost: 1500, costUsd: 20 }
 ];
 
 const calculatorBaseCost = 7999;
@@ -1691,7 +1691,7 @@ function ProjectBuilderSection({
     baseCost +
     selectedNeeds.reduce((total, need) => {
       const needData = buildNeeds.find((item) => item.name === need);
-      const cost = isUsd ? (needData?.costUsd ?? 50) : (needData?.cost ?? 4800);
+      const cost = isUsd ? (needData?.costUsd ?? 20) : (needData?.cost ?? 1500);
       return total + cost;
     }, 0);
 
@@ -1909,8 +1909,8 @@ Please guide me with the next step.`;
                 </p>
                 <p className="mt-4 text-sm leading-6 text-black/64">
                   {isUsd
-                    ? `All websites start from $${calculatorBaseCostUsd} USD (~₹${calculatorBaseCostInr.toLocaleString("en-IN")}). Each selected feature adds $50 (~₹4,800).`
-                    : `All websites start from ₹${calculatorBaseCostInr.toLocaleString("en-IN")} (~$${calculatorBaseCostUsd} USD). Each selected feature adds ₹4,800 (~$50 USD).`}
+                    ? `All websites start from $${calculatorBaseCostUsd} USD (~₹${calculatorBaseCostInr.toLocaleString("en-IN")}). Each selected feature adds $20 (~₹1,500).`
+                    : `All websites start from ₹${calculatorBaseCostInr.toLocaleString("en-IN")} (~$${calculatorBaseCostUsd} USD). Each selected feature adds ₹1,500 (~$20 USD).`}
                 </p>
                 <div className="mt-6 flex flex-col gap-2.5">
                   <a
