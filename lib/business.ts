@@ -63,7 +63,7 @@ export const business = {
     "UI/UX Design",
     "Lead Management"
   ],
-  priceRange: "$300 - $750 USD / ₹28,750 - ₹72,000 INR",
+  priceRange: "$99 - $599 USD / ₹7,999 - ₹49,999 INR",
   citations: [
     { name: "Google Business Profile", url: "https://share.google/FeZQgspdDBgAnBavG" },
     { name: "Clutch.co", url: "https://clutch.co/profile/ppr-global" },

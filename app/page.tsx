@@ -114,9 +114,9 @@ const buildNeeds = [
   { name: "SEO", cost: 4800, costUsd: 50 }
 ];
 
-const calculatorBaseCost = 28750;
-const calculatorBaseCostInr = 28750;
-const calculatorBaseCostUsd = 300;
+const calculatorBaseCost = 7999;
+const calculatorBaseCostInr = 7999;
+const calculatorBaseCostUsd = 99;
 
 const agencySystemStats = [
   { value: "72h", label: "First design direction", detail: "Structure, offer, pages, and launch path." },
@@ -430,7 +430,7 @@ export default function Home() {
                     href="#calculator"
                     className="inline-flex min-h-12 items-center gap-2 rounded-full border border-black/15 bg-white/80 px-5 text-xs font-black uppercase tracking-[0.16em] text-ink transition-transform hover:scale-105 hover:bg-white focus-visible:ring-2 focus-visible:ring-ink"
                   >
-                    <span>Calculate Build Cost ({currency === "USD" ? "$300+" : "₹28,750+"})</span>
+                    <span>Calculate Build Cost ({currency === "USD" ? "$99+" : "₹7,999+"})</span>
                     <ArrowUpRight size={15} aria-hidden="true" />
                   </a>
                 </div>
@@ -909,7 +909,7 @@ export default function Home() {
                 </p>
                 <p className="mt-2 text-base leading-7 text-white/68">
                   {currency === "USD"
-                    ? "Production-grade websites starting at $300 USD. Direct founder engineering, milestone delivery, and zero fluff."
+                    ? "Production-grade websites starting at $99 USD. Direct founder engineering, milestone delivery, and zero fluff."
                     : "Transparent starting prices for sharp launches, upgrade-ready systems, and premium motion builds."}
                 </p>
               </div>

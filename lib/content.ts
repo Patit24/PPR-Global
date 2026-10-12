@@ -440,10 +440,10 @@ export const servicePages = [
     shortName: "Website Development",
     metaTitle: "Website Development Company Kolkata | PPR Global [4.9★]",
     metaDescription:
-      "Top website development company in Kolkata. Custom responsive websites, WhatsApp integration & SEO from $300 USD (₹28,750 INR). 7-day launch. Free estimate!",
+      "Top website development company in Kolkata. Custom responsive websites, WhatsApp integration & SEO from ₹7,999 INR ($99 USD). 7-day launch. Free estimate!",
     description:
       "PPR Global builds fast, affordable websites for Kolkata and West Bengal businesses, including static websites, dynamic websites, admin panels, and SEO-ready landing pages.",
-    price: "Starts from $300 USD (₹28,750 INR)",
+    price: "Starts from ₹7,999 INR ($99 USD)",
     highlights: ["Static and dynamic websites", "Admin panel options", "WhatsApp enquiry flow", "SEO-ready structure"],
     keywords: [
       "website development company in Kolkata",
@@ -460,7 +460,7 @@ export const servicePages = [
       {
         question: "How much does a website cost in Kolkata?",
         answer:
-          "A starter static website begins from $300 USD (₹28,750 INR). Final pricing depends on page count, admin panel needs, booking, payment, WhatsApp automation, SEO, and design complexity."
+          "A starter static website (5 pages) begins from ₹7,999 INR ($99 USD). Final pricing depends on page count, admin panel needs, booking, payment, WhatsApp automation, SEO, and design complexity."
       },
       {
         question: "Can the website include an admin panel?",
@@ -915,10 +915,10 @@ export const servicePages = [
     shortName: "Mobile Apps",
     metaTitle: "Mobile App Development Company Kolkata | PPR Global",
     metaDescription:
-      "Custom iOS & Android mobile app development in Kolkata from $750 USD (₹72,000 INR). React Native, Flutter, clean backend & App Store deployment.",
+      "Custom iOS & Android mobile app development in Kolkata from ₹49,999 INR ($599 USD). React Native, Flutter, clean backend & App Store deployment.",
     description:
       "Mobile app development company in Kolkata building clean iOS, Android, and MVP products with UX planning, APIs, dashboards, and launch support.",
-    price: "Starts from $750 USD (₹72,000 INR)",
+    price: "Starts from ₹49,999 INR ($599 USD)",
     highlights: ["iOS and Android planning", "UX flows", "API integrations", "Launch support"],
     keywords: [
       "mobile app development company kolkata",
@@ -935,7 +935,7 @@ export const servicePages = [
       {
         question: "What is the starting cost for an app?",
         answer:
-          "Apps start from ₹14,999 and depend on features, screens, login, backend, payments, admin panel, and integrations."
+          "Mobile apps start from ₹49,999 INR ($599 USD) for a clean MVP and depend on features, screens, login, backend, payments, admin panel, and integrations."
       },
       {
         question: "Can you build an MVP first?",
@@ -1248,10 +1248,10 @@ export const servicePages = [
     shortName: "Static Website",
     metaTitle: "Static Website Design in Kolkata | PPR Global [7-Day Launch]",
     metaDescription:
-      "Clean, lightning-fast static business websites in Kolkata from $300 USD (₹28,750 INR). Custom HTML5 & Next.js design, mobile-friendly & WhatsApp CTA.",
+      "Clean, lightning-fast 5-page static business websites in Kolkata from ₹7,999 INR ($99 USD). Custom HTML5 & Next.js design, mobile-friendly & WhatsApp CTA.",
     description:
-      "PPR Global designs ultra-fast, affordable static websites for Kolkata small businesses, consultants, and professionals with 5-day delivery and zero ongoing hosting headaches.",
-    price: "Starts from $300 USD (₹28,750 INR)",
+      "PPR Global designs ultra-fast, affordable 5-page static websites for Kolkata small businesses, consultants, and professionals with 5-day delivery and zero ongoing hosting headaches.",
+    price: "Starts from ₹7,999 INR ($99 USD)",
     highlights: ["Lightning-fast loading speed", "Zero maintenance & database fees", "Direct WhatsApp enquiry flow", "Local SEO metadata included"],
     keywords: [
       "static website design in kolkata",
@@ -1268,7 +1268,7 @@ export const servicePages = [
       {
         question: "How much does a static website cost in Kolkata?",
         answer:
-          "Our static business website package starts at $300 USD (₹28,750 INR) for a complete, responsive multi-section site including custom copywriting, WhatsApp integration, and local SEO setup."
+          "Our starter static business website package (5 pages) starts at ₹7,999 INR ($99 USD) for a complete, responsive multi-section site including custom copywriting, WhatsApp integration, and local SEO setup."
       },
       {
         question: "Can I update content on a static website later?",
@@ -1290,10 +1290,10 @@ export const servicePages = [
     shortName: "Dynamic Website",
     metaTitle: "Dynamic Website Development Kolkata | PPR Global",
     metaDescription:
-      "Custom dynamic website development in Kolkata for growing companies. Database management, user login, search filters, APIs & high-performance Next.js builds.",
+      "Custom dynamic website development in Kolkata for growing companies from ₹24,999 INR ($299 USD). Database management, user login, search filters, APIs & high-performance Next.js builds.",
     description:
       "Custom dynamic website development in Kolkata for businesses that need real-time database management, user authentication, customer portals, and interactive web tools.",
-    price: "Starts from $499 USD (₹47,800 INR)",
+    price: "Starts from ₹24,999 INR ($299 USD)",
     highlights: ["Real-time database integration", "Custom filtering & search", "User authentication & roles", "API & payment gateway integrations"],
     keywords: [
       "dynamic website development kolkata",
@@ -1332,10 +1332,10 @@ export const servicePages = [
     shortName: "Admin Panel Website",
     metaTitle: "Website with Admin Panel Kolkata | Self-Managed CMS Dashboards",
     metaDescription:
-      "Get a custom website with an easy-to-use admin panel in Kolkata. Update content, products, blogs & client enquiries without touching code. Free quote!",
+      "Get a custom website with an easy-to-use admin panel in Kolkata from ₹14,999 INR ($179 USD). Update content, products, blogs & client enquiries without touching code. Free quote!",
     description:
       "PPR Global builds custom business websites with secure, intuitive admin panels so you can update text, images, products, pricing, and view leads without writing code.",
-    price: "Starts from $390 USD (₹37,400 INR)",
+    price: "Starts from ₹14,999 INR ($179 USD)",
     highlights: ["Intuitive self-managed dashboard", "Zero monthly CMS subscription fees", "Lead tracking & inquiry inbox", "Media uploads & blog editor"],
     keywords: [
       "website with admin panel kolkata",
@@ -1374,10 +1374,10 @@ export const servicePages = [
     shortName: "3D Motion Website",
     metaTitle: "3D Motion & Animated Website Design Kolkata | Award-Winning WebGL",
     metaDescription:
-      "Captivate your audience with interactive 3D motion graphics, GSAP animations & WebGL websites designed in Kolkata. Luxury visual experiences for modern brands.",
+      "Captivate your audience with interactive 3D motion graphics, GSAP animations & WebGL websites designed in Kolkata from ₹39,999 INR ($479 USD). Luxury visual experiences for modern brands.",
     description:
       "PPR Global engineers award-winning 3D motion animated websites with Three.js, WebGL, GSAP, and interactive scroll storytelling for luxury brands and tech startups.",
-    price: "Starts from $699 USD (₹67,000 INR)",
+    price: "Starts from ₹39,999 INR ($479 USD)",
     highlights: ["Interactive Three.js & WebGL visuals", "Hardware-accelerated 60fps animations", "Immersive scroll storytelling", "Mobile-optimized performance"],
     keywords: [
       "3d motion animated website kolkata",
@@ -1407,8 +1407,6 @@ export const servicePages = [
           "A bespoke 3D motion experience typically takes 3 to 5 weeks from initial 3D storyboard concepts and motion prototypes to final frontend deployment."
       }
     ],
-    relatedProjectSlug: "as-interior-studio",
-    relatedResourceSlugs: ["nextjs-vs-wordpress-for-business", "website-cost-kolkata", "interior-designer-website-lead-generation"]
   },
   {
     slug: "website-for-salons-kolkata",
@@ -1503,11 +1501,11 @@ export const resourcePosts = [
     "body": [
       "If you are a business owner in Kolkata planning to launch or rebuild your online presence, the first question you inevitably ask is: 'How much does a website cost in Kolkata in 2026?' Depending on who you ask, quotes can range anywhere from ₹3,000 from a student freelancer to ₹2,50,000+ from legacy Salt Lake Sector V agencies. This wide variance causes massive confusion and often leads local businesses to make one of two costly mistakes: choosing a bargain-basement WordPress template that breaks within months, or overpaying a legacy agency for bloated features they will never use.",
       "At PPR Global, we believe in radical pricing transparency. As an engineering agency founded right here in Barasat, Kolkata, we have built digital systems for dental clinics, interior designers, fitness clubs, restaurants, real estate brokers, and global clients. In this exhaustive 2026 benchmark guide, we break down exact market pricing across Kolkata and West Bengal, detailing what each budget tier delivers, hidden fees to watch out for, and how to choose the right architecture for your business.",
-      "Tier 1: Starter Static Business Websites ($300 USD / ₹28,750 INR | Delivery: 3–7 Days): Ideal for independent consultants, legal chambers, dental practices, solo tutors, and local service professionals in Kolkata. A static website consists of pre-rendered, server-side optimized pages (typically Home, About, Services, Case Studies/Portfolio, and Contact). Built with Next.js and Tailwind CSS rather than sluggish PHP, these sites achieve sub-second load times (<0.8s), have zero vulnerable SQL databases for hackers to breach, and require ₹0 monthly database hosting expenses. At PPR Global, our $300 USD (₹28,750 INR) starter package includes custom responsive UI design, conversion-focused copywriting, mobile PageSpeed optimization (95+ score), Google Business Profile Map integration, and instant WhatsApp enquiry routing.",
-      "Tier 2: Websites with Self-Managed Admin Panels ($390 USD / ₹37,400 INR | Delivery: 7–10 Days): Best for interior design studios, real estate brokers, beauty clinics, and coaching institutes that frequently upload project photos, publish client testimonials, update pricing packages, or post new articles. Rather than paying a webmaster ₹500 every time a phone number or photo changes, a custom admin panel gives your front desk a secure, private dashboard to upload images, edit service text, and download customer inquiries to CSV. Unlike clunky WordPress dashboards requiring 30 conflicting plugins and weekly updates, our custom admin dashboards are engineered with Next.js and Supabase for lightning-fast, zero-friction daily operations.",
-      "Tier 3: Custom Dynamic Web Applications ($499 USD / ₹47,800 INR | Delivery: 10–14 Days): Essential for multi-doctor healthcare clinics with online patient slot booking, gyms with class timetables and trial pass checkouts, equipment rental catalogs, and recruitment portals. Dynamic websites connect directly to secure cloud databases (PostgreSQL/Supabase) to handle live data, user accounts, search filters, automated SMS/WhatsApp alerts, and interactive calculators.",
-      "Tier 4: E-Commerce Stores & Direct WhatsApp Catalogs ($499 USD / ₹47,800 INR | Delivery: 14–21 Days): Built for retail boutiques in Gariahat, activewear brands, specialty coffee roasters, and manufacturing distributors in Kolkata. Solutions range from lightweight direct WhatsApp ordering catalogs (0% transaction fees) to full custom Next.js e-commerce engines with payment gateways (Razorpay, Cashfree, UPI), automated shipping slip generation, live inventory sync, and customer accounts.",
-      "Full Kolkata Market Comparison Table: To help you evaluate quotes objectively, here is how the primary website tiers compare in Kolkata across cost, timeline, tech stack, and ideal business use cases: 1. Static Business Website | $300 USD (₹28,750 INR) | 3–7 Days | Next.js, Tailwind, Vercel | Best for: Dentists, Consultants, Lawyers, Salons, Local Trades. 2. Admin Panel Website | $390 USD (₹37,400 INR) | 7–10 Days | Next.js, Supabase, Tailwind | Best for: Interior Designers, Real Estate Agents, Training Institutes, Boutiques. 3. Dynamic Web Application | $499 USD (₹47,800 INR) | 10–14 Days | Next.js, PostgreSQL, Auth | Best for: Multi-Doctor Clinics, Gyms with Class Booking, SaaS MVPs, Rental Directories. 4. E-Commerce & WhatsApp Catalog | $499 USD (₹47,800 INR) | 14–21 Days | Next.js, Razorpay/Shopify, Inventory API | Best for: Clothing Brands, Direct-to-Consumer Brands, Cloud Kitchens, Distributors. 5. 3D Motion Animated Website | $699 USD (₹67,000 INR) | 14–21 Days | Three.js, GSAP, WebGL | Best for: Luxury Studios, Startups. 6. Mobile Applications | Starts $750 USD (₹72,000 INR) | 3–5 Weeks | React Native, Flutter | Best for: Booking apps, on-demand platforms.",
+      "Tier 1: Starter Static Business Websites (5 pages | ₹7,999 INR / $99 USD | Delivery: 3–7 Days): Ideal for independent consultants, legal chambers, dental practices, solo tutors, and local service professionals in Kolkata. A static website consists of pre-rendered, server-side optimized pages (typically Home, About, Services, Case Studies/Portfolio, and Contact). Built with Next.js and Tailwind CSS rather than sluggish PHP, these sites achieve sub-second load times (<0.8s), have zero vulnerable SQL databases for hackers to breach, and require ₹0 monthly database hosting expenses. At PPR Global, our ₹7,999 INR ($99 USD) starter package includes custom responsive UI design, conversion-focused copywriting, mobile PageSpeed optimization (95+ score), Google Business Profile Map integration, and instant WhatsApp enquiry routing.",
+      "Tier 2: Business Websites with Self-Managed Admin Panels (₹14,999 INR / $179 USD | Delivery: 7–10 Days): Best for interior design studios, real estate brokers, beauty clinics, and coaching institutes that frequently upload project photos, publish client testimonials, update pricing packages, or post new articles. Rather than paying a webmaster ₹500 every time a phone number or photo changes, a custom admin panel gives your front desk a secure, private dashboard to upload images, edit service text, and download customer inquiries to CSV. Unlike clunky WordPress dashboards requiring 30 conflicting plugins and weekly updates, our custom admin dashboards are engineered with Next.js and Supabase for lightning-fast, zero-friction daily operations.",
+      "Tier 3: Growth Dynamic Web Applications (Database-Backed | ₹24,999 INR / $299 USD | Delivery: 10–14 Days): Essential for multi-doctor healthcare clinics with online patient slot booking, gyms with class timetables and trial pass checkouts, equipment rental catalogs, and recruitment portals. Dynamic websites connect directly to secure cloud databases (PostgreSQL/Supabase) to handle live data, user accounts, search filters, automated SMS/WhatsApp alerts, and interactive calculators.",
+      "Tier 4: E-Commerce Stores & Direct WhatsApp Catalogs (from ₹24,999 INR / $299 USD | Delivery: 14–21 Days): Built for retail boutiques in Gariahat, activewear brands, specialty coffee roasters, and manufacturing distributors in Kolkata. Solutions range from lightweight direct WhatsApp ordering catalogs (0% transaction fees) to full custom Next.js e-commerce engines with payment gateways (Razorpay, Cashfree, UPI), automated shipping slip generation, live inventory sync, and customer accounts.",
+      "Full Kolkata Market Comparison Table: To help you evaluate quotes objectively, here is how the primary website tiers compare in Kolkata across cost, timeline, tech stack, and ideal business use cases: 1. Starter (5 pages) | ₹7,999 INR ($99 USD) | 3–7 Days | Next.js, Tailwind, Vercel | Best for: Dentists, Consultants, Lawyers, Salons, Local Trades. 2. Business with Admin Panel | ₹14,999 INR ($179 USD) | 7–10 Days | Next.js, Supabase, Tailwind | Best for: Interior Designers, Real Estate Agents, Training Institutes, Boutiques. 3. Growth (Database-Backed) | ₹24,999 INR ($299 USD) | 10–14 Days | Next.js, PostgreSQL, Auth | Best for: Multi-Doctor Clinics, Gyms with Class Booking, SaaS MVPs, Rental Directories. 4. E-Commerce & WhatsApp Catalog | from ₹24,999 INR ($299 USD) | 14–21 Days | Next.js, Razorpay/Shopify, Inventory API | Best for: Clothing Brands, Direct-to-Consumer Brands, Cloud Kitchens, Distributors. 5. 3D Motion Animated Website | from ₹39,999 INR ($479 USD) | 14–21 Days | Three.js, GSAP, WebGL | Best for: Luxury Studios, High-Tech Brands. 6. Mobile Applications | from ₹49,999 INR ($599 USD) | 3–5 Weeks | React Native, Flutter | Best for: Booking apps, on-demand platforms.",
       "Hidden Agency Costs Kolkata Businesses Must Watch Out For: When evaluating low-cost agencies offering '₹2,999 complete websites', examine what is left out. In Kolkata's web market, low upfront quotes are almost always bait-and-switch tactics. Here are the hidden traps: 1. Mandatory Hosting Markups: Agencies lock your domain to their private server and demand ₹8,000–₹15,000 annually for 'hosting renewal'—even though modern static sites can be hosted for ₹0 on Vercel or Cloudflare. 2. Unlicensed Nulled WordPress Themes: Cheap agencies install pirated premium themes that contain malware, crypto-miners, or backdoors that eventually get your domain blacklisted by Google. 3. Hostage Code & Domain Ownership: Some firms register your domain under their own personal GoDaddy account. When you attempt to switch providers, they charge ₹10,000+ 'transfer release fees'. At PPR Global, you own 100% of your source code, domain, and hosting accounts from day one.",
       "WordPress vs. Next.js: The 2026 Reality for Indian Businesses: For over 15 years, WordPress powered most agency sites. But in 2026, WordPress has become bloated, slow, and expensive to maintain. A typical WordPress site requires 20+ plugins (Elementor, Yoast, Contact Form 7, Wordfence, WP Rocket) that constantly conflict, break during updates, and drag mobile load times down to 5–8 seconds. In Kolkata, where 80%+ of local consumers browse over mobile 4G/5G connections, a 3-second delay increases bounce rates by over 50%. PPR Global builds on Next.js—the modern framework created by Vercel and used by Nike, TikTok, and Target. Next.js pre-renders pages into pure, static HTML that loads in milliseconds, scores 95+ on Google PageSpeed Insights, and ranks significantly higher on Google Search.",
       "Real-World Kolkata Case Studies: Measuring True ROI: A website should never be treated as an overhead cost—it is an automated 24/7 revenue engine. Consider two real client examples from our Kolkata portfolio: First, Dr. Shaheen Dental Clinic invested in a targeted healthcare website with treatment showcases and instant WhatsApp booking. By capturing just two high-value dental implant and aligner patients in month one, the entire project investment was fully recouped. Second, The Daily Roast Cafe launched a direct WhatsApp ordering website with digital QR menus. By routing 35% of repeat takeout orders away from Swiggy/Zomato (which charge 28% commission), the cafe saved over ₹68,000 every single month in platform fees alone.",
@@ -1516,7 +1514,7 @@ export const resourcePosts = [
     "faqs": [
       {
         "question": "What is the average cost of a small business website in Kolkata?",
-        "answer": "In 2026, a professional 5-page small business website with custom Next.js design, mobile responsiveness, WhatsApp integration, and local SEO typically costs starts at $300 USD (₹28,750 INR) with PPR Global for an enterprise-grade Next.js build."
+        "answer": "In 2026, a professional 5-page small business website with custom Next.js design, mobile responsiveness, WhatsApp integration, and local SEO starts at ₹7,999 INR ($99 USD) with PPR Global for an enterprise-grade Next.js build."
       },
       {
         "question": "Are there recurring monthly fees after the website is built?",
@@ -2888,11 +2886,11 @@ export const resourcePosts = [
 
 
 export const pricing = [
-  { name: "Static Website", price: "$300 / ₹28,750", priceUsd: "$300", priceInr: "₹28,750", detail: "Fast-launch one-page or starter website" },
-  { name: "Website with Admin Panel", price: "$390 / ₹37,400", priceUsd: "$390", priceInr: "₹37,400", detail: "Editable business website with control panel" },
-  { name: "Dynamic Website", price: "$499 / ₹47,800", priceUsd: "$499", priceInr: "₹47,800", detail: "Database-backed website for growing teams" },
-  { name: "3D Motion Animated Website", price: "$699 / ₹67,000", priceUsd: "$699", priceInr: "₹67,000", detail: "Premium animated experience with motion polish" },
-  { name: "Apps", price: "Starts $750 / ₹72,000", priceUsd: "Starts $750", priceInr: "Starts ₹72,000", detail: "Based on features, platforms, and integrations" }
+  { name: "Starter (5 pages)", price: "$99 / ₹7,999", priceUsd: "$99", priceInr: "₹7,999", detail: "Fast-launch 5-page high-converting business website" },
+  { name: "Business with Admin Panel", price: "$179 / ₹14,999", priceUsd: "$179", priceInr: "₹14,999", detail: "Editable business website with custom control panel" },
+  { name: "Growth (database-backed)", price: "$299 / ₹24,999", priceUsd: "$299", priceInr: "₹24,999", detail: "Database-backed dynamic website for growing teams" },
+  { name: "3D Motion", price: "Starts $479 / ₹39,999", priceUsd: "Starts $479", priceInr: "from ₹39,999", detail: "Premium WebGL & interactive motion experience" },
+  { name: "Apps", price: "Starts $599 / ₹49,999", priceUsd: "Starts $599", priceInr: "from ₹49,999", detail: "Custom iOS, Android & MVP product applications" }
 ];
 
 export const stats = [
@@ -2904,19 +2902,20 @@ export const stats = [
 
 export const fieldOptions = {
   services: [
-    "Static Website",
-    "Dynamic Website",
-    "Admin Panel Website",
+    "Starter (5 pages)",
+    "Business with Admin Panel",
+    "Growth (database-backed)",
+    "3D Motion Website",
     "Mobile App",
     "Ads / SEO",
     "Automation / CRM"
   ],
   budgets: [
-    "Under $300 / ₹28,000",
-    "$300 - $600 / ₹28,000 - ₹57,000",
-    "$600 - $1,200 / ₹57,000 - ₹1,15,000",
-    "$1,200 - $2,500 / ₹1,15,000 - ₹2,40,000",
-    "Above $2,500 / ₹2,40,000+",
+    "Under ₹10,000 / $120",
+    "₹10,000 - ₹25,000 / $120 - $300",
+    "₹25,000 - ₹50,000 / $300 - $600",
+    "₹50,000 - ₹1,00,000 / $600 - $1,200",
+    "Above ₹1,00,000 / $1,200+",
     "Not decided"
   ]
 };
