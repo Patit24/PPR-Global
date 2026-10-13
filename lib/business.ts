@@ -3,8 +3,8 @@ export const business = {
   founder: "Patit Roy",
   foundingYear: "2024",
   description:
-    "PPR Global is a website, mobile app and business automation agency founded by Patit Roy in Kolkata, West Bengal, India.",
-  shortDescription: "PPR Global - Website, App and Automation Agency in Kolkata.",
+    "PPR Global is a high-performance website, mobile app, and business automation engineering agency founded by Patit Roy, serving clients in India, the US, the UK, Europe, Australia, and worldwide.",
+  shortDescription: "PPR Global - Global Website, App, and Business Automation Agency.",
   url: "https://www.pprglobal.online",
   logo: "https://www.pprglobal.online/opengraph-image",
   primaryImage: "https://www.pprglobal.online/opengraph-image",

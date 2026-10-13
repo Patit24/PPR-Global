@@ -346,22 +346,21 @@ export default function Home() {
             <div className="relative z-20 grid gap-5 md:grid-cols-[minmax(0,0.72fr)_0.28fr]">
               <div className="max-w-[52rem]">
                 <p className="mb-3 font-display text-sm font-black uppercase tracking-[0.2em] text-black/48">
-                  Founder of PPR Global
+                  Founder of PPR Global · Worldwide Agency
                 </p>
                 <h1 className="font-sans text-4xl font-bold uppercase leading-[0.94] tracking-normal text-ink [font-family:Arial,system-ui,sans-serif] md:font-display md:text-5xl md:font-semibold lg:text-6xl">
-                  Website & app development for Kolkata businesses.
+                  Website & App Development for Businesses Worldwide.
                 </h1>
                 <p className="mt-5 max-w-xl text-base font-semibold leading-7 text-black/62 md:text-lg">
-                  Affordable websites, apps, automation, ads funnels, CRM systems, and
-                  conversion-ready software delivered fast from Kolkata, West Bengal, for local
-                  and global brands.
+                  High-speed websites, web apps, WhatsApp automation, and custom CRM systems
+                  built for ambitious businesses in India, the US, the UK, Europe, Australia, and worldwide.
                 </p>
                 {/* Hero Proof & Trust Bar */}
                 <div className="mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3">
                   <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
                     <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
                     <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
-                      25+ Global Clients
+                      🌍 Serving Global & Local Clients
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-acid/40 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
@@ -373,12 +372,12 @@ export default function Home() {
                   <div className="inline-flex items-center gap-2 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
                     <Check size={13} className="text-acid" aria-hidden="true" />
                     <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
-                      50+ Websites & Apps
+                      50+ Digital Systems Delivered
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-white/90 px-3.5 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
                     <span className="font-display text-xs font-black uppercase tracking-wider text-ink">
-                      Founded 2024 · Kolkata
+                      USD & INR Invoicing Available
                     </span>
                   </div>
                   <a
@@ -677,7 +676,7 @@ export default function Home() {
                   Services
                 </p>
                 <h2 className="font-display text-5xl font-semibold leading-none text-white md:text-7xl">
-                  Website development, mobile apps & automation for Kolkata businesses.
+                  Website development, mobile apps & automation for businesses worldwide.
                 </h2>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -1144,7 +1143,7 @@ Please send me a proposal.`
                   Resources
                 </p>
                 <h2 className="max-w-4xl font-display text-5xl font-semibold leading-none text-white md:text-7xl">
-                  Practical guides for Kolkata businesses planning digital growth.
+                  Practical guides for growing businesses worldwide.
                 </h2>
               </div>
               <p className="max-w-md text-base leading-7 text-white/62">
